@@ -1,13 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "introduction",
+  "id": "sec-section-name",
   "level": "1",
-  "url": "introduction.html",
-  "type": "Chapter",
-  "number": "1",
-  "title": "Introduction",
-  "body": " Introduction   "
+  "url": "sec-section-name.html",
+  "type": "Section",
+  "number": "1.1",
+  "title": "Introduction to MA 261",
+  "body": " Introduction to MA 261  Welcome to MA 261.  "
 }
 ]
 
