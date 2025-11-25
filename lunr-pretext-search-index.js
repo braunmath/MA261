@@ -1,31 +1,13 @@
 var ptx_lunr_search_style = "textbook";
 var ptx_lunr_docs = [
 {
-  "id": "front-colophon",
+  "id": "introduction",
   "level": "1",
-  "url": "front-colophon.html",
-  "type": "Colophon",
-  "number": "",
-  "title": "Colophon",
-  "body": "  "
-},
-{
-  "id": "sec-section-name",
-  "level": "1",
-  "url": "sec-section-name.html",
-  "type": "Section",
-  "number": "1.1",
-  "title": "Section Title",
-  "body": " Section Title  Text of section.  "
-},
-{
-  "id": "backmatter-2",
-  "level": "1",
-  "url": "backmatter-2.html",
-  "type": "Colophon",
-  "number": "",
-  "title": "Colophon",
-  "body": " This book was authored in PreTeXt .  "
+  "url": "introduction.html",
+  "type": "Chapter",
+  "number": "1",
+  "title": "Introduction",
+  "body": " Introduction   "
 }
 ]
 
