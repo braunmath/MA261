@@ -3,9 +3,390 @@
 <chapter xml:id="problems" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Problems and Essays</title>
   
-<p>
-</p>
+    <problem>
+        <title>P1</title>
+        <p>
+        </p>
+    </problem>
 
+    <problem>
+        <title>P2</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>Essay 1</title>
+        <p> 
+        </p>
+    </problem>
+
+    <problem>
+        <title>P3</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P4</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P5</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>Essay 2</title>
+        <p>
+        </p>
+    </problem>
     
+    <problem>
+        <title>P6</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P7</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P8</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P9</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P10</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P11</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P12</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P13</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P14</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P15</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P16</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P17</title>
+        <p>
+        </p>
+    </problem>
+
+        <problem>
+        <title>Essay 3</title>
+        <p>
+            Read the following blog post by Keith Weber, a professor of math education at Rutgers University who studies how undergraduate students understand proofs in mathematics: <url href="https://blogs.ams.org/matheducation/2015/02/10/mathematics-professors-and-mathematics-majors-expectations-of-lectures-in-advanced-mathematics/" />
+            After you read this article, complete the following essay.
+            <ul>
+                <li>
+                    <p>
+                        This will be an essay of length at least 500 words, which is equivalent to at least 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced. (You can write a longer essay if needed.)
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Your essay should respond to the following three questions.
+                        <ul>
+                            <li>
+                                <p>
+                                    The article describes four expectations that professors have for students, but which are usually mis-communicated. <em>For each of these four expectations</em>, do you respond more like the students in their surveys, or more like the professors? Why?
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    The discussion at the end of the article has some recommendations for faculty in their courses. Which of these recommendations do you think you would find most helpful for your learning, and why?
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    What is one thing you might change about your approach to your math courses after reading this article? Why is this the thing you would choose to change?
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
+                </li>
+            </ul>
+Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).
+        </p>
+    </problem>
+
+    <problem>
+        <title>P18</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P19</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P20</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P21</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P22</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P23</title>
+        <p>
+        </p>
+    </problem>
+
+        <problem>
+        <title>Essay 4</title>
+        <p>
+            Watch the following YouTube video from <em>Quanta Magazine</em> (17 minutes, published January 2021): <url href="https://www.quantamagazine.org/videos/the-riemann-hypothesis-explained/" />
+
+After you watch this video, complete the following essay.
+<ul>
+    <li>
+        <p>
+            This will be an essay of length 500 words, which is equivalent to 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced. 
+        </p>
+    </li>
+    <li>
+        <p>
+            Write a critical review of this video.
+      Imagine that you are writing your review for a journal for undergraduates in mathematics and the sciences, so your primary audience is undergraduate math/cs/engineering/etc majors and minors.
+        </p>
+    </li>
+    <li>
+        <p>
+            Like any critic, you will respond positively to some things and negatively to others.  
+        Unlike many critics, you need to justify your opinions and provide detailed explanations for your claims.
+        </p>
+    </li>
+    <li>
+        <p>
+            You should consider the following questions:
+        </p>
+    </li>
+    <ol>
+        <li>
+            <p>
+                Does the video effectively communicate the mathematics it discusses? Why or why not? Justify your claims with specific details about the video.
+            </p>
+        </li>
+        <li>
+            <p>
+                We have discussed multiple approaches/themes to prime numbers in this course.
+                Which of these approaches/themes to prime numbers are used in this video? Be detailed, give specific examples from the video!
+            </p>
+        </li>
+        <li>
+            <p>
+                Is the mathematics clearly explained? If yes, what did they do especially well? If no, what made it unclear? Again, justify your claims with specific examples from the video.
+            </p>
+        </li>
+    </ol>
+</ul>        
+  
+Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).
+        </p>
+    </problem>
+
+    <problem>
+        <title>P24</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P25</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P26</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>Essay 5</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P27</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P28</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P29</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P30</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P31</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P32</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>Essay 6</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P33</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P34</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P35</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P36</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P37</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P38</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P39</title>
+        <p>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P40</title>
+        <p>
+        </p>
+    </problem>
+
+
+        <problem>
+        <title>End-of-Class Reflection</title>
+        <p>
+            Type a 1000 word essay in response to the following prompt.
+This is the equivalent of 4 pages in 12 point Times New Roman font, double-spaced.
+
+<ol>
+<li>
+    <p>What were <em>six</em> of the most important discoveries or realizations you made in this class?
+In other words, what are you taking away from this class that you think might stick with you over time  and/or influence you in the future?
+What have you experienced that might have a long-term effect on you intellectually or personally?
+These can include things you had not realized about mathematics or society, specific homework problems or theorems, etc.
+These can be things that made sense to you, or topics where you were confused, points that you agreed/disagreed with in the readings or class discussions, issues that arose while working on your assignments, etc.
+    </p>
+</li>
+<li>
+    <p>
+        Explain why these six discoveries or realizations are important to you.
+    </p>
+</li>
+<li>
+    <p>
+        You should include a combination of observations about <em>both</em> mathematics <em>and</em> your habits, practices, and beliefs about mathematics.
+    </p>
+</li>
+</ol>
+This assignment grade is based only on completion (i.e. if you turn it in, it meets the length requirement, and it appropriately responds to the prompt above, then you get full credit). 
+        </p>
+    </problem>
 
 </chapter>
