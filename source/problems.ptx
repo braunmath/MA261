@@ -262,9 +262,35 @@ Your grade is based on completion only (in other words, if you complete the assi
         </p>
     </problem>
 
-    <problem>
+<problem>
         <title>Essay 5</title>
         <p>
+            Read the course syllabus on the Canvas homepage for MA 261.
+            After you read the syllabus, complete the following essay.
+            <ul>
+                <li>
+                    <p>
+                        This will be an essay of length at least 500 words, which is equivalent to at least 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced. (You can write a longer essay if needed.)
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Your essay should respond to the following three questions.
+                        <ul>
+                           <li>
+                                <p>
+So far we have investigated multiple topics and techniques in number theory. Which of these have you enjoyed the most? Which have you enjoyed the least? Why? Give specific examples from the homework and/or notes to illustrate your opinions.                                </p>
+                            </li>
+                            <li>
+                                <p>
+The student learning outcomes list various mathematical practices that students will develop in MA 261, in addition to the content-based learning outcomes. Which of these practices do you feel you have improved on the most so far this semester? Which do you are most in need of further development?                                
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
+                </li>
+            </ul>
+Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).
         </p>
     </problem>
 
