@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="divisibility" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Divisibility</title>
+
+     <!-- include sections  -->
+  <xi:include href="divisionalgorithm.ptx" />
+    
+
+</chapter>
