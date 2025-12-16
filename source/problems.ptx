@@ -4,20 +4,99 @@
   <title>Problems and Essays</title>
   
     <problem>
-        <title>P1</title>
-        <p>
+        <title>Essay 1</title>
+        <p> 
+            Go to <url href="https://link.springer.com/book/10.1007/978-94-007-2129-6"/> and download the book <em>Proof and Proving in Mathematics Education</em>.
+            Your essay will be a response to parts of Chapter 2, titled "Cognitive Development of Proof".
+            Read the following sections of this chapter:
+            <ul>
+                <li>
+                    <p>
+                        Section 2, "Perceptions of Proof", including both Subsections 2.1 and 2.2, page numbers 14-16.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Subsection 3.3, "A Global Framework for the Development of Mathematical Thinking", page numbers 23-25.
+                    </p>
+                </li>
+            </ul>
+            After you read these sections, complete the following essay.
+            <ul>
+                <li>
+                    <p>
+                        This will be an essay of length at least 500 words, which is equivalent to at least 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced. (You can write a longer essay if needed.)
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Your essay should respond to the following three questions.
+                        <ul>
+                            <li>
+                                <p>
+                                    What are 2-3 experiences you have with mathematical proofs in your previous mathematics courses (both high school and college)?
+                                    How do these experiences relate to the discussion of proof for mathematicians and for growing individuals discussed in Section 2 of the article?
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    What are examples of work you have done in your previous mathematics courses that represent "embodied", "symbolic", and "formal" modes of mathematical thinking, as described in Subsection 3.3 of the article?
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    What is one thing that you read in these sections that made sense to you? Why?
+                                    What is one thing that you read in these sections that did not make sense to you? Why was it confusing? What questions do you have about it?
+                                </p>
+                            </li>
+                        </ul>
+                    </p>
+                </li>
+            </ul>
+Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).
         </p>
     </problem>
+
+    <problem>
+        <title>P1</title>
+        <p>
+            For a real number <m>x\in \mathbb{R}</m>, define the <em>floor function</em> <m>\lfloor x \rfloor</m> to be the greatest integer less than or equal to <m>x</m>. For example, <m>\lfloor 3.7 \rfloor = 3</m>, <m>\lfloor -2.1 \rfloor = -3</m>, and <m>\lfloor 5 \rfloor = 5</m>.
+        </p>
+        <p>
+            Let <m>N</m> and <m>m</m> be positive integers. 
+            Explain why the number of multiples of <m>m</m> between <m>1</m> and <m>N</m> (inclusive) is given by <m>\left\lfloor \frac{N}{m} \right\rfloor</m>.
+        </p>
+        <p>
+            Hint: Before you start writing your explanation, work out several examples with specific numbers.
+            What do those examples suggest about how to give a clear explanation for arbitrary values of <m>N</m> and <m>m</m>?
+        </p>
+        </problem>
 
     <problem>
         <title>P2</title>
         <p>
-        </p>
-    </problem>
-
-    <problem>
-        <title>Essay 1</title>
-        <p> 
+            Consider the equation 
+            <me>1+3+5+\cdots+(2n-1)=n^2\, .
+            </me>
+            <ol>
+                <li>
+                    <p>
+                        Draw a picture that demonstrates why this is true for all positive integers <m>n</m>.
+                        (This is an "embodied" proof.)
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Give a "symbolic" proof of this equation by rewriting the numbers in the sum and using properties of sums that we have discussed in class.
+                        Note: You should <em>not</em> use induction for this part, even if you know how to do so.
+                    </p>
+                </li>
+            </ol>
+            <p>
+                Hint: As with the previous problem, begin with small examples. 
+                What happens when <m>n=1,2,3,4</m>?
+                How can you use these examples to guide your thinking about the general case?
+            </p>
         </p>
     </problem>
 
@@ -42,6 +121,36 @@
     <problem>
         <title>Essay 2</title>
         <p>
+            Watch the following video from <em>3Blue1Brown</em> (19 minutes, published July 2023): <url href="https://www.youtube.com/watch?v=VYQVlVoWoPY"/> 
+            After you watch this video, complete the following essay.
+        <ul>
+            <li>
+                <p>
+                    This will be an essay of length 500 words, which is equivalent to 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    The video introduced three false proofs, one related to spherical surface area, one related to finding the value of <m>\pi</m>, and one supposedly proving that all triangles are equilateral.
+                    Which of these three false proofs did you find most interesting, and why?
+                    Which of these three false proofs did you find least interesting, and why?
+                    You need to give specific details in the video that support your opinions.
+                </p>
+            </li>
+            <li>
+                <p>
+                    What is something about mathematical proof that this video made you consider that you had not thought of before?
+                    Do you feel that this new insight will help you as you work on proofs in this course? Why or why not?
+                </p>
+            </li>
+            <li>
+                <p>
+                    How are the ideas of the embodied, symbolic, and formal modes of mathematical thinking (from the reading for Essay 1) related to the ideas introduced in this video?
+                    Does this video make you think differently about these modes of mathematical thinking? Why or why not?
+                </p>
+            </li>
+        </ul>
+        Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).
         </p>
     </problem>
     
@@ -215,11 +324,11 @@ After you watch this video, complete the following essay.
         Unlike many critics, you need to justify your opinions and provide detailed explanations for your claims.
         </p>
     </li>
-    <li>
+</ul>
+
         <p>
             You should consider the following questions:
         </p>
-    </li>
     <ol>
         <li>
             <p>
@@ -237,8 +346,7 @@ After you watch this video, complete the following essay.
                 Is the mathematics clearly explained? If yes, what did they do especially well? If no, what made it unclear? Again, justify your claims with specific examples from the video.
             </p>
         </li>
-    </ol>
-</ul>        
+    </ol>    
   
 Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).
         </p>
