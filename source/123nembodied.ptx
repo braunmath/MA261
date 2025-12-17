@@ -4,12 +4,57 @@
   <title>Embodied Proof</title>
 
   <p>
-    Here is a description of the embodied world from David Tall's paper "Building Theories: The Three Worlds of Mathematics", published in <em>For the Learning of Mathematics</em> in 2004 <url href=""/>.
+    Here is a description of the embodied world from David Tall's paper "Building Theories: The Three Worlds of Mathematics", published in <em>For the Learning of Mathematics</em> in 2004 <url href="https://www.jstor.org/stable/40248444"/>.
+  </p>
+
+  <p>
     <q>
-      The first [world] grows out of our perceptions of the world and consists of our thinking about things that we perceive and sense, not only in the physical world, but in our own mental world of meaning. 
+      The <em>first</em> [world] grows out of our <em>perceptions</em> of the world and consists of our thinking about things that we perceive and sense, not only in the physical world, but in our own mental world of meaning. 
       By reflection and by the use of increasingly sophisticated language, we can focus on aspects of our sensory experience that enable us to envisage conceptions that no longer exist in the world outside, such as a 'line' that is 'perfectly straight'. 
-      I now term this world the 'conceptual-embodied world' or 'embodied world' for short.
+      I now term this world the 'conceptual-embodied world' or '<em>embodied</em> world' for short.
     </q>
+  </p>
+
+    <p>
+      Embodied proofs are usually considered "informal" by professional mathematicians.
+      Embodied mathematical reasoning is usually not considered sufficiently rigorous for professional mathematical proof in the early 21st century.
+      However, embodied reasoning is often used by professional mathematicians to convey key insights or intuitions that are later made more precise with a formal proof.
     </p>
+
+    <p>
+      Here is a picture that gives an <alert>embodied</alert> proof of our conjecture, represented for the value <m>n=10</m>.
+      Note that the shaded area is equal to the sum <m>1+2+3+\cdots +10</m>, and that this area is half of the area of a rectangle that is 10 blocks by 11 blocks in size.
+      Therefore, the shaded area is half of the total area, which is
+      <me>
+        \frac{10 \times 11}{2} = 55\, .
+      </me>
+      The embodied proof of our conjecture is to imagine this picture for any value of <m>n</m>.
+    </p>
+
+    <figure xml:id="fig-embodied123nsum">
+      <caption>A 10 by 11 grid illustrating the embodied proof of our conjecture. </caption>
+      <image source="embodiedsum123n.png" width="65%"> 
+        <shortdescription>A 10 by 11 grid where the squares in the lower left half are shaded.</shortdescription>
+      </image>
+    </figure>
+
+    <exercise>
+      <p>
+        Discuss this picture. 
+        Why is this a proof of the conjecture? 
+        Can you see how to generalize this picture to justify that our conjecture is true for any positive integer <m>n</m>?
+      </p>
+    </exercise>
+
+    <p>
+      On the Wikipedia page for the Pythagorean Theorem, there are many examples of visual proofs, which fall within the embodied category of proof.
+      Let's look at one of these: <url href="https://en.wikipedia.org/wiki/Pythagorean_theorem#Rearrangement_proofs">rearrangement proofs</url>.
+    </p>
+
+    <exercise>
+      <p>
+        Does this proof make sense? Why or why not? Does it convince you that the Pythagorean Theorem holds for every right triangle? Why or why not?
+      </p>
+    </exercise>
 
 </section>

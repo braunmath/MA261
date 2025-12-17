@@ -46,7 +46,6 @@
     </statement>
     </principle>
 
-    <exercise>
       <p>
         The software system SageMath is extremely useful for mathematics, and it is built on top of Python, so if you know some Python it is very familiar.
         A simple SageMath interface is available for free at <url href="https://sagecell.sagemath.org/">https://sagecell.sagemath.org/</url>.
@@ -60,7 +59,7 @@
       <p>
         It is always helpful to try to visualize sequences of numbers, rather than just look at the numerical output.
         For example, here is code to create a plot of the values <m>1+2+3+\cdots+n</m> for <m>n=1,2,\ldots,15</m> as points of the form <m>(n,1+2+\cdots+n)</m>.
-        What type of function does this look like the graph of?
+        
       </p>
       <program language="sage">
         L = []
@@ -70,7 +69,12 @@
             
         points(L,xmax=50,ymax=120)
       </program>
-    </exercise>
+
+    <exercise>
+      <p>
+        What type of function does this point plot look like the graph of?
+      </p>
+      </exercise>
 
     <p>
       Based on the explorations above, we might conjecture that the sum <m>1+2+3+\cdots+n</m> is given by a quadratic function of <m>n</m>.

@@ -4,7 +4,153 @@
   <title>Formal Proof</title>
 
  <p>
+  The final world of mathematics is the formal world, which is described as follows by David Tall in his paper "Building Theories: The Three Worlds of Mathematics", published in <em>For the Learning of Mathematics</em> in 2004 <url href="https://www.jstor.org/stable/40248444"/>.
  </p>
+
+ <p>
+  <q>
+    The third world is based on <em>properties</em>, expressed in terms of formal definitions that are used as axioms to specify mathematical structures (such as 'group', 'field', 'vector space', 'topological space' and so on). 
+    This world I have called the 'formal-axiomatic world' or '<em>formal</em> world', for short. 
+    It turns previous experiences on their heads, working not with familiar objects of experience, but with axioms that are carefully formulated to <em>define</em> mathematical structures in terms of specified properties. 
+    Other properties are then deduced by formal proof to build a sequence of theorems. Within the axiomatic system, new concepts can be defined and their properties deduced to build a coherent, logically deduced theory.
+  </q>
+ </p>
+
+ <p>
+  One of the first formal proof methods that students usually learn is called <em>mathematical induction</em>.
+  There are various flavors of induction, including the "method of descent", "strong induction", "weak induction", etc.
+  We will continue to discuss various aspects of these distinctions, but what is more important than learning names is to learn and understand the key idea of induction:
+      <blockquote>
+          <p>
+              <em>verify small cases, then use those small cases to verify the next case, then use that new case to verify the next case, then use that new case to verify the next case, and then carefully explain why you can always continue this process for a specific problem or proof.</em>
+
+          </p>
+      </blockquote>
+  </p>
+
+ <p>
+  We will begin by considering an example of an <alert>embodied</alert> inductive proof.
+  The question that will motivate us is the following.
+ </p>
+
+ <assumption xml:id="ques-twocolorregions">
+  <statement>
+    <p>
+            Consider any map formed by drawing <m>n</m> straight lines in the plane, each line extending infinitely in both directions, to represent the boundaries of the regions.
+            Some regions will be compact and bounded, others will be unbounded and go off to infinity.
+            Is it always possible to color the regions using only two colors, say white and gray, in such a way that white and gray regions never share an edge?
+            In other words, the edges between regions always have white on one side and gray on the other side.
+            If yes, why? If no, why not?
+        </p>
+  </statement>
+ </assumption>
+
+ <exercise>
+  <p>
+    Work on this problem with your group.
+    Do you think the answer is "yes, it is always possible" or "no, it is not always possible"?
+    Try to come up with a convincing argument to support your answer.
+  </p>
+ </exercise>
+
+ <theorem xml:id="thm-twocolors">
+  <statement>
+    <p>
+      The answer to <xref ref="ques-twocolorregions"/> is yes.
+    </p>
+  </statement>
+ </theorem>
+
+ <proof>
+  <p>
+    We will prove <xref ref="thm-twocolors"/> by mathematical induction on the number of lines, <m>n</m>.
+    For the base case, when <m>n=1</m>, there are two regions separated by a single line.
+    We can color one region white and the other gray, so the base case holds.
+  </p>
+  <p>
+    Next, we prove the inductive step.
+    Assume that for some arbitrary value <m>n=k</m>, any map formed by <m>k</m> lines can be colored using only two colors so that no two adjacent regions share the same color.
+    Now, consider a map formed by <m>k+1</m> lines.
+    We can think of this map as being formed by first drawing <m>k</m> lines, and then adding one additional line.
+    By our inductive hypothesis, we can color the regions formed by the first <m>k</m> lines using only two colors.
+    Now, when we add the <m>(k+1)</m>st line, it will intersect some of the existing regions, dividing them into two new regions.
+    To ensure that no two adjacent regions share the same color, we can simply switch the colors of all the regions on one side of the new line.
+    This way, the regions on either side of the new line will have different colors, and the coloring of the other regions remains the same.
+    Further, none of the adjacent regions have the same color.
+  </p>
+ </proof>
+
+ <exercise>
+  <p>
+    Discuss this proof. Does it make sense? Why or why not?
+  </p>
+ </exercise>
+
+ <p>
+  Now, let's give an inductive proof of our original conjecture that is within the world of <alert>formal</alert> mathematics.
+ </p>
+
+ <proof>
+  <title>Proof of <xref ref="conj-123nsum"/></title>
+  <p>
+    We use induction.
+    For the base case, when <m>n=1</m>, we have
+    <me>
+      1 = \frac{1(1+1)}{2} \, ,
+    </me>
+    so the base case holds.
+  </p>
+  <p>
+    For the inductive step, assume that for some arbitrary value <m>n=k</m>, we have
+    <me>
+      1+2+3+\cdots +k = \frac{k(k+1)}{2} \, .
+    </me>
+    We need to show that this implies that
+    <me>
+      1+2+3+\cdots +k + (k+1) = \frac{(k+1)(k+2)}{2} \, .
+    </me>
+    Starting from the left-hand side, we have
+    <md>
+      <mrow>1+2+3+\cdots +k + (k+1) \amp = \frac{k(k+1)}{2} + (k+1) </mrow>
+      <mrow> \amp = \frac{k(k+1) + 2(k+1)}{2} </mrow>
+      <mrow>\amp = \frac{(k+1)(k+2)}{2} \, . </mrow>
+    </md>
+    This completes the inductive step, and therefore our proof by induction is complete.
+  </p>
+ </proof>
+ 
+ <exercise>
+  <p>
+    Discuss this proof. Does it make sense? Why or why not?
+    What is the most confusing part? Why is it confusing?
+  </p>
+ </exercise>
+
+ <p>
+        These two proofs demonstrate how you can use a small number of initial data points to make a conjecture, then look at how the structure of the problem leads you to use the same pattern of logical argument repeatedly.
+        This "pattern of logical argument" is the <em>inductive step</em> of an induction argument, while the small initial data points are the <em>base cases</em> of the inductive argument.
+        We are now in a position to give a precise statement of the principle of mathematical induction.
+    </p>
+    <principle xml:id="principle-induction">
+        <title>Principle of Mathematical Induction</title>
+        <statement>
+            <p>Suppose we have a sequence of mathematical statements <m>P(1),P(2),P(3),\ldots</m> (one for each natural number).
+                If the following two properties hold, then <m>P(n)</m> is true for every natural number <m>n</m>:
+                <ol>
+                    <li>
+                        <p>
+                            The <em>base case</em>: <m>P(1)</m> is true.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The <em>induction step</em>: If <m>P(k)</m> is true, then <m>P(k+1)</m> is true.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </principle>
   
 
 </section>

@@ -3,8 +3,98 @@
 <section xml:id="123nsymbolic" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Symbolic Proof</title>
 
- <p>
+ <p>    
+  Here is a description of the symbolic world from David Tall's paper "Building Theories: The Three Worlds of Mathematics", published in <em>For the Learning of Mathematics</em> in 2004 <url href="https://www.jstor.org/stable/40248444"/>.
  </p>
-  
+
+ <p>
+  <q>
+    The <em>second</em> world is the world of symbols that we use for calculation and manipulation in arithmetic, algebra, calculus and so on. 
+    These begin with <em>actions</em> (such as pointing and counting) that are encapsulated as concepts by using symbols that allow us to switch effortlessly from processes to <em>do</em> mathematics, to concepts to <em>think</em> about... 
+
+    The initial stages of counting and early arithmetic are largely embodied. 
+    But the focus on the properties of the symbols and the relationship between them moves away from the physical meaning to a symbolic activity in arithmetic. 
+    This becomes increasingly sophisticated, with the introduction of more sophisticated number concepts (fractions, negatives, rationals, irrationals, infinite decimals, complex numbers, vectors in two and three, then n dimensions, and so on) that enable us to calculate and manipulate symbols with great accuracy and precision. 
+  </q>
+</p>
+
+<p>
+  An example of an <alert>embodied-symbolic</alert> proof of our conjecture for <m>n=6</m> is the following.
+  Take two copies of our sum and add them together, but place one copy on top of the other, with the second set of summands appearing in the opposite order:
+  <md>
+    <mrow>\amp 1+2+3+4+5+6</mrow>
+    <mrow>\amp 6+5+4+3+2+1</mrow>
+    <mrow>\hline</mrow>
+    <mrow>\amp 7+7+7+7+7+7</mrow>
+  </md>
+  When these two sums are added together, the summands pair to produce the sum of six copies of <m>7</m>.
+  Thus, the initial sum, <m>1+2+3+4+5+6</m>, must be half of this total, is equal to half of <m>6 \times 7</m>, which is <m>21</m>.  
+</p>
+
+<p>
+  This proof is embodied because it relies on visualizing the two sums being added together in this way, and because it relies on the physical action of pairing the summands.
+  It is symbolic because it relies on manipulating the symbols of addition and equality to arrive at the conclusion.
+</p>
+
+<exercise>
+  <p>
+    Discuss the proof above. Does it make sense? Why or why not?
+  </p>
+</exercise>
+
+<p>
+  Next, let's look at a more general version of this proof that would be considered <alert>symbolic</alert>.
+  When writing a proof that is more symbolic or formal (which we will discuss next), we usually will place our argument in a proof environment that begins with the word "Proof" and ends with either a small box symbol <m>\Box</m> or the letters "QED" (which stands for the Latin phrase <em>quod erat demonstrandum</em>, meaning "which was to be demonstrated").
+  This is what you should do when writing your own symbolic and/or formal proofs.
+</p>
+  <p>
+  In the proof below, we will use the sigma notation for sums.
+  Remember that the notation
+  <me>\sum_{i=1}^n a_i</me>
+  means to sum the terms <m>a_1, a_2, a_3, \ldots, a_n</m>.
+  Using this notation, our conjecture can be written as
+  <me>\sum_{i=1}^n i = \frac{n(n+1)}{2} .</me>
+</p>
+
+<proof>
+  <title>Proof of <xref ref="conj-123nsum"/></title>
+<p>
+  We write the sum <me>S = \sum_{i=1}^n i</me> twice, once in the usual order and once in reverse order, and add them together:
+  <md>
+    <mrow>S+S \amp = \sum_{i=1}^n i + \sum_{i=1}^n (n+1-i)</mrow>
+    <mrow> \amp = \sum_{i=1}^n (i + (n+1-i)) </mrow>
+    <mrow>\amp = \sum_{i=1}^n (n+1)  </mrow>
+    <mrow>\amp = n\cdot (n+1)  </mrow>
+  </md>
+  Therefore, the equation above gives
+  <me>
+    2S=n(n+1)
+  </me>
+   from which it follows that
+  <me>
+    S = \frac{n(n+1)}{2} \, .
+  </me>
+</p>
+</proof>
+
+<exercise>
+  <p>
+    Discuss this proof. Does it make sense? Why or why not?
+  </p>
+</exercise>
+
+<exercise>
+  <p>
+    Which of the three proofs (embodied, embodied-symbolic, and symbolic) that we have seen so far do you prefer?
+    Why?
+    Which of these proofs most makes you <em>believe</em> that our conjecture is true?
+    Why?
+  </p>
+</exercise>
+
+<p>
+  If you want to see another example of a symbolic proof, look at the <url href="https://en.wikipedia.org/wiki/Pythagorean_theorem#Proof_using_similar_triangles">proof of the Pythagorean Theorem using similar triangles</url> on Wikipedia.
+  You can see that this proof feels different and requires a different type of reasoning from the embodied proof using rearrangement that we saw earlier.
+</p>
 
 </section>
