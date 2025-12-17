@@ -7,7 +7,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Introduction to MA 261",
-  "body": " Introduction to MA 261  Welcome to MA 261.  "
+  "body": " Introduction to MA 261  Welcome to MA 261, Intro to Number Theory! This course serves two purposes for students at UK:   Students are introduced to fundamental concepts in elementary number theory, including divisibility, prime numbers, modular arithmetic, approximating real numbers by continued fractions, and Pythagorean triples.    MA 261 is a required course in the UK Math major \"Foundations of Mathematics\" track, in which students learn to read, construct, and critique mathematical proofs, along with learning about the role of proof in mathematics.     In this particular course, we will also explore applications of number theory in music, specifically to the theory of rhythm and the theory of scales and temperament.  First, let's address the elephant in the room: Many students are afraid of, or have had bad previous experiences, with proofs in mathematics.   If you are already comfortable with proofs, that's great! If not, then you are in the right course. This course is intended to help you gain familiarity and skill with proof-based mathematics. The first thing that we will do is to look at a simple theorem in number theory and use it as the basis for a larger conversation about different types of mathematical reasoning, and how those types of mathematical reasoning are reflected in different approaches to proof.  "
 },
 {
   "id": "123n",
@@ -16,7 +16,97 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Sums of Integers",
-  "body": " Sums of Integers    "
+  "body": " Sums of Integers  Mathematical reasoning always begins with a question. Most students experience math in school, including in university, as a sequence of answers to questions that they have never heard asked. Don't believe this lie! Mathematics is about wondering, questioning, being curious, and making sense of the world. So let's begin with a question.   What is the value of the sum for different positive integer values of ?    In this class, we will frequently engage in collaborative activities, which we will call checkpoints. Here are the expectations for checkpoints, which will usually either be a problem to solve or a question to discuss:   First, begin the discussion by going around your group and having each person spend 10-seconds sharing an initial strategy for solving the problem, or sharing a answer to the question if it is a discussion question.    Second, go around the group again and give a 10-second follow-up answer. This allows everyone to have a chance to offer their thoughts before the general problem-solving or discussion begins.    Third, as a group, solve the problem or engage in the discussion for the checkpoint.       Discuss with your neighbors:   What qualities would you want to see in a \"good\" answer to the question above?    What are some different approaches that you could use to start trying to answer the question?      "
+},
+{
+  "id": "123n-3",
+  "level": "2",
+  "url": "123n.html#123n-3",
+  "type": "Question",
+  "number": "2.1.1",
+  "title": "",
+  "body": " What is the value of the sum for different positive integer values of ?  "
+},
+{
+  "id": "123n-4",
+  "level": "2",
+  "url": "123n.html#123n-4",
+  "type": "Remark",
+  "number": "2.1.2",
+  "title": "",
+  "body": " In this class, we will frequently engage in collaborative activities, which we will call checkpoints. Here are the expectations for checkpoints, which will usually either be a problem to solve or a question to discuss:   First, begin the discussion by going around your group and having each person spend 10-seconds sharing an initial strategy for solving the problem, or sharing a answer to the question if it is a discussion question.    Second, go around the group again and give a 10-second follow-up answer. This allows everyone to have a chance to offer their thoughts before the general problem-solving or discussion begins.    Third, as a group, solve the problem or engage in the discussion for the checkpoint.     "
+},
+{
+  "id": "123n-5",
+  "level": "2",
+  "url": "123n.html#123n-5",
+  "type": "Checkpoint",
+  "number": "2.1.3",
+  "title": "",
+  "body": " Discuss with your neighbors:   What qualities would you want to see in a \"good\" answer to the question above?    What are some different approaches that you could use to start trying to answer the question?     "
+},
+{
+  "id": "123napproaches",
+  "level": "1",
+  "url": "123napproaches.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "Ways to Explore a Problem",
+  "body": " Ways to Explore a Problem  Let's discuss a few useful principles for approaching mathematical problems, which also apply to writing mathematical proofs.    Work out small examples with pencil and paper.     Explore the sum for small values of by computing the sums for . What patterns do you notice, if any?     Draw various pictures or diagrams to visualize the problem, theorem, definition, etc.     Can you draw a picture to represent the sum ? How might such a picture help you understand the problem better?     Use a computer to conduct experiments and generate data.     The software system SageMath is extremely useful for mathematics; a simple interface is available for free at https:\/\/sagecell.sagemath.org\/ . You can also install SageMath on your computer, or you can use it through a web browser via services such as CoCalc https:\/\/cocalc.com\/ . Here is a simple SageMath command to compute the sum for a given positive integer :  for n in range(1,11): print(n, sum([k for k in range(1, n+1)]))   Your goal in these exercises is to gather data and look for patterns that can help you formulate a conjecture about the value of the sum for a general positive integer .  "
+},
+{
+  "id": "principle-smallexamples",
+  "level": "2",
+  "url": "123napproaches.html#principle-smallexamples",
+  "type": "Principle",
+  "number": "2.2.1",
+  "title": "",
+  "body": "  Work out small examples with pencil and paper.   "
+},
+{
+  "id": "123napproaches-4",
+  "level": "2",
+  "url": "123napproaches.html#123napproaches-4",
+  "type": "Checkpoint",
+  "number": "2.2.2",
+  "title": "",
+  "body": " Explore the sum for small values of by computing the sums for . What patterns do you notice, if any?  "
+},
+{
+  "id": "principle-drawapicture",
+  "level": "2",
+  "url": "123napproaches.html#principle-drawapicture",
+  "type": "Principle",
+  "number": "2.2.3",
+  "title": "",
+  "body": "  Draw various pictures or diagrams to visualize the problem, theorem, definition, etc.   "
+},
+{
+  "id": "123napproaches-6",
+  "level": "2",
+  "url": "123napproaches.html#123napproaches-6",
+  "type": "Checkpoint",
+  "number": "2.2.4",
+  "title": "",
+  "body": " Can you draw a picture to represent the sum ? How might such a picture help you understand the problem better?  "
+},
+{
+  "id": "principle-computationalexperiments",
+  "level": "2",
+  "url": "123napproaches.html#principle-computationalexperiments",
+  "type": "Principle",
+  "number": "2.2.5",
+  "title": "",
+  "body": "  Use a computer to conduct experiments and generate data.   "
+},
+{
+  "id": "123napproaches-8",
+  "level": "2",
+  "url": "123napproaches.html#123napproaches-8",
+  "type": "Checkpoint",
+  "number": "2.2.6",
+  "title": "",
+  "body": " The software system SageMath is extremely useful for mathematics; a simple interface is available for free at https:\/\/sagecell.sagemath.org\/ . You can also install SageMath on your computer, or you can use it through a web browser via services such as CoCalc https:\/\/cocalc.com\/ . Here is a simple SageMath command to compute the sum for a given positive integer :  for n in range(1,11): print(n, sum([k for k in range(1, n+1)]))  "
 },
 {
   "id": "prime-numbers",
