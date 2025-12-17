@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="123napproaches" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Ways to Explore a Problem</title>
+  <title>Exploration Leads to Conjecture</title>
 
   <p>
-    Let's discuss a few useful principles for approaching mathematical problems, which also apply to writing mathematical proofs.
+    Let's discuss a few useful principles for exploring mathematical questions, which also apply to creating mathematical proofs.
   </p>
 
   <principle xml:id="principle-smallexamples">
@@ -48,7 +48,8 @@
 
     <exercise>
       <p>
-        The software system SageMath is extremely useful for mathematics; a simple interface is available for free at <url href="https://sagecell.sagemath.org/">https://sagecell.sagemath.org/</url>.
+        The software system SageMath is extremely useful for mathematics, and it is built on top of Python, so if you know some Python it is very familiar.
+        A simple SageMath interface is available for free at <url href="https://sagecell.sagemath.org/">https://sagecell.sagemath.org/</url>.
         You can also install SageMath on your computer, or you can use it through a web browser via services such as CoCalc <url href="https://cocalc.com/">https://cocalc.com/</url>.
         Here is a simple SageMath command to compute the sum <m>1+2+3+\cdots+n</m> for a given positive integer <m>n</m>:
       </p>
@@ -56,10 +57,42 @@
       for n in range(1,11):
           print(n, sum([k for k in range(1, n+1)]))
       </program>
+      <p>
+        It is always helpful to try to visualize sequences of numbers, rather than just look at the numerical output.
+        For example, here is code to create a plot of the values <m>1+2+3+\cdots+n</m> for <m>n=1,2,\ldots,15</m> as points of the form <m>(n,1+2+\cdots+n)</m>.
+        What type of function does this look like the graph of?
+      </p>
+      <program language="sage">
+        L = []
+
+        for n in range(1,16):
+            L.append([n, sum([k for k in range(1, n+1)])])
+            
+        points(L,xmax=50,ymax=120)
+      </program>
     </exercise>
 
     <p>
-      Your goal in these exercises is to gather data and look for patterns that can help you formulate a conjecture about the value of the sum <m>1+2+3+\cdots+n</m> for a general positive integer <m>n</m>.
+      Based on the explorations above, we might conjecture that the sum <m>1+2+3+\cdots+n</m> is given by a quadratic function of <m>n</m>.
+      So, suppose that there are constants <m>a</m>, <m>b</m>, and <m>c</m> such that the equality
+      <me>
+        1+2+3+\cdots+n = an^2 + bn + c
+      </me> 
+      holds for all positive integers <m>n</m>.
+      Using the small values we computed earlier for <m>n=1,2,3</m>, we can set up a system of equations to solve for <m>a</m>, <m>b</m>, and <m>c</m>.
+      <md>
+        <mrow>1 \amp = a(1)^2 + b(1) + c</mrow>
+        <mrow>1+2 \amp = a(2)^2 + b(2) + c</mrow>
+        <mrow>1+2+3 \amp = a(3)^2 + b(3) + c</mrow>
+      </md>
+      Solving for <m>a,b</m>, and <m>c</m> (for example, by back substitution), we find that <m>a=\frac{1}{2}, b=\frac{1}{2}, c=0</m>, so we have the following conjecture.
+      <conjecture xml:id="conj-123nsum">
+        <statement>
+          <p>
+            <me>1+2+3+\cdots+n = \frac{1}{2}n^2 + \frac{1}{2}n = \frac{n(n+1)}{2}</me>
+          </p>
+        </statement>
+      </conjecture> 
     </p>
 
 </section>

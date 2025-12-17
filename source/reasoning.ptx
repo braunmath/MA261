@@ -6,6 +6,10 @@
      <!-- include sections  -->
   <xi:include href="123n.ptx" />
   <xi:include href="123napproaches.ptx" />
-    
+  <xi:include href="123nproofs.ptx" />
+  <xi:include href="123nembodied.ptx" />
+  <xi:include href="123nsymbolic.ptx" />
+  <xi:include href="123nformal.ptx" />
+  <xi:include href="induction.ptx" />
 
 </chapter>

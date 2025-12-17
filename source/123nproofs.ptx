@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="123nproofs" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Conjecture Requires Experimental Verification and Proof</title>
+
+ <p>
+  We have now explored different approaches to understanding the sum <m>1+2+3+\cdots+n</m> for positive integers <m>n</m>, and it led us to conjecture that
+    <me>
+      1+2+3+\cdots +n = \frac{n(n+1)}{2} \, .
+    </me>
+  So... what do we do now? 
+  </p>
+
+  <p>
+    One thing we could do is further test our conjecture experimentally, to make sure we really believe it.
+    Let's do that using SageMath, let's test this for the first 10,000 positive integers <m>n</m>.
+    <program lang="sage">
+    for n in range(1,10001):
+        S = sum([k for k in range(1, n+1)])
+        formula = n*(n+1)/2
+        if S != formula:
+            print("Conjecture is false at n ="+str(n))
+        if n % 1000 == 0:
+            print("Conjecture is true up to n="+str(n))
+    </program>
+    This provides stronger evidence that our conjecture is correct, but it is still not a proof.
+  </p>
+
+  <p>
+    So, now that we have a conjecture that is supported by experimental evidence, we need to determine (A) if it is <em>actually</em> true and (B) if it is true, we need to give a clear explanation of <em>why</em> it is true.
+    This means we need a mathematical proof.
+    Unfortunately, "mathematical proof" is a more complicated topic than one might expect.
+    In part, the standards for what a "rigorous" proof is depends on context, audience, and purpose.
+    It also depends on what "world" of mathematics you are working in.
+  </p>
+
+  <p>
+    In this class, we will rely on a framework developed by David Tall in his book <url href="https://www.cambridge.org/us/universitypress/subjects/psychology/educational-psychology/how-humans-learn-think-mathematically-exploring-three-worlds-mathematics">How Humans Learn to Think Mathematically
+Exploring the Three Worlds of Mathematics</url>.
+    You will read more about this framework and reflect on it for Essay 1.
+  </p>
+
+  <figure xml:id="fig-threeworlds">
+    <caption>David Tall's Three Worlds of Mathematics, from <url href="https://link.springer.com/book/10.1007/978-94-007-2129-6">Proof and Proving in Mathematics Education</url>, page 24.</caption>
+    <image source="tallthreeworlds.png" width="75%">
+      <shortdescription>A picture of David Tall's Three Worlds of Mathematics with images and words illustrating the embodied, symbolic, and formal worlds of mathematics.</shortdescription>
+      
+    </image>
+  </figure>
+
+  <p>
+    Our goal is to give three different proofs of our conjecture, one proof representing each of the three worlds of mathematics.
+  </p>
+  
+
+</section>
