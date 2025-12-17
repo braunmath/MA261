@@ -15,8 +15,8 @@ var ptx_lunr_docs = [
   "url": "123n.html",
   "type": "Section",
   "number": "2.1",
-  "title": "Sums of Integers",
-  "body": " Sums of Integers  Mathematical reasoning always begins with a question. Most students experience math in school, including in university, as a sequence of answers to questions that they have never heard asked. Don't believe this lie! Mathematics is about wondering, questioning, being curious, and making sense of the world. So let's begin with a question.   What is the value of the sum for different positive integer values of ?    In this class, we will frequently engage in collaborative activities, which we will call checkpoints. Here are the expectations for checkpoints, which will usually either be a problem to solve or a question to discuss:   First, begin the discussion by going around your group and having each person spend 10-seconds sharing an initial strategy for solving the problem, or sharing a answer to the question if it is a discussion question.    Second, go around the group again and give a 10-second follow-up answer. This allows everyone to have a chance to offer their thoughts before the general problem-solving or discussion begins.    Third, as a group, solve the problem or engage in the discussion for the checkpoint.       Discuss with your neighbors:   What qualities would you want to see in a \"good\" answer to the question above?    What are some different approaches that you could use to start trying to answer the question?      "
+  "title": "Mathematics Begins With Questions",
+  "body": " Mathematics Begins With Questions  Mathematical reasoning always begins with a question. Most students experience math in school, including in university, as a sequence of answers to questions that they have never heard asked. Don't believe this lie! Mathematics is about wondering, questioning, being curious, and making sense of the world. So let's begin with a question.   What is the value of the sum for different positive integer values of ?    In this class, we will frequently engage in collaborative activities, which we will call checkpoints. Here are the expectations for checkpoints, which will usually either be a problem to solve or a question to discuss:   First, begin the discussion by going around your group and having each person spend 10-seconds sharing an initial strategy for solving the problem, or sharing a answer to the question if it is a discussion question.    Second, go around the group again and give a 10-second follow-up answer. This allows everyone to have a chance to offer their thoughts before the general problem-solving or discussion begins.    Third, as a group, solve the problem or engage in the discussion for the checkpoint.       Discuss with your neighbors:   What qualities would you want to see in a \"good\" answer to the question above?    What are some different approaches that you could use to start trying to answer the question?      "
 },
 {
   "id": "123n-3",
@@ -51,8 +51,8 @@ var ptx_lunr_docs = [
   "url": "123napproaches.html",
   "type": "Section",
   "number": "2.2",
-  "title": "Ways to Explore a Problem",
-  "body": " Ways to Explore a Problem  Let's discuss a few useful principles for approaching mathematical problems, which also apply to writing mathematical proofs.    Work out small examples with pencil and paper.     Explore the sum for small values of by computing the sums for . What patterns do you notice, if any?     Draw various pictures or diagrams to visualize the problem, theorem, definition, etc.     Can you draw a picture to represent the sum ? How might such a picture help you understand the problem better?     Use a computer to conduct experiments and generate data.     The software system SageMath is extremely useful for mathematics; a simple interface is available for free at https:\/\/sagecell.sagemath.org\/ . You can also install SageMath on your computer, or you can use it through a web browser via services such as CoCalc https:\/\/cocalc.com\/ . Here is a simple SageMath command to compute the sum for a given positive integer :  for n in range(1,11): print(n, sum([k for k in range(1, n+1)]))   Your goal in these exercises is to gather data and look for patterns that can help you formulate a conjecture about the value of the sum for a general positive integer .  "
+  "title": "Exploration Leads to Conjecture",
+  "body": " Exploration Leads to Conjecture  Let's discuss a few useful principles for exploring mathematical questions, which also apply to creating mathematical proofs.    Work out small examples with pencil and paper.     Explore the sum for small values of by computing the sums for . What patterns do you notice, if any?     Draw various pictures or diagrams to visualize the problem, theorem, definition, etc.     Can you draw a picture to represent the sum ? How might such a picture help you understand the problem better?     Use a computer to conduct experiments and generate data.    The software system SageMath is extremely useful for mathematics, and it is built on top of Python, so if you know some Python it is very familiar. A simple SageMath interface is available for free at https:\/\/sagecell.sagemath.org\/ . You can also install SageMath on your computer, or you can use it through a web browser via services such as CoCalc https:\/\/cocalc.com\/ . Here is a simple SageMath command to compute the sum for a given positive integer :  for n in range(1,11): print(n, sum([k for k in range(1, n+1)]))  It is always helpful to try to visualize sequences of numbers, rather than just look at the numerical output. For example, here is code to create a plot of the values for as points of the form .  L = [] for n in range(1,16): L.append([n, sum([k for k in range(1, n+1)])]) points(L,xmax=50,ymax=120)   What type of function does this point plot look like the graph of?   Based on the explorations above, we might conjecture that the sum is given by a quadratic function of . So, suppose that there are constants , , and such that the equality holds for all positive integers . Using the small values we computed earlier for , we can set up a system of equations to solve for , , and . Solving for , and (for example, by back substitution), we find that , so we have the following conjecture.         "
 },
 {
   "id": "principle-smallexamples",
@@ -100,13 +100,211 @@ var ptx_lunr_docs = [
   "body": "  Use a computer to conduct experiments and generate data.   "
 },
 {
-  "id": "123napproaches-8",
+  "id": "123napproaches-12",
   "level": "2",
-  "url": "123napproaches.html#123napproaches-8",
+  "url": "123napproaches.html#123napproaches-12",
   "type": "Checkpoint",
   "number": "2.2.6",
   "title": "",
-  "body": " The software system SageMath is extremely useful for mathematics; a simple interface is available for free at https:\/\/sagecell.sagemath.org\/ . You can also install SageMath on your computer, or you can use it through a web browser via services such as CoCalc https:\/\/cocalc.com\/ . Here is a simple SageMath command to compute the sum for a given positive integer :  for n in range(1,11): print(n, sum([k for k in range(1, n+1)]))  "
+  "body": " What type of function does this point plot look like the graph of?  "
+},
+{
+  "id": "conj-123nsum",
+  "level": "2",
+  "url": "123napproaches.html#conj-123nsum",
+  "type": "Conjecture",
+  "number": "2.2.7",
+  "title": "",
+  "body": "      "
+},
+{
+  "id": "123nproofs",
+  "level": "1",
+  "url": "123nproofs.html",
+  "type": "Section",
+  "number": "2.3",
+  "title": "Conjecture Requires Experimental Verification and Proof",
+  "body": " Conjecture Requires Experimental Verification and Proof  We have now explored different approaches to understanding the sum for positive integers , and it led us to conjecture that So... what do we do now?    Test conjectures with as many experiments as possible!    Let's put this principle into practice using SageMath by testing our conjecture for the first 10,000 positive integers . for n in range(1,10001): S = sum([k for k in range(1, n+1)]) formula = n*(n+1)\/2 if S != formula: print(\"Conjecture is false at n =\"+str(n)) if n % 1000 == 0: print(\"Conjecture is true up to n=\"+str(n)) This provides stronger evidence that our conjecture is correct, but it is still not a proof.  So, now that we have a conjecture that is supported by experimental evidence, we need to (A) determine if it is actually true and (B) if it is true, we need to give a clear explanation of why it is true. This means we need a mathematical proof. Unfortunately, \"mathematical proof\" is a more complicated topic than one might expect. The standards for what a \"rigorous\" proof is depends on context, audience, and purpose. It also depends on what \"world\" of mathematics you are working in.  In this class, we will rely on a framework developed by David Tall in his book How Humans Learn to Think Mathematically: Exploring the Three Worlds of Mathematics . You will read more about this framework and reflect on it for Essay 1.   David Tall's Three Worlds of Mathematics, from Proof and Proving in Mathematics Education , page 24.   A picture of David Tall's Three Worlds of Mathematics with images and words illustrating the embodied, symbolic, and formal worlds of mathematics.    Our goal is to give three different proofs of our conjecture, one proof representing each of the three worlds of mathematics.  "
+},
+{
+  "id": "principle-testmore",
+  "level": "2",
+  "url": "123nproofs.html#principle-testmore",
+  "type": "Principle",
+  "number": "2.3.1",
+  "title": "",
+  "body": "  Test conjectures with as many experiments as possible!   "
+},
+{
+  "id": "fig-threeworlds",
+  "level": "2",
+  "url": "123nproofs.html#fig-threeworlds",
+  "type": "Figure",
+  "number": "2.3.2",
+  "title": "",
+  "body": " David Tall's Three Worlds of Mathematics, from Proof and Proving in Mathematics Education , page 24.   A picture of David Tall's Three Worlds of Mathematics with images and words illustrating the embodied, symbolic, and formal worlds of mathematics.   "
+},
+{
+  "id": "123nembodied",
+  "level": "1",
+  "url": "123nembodied.html",
+  "type": "Section",
+  "number": "2.4",
+  "title": "Embodied Proof",
+  "body": " Embodied Proof  Here is a description of the embodied world from David Tall's paper \"Building Theories: The Three Worlds of Mathematics\", published in For the Learning of Mathematics in 2004 .   The first [world] grows out of our perceptions of the world and consists of our thinking about things that we perceive and sense, not only in the physical world, but in our own mental world of meaning. By reflection and by the use of increasingly sophisticated language, we can focus on aspects of our sensory experience that enable us to envisage conceptions that no longer exist in the world outside, such as a 'line' that is 'perfectly straight'. I now term this world the 'conceptual-embodied world' or ' embodied world' for short.   Embodied proofs are usually considered \"informal\" by professional mathematicians. Embodied mathematical reasoning is usually not considered sufficiently rigorous for professional mathematical proof in the early 21st century. However, embodied reasoning is often used by professional mathematicians to convey key insights or intuitions that are later made more precise with a formal proof.  Here is a picture that gives an embodied proof of our conjecture, represented for the value . Note that the shaded area is equal to the sum , and that this area is half of the area of a rectangle that is 10 blocks by 11 blocks in size. Therefore, the shaded area is half of the total area, which is The embodied proof of our conjecture is to imagine this picture for any value of .   A 10 by 11 grid illustrating the embodied proof of our conjecture.   A 10 by 11 grid where the squares in the lower left half are shaded.     Discuss this picture. Why is this a proof of the conjecture? Can you see how to generalize this picture to justify that our conjecture is true for any positive integer ?   On the Wikipedia page for the Pythagorean Theorem, there are many examples of visual proofs, which fall within the embodied category of proof. Let's look at one of these: rearrangement proofs .   Does this proof make sense? Why or why not? Does it convince you that the Pythagorean Theorem holds for every right triangle? Why or why not?   "
+},
+{
+  "id": "fig-embodied123nsum",
+  "level": "2",
+  "url": "123nembodied.html#fig-embodied123nsum",
+  "type": "Figure",
+  "number": "2.4.1",
+  "title": "",
+  "body": " A 10 by 11 grid illustrating the embodied proof of our conjecture.   A 10 by 11 grid where the squares in the lower left half are shaded.   "
+},
+{
+  "id": "123nembodied-7",
+  "level": "2",
+  "url": "123nembodied.html#123nembodied-7",
+  "type": "Checkpoint",
+  "number": "2.4.2",
+  "title": "",
+  "body": " Discuss this picture. Why is this a proof of the conjecture? Can you see how to generalize this picture to justify that our conjecture is true for any positive integer ?  "
+},
+{
+  "id": "123nembodied-9",
+  "level": "2",
+  "url": "123nembodied.html#123nembodied-9",
+  "type": "Checkpoint",
+  "number": "2.4.3",
+  "title": "",
+  "body": " Does this proof make sense? Why or why not? Does it convince you that the Pythagorean Theorem holds for every right triangle? Why or why not?  "
+},
+{
+  "id": "123nsymbolic",
+  "level": "1",
+  "url": "123nsymbolic.html",
+  "type": "Section",
+  "number": "2.5",
+  "title": "Symbolic Proof",
+  "body": " Symbolic Proof  Here is a description of the symbolic world from David Tall's paper \"Building Theories: The Three Worlds of Mathematics\", published in For the Learning of Mathematics in 2004 .   The second world is the world of symbols that we use for calculation and manipulation in arithmetic, algebra, calculus and so on. These begin with actions (such as pointing and counting) that are encapsulated as concepts by using symbols that allow us to switch effortlessly from processes to do mathematics, to concepts to think about... The initial stages of counting and early arithmetic are largely embodied. But the focus on the properties of the symbols and the relationship between them moves away from the physical meaning to a symbolic activity in arithmetic. This becomes increasingly sophisticated, with the introduction of more sophisticated number concepts (fractions, negatives, rationals, irrationals, infinite decimals, complex numbers, vectors in two and three, then n dimensions, and so on) that enable us to calculate and manipulate symbols with great accuracy and precision.   An example of an embodied-symbolic proof of our conjecture for is the following. Take two copies of our sum and add them together, but place one copy on top of the other, with the second set of summands appearing in the opposite order: When these two sums are added together, the summands pair to produce the sum of six copies of . Thus, the initial sum, , must be half of this total, is equal to half of , which is .  This proof is embodied because it relies on visualizing the two sums being added together in this way, and because it relies on the physical action of pairing the summands. It is symbolic because it relies on manipulating the symbols of addition and equality to arrive at the conclusion.   Discuss the proof above. Does it make sense? Why or why not?   Next, let's look at a more general version of this proof that would be considered symbolic . When writing a proof that is more symbolic or formal (which we will discuss next), we usually will place our argument in a proof environment that begins with the word \"Proof\" and ends with either a small box symbol or the letters \"QED\" (which stands for the Latin phrase quod erat demonstrandum , meaning \"which was to be demonstrated\"). This is what you should do when writing your own symbolic and\/or formal proofs.  In the proof below, we will use the sigma notation for sums. Remember that the notation means to sum the terms . Using this notation, our conjecture can be written as    Proof of  We write the sum twice, once in the usual order and once in reverse order, and add them together: Therefore, the equation above gives from which it follows that     Discuss this proof. Does it make sense? Why or why not?    Which of the three proofs (embodied, embodied-symbolic, and symbolic) that we have seen so far do you prefer? Why? Which of these proofs most makes you believe that our conjecture is true? Why?   If you want to see another example of a symbolic proof, look at the proof of the Pythagorean Theorem using similar triangles on Wikipedia. You can see that this proof feels different and requires a different type of reasoning from the embodied proof using rearrangement that we saw earlier.  "
+},
+{
+  "id": "123nsymbolic-6",
+  "level": "2",
+  "url": "123nsymbolic.html#123nsymbolic-6",
+  "type": "Checkpoint",
+  "number": "2.5.1",
+  "title": "",
+  "body": " Discuss the proof above. Does it make sense? Why or why not?  "
+},
+{
+  "id": "123nsymbolic-9",
+  "level": "2",
+  "url": "123nsymbolic.html#123nsymbolic-9",
+  "type": "Proof",
+  "number": "2.5.1",
+  "title": "Proof of Conjecture 2.2.7.",
+  "body": " Proof of  We write the sum twice, once in the usual order and once in reverse order, and add them together: Therefore, the equation above gives from which it follows that   "
+},
+{
+  "id": "123nsymbolic-10",
+  "level": "2",
+  "url": "123nsymbolic.html#123nsymbolic-10",
+  "type": "Checkpoint",
+  "number": "2.5.2",
+  "title": "",
+  "body": " Discuss this proof. Does it make sense? Why or why not?  "
+},
+{
+  "id": "123nsymbolic-11",
+  "level": "2",
+  "url": "123nsymbolic.html#123nsymbolic-11",
+  "type": "Checkpoint",
+  "number": "2.5.3",
+  "title": "",
+  "body": " Which of the three proofs (embodied, embodied-symbolic, and symbolic) that we have seen so far do you prefer? Why? Which of these proofs most makes you believe that our conjecture is true? Why?  "
+},
+{
+  "id": "123nformal",
+  "level": "1",
+  "url": "123nformal.html",
+  "type": "Section",
+  "number": "2.6",
+  "title": "Formal Proof",
+  "body": " Formal Proof  The final world of mathematics is the formal world, which is described as follows by David Tall in his paper \"Building Theories: The Three Worlds of Mathematics\", published in For the Learning of Mathematics in 2004 .   The third world is based on properties , expressed in terms of formal definitions that are used as axioms to specify mathematical structures (such as 'group', 'field', 'vector space', 'topological space' and so on). This world I have called the 'formal-axiomatic world' or ' formal world', for short. It turns previous experiences on their heads, working not with familiar objects of experience, but with axioms that are carefully formulated to define mathematical structures in terms of specified properties. Other properties are then deduced by formal proof to build a sequence of theorems. Within the axiomatic system, new concepts can be defined and their properties deduced to build a coherent, logically deduced theory.   One of the first formal proof methods that students usually learn is called mathematical induction . There are various flavors of induction, including the \"method of descent\", \"strong induction\", \"weak induction\", etc. We will continue to discuss various aspects of these distinctions, but what is more important than learning names is to learn and understand the key idea of induction:   verify small cases, then use those small cases to verify the next case, then use that new case to verify the next case, then use that new case to verify the next case, and then carefully explain why you can always continue this process for a specific problem or proof.     We will begin by considering an example of an embodied inductive proof. The question that will motivate us is the following.    Consider any map formed by drawing straight lines in the plane, each line extending infinitely in both directions, to represent the boundaries of the regions. Some regions will be compact and bounded, others will be unbounded and go off to infinity. Is it always possible to color the regions using only two colors, say white and gray, in such a way that white and gray regions never share an edge? In other words, the edges between regions always have white on one side and gray on the other side. If yes, why? If no, why not?     Work on this problem with your group. Do you think the answer is \"yes, it is always possible\" or \"no, it is not always possible\"? Try to come up with a convincing argument to support your answer.     The answer to is yes.     We will prove by mathematical induction on the number of lines, . For the base case, when , there are two regions separated by a single line. We can color one region white and the other gray, so the base case holds.  Next, we prove the inductive step. Assume that for some arbitrary value , any map formed by lines can be colored using only two colors so that no two adjacent regions share the same color. Now, consider a map formed by lines. We can think of this map as being formed by first drawing lines, and then adding one additional line. By our inductive hypothesis, we can color the regions formed by the first lines using only two colors. Now, when we add the st line, it will intersect some of the existing regions, dividing them into two new regions. To ensure that no two adjacent regions share the same color, we can simply switch the colors of all the regions on one side of the new line. This way, the regions on either side of the new line will have different colors, and the coloring of the other regions remains the same. Further, none of the adjacent regions have the same color.    Discuss this proof. Does it make sense? Why or why not?   Now, let's give an inductive proof of our original conjecture that is within the world of formal mathematics.   Proof of  We use induction. For the base case, when , we have so the base case holds.  For the inductive step, assume that for some arbitrary value , we have We need to show that this implies that Starting from the left-hand side, we have This completes the inductive step, and therefore our proof by induction is complete.    Discuss this proof. Does it make sense? Why or why not? What is the most confusing part? Why is it confusing?   These two proofs demonstrate how you can use a small number of initial data points to make a conjecture, then look at how the structure of the problem leads you to use the same pattern of logical argument repeatedly. This \"pattern of logical argument\" is the inductive step of an induction argument, while the small initial data points are the base cases of the inductive argument. We are now in a position to give a precise statement of the principle of mathematical induction.   Principle of Mathematical Induction   Suppose we have a sequence of mathematical statements (one for each natural number). If the following two properties hold, then is true for every natural number :   The base case : is true.    The induction step : If is true, then is true.       "
+},
+{
+  "id": "ques-twocolorregions",
+  "level": "2",
+  "url": "123nformal.html#ques-twocolorregions",
+  "type": "Question",
+  "number": "2.6.1",
+  "title": "",
+  "body": "  Consider any map formed by drawing straight lines in the plane, each line extending infinitely in both directions, to represent the boundaries of the regions. Some regions will be compact and bounded, others will be unbounded and go off to infinity. Is it always possible to color the regions using only two colors, say white and gray, in such a way that white and gray regions never share an edge? In other words, the edges between regions always have white on one side and gray on the other side. If yes, why? If no, why not?   "
+},
+{
+  "id": "123nformal-7",
+  "level": "2",
+  "url": "123nformal.html#123nformal-7",
+  "type": "Checkpoint",
+  "number": "2.6.2",
+  "title": "",
+  "body": " Work on this problem with your group. Do you think the answer is \"yes, it is always possible\" or \"no, it is not always possible\"? Try to come up with a convincing argument to support your answer.  "
+},
+{
+  "id": "thm-twocolors",
+  "level": "2",
+  "url": "123nformal.html#thm-twocolors",
+  "type": "Theorem",
+  "number": "2.6.3",
+  "title": "",
+  "body": "  The answer to is yes.   "
+},
+{
+  "id": "123nformal-9",
+  "level": "2",
+  "url": "123nformal.html#123nformal-9",
+  "type": "Proof",
+  "number": "2.6.1",
+  "title": "",
+  "body": " We will prove by mathematical induction on the number of lines, . For the base case, when , there are two regions separated by a single line. We can color one region white and the other gray, so the base case holds.  Next, we prove the inductive step. Assume that for some arbitrary value , any map formed by lines can be colored using only two colors so that no two adjacent regions share the same color. Now, consider a map formed by lines. We can think of this map as being formed by first drawing lines, and then adding one additional line. By our inductive hypothesis, we can color the regions formed by the first lines using only two colors. Now, when we add the st line, it will intersect some of the existing regions, dividing them into two new regions. To ensure that no two adjacent regions share the same color, we can simply switch the colors of all the regions on one side of the new line. This way, the regions on either side of the new line will have different colors, and the coloring of the other regions remains the same. Further, none of the adjacent regions have the same color.  "
+},
+{
+  "id": "123nformal-10",
+  "level": "2",
+  "url": "123nformal.html#123nformal-10",
+  "type": "Checkpoint",
+  "number": "2.6.4",
+  "title": "",
+  "body": " Discuss this proof. Does it make sense? Why or why not?  "
+},
+{
+  "id": "123nformal-12",
+  "level": "2",
+  "url": "123nformal.html#123nformal-12",
+  "type": "Proof",
+  "number": "2.6.2",
+  "title": "Proof of Conjecture 2.2.7.",
+  "body": " Proof of  We use induction. For the base case, when , we have so the base case holds.  For the inductive step, assume that for some arbitrary value , we have We need to show that this implies that Starting from the left-hand side, we have This completes the inductive step, and therefore our proof by induction is complete.  "
+},
+{
+  "id": "123nformal-13",
+  "level": "2",
+  "url": "123nformal.html#123nformal-13",
+  "type": "Checkpoint",
+  "number": "2.6.5",
+  "title": "",
+  "body": " Discuss this proof. Does it make sense? Why or why not? What is the most confusing part? Why is it confusing?  "
+},
+{
+  "id": "principle-induction",
+  "level": "2",
+  "url": "123nformal.html#principle-induction",
+  "type": "Principle",
+  "number": "2.6.6",
+  "title": "Principle of Mathematical Induction.",
+  "body": " Principle of Mathematical Induction   Suppose we have a sequence of mathematical statements (one for each natural number). If the following two properties hold, then is true for every natural number :   The base case : is true.    The induction step : If is true, then is true.      "
 },
 {
   "id": "prime-numbers",
