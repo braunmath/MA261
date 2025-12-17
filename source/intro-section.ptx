@@ -4,7 +4,31 @@
   <title>Introduction to MA 261</title>
 
   <p> 
-    Welcome to MA 261.
+    Welcome to MA 261, Intro to Number Theory! This course serves two purposes for students at UK:
+    <ol>
+      <li>
+        <p>
+          Students are introduced to fundamental concepts in elementary number theory, including divisibility, prime numbers, modular arithmetic, approximating real numbers by continued fractions, and Pythagorean triples.
+        </p>
+      </li>
+      <li>
+        <p>
+          MA 261 is a required course in the UK Math major "Foundations of Mathematics" track, in which students learn to read, construct, and critique mathematical proofs, along with learning about the role of proof in mathematics.
+        </p>
+      </li>
+    </ol>
+  </p>
+  <p>
+    In this particular course, we will also explore applications of number theory in music, specifically to the theory of rhythm and the theory of scales and temperament.
+  </p>
+  <p>
+    First, let's address the elephant in the room:
+        <em>Many students are afraid of, or have had bad previous experiences, with proofs in mathematics.</em>
+  </p>
+  <p>
+    If you are already comfortable with proofs, that's great! If not, then you are in the right course.
+    This course is intended to help you gain familiarity and skill with proof-based mathematics.
+    The first thing that we will do is to look at a simple theorem in number theory and use it as the basis for a larger conversation about different types of mathematical reasoning, and how those types of mathematical reasoning are reflected in different approaches to proof.
   </p>
 
 </section>

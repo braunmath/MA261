@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="123napproaches" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Ways to Explore a Problem</title>
+
+  <p>
+    Let's discuss a few useful principles for approaching mathematical problems, which also apply to writing mathematical proofs.
+  </p>
+
+  <principle xml:id="principle-smallexamples">
+    <statement>
+      <p>
+        Work out small examples with pencil and paper.
+      </p>
+    </statement>
+  </principle>
+
+  <exercise>
+    <p>
+      Explore the sum <m>1+2+3+\cdots+n</m> for small values of <m>n</m> by computing the sums for <m>n=1,2,3,4,5</m>.
+      What patterns do you notice, if any?
+    </p>
+  </exercise>
+
+
+    <principle xml:id="principle-drawapicture">
+      <statement>
+        <p>
+          Draw various pictures or diagrams to visualize the problem, theorem, definition, etc.
+        </p>
+      </statement>
+    </principle>
+
+    <exercise>
+      <p>
+        Can you draw a picture to represent the sum <m>1+2+3+\cdots+n</m>?
+        How might such a picture help you understand the problem better?
+      </p>
+    </exercise>
+
+      <principle xml:id="principle-computationalexperiments">
+    <statement>
+      <p>
+        Use a computer to conduct experiments and generate data.
+      </p>
+    </statement>
+    </principle>
+
+    <exercise>
+      <p>
+        The software system SageMath is extremely useful for mathematics; a simple interface is available for free at <url href="https://sagecell.sagemath.org/">https://sagecell.sagemath.org/</url>.
+        You can also install SageMath on your computer, or you can use it through a web browser via services such as CoCalc <url href="https://cocalc.com/">https://cocalc.com/</url>.
+        Here is a simple SageMath command to compute the sum <m>1+2+3+\cdots+n</m> for a given positive integer <m>n</m>:
+      </p>
+      <program language="sage">
+      for n in range(1,11):
+          print(n, sum([k for k in range(1, n+1)]))
+      </program>
+    </exercise>
+
+    <p>
+      Your goal in these exercises is to gather data and look for patterns that can help you formulate a conjecture about the value of the sum <m>1+2+3+\cdots+n</m> for a general positive integer <m>n</m>.
+    </p>
+
+</section>

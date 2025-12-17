@@ -4,7 +4,59 @@
   <title>Sums of Integers</title>
 
   <p>
-    
+    Mathematical reasoning <em>always</em> begins with a question.
+    Most students experience math in school, including in university, as a sequence of answers to questions that they have never heard asked.
+    Don't believe this lie!
+    Mathematics is about wondering, questioning, being curious, and making sense of the world.
+    So let's begin with a question.
   </p>
+
+  <assumption>
+    <p>
+    What is the value of the sum <m>1+2+3+\cdots+n</m> for different positive integer values of <m>n</m>?
+    </p>
+  </assumption>
+  <remark>
+  
+    <p>
+      In this class, we will frequently engage in collaborative activities, which we will call checkpoints.
+      Here are the expectations for checkpoints, which will usually either be a problem to solve or a question to discuss:
+      <ul>
+        <li>
+          <p>
+            First, begin the discussion by going around your group and having each person spend 10-seconds sharing an initial strategy for solving the problem, or sharing a answer to the question if it is a discussion question.
+          </p>
+        </li>
+        <li>
+          <p>
+            Second, go around the group again and give a 10-second follow-up answer. This allows everyone to have a chance to offer their thoughts before the general problem-solving or discussion begins.
+          </p>
+        </li>
+        <li>
+          <p>
+            Third, as a group, solve the problem or engage in the discussion for the checkpoint.
+          </p>
+        </li>
+      </ul>
+    </p>
+  </remark>
+
+  <exercise>
+    <p>
+      Discuss with your neighbors:
+      <ol>
+        <li>
+          <p>
+            What qualities would you want to see in a "good" answer to the question above?
+          </p>
+        </li>
+        <li>
+          <p>
+            What are some different approaches that you could use to start trying to answer the question?
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
 
 </section>

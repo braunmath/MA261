@@ -5,6 +5,7 @@
 
      <!-- include sections  -->
   <xi:include href="123n.ptx" />
+  <xi:include href="123napproaches.ptx" />
     
 
 </chapter>
