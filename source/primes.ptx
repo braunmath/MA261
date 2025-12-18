@@ -5,6 +5,7 @@
 
      <!-- include sections  -->
   <xi:include href="prime-numbers.ptx" />
+  <xi:include href="infinitudeofprimes.ptx" />
     
 
 </chapter>

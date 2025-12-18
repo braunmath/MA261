@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="infinitudeofprimes" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Infinitude of Primes
+  </title>
+
+  <p>
+    The most important question about primes that was asked in ancient times is the following.
+  </p>
+
+  <question>
+    <p>
+      How many primes are there?
+      Are there only finitely many?
+      Or are there infinitely many?
+    </p>
+  </question>
+
+  <p>
+    The answer to this question is the following theorem, found in <url href="https://en.wikipedia.org/wiki/Euclid%27s_Elements">Euclid's Elements</url>.
+  </p>
+
+  
+
+    
+
+
+</section>
