@@ -151,7 +151,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.4",
   "title": "Embodied Proof",
-  "body": " Embodied Proof  Here is a description of the embodied world from David Tall's paper \"Building Theories: The Three Worlds of Mathematics\", published in For the Learning of Mathematics in 2004 .   The first [world] grows out of our perceptions of the world and consists of our thinking about things that we perceive and sense, not only in the physical world, but in our own mental world of meaning. By reflection and by the use of increasingly sophisticated language, we can focus on aspects of our sensory experience that enable us to envisage conceptions that no longer exist in the world outside, such as a 'line' that is 'perfectly straight'. I now term this world the 'conceptual-embodied world' or ' embodied world' for short.   Embodied proofs are usually considered \"informal\" by professional mathematicians. Embodied mathematical reasoning is usually not considered sufficiently rigorous for professional mathematical proof in the early 21st century. However, embodied reasoning is often used by professional mathematicians to convey key insights or intuitions that are later made more precise with a formal proof.  Here is a picture that gives an embodied proof of our conjecture, represented for the value . Note that the shaded area is equal to the sum , and that this area is half of the area of a rectangle that is 10 blocks by 11 blocks in size. Therefore, the shaded area is half of the total area, which is The embodied proof of our conjecture is to imagine this picture for any value of .   A 10 by 11 grid illustrating the embodied proof of our conjecture.   A 10 by 11 grid where the squares in the lower left half are shaded.     Discuss this picture. Why is this a proof of the conjecture? Can you see how to generalize this picture to justify that our conjecture is true for any positive integer ?   On the Wikipedia page for the Pythagorean Theorem, there are many examples of visual proofs, which fall within the embodied category of proof. Let's look at one of these: rearrangement proofs .   Does this proof make sense? Why or why not? Does it convince you that the Pythagorean Theorem holds for every right triangle? Why or why not?   "
+  "body": " Embodied Proof  Here is a description of the embodied world from David Tall's paper \"Building Theories: The Three Worlds of Mathematics\", published in For the Learning of Mathematics in 2004 .   The first [world] grows out of our perceptions of the world and consists of our thinking about things that we perceive and sense, not only in the physical world, but in our own mental world of meaning. By reflection and by the use of increasingly sophisticated language, we can focus on aspects of our sensory experience that enable us to envisage conceptions that no longer exist in the world outside, such as a 'line' that is 'perfectly straight'. I now term this world the 'conceptual-embodied world' or ' embodied world' for short.   Embodied proofs are usually considered \"informal\" by professional mathematicians. Embodied mathematical reasoning is usually not considered sufficiently rigorous for professional mathematical proof in the early 21st century. However, embodied reasoning is often used by professional mathematicians to convey key insights or intuitions that are later made more precise with a formal proof.  Here is a picture that gives an embodied proof of our conjecture, represented for the value . Note that the shaded area is equal to the sum , and that this area is half of the area of a rectangle that is 10 blocks by 11 blocks in size. Therefore, the shaded area is half of the total area, which is The embodied proof of our conjecture is to imagine this picture for any value of .   A 10 by 11 grid illustrating the embodied proof of our conjecture.   A 10 by 11 grid where the squares in the lower left half are shaded.     Discuss this picture. Why is this a proof of the conjecture? Can you see how to generalize this picture to justify that our conjecture is true for any positive integer ?   "
 },
 {
   "id": "fig-embodied123nsum",
@@ -172,22 +172,13 @@ var ptx_lunr_docs = [
   "body": " Discuss this picture. Why is this a proof of the conjecture? Can you see how to generalize this picture to justify that our conjecture is true for any positive integer ?  "
 },
 {
-  "id": "123nembodied-9",
-  "level": "2",
-  "url": "123nembodied.html#123nembodied-9",
-  "type": "Checkpoint",
-  "number": "2.4.3",
-  "title": "",
-  "body": " Does this proof make sense? Why or why not? Does it convince you that the Pythagorean Theorem holds for every right triangle? Why or why not?  "
-},
-{
   "id": "123nsymbolic",
   "level": "1",
   "url": "123nsymbolic.html",
   "type": "Section",
   "number": "2.5",
   "title": "Symbolic Proof",
-  "body": " Symbolic Proof  Here is a description of the symbolic world from David Tall's paper \"Building Theories: The Three Worlds of Mathematics\", published in For the Learning of Mathematics in 2004 .   The second world is the world of symbols that we use for calculation and manipulation in arithmetic, algebra, calculus and so on. These begin with actions (such as pointing and counting) that are encapsulated as concepts by using symbols that allow us to switch effortlessly from processes to do mathematics, to concepts to think about... The initial stages of counting and early arithmetic are largely embodied. But the focus on the properties of the symbols and the relationship between them moves away from the physical meaning to a symbolic activity in arithmetic. This becomes increasingly sophisticated, with the introduction of more sophisticated number concepts (fractions, negatives, rationals, irrationals, infinite decimals, complex numbers, vectors in two and three, then n dimensions, and so on) that enable us to calculate and manipulate symbols with great accuracy and precision.   An example of an embodied-symbolic proof of our conjecture for is the following. Take two copies of our sum and add them together, but place one copy on top of the other, with the second set of summands appearing in the opposite order: When these two sums are added together, the summands pair to produce the sum of six copies of . Thus, the initial sum, , must be half of this total, is equal to half of , which is .  This proof is embodied because it relies on visualizing the two sums being added together in this way, and because it relies on the physical action of pairing the summands. It is symbolic because it relies on manipulating the symbols of addition and equality to arrive at the conclusion.   Discuss the proof above. Does it make sense? Why or why not?   Next, let's look at a more general version of this proof that would be considered symbolic . When writing a proof that is more symbolic or formal (which we will discuss next), we usually will place our argument in a proof environment that begins with the word \"Proof\" and ends with either a small box symbol or the letters \"QED\" (which stands for the Latin phrase quod erat demonstrandum , meaning \"which was to be demonstrated\"). This is what you should do when writing your own symbolic and\/or formal proofs.  In the proof below, we will use the sigma notation for sums. Remember that the notation means to sum the terms . Using this notation, our conjecture can be written as    Proof of  We write the sum twice, once in the usual order and once in reverse order, and add them together: Therefore, the equation above gives from which it follows that     Discuss this proof. Does it make sense? Why or why not?    Which of the three proofs (embodied, embodied-symbolic, and symbolic) that we have seen so far do you prefer? Why? Which of these proofs most makes you believe that our conjecture is true? Why?   If you want to see another example of a symbolic proof, look at the proof of the Pythagorean Theorem using similar triangles on Wikipedia. You can see that this proof feels different and requires a different type of reasoning from the embodied proof using rearrangement that we saw earlier.  "
+  "body": " Symbolic Proof  Here is a description of the symbolic world from David Tall's paper \"Building Theories: The Three Worlds of Mathematics\", published in For the Learning of Mathematics in 2004 .   The second world is the world of symbols that we use for calculation and manipulation in arithmetic, algebra, calculus and so on. These begin with actions (such as pointing and counting) that are encapsulated as concepts by using symbols that allow us to switch effortlessly from processes to do mathematics, to concepts to think about... The initial stages of counting and early arithmetic are largely embodied. But the focus on the properties of the symbols and the relationship between them moves away from the physical meaning to a symbolic activity in arithmetic. This becomes increasingly sophisticated, with the introduction of more sophisticated number concepts (fractions, negatives, rationals, irrationals, infinite decimals, complex numbers, vectors in two and three, then n dimensions, and so on) that enable us to calculate and manipulate symbols with great accuracy and precision.   An example of an embodied-symbolic proof of our conjecture for is the following. Take two copies of our sum and add them together, but place one copy on top of the other, with the second set of summands appearing in the opposite order: When these two sums are added together, the summands pair to produce the sum of six copies of . Thus, the initial sum, , must be half of this total, is equal to half of , which is .  This proof is embodied because it relies on visualizing the two sums being added together in this way, and because it relies on the physical action of pairing the summands. It is symbolic because it relies on manipulating the symbols of addition and equality to arrive at the conclusion.   Discuss the proof above. Does it make sense? Why or why not?   Next, let's look at a more general version of this proof that would be considered symbolic . When writing a proof that is more symbolic or formal (which we will discuss next), we usually will place our argument in a proof environment that begins with the word \"Proof\" and ends with either a small box symbol or the letters \"QED\" (which stands for the Latin phrase quod erat demonstrandum , meaning \"which was to be demonstrated\"). This is what you should do when writing your own symbolic and\/or formal proofs.  In the proof below, we will use the sigma notation for sums. Remember that the notation means to sum the terms . Using this notation, our conjecture can be written as    Proof of  We write the sum twice, once in the usual order and once in reverse order, and add them together: Therefore, the equation above gives from which it follows that     Discuss this proof. Does it make sense? Why or why not?    Which of the three proofs (embodied, embodied-symbolic, and symbolic) that we have seen so far do you prefer? Why? Which of these proofs most makes you believe that our conjecture is true? Why?   "
 },
 {
   "id": "123nsymbolic-6",
@@ -503,6 +494,42 @@ var ptx_lunr_docs = [
   "number": "3.1.13",
   "title": "",
   "body": "    What do you think the two or three key ideas of this proof are?    If you had to summarize this proof in one or two sentences, without using any symbols, what would you say?    In what way does the following picture give an embodied version of this proof?     A picture of dots, illustrating that is divisible by which has a prime divisor .   A picture of sixty dots grouped into five groups of twelve, where each of those is grouped into four groups of three.     "
+},
+{
+  "id": "infinitudeofprimes",
+  "level": "1",
+  "url": "infinitudeofprimes.html",
+  "type": "Section",
+  "number": "3.2",
+  "title": "Infinitude of Primes",
+  "body": " Infinitude of Primes  The most important question about primes that was asked in ancient times is the following.   How many primes are there? Are there only finitely many? Or are there infinitely many?   The answer to this question is the following theorem, found in Euclid's Elements .    There are infinitely many primes.    We will give two versions of Euclid's proof. The first is a constructive proof.   We will apply the following operation: given a set of primes , produce the number . We will call this a Euclid step .  Note that does not divide , since dividing by leaves a remainder of . Similarly, dividing by leaves a remainder of . The same holds for every . Therefore, is a number that is not divisible by any of the primes we have, and by , there is a new prime that divides .  Thus, starting with , we obtain the prime . From there, we can produce the prime . From there, we can produce the prime . From there, we can produce the number . We can pick either of or to add to our list of primes.  With each application of a Euclid step, we produce a new prime. Thus, this yields an algorithm for constructing an infinite sequence of prime numbers.   "
+},
+{
+  "id": "infinitudeofprimes-3",
+  "level": "2",
+  "url": "infinitudeofprimes.html#infinitudeofprimes-3",
+  "type": "Question",
+  "number": "3.2.1",
+  "title": "",
+  "body": " How many primes are there? Are there only finitely many? Or are there infinitely many?  "
+},
+{
+  "id": "thm-infinitudeofprimes",
+  "level": "2",
+  "url": "infinitudeofprimes.html#thm-infinitudeofprimes",
+  "type": "Theorem",
+  "number": "3.2.2",
+  "title": "",
+  "body": "  There are infinitely many primes.   "
+},
+{
+  "id": "infinitudeofprimes-7",
+  "level": "2",
+  "url": "infinitudeofprimes.html#infinitudeofprimes-7",
+  "type": "Proof",
+  "number": "3.2.1",
+  "title": "",
+  "body": " We will apply the following operation: given a set of primes , produce the number . We will call this a Euclid step .  Note that does not divide , since dividing by leaves a remainder of . Similarly, dividing by leaves a remainder of . The same holds for every . Therefore, is a number that is not divisible by any of the primes we have, and by , there is a new prime that divides .  Thus, starting with , we obtain the prime . From there, we can produce the prime . From there, we can produce the prime . From there, we can produce the number . We can pick either of or to add to our list of primes.  With each application of a Euclid step, we produce a new prime. Thus, this yields an algorithm for constructing an infinite sequence of prime numbers.  "
 },
 {
   "id": "divisionalgorithm",
