@@ -144,13 +144,42 @@
                     </li>
                     <li>
                         <p>
-                            The <em>induction step</em>: If <m>P(k)</m> is true, then <m>P(k+1)</m> is true.
+                            The <em>induction step</em>: If for a natural number <m>k</m> the statement <m>P(k)</m> is true, then <m>P(k+1)</m> is true.
                         </p>
                     </li>
                 </ol>
             </p>
         </statement>
     </principle>
+
+    <p>
+      There is a variation on induction called <em>strong induction</em> that uses a stronger induction step, which we will sometimes need.
+    </p>
   
+
+    <principle xml:id="principle-strong-induction">
+        <title>Principle of Strong Mathematical Induction</title>
+        <statement>
+            <p>Suppose we have a sequence of mathematical statements <m>P(1),P(2),P(3),\ldots</m> (one for each natural number).
+                If the following two properties hold, then <m>P(n)</m> is true for every natural number <m>n</m>:
+                <ol>
+                    <li>
+                        <p>
+                            The <em>base case</em>: <m>P(1)</m> is true.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            The <em>induction step</em>: If for every natural number <m>m</m> the statement <m>P(k)</m> is true for all <m>1\leq k\leq m</m>, then <m>P(m+1)</m> is true.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+        </statement>
+    </principle>
+
+    <p>
+      Note that in strong induction, we have to know that <em>all</em> of the preceding statements are true, rather than just the immediately preceding statement, in order to guarantee the implication.
+    </p>
 
 </section>

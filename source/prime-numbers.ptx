@@ -5,8 +5,274 @@
   </title>
 
   <p>
-    
+    Now that we have language allowing us to describe different aspects of mathematical reasoning and proof, we can begin our study of number theory.
+    We will start with the study of prime numbers.
+    First, let's define the types of numbers we will be discussing.
   </p>
+
+  <definition xml:id="def-numbers">
+    <statement>
+      <p>
+        <ul>
+          <li>
+            <p>
+              The set of <em>natural numbers</em> is the set <m>\mathbb{N}:=\{1, 2, 3, \ldots\}</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              The set of <em>integers</em> is the set <m>\mathbb{Z}:=\{\ldots, -3, -2, -1, 0, 1, 2, 3, \ldots\}</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Observe that we are using set notation above to define these families of numbers.
+    We use "<m>:=</m>" to mean "is defined to be"; this is helpful when distinguishing between when we define something and when we are indicating equality.
+    When we are defining a set, we often use curly braces <m>\{\}</m> to indicate the elements of the set and we specify the elements within the braces.
+    One can use special notation within the braces to indicate a pattern for the elements of the set.
+    For example, we can describe the natural numbers as
+    <me>
+      \mathbb{N} = \{ n \in \mathbb{Z} : n > 0 \} \, .
+    </me>
+    The symbol "<m>\in</m>" is read as "is an element of" or "belongs to".
+    The ":" is read as "such that", so that the above set is read as "the set of all integers <m>n</m> such that <m>n</m> is greater than <m>0</m>".
+  </p>
+
+  <exercise>
+    <p>
+      Does the notation above make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <p>
+  With this, we can define sets such as the <em>rational numbers</em>, which are the numbers in the set 
+  <me>\mathbb{Q}:=\left\{\frac{a}{b} : a, b \in \mathbb{Z}, b \neq 0\right\} \, .</me>
+  </p>
+
+  <exercise>
+    <p>
+      Take turns reading the set-builder description of the rationals out loud as a sentence.
+      Discuss <em>every symbol</em> used in the definition and talk about what that symbol represents.
+    </p>
+  </exercise>
+
+
+  <definition xml:id="def-divisible">
+    <statement>
+      <p>
+        Let <m>a</m> and <m>b</m> be integers with <m>b \neq 0</m>.
+        We say that <m>a</m> is <em>divisible by</em> <m>b</m> if there exists an integer <m>k</m> such that <m>a = bk</m>.
+        If <m>a</m> is divisible by <m>b</m>, we also say that <m>b</m> <em>divides</em> <m>a</m> and we write <m>b \mid a</m>.
+        If <m>a</m> is not divisible by <m>b</m>, we write <m>b \nmid a</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <example>
+    <p>
+      <ol>
+        <li>
+          <p>
+            <m>5\mid 30</m> means that five divides thirty.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>6\nmid 17</m> means that six does not divide seventeen.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </example>
+
+  <p>
+    We can combine set builder notation with these definitions to describe sets of numbers with certain divisibility properties.
+    For example, the set of all integers that are divisible by <m>5</m> but not divisible by <m>6</m> is written as
+    <me>
+      \{ n \in \mathbb{Z} : 5 \mid n \text{ and } 6 \nmid n \} \, .
+    </me>
+    Note that if we tried to list the elements of this set, it would be hard to make it clear what the pattern is.
+    For example, if we wrote the set above as
+    <me>
+      \{\ldots, -25, -20, -10, -5, 5, 10, 15, 25, \ldots\} \, ,
+    </me>
+    it would be unclear that <m>30</m> is not in the set.
+    However, using the set-builder notation, two conditions are given following the ":" symbol that can be used to clearly determine that <m>30</m> is not in the set.
+  </p>
+
+  <exercise>
+    <p>
+      Use set builder notation and the notation for divisibility to write the following sets:
+      <ol>
+        <li>
+          <p>
+            The set of all natural numbers divisible by <m>3</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The set of all integers not divisible by <m>5</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The set of all natural numbers divisible by <m>4</m> but not by <m>6</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+
+  <p>
+    Some of the most important natural numbers are the primes, defined as follows.
+  </p>
+
+
+  <definition xml:id="def-prime-number">
+    <statement>
+      <p>
+      A <em>prime number</em> is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+      If a number is not prime, then it is <em>composite</em>.
+      We will denote the set of prime numbers by <m>\mathbb{P}</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise>
+    <p>
+      With your group, find the first ten prime numbers.
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      With your group, use set builder notation to describe the set of all prime numbers that are three more than a multiple of four.
+    </p>
+    <p>
+      Hint: You might need to write a longer phrase to the right of ":", for example, to describe what the remainder of <m>p</m> is after dividing by <m>4</m>.
+    </p>
+  </exercise>
+
+  <p>
+    Number theory is an ancient topic of study, with prime numbers being studied for thousands of years.
+    We will begin with an old process to find primes.
+  </p>
+
+  <definition xml:id="def-sieveoferatosthenes">
+    <statement>
+      <p>
+        The <em>Sieve of Eratosthenes</em> is a method to find all prime numbers between <m>2</m> and a given bound <m>N</m>.
+        The process is as follows:
+        <ul>
+          <li>
+            <p>
+              Write down all the numbers from <m>2</m> to <m>N</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Start with the first number in the list (which is <m>2</m>).
+              Circle it (it is prime) and then cross out all of its multiples.
+            </p>
+          </li>
+          <li>
+            <p>
+              Move to the next number that is not crossed out.
+              Circle it (it is prime) and then cross out all of its multiples.
+            </p>
+          </li>
+          <li>
+            <p>
+              Repeat this process until you have processed each number up to <m>N</m>.
+            </p>
+          </li>
+        </ul>
+        The numbers that remain uncrossed are all of the prime numbers between <m>2</m> and <m>N</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise>
+    <p>
+      Use the Sieve of Eratosthenes to find all prime numbers between <m>2</m> and <m>50</m>.
+    </p>
+  </exercise>
+
+  <p>
+    A visual illustration of the Sieve of Eratosthenes is given on the <url href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Wikipedia page for the Sieve</url>.
+    Implicit in the Sieve of Eratosthenes is that the idea that every number is divisible by some prime number.
+    Let's go ahead and prove that this is true.
+  </p>
+
+  <theorem xml:id="thm-primesdividenumbers">
+    <statement>
+      <p>
+        Every natural number greater than 1 is divisible by a prime number.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      This proof closely follows the one given for <url href="https://bookstore.ams.org/view?ProductCode=AMSTEXT/58">Proposition 1.6.3 in Cioaba and Linde's <em>A Bridge to Advanced Mathematics</em></url>.
+      We will prove this by strong induction <xref ref="principle-strong-induction"/>.
+      The base case is <m>n = 2</m>, and the result is true in this case since <m>2</m> is prime.
+    </p>
+    <p>
+      For the (strong) induction step, let <m>m</m> be a positive integer and assume that every natural number <m>1\leq k\leq m</m> has a prime divisor.
+      We want to prove that <m>m+1</m> also has a prime divisor.
+      If <m>m+1</m> is prime, then we are done.
+      If not, then <m>m+1</m> must have some divisor <m>d</m> such that <m>1\lt d\lt m+1</m>, so that means there exists a number <m>c</m> such that
+      <md>
+        m+1=cd \, .
+      </md>
+      By our induction hypothesis, <m>d</m> has a prime divisor.
+      So, there exists a number <m>a</m> and a prime <m>p</m> such that
+      <me>
+        d=ap \, .
+      </me>
+      Therefore, we have that
+      <md>
+        m+1=cd=cap 
+      </md>
+      and thus <m>p</m> is also a prime divisor of <m>m+1</m>, which finishes our proof.      
+    </p>
+  </proof>
+
+  <exercise>
+    <p>
+      <ol>
+        <li>
+          <p>
+            What do you think the two or three <em>key ideas</em> of this proof are?
+          </p>
+        </li>
+        <li>
+          <p>
+            If you had to summarize this proof in one or two sentences, without using any symbols, what would you say?
+          </p>
+        </li>
+        <li>
+          <p>
+            In what way does the following picture give an embodied version of this proof?
+          </p>
+        </li>
+      </ol>
+      <figure xml:id="fig-numbershaveprimedivisors">
+        <caption>A picture of <m>60</m> dots, illustrating that <m>60</m> is divisible by <m>12</m> which has a prime divisor <m>3</m>.</caption>
+        <image source="numbershaveprimedivisors.png" width="30%">
+          <shortdescription>A picture of sixty dots grouped into five groups of twelve, where each of those is grouped into four groups of three.</shortdescription>
+        </image>
+      </figure>
+    </p>
+  </exercise>
+
+
+  
 
 
 </section>
