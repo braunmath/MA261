@@ -366,8 +366,8 @@ var ptx_lunr_docs = [
   "url": "prime-numbers.html",
   "type": "Section",
   "number": "3.1",
-  "title": "Prime Numbers",
-  "body": " Prime Numbers  Now that we have language allowing us to describe different aspects of mathematical reasoning and proof, we can begin our study of number theory. We will start with the study of prime numbers. First, let's define the types of numbers we will be discussing.       The set of natural numbers is the set .    The set of integers is the set .       Observe that we are using set notation above to define these families of numbers. We use \" \" to mean \"is defined to be\"; this is helpful when distinguishing between when we define something and when we are indicating equality. When we are defining a set, we often use curly braces to indicate the elements of the set and we specify the elements within the braces. One can use special notation within the braces to indicate a pattern for the elements of the set. For example, we can describe the natural numbers as The symbol \" \" is read as \"is an element of\" or \"belongs to\". The \":\" is read as \"such that\", so that the above set is read as \"the set of all integers such that is greater than \".   Does the notation above make sense? Why or why not?   With this, we can define sets such as the rational numbers , which are the numbers in the set    Take turns reading the set-builder description of the rationals out loud as a sentence. Discuss every symbol used in the definition and talk about what that symbol represents.     Let and be integers with . We say that is divisible by  if there exists an integer such that . If is divisible by , we also say that  divides  and we write . If is not divisible by , we write .         means that five divides thirty.     means that six does not divide seventeen.      We can combine set builder notation with these definitions to describe sets of numbers with certain divisibility properties. For example, the set of all integers that are divisible by but not divisible by is written as Note that if we tried to list the elements of this set, it would be hard to make it clear what the pattern is. For example, if we wrote the set above as it would be unclear that is not in the set. However, using the set-builder notation, two conditions are given following the \":\" symbol that can be used to clearly determine that is not in the set.   Use set builder notation and the notation for divisibility to write the following sets:   The set of all natural numbers divisible by .    The set of all integers not divisible by .    The set of all natural numbers divisible by but not by .      Some of the most important natural numbers are the primes, defined as follows.    A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. If a number is not prime, then it is composite . We will denote the set of prime numbers by .     With your group, find the first ten prime numbers.    With your group, use set builder notation to describe the set of all prime numbers that are three more than a multiple of four.  Hint: You might need to write a longer phrase to the right of \":\", for example, to describe what the remainder of is after dividing by .   Number theory is an ancient topic of study, with prime numbers being studied for thousands of years. We will begin with an old process to find primes.    The Sieve of Eratosthenes is a method to find all prime numbers between and a given bound . The process is as follows:   Write down all the numbers from to .    Start with the first number in the list (which is ). Circle it (it is prime) and then cross out all of its multiples.    Move to the next number that is not crossed out. Circle it (it is prime) and then cross out all of its multiples.    Repeat this process until you have processed each number up to .   The numbers that remain uncrossed are all of the prime numbers between and .     Use the Sieve of Eratosthenes to find all prime numbers between and .   A visual illustration of the Sieve of Eratosthenes is given on the Wikipedia page for the Sieve . Implicit in the Sieve of Eratosthenes is that the idea that every number is divisible by some prime number. Let's go ahead and prove that this is true.    Every natural number greater than 1 is divisible by a prime number.     This proof closely follows the one given for Proposition 1.6.3 in Cioaba and Linde's A Bridge to Advanced Mathematics . We will prove this by strong induction . The base case is , and the result is true in this case since is prime.  For the (strong) induction step, let be a positive integer and assume that every natural number has a prime divisor. We want to prove that also has a prime divisor. If is prime, then we are done. If not, then must have some divisor such that , so that means there exists a number such that By our induction hypothesis, has a prime divisor. So, there exists a number and a prime such that Therefore, we have that and thus is also a prime divisor of , which finishes our proof.       What do you think the two or three key ideas of this proof are?    If you had to summarize this proof in one or two sentences, without using any symbols, what would you say?    In what way does the following picture give an embodied version of this proof?     A picture of dots, illustrating that is divisible by which has a prime divisor .   A picture of sixty dots grouped into five groups of twelve, where each of those is grouped into four groups of three.      "
+  "title": "Numbers, Sets, and Primes",
+  "body": " Numbers, Sets, and Primes  Now that we have language allowing us to describe different aspects of mathematical reasoning and proof, we can begin our study of number theory. We will start with the study of prime numbers. First, let's define the types of numbers we will be discussing.       The set of natural numbers is the set .    The set of integers is the set .       Observe that we are using set notation above to define these families of numbers. We use \" \" to mean \"is defined to be\"; this is helpful when distinguishing between when we define something and when we are indicating equality. When we are defining a set, we often use curly braces to indicate the elements of the set and we specify the elements within the braces. One can use special notation within the braces to indicate a pattern for the elements of the set. For example, we can describe the natural numbers as The symbol \" \" is read as \"is an element of\" or \"belongs to\". The \":\" is read as \"such that\", so that the above set is read as \"the set of all integers such that is greater than \".   Does the notation above make sense? Why or why not?   With this, we can define sets such as the rational numbers , which are the numbers in the set    Take turns reading the set-builder description of the rationals out loud as a sentence. Discuss every symbol used in the definition and talk about what that symbol represents.     Let and be integers with . We say that is divisible by  if there exists an integer such that . If is divisible by , we also say that  divides  and we write . If is not divisible by , we write .         means that five divides thirty.     means that six does not divide seventeen.      We can combine set builder notation with these definitions to describe sets of numbers with certain divisibility properties. For example, the set of all integers that are divisible by but not divisible by is written as Note that if we tried to list the elements of this set, it would be hard to make it clear what the pattern is. For example, if we wrote the set above as it would be unclear that is not in the set. However, using the set-builder notation, two conditions are given following the \":\" symbol that can be used to clearly determine that is not in the set.   Use set builder notation and the notation for divisibility to write the following sets:   The set of all natural numbers divisible by .    The set of all integers not divisible by .    The set of all natural numbers divisible by but not by .      Some of the most important natural numbers are the primes, defined as follows.    A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. If a number is not prime, then it is composite . We will denote the set of prime numbers by .     With your group, find the first ten prime numbers.    With your group, use set builder notation to describe the set of all prime numbers that are three more than a multiple of four.  Hint: You might need to write a longer phrase to the right of \":\", for example, to describe what the remainder of is after dividing by .   Number theory is an ancient topic of study, with prime numbers being studied for thousands of years. We will begin with an old process to find primes.    The Sieve of Eratosthenes is a method to find all prime numbers between and a given bound . The process is as follows:   Write down all the numbers from to .    Start with the first number in the list (which is ). Circle it (it is prime) and then cross out all of its multiples.    Move to the next number that is not crossed out. Circle it (it is prime) and then cross out all of its multiples.    Repeat this process until you have processed each number up to .   The numbers that remain uncrossed are all of the prime numbers between and .     Use the Sieve of Eratosthenes to find all prime numbers between and .   A visual illustration of the Sieve of Eratosthenes is given on the Wikipedia page for the Sieve . Implicit in the Sieve of Eratosthenes is that the idea that every number is divisible by some prime number. Let's go ahead and prove that this is true.    Every natural number greater than 1 is divisible by a prime number.     This proof closely follows the one given for Proposition 1.6.3 in Cioaba and Linde's A Bridge to Advanced Mathematics . We will prove this by strong induction . The base case is , and the result is true in this case since is prime.  For the (strong) induction step, let be a positive integer and assume that every natural number has a prime divisor. We want to prove that also has a prime divisor. If is prime, then we are done. If not, then must have some divisor such that , so that means there exists a number such that By our induction hypothesis, has a prime divisor. So, there exists a number and a prime such that Therefore, we have that and thus is also a prime divisor of , which finishes our proof.       What do you think the two or three key ideas of this proof are?    If you had to summarize this proof in one or two sentences, without using any symbols, what would you say?    In what way does the following picture give an embodied version of this proof?     A picture of dots, illustrating that is divisible by which has a prime divisor .   A picture of sixty dots grouped into five groups of twelve, where each of those is grouped into four groups of three.      "
 },
 {
   "id": "def-numbers",
@@ -502,7 +502,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "Infinitude of Primes",
-  "body": " Infinitude of Primes  The most important question about primes that was asked in ancient times is the following.   How many primes are there? Are there only finitely many? Or are there infinitely many?   The answer to this question is the following theorem, found in Euclid's Elements .    There are infinitely many primes.    We will give two versions of Euclid's proof. The first is a constructive proof.   We will apply the following operation: given a set of primes , produce the number . We will call this a Euclid step .  Note that does not divide , since dividing by leaves a remainder of . Similarly, dividing by leaves a remainder of . The same holds for every . Therefore, is a number that is not divisible by any of the primes we have, and by , there is a new prime that divides .  Thus, starting with , we obtain the prime . From there, we can produce the prime . From there, we can produce the prime . From there, we can produce the number . We can pick either of or to add to our list of primes.  With each application of a Euclid step, we produce a new prime. Thus, this yields an algorithm for constructing an infinite sequence of prime numbers.    What are the first few primes do you get when you start this process with the prime instead of the prime as your first value?    What makes sense about this proof? Do you feel that this proof is primarily embodied, symbolic, formal, or a combination of these worlds? Why?   "
+  "body": " Infinitude of Primes  The most important question about primes that was asked in ancient times is the following.   How many primes are there? Are there only finitely many? Or are there infinitely many?   Let's look at some data. Define to be the number of primes less than or equal to . (Here is the Greek letter corresponding to \"p\", not the number .) So, for example, since are the four primes less than or equal to .  The following code will plot a point at for every prime up to . What happens if we change the upper bound to ?   L = [] M = 100 for i in range(M): if i in Primes(): L.append([i,len(L)+1]) points(L,xmax=M,ymax=M)   As was discovered thousands of years ago, the answer to our question is the following theorem, recorded in Euclid's Elements .    There are infinitely many primes.    We will give two versions of Euclid's proof. The first is a constructive proof.   We will apply the following operation: given a set of primes , produce the number . We will call this a Euclid step .  Note that does not divide , since dividing by leaves a remainder of . Similarly, dividing by leaves a remainder of . The same holds for every . Therefore, is a number that is not divisible by any of the primes we have, and by , there is a new prime that divides .  Thus, starting with , we obtain the prime . From there, we can produce the prime . From there, we can produce the prime . From there, we can produce the number . We can pick either of or to add to our list of primes.  With each application of a Euclid step, we produce a new prime. Thus, this yields an algorithm for constructing an infinite sequence of prime numbers.    What are the first few primes do you get when you start this process with the prime instead of the prime as your first value?    What makes sense about this proof? Do you feel that this proof is primarily embodied, symbolic, formal, or a combination of these worlds? Why?   Next we will consider Euclid's original version of this proof, which is a proof by contradiction . In a proof by contradiction, you suppose that the result is false, and show that this leads to a contradiction, hence the result must be true.   Suppose for contradiction that there are only finitely many primes, call them . If we apply a Euclid step (as defined in the previous proof) to these primes, then this produces a new prime that is not in our list. This contradicts our assumption that there are only finitely many primes, and thus there must be infinitely many primes.       Discuss the proof by contradiction. Does it make sense why this shows there are infinitely many primes?    Which proof do you prefer, the constructive or contradiction proof? Why?      "
 },
 {
   "id": "infinitudeofprimes-3",
@@ -523,31 +523,121 @@ var ptx_lunr_docs = [
   "body": "  There are infinitely many primes.   "
 },
 {
-  "id": "infinitudeofprimes-7",
+  "id": "infinitudeofprimes-10",
   "level": "2",
-  "url": "infinitudeofprimes.html#infinitudeofprimes-7",
+  "url": "infinitudeofprimes.html#infinitudeofprimes-10",
   "type": "Proof",
   "number": "3.2.1",
   "title": "",
   "body": " We will apply the following operation: given a set of primes , produce the number . We will call this a Euclid step .  Note that does not divide , since dividing by leaves a remainder of . Similarly, dividing by leaves a remainder of . The same holds for every . Therefore, is a number that is not divisible by any of the primes we have, and by , there is a new prime that divides .  Thus, starting with , we obtain the prime . From there, we can produce the prime . From there, we can produce the prime . From there, we can produce the number . We can pick either of or to add to our list of primes.  With each application of a Euclid step, we produce a new prime. Thus, this yields an algorithm for constructing an infinite sequence of prime numbers.  "
 },
 {
-  "id": "infinitudeofprimes-8",
+  "id": "infinitudeofprimes-11",
   "level": "2",
-  "url": "infinitudeofprimes.html#infinitudeofprimes-8",
+  "url": "infinitudeofprimes.html#infinitudeofprimes-11",
   "type": "Checkpoint",
   "number": "3.2.3",
   "title": "",
   "body": " What are the first few primes do you get when you start this process with the prime instead of the prime as your first value?  "
 },
 {
-  "id": "infinitudeofprimes-9",
+  "id": "infinitudeofprimes-12",
   "level": "2",
-  "url": "infinitudeofprimes.html#infinitudeofprimes-9",
+  "url": "infinitudeofprimes.html#infinitudeofprimes-12",
   "type": "Checkpoint",
   "number": "3.2.4",
   "title": "",
   "body": " What makes sense about this proof? Do you feel that this proof is primarily embodied, symbolic, formal, or a combination of these worlds? Why?  "
+},
+{
+  "id": "infinitudeofprimes-14",
+  "level": "2",
+  "url": "infinitudeofprimes.html#infinitudeofprimes-14",
+  "type": "Proof",
+  "number": "3.2.2",
+  "title": "",
+  "body": " Suppose for contradiction that there are only finitely many primes, call them . If we apply a Euclid step (as defined in the previous proof) to these primes, then this produces a new prime that is not in our list. This contradicts our assumption that there are only finitely many primes, and thus there must be infinitely many primes.  "
+},
+{
+  "id": "infinitudeofprimes-15",
+  "level": "2",
+  "url": "infinitudeofprimes.html#infinitudeofprimes-15",
+  "type": "Checkpoint",
+  "number": "3.2.5",
+  "title": "",
+  "body": "    Discuss the proof by contradiction. Does it make sense why this shows there are infinitely many primes?    Which proof do you prefer, the constructive or contradiction proof? Why?     "
+},
+{
+  "id": "fundthmarithmetic",
+  "level": "1",
+  "url": "fundthmarithmetic.html",
+  "type": "Section",
+  "number": "3.3",
+  "title": "The Fundamental Theorem of Arithmetic",
+  "body": " The Fundamental Theorem of Arithmetic   established that every natural number greater than is divisible by a prime. This leads to a question: exactly which primes divide a natural number? Is it possible to give two different sets of primes that multiply together to give the same number?  The answer to this question is the following, which is a something most of you learned as a \"fact\" in elementary and middle school.   The Fundamental Theorem of Arithmetic   Every natural number greater than can be written as a product of primes, and this product is unique for each number. Symbolically, given a natural number , there exist distinct primes and non-negative exponents such that and the primes and exponents are unique up to reordering of factors.     Find the prime factorizations for the following numbers.                    We will prove existence of factorizations and uniqueness of factorizations separately. This proof closely follows the one given for Theorem 1.6.5 in Cioaba and Linde's A Bridge to Advanced Mathematics .   Proof of existence of prime factorizations  First, we will show that such a factorization exists, using strong induction. Our base case is , which is prime. For the (strong) induction step, let be a positive integer and assume that every natural number has a prime factorization. We want to prove that also has a prime factorization. If is prime, then we are done. If not, then must have some prime divisor such that , so that means there exists a number such that By induction, has a prime factorization If we multiply this by , we obtain a prime factorization for . Therefore, prime factorizations exist by induction.    Discuss the proof of existence using strong induction. What are the 2-3 key ideas that make this proof work?    Draw a picture or diagram that illustrates the inductive process of this proof.    Proof of uniqueness of prime factorizations  Second, we will show that each factorization is unique, using a proof by contradiction.    Discuss the proof of uniqueness using strong induction. What are the 2-3 key ideas that make this proof work?   "
+},
+{
+  "id": "thm-fundthmarithmetic",
+  "level": "2",
+  "url": "fundthmarithmetic.html#thm-fundthmarithmetic",
+  "type": "Theorem",
+  "number": "3.3.1",
+  "title": "The Fundamental Theorem of Arithmetic.",
+  "body": " The Fundamental Theorem of Arithmetic   Every natural number greater than can be written as a product of primes, and this product is unique for each number. Symbolically, given a natural number , there exist distinct primes and non-negative exponents such that and the primes and exponents are unique up to reordering of factors.   "
+},
+{
+  "id": "fundthmarithmetic-5",
+  "level": "2",
+  "url": "fundthmarithmetic.html#fundthmarithmetic-5",
+  "type": "Checkpoint",
+  "number": "3.3.2",
+  "title": "",
+  "body": " Find the prime factorizations for the following numbers.                   "
+},
+{
+  "id": "fundthmarithmetic-7",
+  "level": "2",
+  "url": "fundthmarithmetic.html#fundthmarithmetic-7",
+  "type": "Proof",
+  "number": "3.3.1",
+  "title": "Proof of existence of prime factorizations.",
+  "body": " Proof of existence of prime factorizations  First, we will show that such a factorization exists, using strong induction. Our base case is , which is prime. For the (strong) induction step, let be a positive integer and assume that every natural number has a prime factorization. We want to prove that also has a prime factorization. If is prime, then we are done. If not, then must have some prime divisor such that , so that means there exists a number such that By induction, has a prime factorization If we multiply this by , we obtain a prime factorization for . Therefore, prime factorizations exist by induction.  "
+},
+{
+  "id": "fundthmarithmetic-8",
+  "level": "2",
+  "url": "fundthmarithmetic.html#fundthmarithmetic-8",
+  "type": "Checkpoint",
+  "number": "3.3.3",
+  "title": "",
+  "body": " Discuss the proof of existence using strong induction. What are the 2-3 key ideas that make this proof work?  "
+},
+{
+  "id": "fundthmarithmetic-9",
+  "level": "2",
+  "url": "fundthmarithmetic.html#fundthmarithmetic-9",
+  "type": "Checkpoint",
+  "number": "3.3.4",
+  "title": "",
+  "body": " Draw a picture or diagram that illustrates the inductive process of this proof.  "
+},
+{
+  "id": "fundthmarithmetic-10",
+  "level": "2",
+  "url": "fundthmarithmetic.html#fundthmarithmetic-10",
+  "type": "Proof",
+  "number": "3.3.2",
+  "title": "Proof of uniqueness of prime factorizations.",
+  "body": " Proof of uniqueness of prime factorizations  Second, we will show that each factorization is unique, using a proof by contradiction.  "
+},
+{
+  "id": "fundthmarithmetic-11",
+  "level": "2",
+  "url": "fundthmarithmetic.html#fundthmarithmetic-11",
+  "type": "Checkpoint",
+  "number": "3.3.5",
+  "title": "",
+  "body": " Discuss the proof of uniqueness using strong induction. What are the 2-3 key ideas that make this proof work?  "
 },
 {
   "id": "divisionalgorithm",
