@@ -502,7 +502,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "Infinitude of Primes",
-  "body": " Infinitude of Primes  The most important question about primes that was asked in ancient times is the following.   How many primes are there? Are there only finitely many? Or are there infinitely many?   The answer to this question is the following theorem, found in Euclid's Elements .    There are infinitely many primes.    We will give two versions of Euclid's proof. The first is a constructive proof.   We will apply the following operation: given a set of primes , produce the number . We will call this a Euclid step .  Note that does not divide , since dividing by leaves a remainder of . Similarly, dividing by leaves a remainder of . The same holds for every . Therefore, is a number that is not divisible by any of the primes we have, and by , there is a new prime that divides .  Thus, starting with , we obtain the prime . From there, we can produce the prime . From there, we can produce the prime . From there, we can produce the number . We can pick either of or to add to our list of primes.  With each application of a Euclid step, we produce a new prime. Thus, this yields an algorithm for constructing an infinite sequence of prime numbers.   "
+  "body": " Infinitude of Primes  The most important question about primes that was asked in ancient times is the following.   How many primes are there? Are there only finitely many? Or are there infinitely many?   The answer to this question is the following theorem, found in Euclid's Elements .    There are infinitely many primes.    We will give two versions of Euclid's proof. The first is a constructive proof.   We will apply the following operation: given a set of primes , produce the number . We will call this a Euclid step .  Note that does not divide , since dividing by leaves a remainder of . Similarly, dividing by leaves a remainder of . The same holds for every . Therefore, is a number that is not divisible by any of the primes we have, and by , there is a new prime that divides .  Thus, starting with , we obtain the prime . From there, we can produce the prime . From there, we can produce the prime . From there, we can produce the number . We can pick either of or to add to our list of primes.  With each application of a Euclid step, we produce a new prime. Thus, this yields an algorithm for constructing an infinite sequence of prime numbers.    What are the first few primes do you get when you start this process with the prime instead of the prime as your first value?    What makes sense about this proof? Do you feel that this proof is primarily embodied, symbolic, formal, or a combination of these worlds? Why?   "
 },
 {
   "id": "infinitudeofprimes-3",
@@ -530,6 +530,24 @@ var ptx_lunr_docs = [
   "number": "3.2.1",
   "title": "",
   "body": " We will apply the following operation: given a set of primes , produce the number . We will call this a Euclid step .  Note that does not divide , since dividing by leaves a remainder of . Similarly, dividing by leaves a remainder of . The same holds for every . Therefore, is a number that is not divisible by any of the primes we have, and by , there is a new prime that divides .  Thus, starting with , we obtain the prime . From there, we can produce the prime . From there, we can produce the prime . From there, we can produce the number . We can pick either of or to add to our list of primes.  With each application of a Euclid step, we produce a new prime. Thus, this yields an algorithm for constructing an infinite sequence of prime numbers.  "
+},
+{
+  "id": "infinitudeofprimes-8",
+  "level": "2",
+  "url": "infinitudeofprimes.html#infinitudeofprimes-8",
+  "type": "Checkpoint",
+  "number": "3.2.3",
+  "title": "",
+  "body": " What are the first few primes do you get when you start this process with the prime instead of the prime as your first value?  "
+},
+{
+  "id": "infinitudeofprimes-9",
+  "level": "2",
+  "url": "infinitudeofprimes.html#infinitudeofprimes-9",
+  "type": "Checkpoint",
+  "number": "3.2.4",
+  "title": "",
+  "body": " What makes sense about this proof? Do you feel that this proof is primarily embodied, symbolic, formal, or a combination of these worlds? Why?  "
 },
 {
   "id": "divisionalgorithm",
