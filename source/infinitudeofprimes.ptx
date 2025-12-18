@@ -20,7 +20,32 @@
     The answer to this question is the following theorem, found in <url href="https://en.wikipedia.org/wiki/Euclid%27s_Elements">Euclid's Elements</url>.
   </p>
 
+  <theorem xml:id="thm-infinitudeofprimes">
+    <statement>
+      <p>
+        There are infinitely many primes.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    We will give two versions of Euclid's proof.
+    The first is a <alert>constructive</alert> proof.
+  </p>
+
+  <proof>
+    <p>
+      Start with the prime <m>2</m>.
+      We will apply the following operation: given a set of primes <m>p_1,\ldots,p_k</m>, produce the number <m>N=p_1p_2\cdots p_k+1</m>.
+      We will call this a <em>Euclid step</em>.
+    </p>
+    <p>
+      
+    </p>
+  </proof>
   
+
+
 
     
 
