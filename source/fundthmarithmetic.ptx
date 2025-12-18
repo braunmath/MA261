@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="fundthmarithmetic" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>The Fundamental Theorem of Arithmetic</title>
+
+  <p>
+    <xref ref="thm-primesdividenumbers"/> established that every natural number greater than <m>1</m> is divisible by a prime.
+    This leads to a question: exactly which primes divide a natural number?
+    Is it possible to give two different sets of primes that multiply together to give the same number?
+  </p>
+
+  <p>
+    The answer to this question is the following, which is a something most of you learned as a "fact" in elementary and middle school.
+  </p>
+
+  <theorem xml:id="thm-fundthmarithmetic">
+    <title>The Fundamental Theorem of Arithmetic</title>
+    <statement>
+      <p>
+        Every natural number greater than <m>1</m> can be written as a product of primes, and this product is unique for each number.
+        Symbolically, given a natural number <m>n\gt 1</m>, there exist distinct primes <m>p_1,\ldots,p_k</m> and non-negative exponents <m>a_1,\ldots,a_k\in \mathbb{Z}_{\geq 0}</m> such that
+        <me>
+          n = p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}
+        </me>
+        and the primes and exponents are unique up to reordering of factors.
+      </p>
+    </statement>
+  </theorem>
+
+  <exercise>
+    <p>
+      Find the prime factorizations for the following numbers.
+      <ol>
+        <li>
+          <p>
+            <m>380</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>927</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>708</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+
+  <p>
+    We will prove existence of factorizations and uniqueness of factorizations separately.
+    This proof closely follows the one given for <url href="https://bookstore.ams.org/view?ProductCode=AMSTEXT/58">Theorem 1.6.5 in Cioaba and Linde's <em>A Bridge to Advanced Mathematics</em></url>.
+  </p>
+  
+  <proof>
+    <title>Proof of existence of prime factorizations</title>
+    <p>
+      First, we will show that such a factorization exists, using strong induction.
+      Our base case is <m>n=2</m>, which is prime.
+      For the (strong) induction step, let <m>m</m> be a positive integer and assume that every natural number <m>1\leq k\leq m</m> has a prime factorization.
+      We want to prove that <m>m+1</m> also has a prime factorization.
+      If <m>m+1</m> is prime, then we are done.
+      If not, then <m>m+1</m> must have some prime divisor <m>p</m> such that <m>1\lt p\lt m+1</m>, so that means there exists a number <m>c</m> such that
+      <me>
+        m+1=cp \, .
+      </me>
+      By induction, <m>c</m> has a prime factorization 
+      <me>
+        c=p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}\, .
+      </me>
+      If we multiply this by <m>p</m>, we obtain a prime factorization for <m>m+1</m>.
+      Therefore, prime factorizations exist by induction.
+    </p>
+  </proof>
+
+  <exercise>
+    <p>
+            Discuss the proof of existence using strong induction.
+            What are the 2-3 key ideas that make this proof work?
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      Draw a picture or diagram that illustrates the inductive process of this proof.
+    </p>
+  </exercise>
+
+  <proof>
+    <title>Proof of uniqueness of prime factorizations</title>    
+    <p>
+      Second, we will show that each factorization is unique, using a proof by contradiction.
+
+    </p>
+  </proof>
+
+  <exercise>
+    <p>
+
+            Discuss the proof of uniqueness using strong induction.
+            What are the 2-3 key ideas that make this proof work?
+
+    </p>
+  </exercise>
+
+</section>

@@ -8,16 +8,43 @@
     The most important question about primes that was asked in ancient times is the following.
   </p>
 
-  <question>
+  <assumption>
     <p>
       How many primes are there?
       Are there only finitely many?
       Or are there infinitely many?
     </p>
-  </question>
+  </assumption>
 
   <p>
-    The answer to this question is the following theorem, found in <url href="https://en.wikipedia.org/wiki/Euclid%27s_Elements">Euclid's Elements</url>.
+    Let's look at some data.
+    Define <m>\pi(n)</m> to be the number of primes less than or equal to <m>n</m>.
+    (Here <m>\pi</m> is the Greek letter corresponding to "p", not the number <m>3.14\ldots</m>.)
+    So, for example, 
+    <me>
+      \pi(10)=4
+    </me>
+    since <m>2,3,5,7</m> are the four primes less than or equal to <m>10</m>.    
+  </p>
+
+  <p>
+    The following code will plot a point at <m>[p,\pi(p)]</m> for every prime <m>p</m> up to <m>100</m>.
+    What happens if we change the upper bound to <m>1000</m>?
+  </p>
+
+  <program language="sage">
+    <input>
+      L = []
+      M = 100
+      for i in range(M):
+          if i in Primes():
+              L.append([i,len(L)+1])
+      points(L,xmax=M,ymax=M)
+    </input>
+  </program>
+
+  <p>
+    As was discovered thousands of years ago, the answer to our question is the following theorem, recorded in <url href="https://en.wikipedia.org/wiki/Euclid%27s_Elements">Euclid's Elements</url>.
   </p>
 
   <theorem xml:id="thm-infinitudeofprimes">
@@ -70,9 +97,36 @@
     </p>
   </exercise>
 
+  <p>
+    Next we will consider Euclid's original version of this proof, which is a <alert>proof by contradiction</alert>.
+    In a proof by contradiction, you suppose that the result is false, and show that this leads to a contradiction, hence the result must be true.
+  </p>
 
+  <proof>
+    <p>
+      Suppose for contradiction that there are only finitely many primes, call them <m>p_1,\ldots,p_k</m>.
+      If we apply a Euclid step (as defined in the previous proof) to these primes, then this produces a new prime that is not in our list.
+      This contradicts our assumption that there are only finitely many primes, and thus there must be infinitely many primes.
+    </p>
+  </proof>
 
-    
-
+  <exercise>
+    <p>
+      <ul>
+        <li>
+          <p>
+            Discuss the proof by contradiction.
+      Does it make sense why this shows there are infinitely many primes?
+          </p>
+        </li>
+        <li>
+          <p>
+      Which proof do you prefer, the constructive or contradiction proof?
+      Why?
+          </p>
+        </li>
+      </ul>
+    </p>
+  </exercise> 
 
 </section>

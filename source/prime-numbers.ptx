@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="prime-numbers" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Prime Numbers
-  </title>
+  <title>Numbers, Sets, and Primes</title>
 
   <p>
     Now that we have language allowing us to describe different aspects of mathematical reasoning and proof, we can begin our study of number theory.
