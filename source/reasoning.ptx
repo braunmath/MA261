@@ -10,5 +10,6 @@
   <xi:include href="123nembodied.ptx" />
   <xi:include href="123nsymbolic.ptx" />
   <xi:include href="123nformal.ptx" />
+  <xi:include href="123ncoding.ptx" />
 
 </chapter>

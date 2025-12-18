@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="123ncoding" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Introduction to SageMath</title>
+
+  <p>
+    If you are familiar with coding in Python, then this should be very familiar.
+    If not, then this section will give you the background you need to conduct basic experiments in number theory.
+  </p>
+
+  <p>
+    SageMath is open source software for mathematical computation.
+    It is a Python-based language that incorporates many powerful packages for computing in math. 
+    There are two straightforward options for coding in SageMath.
+    <ul>
+      <li>
+        <p>
+          You can use <url href=""></url>
+        </p>
+      </li>
+    </ul>
+  </p>
+
+  <definition xml:id="def-range">
+    <statement>
+      <p>
+        $0
+      </p>
+    </statement>
+  </definition>
+
+</section>
