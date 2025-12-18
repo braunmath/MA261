@@ -35,15 +35,40 @@
 
   <proof>
     <p>
-      Start with the prime <m>2</m>.
       We will apply the following operation: given a set of primes <m>p_1,\ldots,p_k</m>, produce the number <m>N=p_1p_2\cdots p_k+1</m>.
       We will call this a <em>Euclid step</em>.
     </p>
     <p>
-      
+      Note that <m>p_1</m> does not divide <m>N</m>, since dividing <m>N</m> by <m>p_1</m> leaves a remainder of <m>1</m>.
+      Similarly, dividing <m>N</m> by <m>p_2</m> leaves a remainder of <m>1</m>.
+      The same holds for every <m>p_i</m>.
+      Therefore, <m>N</m> is a number that is not divisible by any of the primes we have, and by <xref ref="thm-primesdividenumbers"/>, there is a new prime <m>p_{k+1}</m> that divides <m>N</m>.
+    </p>
+    <p>
+      Thus, starting with <m>p_1=2</m>, we obtain the prime <m>2+1=3</m>.
+      From there, we can produce the prime <m>2\cdot3+1=7</m>.
+      From there, we can produce the prime <m>2\cdot 3 \cdot 7 +1=43</m>.
+      From there, we can produce the number <m>2\cdot 3 \cdot 7 \cdot 43 +1= 1807 =13\cdot 139</m>.
+      We can pick either of <m>13</m> or <m>139</m> to add to our list of primes.
+    </p>
+    <p>
+      With each application of a Euclid step, we produce a new prime.
+      Thus, this yields an algorithm for constructing an infinite sequence of prime numbers.
     </p>
   </proof>
   
+  <exercise>
+    <p>
+      What are the first few primes do you get when you start this process with the prime <m>11</m> instead of the prime <m>2</m> as your first value?
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      What makes sense about this proof?
+      Do you feel that this proof is primarily embodied, symbolic, formal, or a combination of these worlds? Why?
+    </p>
+  </exercise>
 
 
 
