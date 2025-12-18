@@ -232,7 +232,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.6",
   "title": "Formal Proof",
-  "body": " Formal Proof  The final world of mathematics is the formal world, which is described as follows by David Tall in his paper \"Building Theories: The Three Worlds of Mathematics\", published in For the Learning of Mathematics in 2004 .   The third world is based on properties , expressed in terms of formal definitions that are used as axioms to specify mathematical structures (such as 'group', 'field', 'vector space', 'topological space' and so on). This world I have called the 'formal-axiomatic world' or ' formal world', for short. It turns previous experiences on their heads, working not with familiar objects of experience, but with axioms that are carefully formulated to define mathematical structures in terms of specified properties. Other properties are then deduced by formal proof to build a sequence of theorems. Within the axiomatic system, new concepts can be defined and their properties deduced to build a coherent, logically deduced theory.   One of the first formal proof methods that students usually learn is called mathematical induction . There are various flavors of induction, including the \"method of descent\", \"strong induction\", \"weak induction\", etc. We will continue to discuss various aspects of these distinctions, but what is more important than learning names is to learn and understand the key idea of induction:   verify small cases, then use those small cases to verify the next case, then use that new case to verify the next case, then use that new case to verify the next case, and then carefully explain why you can always continue this process for a specific problem or proof.     We will begin by considering an example of an embodied inductive proof. The question that will motivate us is the following.    Consider any map formed by drawing straight lines in the plane, each line extending infinitely in both directions, to represent the boundaries of the regions. Some regions will be compact and bounded, others will be unbounded and go off to infinity. Is it always possible to color the regions using only two colors, say white and gray, in such a way that white and gray regions never share an edge? In other words, the edges between regions always have white on one side and gray on the other side. If yes, why? If no, why not?     Work on this problem with your group. Do you think the answer is \"yes, it is always possible\" or \"no, it is not always possible\"? Try to come up with a convincing argument to support your answer.     The answer to is yes.     We will prove by mathematical induction on the number of lines, . For the base case, when , there are two regions separated by a single line. We can color one region white and the other gray, so the base case holds.  Next, we prove the inductive step. Assume that for some arbitrary value , any map formed by lines can be colored using only two colors so that no two adjacent regions share the same color. Now, consider a map formed by lines. We can think of this map as being formed by first drawing lines, and then adding one additional line. By our inductive hypothesis, we can color the regions formed by the first lines using only two colors. Now, when we add the st line, it will intersect some of the existing regions, dividing them into two new regions. To ensure that no two adjacent regions share the same color, we can simply switch the colors of all the regions on one side of the new line. This way, the regions on either side of the new line will have different colors, and the coloring of the other regions remains the same. Further, none of the adjacent regions have the same color.    Discuss this proof. Does it make sense? Why or why not?   Now, let's give an inductive proof of our original conjecture that is within the world of formal mathematics.   Proof of  We use induction. For the base case, when , we have so the base case holds.  For the inductive step, assume that for some arbitrary value , we have We need to show that this implies that Starting from the left-hand side, we have This completes the inductive step, and therefore our proof by induction is complete.    Discuss this proof. Does it make sense? Why or why not? What is the most confusing part? Why is it confusing?   These two proofs demonstrate how you can use a small number of initial data points to make a conjecture, then look at how the structure of the problem leads you to use the same pattern of logical argument repeatedly. This \"pattern of logical argument\" is the inductive step of an induction argument, while the small initial data points are the base cases of the inductive argument. We are now in a position to give a precise statement of the principle of mathematical induction.   Principle of Mathematical Induction   Suppose we have a sequence of mathematical statements (one for each natural number). If the following two properties hold, then is true for every natural number :   The base case : is true.    The induction step : If is true, then is true.       "
+  "body": " Formal Proof  The final world of mathematics is the formal world, which is described as follows by David Tall in his paper \"Building Theories: The Three Worlds of Mathematics\", published in For the Learning of Mathematics in 2004 .   The third world is based on properties , expressed in terms of formal definitions that are used as axioms to specify mathematical structures (such as 'group', 'field', 'vector space', 'topological space' and so on). This world I have called the 'formal-axiomatic world' or ' formal world', for short. It turns previous experiences on their heads, working not with familiar objects of experience, but with axioms that are carefully formulated to define mathematical structures in terms of specified properties. Other properties are then deduced by formal proof to build a sequence of theorems. Within the axiomatic system, new concepts can be defined and their properties deduced to build a coherent, logically deduced theory.   One of the first formal proof methods that students usually learn is called mathematical induction . There are various flavors of induction, including the \"method of descent\", \"strong induction\", \"weak induction\", etc. We will continue to discuss various aspects of these distinctions, but what is more important than learning names is to learn and understand the key idea of induction:   verify small cases, then use those small cases to verify the next case, then use that new case to verify the next case, then use that new case to verify the next case, and then carefully explain why you can always continue this process for a specific problem or proof.     We will begin by considering an example of an embodied inductive proof. The question that will motivate us is the following.    Consider any map formed by drawing straight lines in the plane, each line extending infinitely in both directions, to represent the boundaries of the regions. Some regions will be compact and bounded, others will be unbounded and go off to infinity. Is it always possible to color the regions using only two colors, say white and gray, in such a way that white and gray regions never share an edge? In other words, the edges between regions always have white on one side and gray on the other side. If yes, why? If no, why not?     Work on this problem with your group. Do you think the answer is \"yes, it is always possible\" or \"no, it is not always possible\"? Try to come up with a convincing argument to support your answer.     The answer to is yes.     We will prove by mathematical induction on the number of lines, . For the base case, when , there are two regions separated by a single line. We can color one region white and the other gray, so the base case holds.  Next, we prove the inductive step. Assume that for some arbitrary value , any map formed by lines can be colored using only two colors so that no two adjacent regions share the same color. Now, consider a map formed by lines. We can think of this map as being formed by first drawing lines, and then adding one additional line. By our inductive hypothesis, we can color the regions formed by the first lines using only two colors. Now, when we add the st line, it will intersect some of the existing regions, dividing them into two new regions. To ensure that no two adjacent regions share the same color, we can simply switch the colors of all the regions on one side of the new line. This way, the regions on either side of the new line will have different colors, and the coloring of the other regions remains the same. Further, none of the adjacent regions have the same color.    Discuss this proof. Does it make sense? Why or why not?   Now, let's give an inductive proof of our original conjecture that is within the world of formal mathematics.   Proof of  We use induction. For the base case, when , we have so the base case holds.  For the inductive step, assume that for some arbitrary value , we have We need to show that this implies that Starting from the left-hand side, we have This completes the inductive step, and therefore our proof by induction is complete.    Discuss this proof. Does it make sense? Why or why not? What is the most confusing part? Why is it confusing?   These two proofs demonstrate how you can use a small number of initial data points to make a conjecture, then look at how the structure of the problem leads you to use the same pattern of logical argument repeatedly. This \"pattern of logical argument\" is the inductive step of an induction argument, while the small initial data points are the base cases of the inductive argument. We are now in a position to give a precise statement of the principle of mathematical induction.   Principle of Mathematical Induction   Suppose we have a sequence of mathematical statements (one for each natural number). If the following two properties hold, then is true for every natural number :   The base case : is true.    The induction step : If for a natural number the statement is true, then is true.       There is a variation on induction called strong induction that uses a stronger induction step, which we will sometimes need.   Principle of Strong Mathematical Induction   Suppose we have a sequence of mathematical statements (one for each natural number). If the following two properties hold, then is true for every natural number :   The base case : is true.    The induction step : If for every natural number the statement is true for all , then is true.       Note that in strong induction, we have to know that all of the preceding statements are true, rather than just the immediately preceding statement, in order to guarantee the implication.  "
 },
 {
   "id": "ques-twocolorregions",
@@ -304,7 +304,16 @@ var ptx_lunr_docs = [
   "type": "Principle",
   "number": "2.6.6",
   "title": "Principle of Mathematical Induction.",
-  "body": " Principle of Mathematical Induction   Suppose we have a sequence of mathematical statements (one for each natural number). If the following two properties hold, then is true for every natural number :   The base case : is true.    The induction step : If is true, then is true.      "
+  "body": " Principle of Mathematical Induction   Suppose we have a sequence of mathematical statements (one for each natural number). If the following two properties hold, then is true for every natural number :   The base case : is true.    The induction step : If for a natural number the statement is true, then is true.      "
+},
+{
+  "id": "principle-strong-induction",
+  "level": "2",
+  "url": "123nformal.html#principle-strong-induction",
+  "type": "Principle",
+  "number": "2.6.7",
+  "title": "Principle of Strong Mathematical Induction.",
+  "body": " Principle of Strong Mathematical Induction   Suppose we have a sequence of mathematical statements (one for each natural number). If the following two properties hold, then is true for every natural number :   The base case : is true.    The induction step : If for every natural number the statement is true for all , then is true.      "
 },
 {
   "id": "prime-numbers",
@@ -313,7 +322,133 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.1",
   "title": "Prime Numbers",
-  "body": " Prime Numbers    "
+  "body": " Prime Numbers  Now that we have language allowing us to describe different aspects of mathematical reasoning and proof, we can begin our study of number theory. We will start with the study of prime numbers. First, let's define the types of numbers we will be discussing.       The set of natural numbers is the set .    The set of integers is the set .       Observe that we are using set notation above to define these families of numbers. We use \" \" to mean \"is defined to be\"; this is helpful when distinguishing between when we define something and when we are indicating equality. When we are defining a set, we often use curly braces to indicate the elements of the set and we specify the elements within the braces. One can use special notation within the braces to indicate a pattern for the elements of the set. For example, we can describe the natural numbers as The symbol \" \" is read as \"is an element of\" or \"belongs to\". The \":\" is read as \"such that\", so that the above set is read as \"the set of all integers such that is greater than \".   Does the notation above make sense? Why or why not?   With this, we can define sets such as the rational numbers , which are the numbers in the set    Take turns reading the set-builder description of the rationals out loud as a sentence. Discuss every symbol used in the definition and talk about what that symbol represents.     Let and be integers with . We say that is divisible by  if there exists an integer such that . If is divisible by , we also say that  divides  and we write . If is not divisible by , we write .         means that five divides thirty.     means that six does not divide seventeen.      We can combine set builder notation with these definitions to describe sets of numbers with certain divisibility properties. For example, the set of all integers that are divisible by but not divisible by is written as Note that if we tried to list the elements of this set, it would be hard to make it clear what the pattern is. For example, if we wrote the set above as it would be unclear that is not in the set. However, using the set-builder notation, two conditions are given following the \":\" symbol that can be used to clearly determine that is not in the set.   Use set builder notation and the notation for divisibility to write the following sets:   The set of all natural numbers divisible by .    The set of all integers not divisible by .    The set of all natural numbers divisible by but not by .      Some of the most important natural numbers are the primes, defined as follows.    A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. If a number is not prime, then it is composite . We will denote the set of prime numbers by .     With your group, find the first ten prime numbers.    With your group, use set builder notation to describe the set of all prime numbers that are three more than a multiple of four.  Hint: You might need to write a longer phrase to the right of \":\", for example, to describe what the remainder of is after dividing by .   Number theory is an ancient topic of study, with prime numbers being studied for thousands of years. We will begin with an old process to find primes.    The Sieve of Eratosthenes is a method to find all prime numbers between and a given bound . The process is as follows:   Write down all the numbers from to .    Start with the first number in the list (which is ). Circle it (it is prime) and then cross out all of its multiples.    Move to the next number that is not crossed out. Circle it (it is prime) and then cross out all of its multiples.    Repeat this process until you have processed each number up to .   The numbers that remain uncrossed are all of the prime numbers between and .     Use the Sieve of Eratosthenes to find all prime numbers between and .   A visual illustration of the Sieve of Eratosthenes is given on the Wikipedia page for the Sieve . Implicit in the Sieve of Eratosthenes is that the idea that every number is divisible by some prime number. Let's go ahead and prove that this is true.    Every natural number greater than 1 is divisible by a prime number.     This proof closely follows the one given for Proposition 1.6.3 in Cioaba and Linde's A Bridge to Advanced Mathematics . We will prove this by strong induction . The base case is , and the result is true in this case since is prime.  For the (strong) induction step, let be a positive integer and assume that every natural number has a prime divisor. We want to prove that also has a prime divisor. If is prime, then we are done. If not, then must have some divisor such that , so that means there exists a number such that By our induction hypothesis, has a prime divisor. So, there exists a number and a prime such that Therefore, we have that and thus is also a prime divisor of , which finishes our proof.       What do you think the two or three key ideas of this proof are?    If you had to summarize this proof in one or two sentences, without using any symbols, what would you say?    In what way does the following picture give an embodied version of this proof?     A picture of dots, illustrating that is divisible by which has a prime divisor .   A picture of sixty dots grouped into five groups of twelve, where each of those is grouped into four groups of three.      "
+},
+{
+  "id": "def-numbers",
+  "level": "2",
+  "url": "prime-numbers.html#def-numbers",
+  "type": "Definition",
+  "number": "3.1.1",
+  "title": "",
+  "body": "     The set of natural numbers is the set .    The set of integers is the set .      "
+},
+{
+  "id": "prime-numbers-5",
+  "level": "2",
+  "url": "prime-numbers.html#prime-numbers-5",
+  "type": "Checkpoint",
+  "number": "3.1.2",
+  "title": "",
+  "body": " Does the notation above make sense? Why or why not?  "
+},
+{
+  "id": "prime-numbers-7",
+  "level": "2",
+  "url": "prime-numbers.html#prime-numbers-7",
+  "type": "Checkpoint",
+  "number": "3.1.3",
+  "title": "",
+  "body": " Take turns reading the set-builder description of the rationals out loud as a sentence. Discuss every symbol used in the definition and talk about what that symbol represents.  "
+},
+{
+  "id": "def-divisible",
+  "level": "2",
+  "url": "prime-numbers.html#def-divisible",
+  "type": "Definition",
+  "number": "3.1.4",
+  "title": "",
+  "body": "  Let and be integers with . We say that is divisible by  if there exists an integer such that . If is divisible by , we also say that  divides  and we write . If is not divisible by , we write .   "
+},
+{
+  "id": "prime-numbers-9",
+  "level": "2",
+  "url": "prime-numbers.html#prime-numbers-9",
+  "type": "Example",
+  "number": "3.1.5",
+  "title": "",
+  "body": "     means that five divides thirty.     means that six does not divide seventeen.     "
+},
+{
+  "id": "prime-numbers-11",
+  "level": "2",
+  "url": "prime-numbers.html#prime-numbers-11",
+  "type": "Checkpoint",
+  "number": "3.1.6",
+  "title": "",
+  "body": " Use set builder notation and the notation for divisibility to write the following sets:   The set of all natural numbers divisible by .    The set of all integers not divisible by .    The set of all natural numbers divisible by but not by .     "
+},
+{
+  "id": "def-prime-number",
+  "level": "2",
+  "url": "prime-numbers.html#def-prime-number",
+  "type": "Definition",
+  "number": "3.1.7",
+  "title": "",
+  "body": "  A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. If a number is not prime, then it is composite . We will denote the set of prime numbers by .   "
+},
+{
+  "id": "prime-numbers-14",
+  "level": "2",
+  "url": "prime-numbers.html#prime-numbers-14",
+  "type": "Checkpoint",
+  "number": "3.1.8",
+  "title": "",
+  "body": " With your group, find the first ten prime numbers.  "
+},
+{
+  "id": "prime-numbers-15",
+  "level": "2",
+  "url": "prime-numbers.html#prime-numbers-15",
+  "type": "Checkpoint",
+  "number": "3.1.9",
+  "title": "",
+  "body": " With your group, use set builder notation to describe the set of all prime numbers that are three more than a multiple of four.  Hint: You might need to write a longer phrase to the right of \":\", for example, to describe what the remainder of is after dividing by .  "
+},
+{
+  "id": "def-sieveoferatosthenes",
+  "level": "2",
+  "url": "prime-numbers.html#def-sieveoferatosthenes",
+  "type": "Definition",
+  "number": "3.1.10",
+  "title": "",
+  "body": "  The Sieve of Eratosthenes is a method to find all prime numbers between and a given bound . The process is as follows:   Write down all the numbers from to .    Start with the first number in the list (which is ). Circle it (it is prime) and then cross out all of its multiples.    Move to the next number that is not crossed out. Circle it (it is prime) and then cross out all of its multiples.    Repeat this process until you have processed each number up to .   The numbers that remain uncrossed are all of the prime numbers between and .   "
+},
+{
+  "id": "prime-numbers-18",
+  "level": "2",
+  "url": "prime-numbers.html#prime-numbers-18",
+  "type": "Checkpoint",
+  "number": "3.1.11",
+  "title": "",
+  "body": " Use the Sieve of Eratosthenes to find all prime numbers between and .  "
+},
+{
+  "id": "thm-primesdividenumbers",
+  "level": "2",
+  "url": "prime-numbers.html#thm-primesdividenumbers",
+  "type": "Theorem",
+  "number": "3.1.12",
+  "title": "",
+  "body": "  Every natural number greater than 1 is divisible by a prime number.   "
+},
+{
+  "id": "prime-numbers-21",
+  "level": "2",
+  "url": "prime-numbers.html#prime-numbers-21",
+  "type": "Proof",
+  "number": "3.1.1",
+  "title": "",
+  "body": " This proof closely follows the one given for Proposition 1.6.3 in Cioaba and Linde's A Bridge to Advanced Mathematics . We will prove this by strong induction . The base case is , and the result is true in this case since is prime.  For the (strong) induction step, let be a positive integer and assume that every natural number has a prime divisor. We want to prove that also has a prime divisor. If is prime, then we are done. If not, then must have some divisor such that , so that means there exists a number such that By our induction hypothesis, has a prime divisor. So, there exists a number and a prime such that Therefore, we have that and thus is also a prime divisor of , which finishes our proof.  "
+},
+{
+  "id": "prime-numbers-22",
+  "level": "2",
+  "url": "prime-numbers.html#prime-numbers-22",
+  "type": "Checkpoint",
+  "number": "3.1.13",
+  "title": "",
+  "body": "    What do you think the two or three key ideas of this proof are?    If you had to summarize this proof in one or two sentences, without using any symbols, what would you say?    In what way does the following picture give an embodied version of this proof?     A picture of dots, illustrating that is divisible by which has a prime divisor .   A picture of sixty dots grouped into five groups of twelve, where each of those is grouped into four groups of three.     "
 },
 {
   "id": "divisionalgorithm",
