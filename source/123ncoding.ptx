@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="123ncoding" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Introduction to SageMath</title>
+  <title>Computational Experiments in SageMath</title>
 
   <p>
     If you are familiar with coding in Python, then this should be very familiar.
@@ -9,24 +9,262 @@
   </p>
 
   <p>
-    SageMath is open source software for mathematical computation.
+    <url href="https://www.sagemath.org/">SageMath</url> is open source software for mathematical computation.
     It is a Python-based language that incorporates many powerful packages for computing in math. 
     There are two straightforward options for coding in SageMath.
     <ul>
       <li>
         <p>
-          You can use <url href=""></url>
+          You can use the free website <url href="https://sagecell.sagemath.org/">SageCell</url> to do basic computations in SageMath.
+          In SageCell, you are not able to save your work, so if you primarily use this for your coding, I recommend saving your code in a separate file so you have access to it later.
+        </p>
+      </li>
+      <li>
+        <p>
+          You can sign up for a free account at <url href="https://cocalc.com/">CoCalc</url>.
+          CoCalc gives you access to Jupyter notebooks running SageMath that you can save to your account.
         </p>
       </li>
     </ul>
   </p>
 
+  <p>
+    We will now go through a few basic aspects of coding in Python/SageMath that are useful for computational experimentation.
+    Note that a list of objects in SageMath is stored between two brackets.
+    For example, the following code will assign to "L" the list of odd numbers from 1 to 10 and then print the list:
+  </p>
+  <program language="sage">
+    <input>
+      L = [1,3,5,7,9]
+      print(L)
+    </input>
+  </program>
+
+  <p>
+    If you copy and paste that into SageCell, you will get the list printed.
+  </p>
+
   <definition xml:id="def-range">
     <statement>
       <p>
-        $0
+        To generate the numbers from <m>0</m> to <m>n-1</m>, use the following command.
+        Note that to actually use this, you have to specify what <m>n</m> is.
       </p>
+      <program language="sage">
+        range(n)
+        </program>
     </statement>
   </definition>
+
+  <p>
+    Note that the range command will generate <m>n</m> numbers, but it will start at 0 and end at <m>n-1</m>.
+    Copy and paste the following code into SageCell, and change the value of <m>n</m> a few times.
+    To make a list of numbers from the range generator, we use the "list" command.
+  </p>
+
+  <program language="sage">
+    n = 7
+    list(range(n))
+  </program>
+
+  <definition xml:id="def-forloop">
+    <statement>
+      <p>
+        A "for loop" will iterate through a list (or any other iterable collection of objects).
+        The structure of a "for loop" is:
+      </p>
+      <program language="sage">
+        for "name your objects" in "list or other iterable":
+            "do something"
+      </program>
+    </statement>
+  </definition>
+
+  <p>
+    So, for example, if you want to print the numbers <m>i^2</m> for <m>i</m> from <m>1</m> to <m>20</m>, you would use the following code.
+    Copy and paste this into SageCell, and then explore what happens when you change the value of <m>n</m>, or when you change the exponent on <m>i</m>.
+  </p>
+  <program language="sage">
+    n = 21
+    for i in range(1,n):
+        print(i^2)
+  </program>
+
+  <p>
+    We often want to go through a list of numbers and check them for certain properties.
+    To do this, we use an "if" statement.
+  </p>
+
+  <definition xml:id="def-ifstatements">
+    <statement>
+      <p>
+        To check a condition, we use an "if" statement as follows:
+      </p>
+      <program language="sage">
+        if "condition":
+            "do something"
+      </program>
+    </statement>
+  </definition>
+
+  <p>
+    So, for example, if you want to go through the numbers from 1 to 50 and only print the multiples of 3, then you would need to do the following:
+    <ol>
+      <li>
+        <p>
+          use a for loop from 1 to 50,
+        </p>
+      </li>
+      <li>
+        <p>
+          check if each value is divisible by 3,
+        </p>
+      </li>
+      <li>
+        <p>
+          if it is divisible by 3, print the value.
+        </p>
+      </li>
+    </ol>
+    The way we check divisibility is to compute the remainder when dividing by 3 and checking to see if it is 0.
+    To compute the remainder of <m>n</m> divided by <m>k</m>, use the following command:
+  </p>
+  <program language="sage">
+    <input>
+      n % k
+    </input>
+  </program>
+  <p>
+    To check if two things are equal, we use "==". 
+    To check if two values are not equal, we use "!=".
+  </p>
+  <p>
+    So, the following code will print only numbers divisible by 3.
+  </p>
+  <program language="sage">
+    <input>
+      for i in range(1,51):
+          if i % 3 == 0:
+              print(i)
+    </input>
+  </program>
+  <p>
+    The following program will print the numbers that are not divisible by 3.
+  </p>
+
+  <program language="sage">
+    <input>
+      for i in range(1,51):
+          if i % 3 != 0:
+              print(i)
+    </input>
+  </program>
+
+  <definition xml:id="def-append">
+    <statement>
+      <p>
+        We can store values in a list, which we discussed earlier.
+    To include a new value <m>k</m> at the end of a list <m>L</m>, we use the "append" method.
+  </p>
+  <program language="sage">
+    <input>
+      L.append(k)
+    </input>
+  </program>
+    </statement>
+  </definition>
+    
+  <p>
+    So, for example, if we want to make a list of all numbers from 1 to 50 that are divisible by 3, we first create an empty list <m>L</m> and then append the numbers that are divisible by 3.
+  </p>
+  <program language="sage">
+    <input>
+      L = []
+      for i in range(1,51):
+          if i % 3 == 0:
+              L.append(i)
+      print(L)
+    </input>
+  </program>
+
+  <p>
+    If we have a pair <m>[a,b]</m>, we can store those pairs in a list as well.
+    We can then plot those pairs using the "points" command.
+  </p>
+
+  <program language="sage">
+    <input>
+      L = [[1,3],[2,5],[3,7],[4,4],[5,10]]
+      points(L)
+    </input>
+  </program>
+
+  <p>
+    So, for example, suppose you want to find the remainder for each number <m>n</m> from 1 to 100 after you divide by 7, and the plot the pairs <m>[n,remainder]</m>.
+    You would use this code.
+  </p>
+
+  <program language="sage">
+    <input>
+      L = []
+      k = 7
+      for n in range(101):
+          remainder = n % k
+          L.append([n,remainder])
+      points(L)
+    </input>
+  </program>
+
+  <p>
+    As our final example, let's make a list of all the numbers from 1 to 500 that are divisible by 5 but not divisible by 7.
+    Then, let's make a plot of the point <m>[i,\lfloor i/10 \rfloor]</m> for each of those numbers, where <m>\lfloor i/10 \rfloor</m> is the floor function defined in Problem P1, computed using the command "floor(i/10)".
+    Note the use of the "and" structure to check multiple conditions.
+  </p>
+  <program language="sage">
+    <input>
+      values = []
+      for n in range(1,501):
+          if (n % 5 == 0) and (n % 7 != 0):
+              values.append(n)
+      pairs = []
+      for i in values:
+          pairs.append([i,floor(i/10)])
+      points(pairs)
+    </input>
+  </program>
+
+  <p>
+    Finally, we need to know how to find the length of a list.
+  </p>
+
+  <definition xml:id="def-length">
+    <statement>
+      <p>
+        To compute the length of a list <m>L</m>, use the following command.
+      </p>
+      <program language="sage">
+        <input>
+          len(L)
+        </input>
+      </program>
+    </statement>
+  </definition>
+
+  <p>
+    For example, if we want to count how many numbers less than <m>n</m> are divisible by 5 but not divisible by 7, we can use the following code.
+  </p>
+
+  <program language="sage">
+    <input>
+      n = 501
+      values = []
+      for i in range(1,n):
+          if (i % 5 == 0) and (i % 7 != 0):
+              values.append(i)
+      print(len(values))
+    </input>
+  </program>
+
+
 
 </section>

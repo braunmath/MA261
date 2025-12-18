@@ -60,21 +60,68 @@ Your grade is based on completion only (in other words, if you complete the assi
     <problem>
         <title>P1</title>
         <p>
-            For a real number <m>x\in \mathbb{R}</m>, define the <em>floor function</em> <m>\lfloor x \rfloor</m> to be the greatest integer less than or equal to <m>x</m>. For example, <m>\lfloor 3.7 \rfloor = 3</m>, <m>\lfloor -2.1 \rfloor = -3</m>, and <m>\lfloor 5 \rfloor = 5</m>.
+            For a real number <m>x\in \mathbb{R}</m>, define the <em>floor function</em> <m>\lfloor x \rfloor</m> to be the greatest integer less than or equal to <m>x</m>. 
+            For example, <m>\lfloor 3.7 \rfloor = 3</m>, <m>\lfloor -2.1 \rfloor = -3</m>, and <m>\lfloor 5 \rfloor = 5</m>.
+            The SageMath command to compute the floor is "floor(x)".
         </p>
         <p>
             Let <m>N</m> and <m>m</m> be positive integers. 
-            Explain why the number of multiples of <m>m</m> between <m>1</m> and <m>N</m> (inclusive) is given by <m>\left\lfloor \frac{N}{m} \right\rfloor</m>.
-        </p>
-        <p>
-            Hint: Before you start writing your explanation, work out several examples with specific numbers.
-            What do those examples suggest about how to give a clear explanation for arbitrary values of <m>N</m> and <m>m</m>?
+            The goal of this problem is to explore why the number of multiples of <m>m</m> between <m>1</m> and <m>N</m> (inclusive) is given by <m>\left\lfloor \frac{N}{m} \right\rfloor</m>.
+            <ol>
+                <li>
+                    <p>
+                        Draw a picture using the number line that demonstrates why this is true for <m>N=23</m> and <m>m=5</m>. 
+                        Explain in words why your picture shows that this is true.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Draw a more generic picture using the number line that demonstrates why this is true for any <m>N</m> and <m>m</m>.
+                        Explain in words why your picture shows that this is true.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Explain why this is true using only symbols and words.
+                    </p>
+                </li>
+            </ol>
         </p>
         </problem>
 
     <problem>
         <title>P2</title>
         <p>
+            In this problem, you will complete several computational exercises using SageMath.
+            Before starting this problem, you should read <xref ref="123ncoding"/>.
+            These exercises will require you to modify the code found in that section.
+        </p>
+        <p>
+            To submit your solutions, upload to Canvas either (A) a document with screenshots of your code and output, or (B) a link to a Jupyter notebook with your work.
+            <ol>
+                <li>
+                    <p>
+                        Produce a list of all the numbers from 1 to 200 that are divisible by 10.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Produce a plot of the points <m>[i,\lfloor i/15\rfloor]</m> for all <m>i</m> between 1 and 400 that are divisible by 3 but not divisible by 5 or 7.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        How many numbers between <m>1</m> and <m>10,000</m> are divisible by 23 but not divisible by 17 or 29?
+                    </p>
+                </li>
+            </ol>
+        </p>
+    </problem>
+
+    <problem>
+        <title>P3</title>
+        <p>
+            <p>
             Consider the equation 
             <me>1+3+5+\cdots+(2n-1)=n^2\, .
             </me>
@@ -88,7 +135,7 @@ Your grade is based on completion only (in other words, if you complete the assi
                 <li>
                     <p>
                         Give a "symbolic" proof of this equation by rewriting the numbers in the sum and using properties of sums that we have discussed in class.
-                        Note: You should <em>not</em> use induction for this part, even if you know how to do so.
+                        Hint: write each odd number as <m>2k-1=k+(k-1)</m>.
                     </p>
                 </li>
             </ol>
@@ -98,17 +145,15 @@ Your grade is based on completion only (in other words, if you complete the assi
                 How can you use these examples to guide your thinking about the general case?
             </p>
         </p>
-    </problem>
-
-    <problem>
-        <title>P3</title>
-        <p>
         </p>
     </problem>
 
     <problem>
         <title>P4</title>
         <p>
+            Use induction to prove that
+            <me>1+3+5+\cdots+(2n-1)=n^2\, .
+            </me>
         </p>
     </problem>
 
