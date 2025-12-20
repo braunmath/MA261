@@ -100,9 +100,42 @@
   <exercise>
     <p>
 
-            Discuss the proof of uniqueness using strong induction.
+            Discuss the proof of uniqueness using contradiction through a minimal example.
             What are the 2-3 key ideas that make this proof work?
+    </p>
+  </exercise>
 
+  <p>
+    While the fundamental theorem of arithmetic might seem obvious, the above proof shows that it it not as obvious as it seems.
+    Further, the existence and uniqueness of prime factorization unlocks subtle and deep questions in mathematics.
+    One of these questions is the "Mertens Conjecture", a conjecture that was stated in 1885 by Stieltjes and which was proved false in 1985 by Odlyzko and te Riele.
+    Let's watch the following 9-minute Numberphile video from January 2020 in which Dr. Holly Krieger discusses Merterns' Conjecture.
+  </p>
+
+  <p>
+    <url href="https://www.youtube.com/watch?v=uvMGZb0Suyc">A Prime Surprise (Mertens Conjecture) - Numberphile </url>
+  </p>
+
+  <exercise>
+    <p>
+      <ol>
+        <li>
+          <p>
+            What stood out to you about the mathematics in the video?
+            Did anything surprise you?
+          </p>
+        </li>
+        <li>
+          <p>
+            Did you find the story of the Mertens conjecture interesting? Why or why not?
+          </p>
+        </li>
+        <li>
+          <p>
+            What aspects of embodied, symbolic, and formal mathematics are present in this video?
+          </p>
+        </li>
+      </ol>
     </p>
   </exercise>
 
