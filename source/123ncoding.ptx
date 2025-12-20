@@ -57,15 +57,20 @@
   </definition>
 
   <p>
-    Note that the range command will generate <m>n</m> numbers, but it will start at 0 and end at <m>n-1</m>.
+    To view a list of numbers from the range generator, we use the "list" command combined with the range command, as shown in the following code block.
+    <alert>In practice, when you use the range command, you do not need to use the list command.</alert>
+    Note that the range command will generate <m>n</m> numbers, but it will start at <m>0</m> and end at <m>n-1</m>.
     Copy and paste the following code into SageCell, and change the value of <m>n</m> a few times.
-    To make a list of numbers from the range generator, we use the "list" command.
   </p>
 
   <program language="sage">
     n = 7
     list(range(n))
   </program>
+
+  <p>
+    If you write "range(a,b)", it will produce all the integers from "a" to "b-1".
+  </p>
 
   <definition xml:id="def-forloop">
     <statement>
@@ -79,6 +84,10 @@
       </program>
     </statement>
   </definition>
+
+  <p>
+    Note that at the end of the "for" line you put a colon, and on the following lines within the for loop you indent by four spaces.
+  </p>
 
   <p>
     So, for example, if you want to print the numbers <m>i^2</m> for <m>i</m> from <m>1</m> to <m>20</m>, you would use the following code.
@@ -106,6 +115,10 @@
       </program>
     </statement>
   </definition>
+
+  <p>
+    Note that at the end of the "if" line you put a colon, and on the following lines within the if block you indent by four spaces.
+  </p>
 
   <p>
     So, for example, if you want to go through the numbers from 1 to 50 and only print the multiples of 3, then you would need to do the following:
@@ -216,8 +229,9 @@
   </program>
 
   <p>
-    As our final example, let's make a list of all the numbers from 1 to 500 that are divisible by 5 but not divisible by 7.
-    Then, let's make a plot of the point <m>[i,\lfloor i/10 \rfloor]</m> for each of those numbers, where <m>\lfloor i/10 \rfloor</m> is the floor function defined in Problem P1, computed using the command "floor(i/10)".
+    Next, we will make a list of all the numbers from 1 to 500 that are divisible by 5 but not divisible by 7.
+    Then, we will make a list of the points <m>[i,\lfloor i/10 \rfloor]</m> for each of those numbers, where <m>\lfloor i/10 \rfloor</m> is the floor function defined in Problem P1, computed using the command "floor(i/10)".
+    Finally, we will use the "points" command to make a plot of all the points in our list.
     Note the use of the "and" structure to check multiple conditions.
   </p>
   <program language="sage">
@@ -251,7 +265,24 @@
   </definition>
 
   <p>
-    For example, if we want to count how many numbers less than <m>n</m> are divisible by 5 but not divisible by 7, we can use the following code.
+    For example, if we want to count how many numbers less than <m>n</m> are divisible by 5 but not divisible by 7, we can do the following.
+    <ol>
+      <li>
+        <p>
+          Make an empty list to store our values.
+        </p>
+      </li>
+      <li>
+        <p>
+          For each number between 1 and 500, check to see if it meets our divisibility criteria. If it does, add it to our list of values.
+        </p>
+      </li>
+      <li>
+        <p>
+          Print the length of the resulting list, which tells us how many numbers we found in total.
+        </p>
+      </li>
+    </ol>
   </p>
 
   <program language="sage">
@@ -264,7 +295,6 @@
       print(len(values))
     </input>
   </program>
-
 
 
 </section>
