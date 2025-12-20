@@ -217,11 +217,13 @@ print(L)
 <div class="para" id="def-range-1-1">To generate the numbers from <span class="process-math">\(0\)</span> to <span class="process-math">\(n-1\text{,}\)</span> use the following command. Note that to actually use this, you have to specify what <span class="process-math">\(n\)</span> is.<div class="autopermalink" data-description="Paragraph"><a href="#def-range-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="code-box"><pre class="program clipboardable"><code class="language-py">range(n)
 </code></pre></div>
-<div class="autopermalink" data-description="Definition 2.7.1"><a href="#def-range" title="Copy heading and permalink for Definition 2.7.1" aria-label="Copy heading and permalink for Definition 2.7.1">🔗</a></div></article><div class="para" id="123ncoding-8">Note that the range command will generate <span class="process-math">\(n\)</span> numbers, but it will start at 0 and end at <span class="process-math">\(n-1\text{.}\)</span> Copy and paste the following code into SageCell, and change the value of <span class="process-math">\(n\)</span> a few times. To make a list of numbers from the range generator, we use the "list" command.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 2.7.1"><a href="#def-range" title="Copy heading and permalink for Definition 2.7.1" aria-label="Copy heading and permalink for Definition 2.7.1">🔗</a></div></article><div class="para" id="123ncoding-8">To view a list of numbers from the range generator, we use the "list" command combined with the range command, as shown in the following code block. <em class="alert">In practice, when you use the range command, you do not need to use the list command.</em> Note that the range command will generate <span class="process-math">\(n\)</span> numbers, but it will start at <span class="process-math">\(0\)</span> and end at <span class="process-math">\(n-1\text{.}\)</span> Copy and paste the following code into SageCell, and change the value of <span class="process-math">\(n\)</span> a few times.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="code-box"><pre class="program clipboardable"><code class="language-py">n = 7
 list(range(n))
 </code></pre></div>
+<div class="para" id="123ncoding-10">If you write "range(a,b)", it will produce all the integers from "a" to "b-1".<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <article class="definition definition-like" id="def-forloop"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.7.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
@@ -229,13 +231,15 @@ list(range(n))
 </div> <div class="code-box"><pre class="program clipboardable"><code class="language-py">for "name your objects" in "list or other iterable":
     "do something"
 </code></pre></div>
-<div class="autopermalink" data-description="Definition 2.7.2"><a href="#def-forloop" title="Copy heading and permalink for Definition 2.7.2" aria-label="Copy heading and permalink for Definition 2.7.2">🔗</a></div></article><div class="para" id="123ncoding-11">So, for example, if you want to print the numbers <span class="process-math">\(i^2\)</span> for <span class="process-math">\(i\)</span> from <span class="process-math">\(1\)</span> to <span class="process-math">\(20\text{,}\)</span> you would use the following code. Copy and paste this into SageCell, and then explore what happens when you change the value of <span class="process-math">\(n\text{,}\)</span> or when you change the exponent on <span class="process-math">\(i\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 2.7.2"><a href="#def-forloop" title="Copy heading and permalink for Definition 2.7.2" aria-label="Copy heading and permalink for Definition 2.7.2">🔗</a></div></article><div class="para" id="123ncoding-12">Note that at the end of the "for" line you put a colon, and on the following lines within the for loop you indent by four spaces.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="123ncoding-13">So, for example, if you want to print the numbers <span class="process-math">\(i^2\)</span> for <span class="process-math">\(i\)</span> from <span class="process-math">\(1\)</span> to <span class="process-math">\(20\text{,}\)</span> you would use the following code. Copy and paste this into SageCell, and then explore what happens when you change the value of <span class="process-math">\(n\text{,}\)</span> or when you change the exponent on <span class="process-math">\(i\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="code-box"><pre class="program clipboardable"><code class="language-py">n = 21
 for i in range(1,n):
     print(i^2)
 </code></pre></div>
-<div class="para" id="123ncoding-13">We often want to go through a list of numbers and check them for certain properties. To do this, we use an "if" statement.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="123ncoding-15">We often want to go through a list of numbers and check them for certain properties. To do this, we use an "if" statement.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-ifstatements"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.7.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -244,39 +248,41 @@ for i in range(1,n):
 </div> <div class="code-box"><pre class="program clipboardable"><code class="language-py">if "condition":
     "do something"
 </code></pre></div>
-<div class="autopermalink" data-description="Definition 2.7.3"><a href="#def-ifstatements" title="Copy heading and permalink for Definition 2.7.3" aria-label="Copy heading and permalink for Definition 2.7.3">🔗</a></div></article><div class="para logical" id="123ncoding-15">
+<div class="autopermalink" data-description="Definition 2.7.3"><a href="#def-ifstatements" title="Copy heading and permalink for Definition 2.7.3" aria-label="Copy heading and permalink for Definition 2.7.3">🔗</a></div></article><div class="para" id="123ncoding-17">Note that at the end of the "if" line you put a colon, and on the following lines within the if block you indent by four spaces.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="123ncoding-18">
 <div class="para">So, for example, if you want to go through the numbers from 1 to 50 and only print the multiples of 3, then you would need to do the following:</div>
-<ol class="decimal" id="123ncoding-15-1">
-<li id="123ncoding-15-1-1">
-<div class="para" id="123ncoding-15-1-1-1">use a for loop from 1 to 50,<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-15-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<ol class="decimal" id="123ncoding-18-1">
+<li id="123ncoding-18-1-1">
+<div class="para" id="123ncoding-18-1-1-1">use a for loop from 1 to 50,<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-18-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 1"><a href="#123ncoding-15-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+<div class="autopermalink" data-description="Item 1"><a href="#123ncoding-18-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
 </li>
-<li id="123ncoding-15-1-2">
-<div class="para" id="123ncoding-15-1-2-1">check if each value is divisible by 3,<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-15-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="123ncoding-18-1-2">
+<div class="para" id="123ncoding-18-1-2-1">check if each value is divisible by 3,<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-18-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 2"><a href="#123ncoding-15-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+<div class="autopermalink" data-description="Item 2"><a href="#123ncoding-18-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
 </li>
-<li id="123ncoding-15-1-3">
-<div class="para" id="123ncoding-15-1-3-1">if it is divisible by 3, print the value.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-15-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<li id="123ncoding-18-1-3">
+<div class="para" id="123ncoding-18-1-3-1">if it is divisible by 3, print the value.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-18-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Item 3"><a href="#123ncoding-15-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+<div class="autopermalink" data-description="Item 3"><a href="#123ncoding-18-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
 </li>
 </ol>
 <div class="para">The way we check divisibility is to compute the remainder when dividing by 3 and checking to see if it is 0. To compute the remainder of <span class="process-math">\(n\)</span> divided by <span class="process-math">\(k\text{,}\)</span> use the following command:</div>
-<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="code-box"><pre class="program clipboardable"><code class="language-py">n % k
 </code></pre></div>
-<div class="para" id="123ncoding-17">To check if two things are equal, we use "==". To check if two values are not equal, we use "!=".<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-17" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="123ncoding-20">To check if two things are equal, we use "==". To check if two values are not equal, we use "!=".<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="123ncoding-18">So, the following code will print only numbers divisible by 3.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="123ncoding-21">So, the following code will print only numbers divisible by 3.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="code-box"><pre class="program clipboardable"><code class="language-py">for i in range(1,51):
     if i % 3 == 0:
         print(i)
 </code></pre></div>
-<div class="para" id="123ncoding-20">The following program will print the numbers that are not divisible by 3.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="123ncoding-23">The following program will print the numbers that are not divisible by 3.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="code-box"><pre class="program clipboardable"><code class="language-py">for i in range(1,51):
     if i % 3 != 0:
@@ -288,7 +294,7 @@ for i in range(1,n):
 <div class="para" id="def-append-1-1">We can store values in a list, which we discussed earlier. To include a new value <span class="process-math">\(k\)</span> at the end of a list <span class="process-math">\(L\text{,}\)</span> we use the "append" method.<div class="autopermalink" data-description="Paragraph"><a href="#def-append-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="code-box"><pre class="program clipboardable"><code class="language-py">L.append(k)
 </code></pre></div>
-<div class="autopermalink" data-description="Definition 2.7.4"><a href="#def-append" title="Copy heading and permalink for Definition 2.7.4" aria-label="Copy heading and permalink for Definition 2.7.4">🔗</a></div></article><div class="para" id="123ncoding-23">So, for example, if we want to make a list of all numbers from 1 to 50 that are divisible by 3, we first create an empty list <span class="process-math">\(L\)</span> and then append the numbers that are divisible by 3.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 2.7.4"><a href="#def-append" title="Copy heading and permalink for Definition 2.7.4" aria-label="Copy heading and permalink for Definition 2.7.4">🔗</a></div></article><div class="para" id="123ncoding-26">So, for example, if we want to make a list of all numbers from 1 to 50 that are divisible by 3, we first create an empty list <span class="process-math">\(L\)</span> and then append the numbers that are divisible by 3.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-26" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="code-box"><pre class="program clipboardable"><code class="language-py">L = []
 for i in range(1,51):
@@ -296,12 +302,12 @@ for i in range(1,51):
         L.append(i)
 print(L)
 </code></pre></div>
-<div class="para" id="123ncoding-25">If we have a pair <span class="process-math">\([a,b]\text{,}\)</span> we can store those pairs in a list as well. We can then plot those pairs using the "points" command.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="123ncoding-28">If we have a pair <span class="process-math">\([a,b]\text{,}\)</span> we can store those pairs in a list as well. We can then plot those pairs using the "points" command.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-28" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="code-box"><pre class="program clipboardable"><code class="language-py">L = [[1,3],[2,5],[3,7],[4,4],[5,10]]
 points(L)
 </code></pre></div>
-<div class="para" id="123ncoding-27">So, for example, suppose you want to find the remainder for each number <span class="process-math">\(n\)</span> from 1 to 100 after you divide by 7, and the plot the pairs <span class="process-math">\([n,remainder]\text{.}\)</span> You would use this code.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-27" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="123ncoding-30">So, for example, suppose you want to find the remainder for each number <span class="process-math">\(n\)</span> from 1 to 100 after you divide by 7, and the plot the pairs <span class="process-math">\([n,remainder]\text{.}\)</span> You would use this code.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="code-box"><pre class="program clipboardable"><code class="language-py">L = []
 k = 7
@@ -310,7 +316,7 @@ for n in range(101):
     L.append([n,remainder])
 points(L)
 </code></pre></div>
-<div class="para" id="123ncoding-29">As our final example, let’s make a list of all the numbers from 1 to 500 that are divisible by 5 but not divisible by 7. Then, let’s make a plot of the point <span class="process-math">\([i,\lfloor i/10 \rfloor]\)</span> for each of those numbers, where <span class="process-math">\(\lfloor i/10 \rfloor\)</span> is the floor function defined in Problem P1, computed using the command "floor(i/10)". Note the use of the "and" structure to check multiple conditions.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="123ncoding-32">Next, we will make a list of all the numbers from 1 to 500 that are divisible by 5 but not divisible by 7. Then, we will make a list of the points <span class="process-math">\([i,\lfloor i/10 \rfloor]\)</span> for each of those numbers, where <span class="process-math">\(\lfloor i/10 \rfloor\)</span> is the floor function defined in Problem P1, computed using the command "floor(i/10)". Finally, we will use the "points" command to make a plot of all the points in our list. Note the use of the "and" structure to check multiple conditions.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-32" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="code-box"><pre class="program clipboardable"><code class="language-py">values = []
 for n in range(1,501):
@@ -321,7 +327,7 @@ for i in values:
     pairs.append([i,floor(i/10)])
 points(pairs)
 </code></pre></div>
-<div class="para" id="123ncoding-31">Finally, we need to know how to find the length of a list.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="123ncoding-34">Finally, we need to know how to find the length of a list.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-length"><h3 class="heading">
 <span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.7.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
@@ -329,7 +335,26 @@ points(pairs)
 <div class="para" id="def-length-1-1">To compute the length of a list <span class="process-math">\(L\text{,}\)</span> use the following command.<div class="autopermalink" data-description="Paragraph"><a href="#def-length-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="code-box"><pre class="program clipboardable"><code class="language-py">len(L)
 </code></pre></div>
-<div class="autopermalink" data-description="Definition 2.7.5"><a href="#def-length" title="Copy heading and permalink for Definition 2.7.5" aria-label="Copy heading and permalink for Definition 2.7.5">🔗</a></div></article><div class="para" id="123ncoding-33">For example, if we want to count how many numbers less than <span class="process-math">\(n\)</span> are divisible by 5 but not divisible by 7, we can use the following code.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 2.7.5"><a href="#def-length" title="Copy heading and permalink for Definition 2.7.5" aria-label="Copy heading and permalink for Definition 2.7.5">🔗</a></div></article><div class="para logical" id="123ncoding-36">
+<div class="para">For example, if we want to count how many numbers less than <span class="process-math">\(n\)</span> are divisible by 5 but not divisible by 7, we can do the following.</div>
+<ol class="decimal" id="123ncoding-36-2">
+<li id="123ncoding-36-2-1">
+<div class="para" id="123ncoding-36-2-1-1">Make an empty list to store our values.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-36-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#123ncoding-36-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="123ncoding-36-2-2">
+<div class="para" id="123ncoding-36-2-2-1">For each number between 1 and 500, check to see if it meets our divisibility criteria. If it does, add it to our list of values.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-36-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#123ncoding-36-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="123ncoding-36-2-3">
+<div class="para" id="123ncoding-36-2-3-1">Print the length of the resulting list, which tells us how many numbers we found in total.<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-36-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#123ncoding-36-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#123ncoding-36" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="code-box"><pre class="program clipboardable"><code class="language-py">n = 501
 values = []
