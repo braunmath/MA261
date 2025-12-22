@@ -10,7 +10,7 @@
   </p>
 
   <p>
-    The answer to this question is the following, which is a something most of you learned as a "fact" in elementary and middle school.
+    The answer to this question is the following, which is something most of you learned as a "fact" in elementary and middle school.
   </p>
 
   <theorem xml:id="thm-fundthmarithmetic">
@@ -52,7 +52,7 @@
 
   <p>
     We will prove existence of factorizations and uniqueness of factorizations separately.
-    This proof closely follows the one given for <url href="https://bookstore.ams.org/view?ProductCode=AMSTEXT/58">Theorem 1.6.5 in Cioaba and Linde's <em>A Bridge to Advanced Mathematics</em></url>.
+    This proof closely follows the structure of the proof given in <url href="https://bookstore.ams.org/view?ProductCode=AMSTEXT/58">Theorem 1.6.5 in Cioaba and Linde's <em>A Bridge to Advanced Mathematics</em></url>.
   </p>
   
   <proof>
@@ -89,11 +89,108 @@
     </p>
   </exercise>
 
+  <p>
+    Remember that when we introduced the principle of mathematical induction in <xref ref="principle-induction"/>, we did not give a proof for it.
+    That is because the principle of mathematical induction is, for us in this course, an <alert>axiom</alert> that we take as given.
+    In the formal world, mathematics is the study of <alert>correctness</alert> within logical systems, rather than being the study of reality or truth.
+    So, in the formal world, we make certain assumptions (called "axioms") and then see what logical implications follow from these.
+  </p>
+
+  <p>
+    Different areas of mathematics rely to different degrees on the embodied, symbolic, and formal worlds of mathematics.
+    Number theory is usually practiced by mathematicians through a blending of these three worlds, rather than being rigidly maintained within the formal world.
+    So, we will use the following principle in this course.
+  </p>
+
+  <principle xml:id="principle-balancedworlds">
+    <statement>
+      <p>
+        In our development of number theory, we will rely on a mix of embodied, symbolic, and formal arguments.
+        We will sometimes introduce axioms or fundamental principles of mathematics that are foundational to the formal world, so that students gain experience with the level of detail required when constructing very formal arguments.
+      </p>
+    </statement>
+  </principle>
+
+  <p>
+    For our proof of uniqueness of prime factorizations, we will use a proof by contradiction.
+    It will have five steps.
+    <ol>
+      <li>
+        <p>
+          Step 1: Assume for a contradiction that there is some natural number that has two distinct prime factorizations.
+        </p>
+      </li>
+      <li>
+        <p>
+          Step 2: Consider the smallest natural number <m>N</m> that has this property.
+        </p>
+      </li>
+      <li>
+        <p>
+          Step 3: Use the two different factorizations of <m>N</m> to prove that there is a natural number <m>n</m> that is strictly less than <m>N</m> which also has two distinct prime factorizations.
+        </p>
+      </li>
+      <li>
+        <p>
+          Step 4: Observe that this is a contradiction, because we assumed that <m>N</m> was the smallest number of this type, but we used the factorizations of <m>N</m> to create an even smaller number.
+        </p>
+      </li>
+      <li>
+        <p>
+          Step 5: Conclude that our assumption was faulty, and therefore every number has a unique prime factorization.
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <exercise>
+    <p>
+      Discuss the 5-step strategy we will use for the proof.
+      Does it make sense why this argument will logically imply that every number has a unique prime factorization?
+      Why or why not?
+    </p>
+  </exercise>
+
+  <p>
+    Note that in Step 2, we made an assumption that given a set of natural numbers with some property, there is a smallest number in the set.
+    This makes sense intuitively, because the smallest natural number is <m>1</m>, and so in principle you could start at <m>1</m> and check to see if it has the property, then check <m>2</m>, then check <m>3</m>, and so on until you find the first element in the set.
+    However, in the formal world of mathematical proof, mathematicians want to know if this intuitive idea follows logically from another assumption we make about numbers, or if we should consider it as an independent principle.
+    So, mathematicians asserted the following principle to formally allow this step in the proof.
+  </p>
+
+  <principle xml:id="principle-wellorderingprinciple">
+    <title>Well-Ordering Principle</title>
+    <statement>
+      <p>
+        Every non-empty subset of the natural numbers contains a smallest element, which is sometimes called the <em>least element</em> of the set.
+      </p>
+    </statement>
+  </principle>
+
+  <p>
+    If you study formal axiomatic mathematics in more detail, you will find that the well-ordering principle and the principle of mathematical induction are equivalent.
+    In other words, you can use the well-ordering principle to prove that induction is correct, and you can use induction to prove that well-ordering holds.
+    In this course, we will take both of these as axiomatic principles, and we will direct our focus on proving number-theoretic results that they imply.
+  </p>
+
   <proof>
     <title>Proof of uniqueness of prime factorizations</title>    
     <p>
-      Second, we will show that each factorization is unique, using a proof by contradiction.
-
+      We now show that each natural number has a unique prime factorization, using a proof by contradiction.
+      Assume for contradiction that this is not true, and suppose that <m>N</m> is the least natural number that has two distinct prime factorizations.
+      So, suppose that there exist prime numbers <m>p_1,\ldots,p_t, q_1,\ldots,q_s</m> and non-negative integers <m>a_1,\ldots,a_t,b_1,\ldots,b_s</m>
+      such that
+      <me>
+        N=p_1^{a_1}\cdots p_k^{a_k}=q_1^{b_1}\cdots q_k^{b_k} \, .
+      </me>
+    </p>
+    <p>
+      Our first observation is that the <m>p_i</m>'s are all distinct from the <m>q_j</m>'s.
+      This is because if there was a common prime factor <m>p</m> in the two factorizations, we could divide by that factor to produce a new number <m>n=N/p</m> that would be smaller than <m>N</m> and would have two different prime factorizations.
+      So, there are no common primes between the two factorizations.
+    </p>
+    <p>
+      
     </p>
   </proof>
 

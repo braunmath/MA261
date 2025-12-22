@@ -152,6 +152,14 @@
         </statement>
     </principle>
 
+    <exercise>
+      <p>
+        Discuss how the two proofs we did above are connected to the principle of mathematical induction.
+        What is the mathematical statement <m>P(n)</m> for each of these proofs?
+        What is the statement in the base case for each of these proofs?
+      </p>
+    </exercise>
+
     <p>
       There is a variation on induction called <em>strong induction</em> that uses a stronger induction step, which we will sometimes need.
     </p>
