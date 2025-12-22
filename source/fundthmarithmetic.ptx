@@ -18,7 +18,7 @@
     <statement>
       <p>
         Every natural number greater than <m>1</m> can be written as a product of primes, and this product is unique for each number.
-        Symbolically, given a natural number <m>n\gt 1</m>, there exist distinct primes <m>p_1,\ldots,p_k</m> and non-negative exponents <m>a_1,\ldots,a_k\in \mathbb{Z}_{\geq 0}</m> such that
+        Symbolically, given a natural number <m>n\gt 1</m>, there exist distinct primes <m>p_1,\ldots,p_k</m> and exponents <m>a_1,\ldots,a_k\in \mathbb{N}</m> such that
         <me>
           n = p_1^{a_1}p_2^{a_2}\cdots p_k^{a_k}
         </me>
@@ -106,7 +106,7 @@
     <statement>
       <p>
         In our development of number theory, we will rely on a mix of embodied, symbolic, and formal arguments.
-        We will sometimes introduce axioms or fundamental principles of mathematics that are foundational to the formal world, so that students gain experience with the level of detail required when constructing very formal arguments.
+        While we will not work purely in the formal world, we will regularly introduce axioms or fundamental principles of mathematics that are foundational to the formal world, so that students gain experience with the level of detail required when constructing very formal arguments.
       </p>
     </statement>
   </principle>
@@ -127,12 +127,12 @@
       </li>
       <li>
         <p>
-          Step 3: Use the two different factorizations of <m>N</m> to prove that there is a natural number <m>n</m> that is strictly less than <m>N</m> which also has two distinct prime factorizations.
+          Step 3: Use the two different factorizations of <m>N</m> to construct a natural number <m>n</m> that is strictly less than <m>N</m>, so by assumption it has a unique prime factorization.
         </p>
       </li>
       <li>
         <p>
-          Step 4: Observe that this is a contradiction, because we assumed that <m>N</m> was the smallest number of this type, but we used the factorizations of <m>N</m> to create an even smaller number.
+          Step 4: Use the unique factorization of <m>n</m> to prove that there are two primes <m>p_1</m> and <m>q_1</m> such that <m>p_1\mid q_1</m>, which is impossible.
         </p>
       </li>
       <li>
@@ -178,10 +178,10 @@
     <p>
       We now show that each natural number has a unique prime factorization, using a proof by contradiction.
       Assume for contradiction that this is not true, and suppose that <m>N</m> is the least natural number that has two distinct prime factorizations.
-      So, suppose that there exist prime numbers <m>p_1,\ldots,p_t, q_1,\ldots,q_s</m> and non-negative integers <m>a_1,\ldots,a_t,b_1,\ldots,b_s</m>
+      So, suppose that there exist prime numbers <m>p_1\lt \cdots \lt p_t</m> and <m>q_1\lt \cdots \lt q_s</m> and natural numbers <m>a_1,\ldots,a_t,b_1,\ldots,b_s</m>
       such that
       <me>
-        N=p_1^{a_1}\cdots p_k^{a_k}=q_1^{b_1}\cdots q_k^{b_k} \, .
+        N=p_1^{a_1}\cdots p_t^{a_t}=q_1^{b_1}\cdots q_s^{b_s} \, .
       </me>
     </p>
     <p>
@@ -190,15 +190,55 @@
       So, there are no common primes between the two factorizations.
     </p>
     <p>
-      
+      We can assume that <m>p_1\lt q_1</m>, since if it isn't we can exchange the names of the <m>p_i</m> and <m>q_j</m>.
+      Define
+      <me>
+        n:=N-p_1q_1^{b_1-1}q_2^{b_2}q_3^{b_3}\cdots q_s^{b_s} \, ,
+      </me>
+      which is obtained by replacing one copy of <m>q_1</m> with <m>p_1</m>.
+      We can then substitute our two factorizations of <m>N</m> into this expression to get two different expressions for <m>N</m>:
+      <md>
+        <mrow>n \amp = p_1^{a_1}\cdots p_t^{a_t} - p_1q_1^{b_1-1}q_2^{b_2}q_3^{b_3}\cdots q_s^{b_s} </mrow>
+        <mrow> \amp = p_1(p_1^{a_1-1}\cdots p_t^{a_t} - q_1^{b_1-1}q_2^{b_2}q_3^{b_3}\cdots q_s^{b_s})</mrow>
+      </md>
+      and
+      <md>
+        <mrow>n \amp = q_1^{b_1}\cdots q_s^{b_s} - p_1q_1^{b_1-1}q_2^{b_2}q_3^{b_3}\cdots q_s^{b_s}</mrow>
+        <mrow> \amp = (q_1-p_1)q_1^{b_1-1}q_2^{b_2}q_3^{b_3}\cdots q_s^{b_s}</mrow> \, .
+      </md>
+    Notice that <m>n</m> is less than <m>N</m>, because it is created by subtracting a positive value from <m>N</m>.
+    Therefore, <m>n</m> has a unique factorization.
+    </p>
+    <p>
+      From the first expression, we see that <m>p_1</m> is a prime divisor of <m>n</m>.
+      Since <m>p_1</m> is not equal to any of the <m>q_j</m> values, it must be that <m>p_1\mid (q_1-p_1)</m>, and hence there is a natural number <m>c</m> such that
+      <me>
+        c\cdot p_1 = (q_1-p_1) \, .
+      </me>
+      Therefore, we have that
+      <me>
+        (c+1)\cdot p_1 = c\cdot p_1 + p_1 = (q_1-p_1)+p_1 = q_1 \, .
+      </me>
+      Thus, we have found that the prime <m>p_1</m> divides the prime <m>q_1</m>, which is a contradiction.
+      Therefore, every natural number has a unique prime factorization.
     </p>
   </proof>
 
   <exercise>
     <p>
-
-            Discuss the proof of uniqueness using contradiction through a minimal example.
-            What are the 2-3 key ideas that make this proof work?
+      <ol>
+        <li>
+          <p>
+            Review the proof with your group, matching up each of steps 1-5 with the corresponding section of the proof.
+          </p>
+        </li>
+        <li>
+          <p>
+            Discuss the details of each section of this proof.
+            Does each step make sense? Why or why not?
+          </p>
+        </li>
+      </ol>
     </p>
   </exercise>
 
