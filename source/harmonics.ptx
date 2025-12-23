@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="harmonics" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Harmonics and Temperament</title>
+  <title>Harmonics</title>
 
 <p>
   We are now able to develop our first applications of number theory to music theory, specifically the theory of harmonics and temperament.
@@ -13,11 +13,11 @@
   Sound is perceived through our ears as a sequence of "beats" of pressure.
   The number of beats that is heard per second is the <em>frequency</em> of the wave, which is measured in <em>Hertz</em>.
   One Hertz, written as <m>1</m> Hz, is equal to one beat per second.
-  The human ear can perceive frequencies ranging from around 20 Hz to between 16,000 and 20,000 Hz.
+  The human ear can perceive frequencies ranging from around 20 Hz to around 20,000 Hz.
 </p>
 
 <p>
-  An aside for those students who have musical experience: in this class, we will use the term "frequency" rather than "pitch", because they are technically different; pitch is the human perception of frequency, which does not always correspond accurately to the physical frequency.
+  <alert>An aside for those students who have musical experience:</alert> In this class, we will use the term "frequency" rather than "pitch", because they are technically different; pitch is the human perception of frequency, which does not always correspond accurately to the physical frequency.
   However, for typical musical purposes, the words pitch and frequency are used as synonyms.
 </p>
 
@@ -32,7 +32,7 @@
     </li>
     <li>
       <p>
-        20 Hz using a sine wave (this is a smoothly-varying pressure wave with 20 high pressure beats per second), then increase to 880 Hz.
+        20 Hz using a sine wave (this is a smoothly-varying pressure wave with 20 pressure beats per second), then increase to 880 Hz.
       </p>
     </li>
   </ul>
@@ -82,12 +82,12 @@
     <ol>
       <li>
         <p>
-          Hertz as beats per minute
+          Sound as sequences of "beats" of pressure in the air being sensed by our ears
         </p>
       </li>
       <li>
         <p>
-          Sound as sequences of "beats" of pressure in the air being sensed by our ears
+          Hertz as beats per second
         </p>
       </li>
       <li>
@@ -110,7 +110,7 @@
         <li>
           <p>
             Given two frequencies <m>f_1</m> Hz and <m>f_2</m> Hz, the <em>interval</em> from <m>f_1</m> to <m>f_2</m> is given by the ratio <m>f_1:f_2</m>.
-            If two ratios are equivalent as fractions, then we say that they define the same interval.
+            If two ratios are equivalent as real numbers, then we say that they define the same interval.
           </p>
         </li>
         <li>
@@ -121,6 +121,11 @@
         <li>
           <p>
             Two frequencies differ by a <em>fifth</em> if their interval is <m>3:2</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Two frequencies differ by a <em>fourth</em> if their interval is <m>4:3</m>.
           </p>
         </li>
         <li>
@@ -153,7 +158,18 @@
       </li>
       <li>
         <p>
+          Suppose that the frequency <m>g</m> is a fourth above a frequency <m>f</m>.
+          Show that the fifth above <m>g</m> is <m>2f</m>, the octave above <m>f</m>.
+        </p>
+      </li>
+      <li>
+        <p>
           What frequency is one octave above the fifth above 440 Hz?
+        </p>
+      </li>
+      <li>
+        <p>
+          Show that the frequency <m>\frac{9}{8}f</m> is obtained by going up by two fifths from the frequency <m>f</m> followed by going down by one octave from the resulting frequency.
         </p>
       </li>
     </ol>
@@ -161,16 +177,44 @@
 </exercise>
 
 <p>
-  Intervals and fifths play a fundamental role in many musical traditions around the world.
-  Part of the reason for this is because the ratios for octaves and fifths involve fractions with small integer values.
-  A classical construction of musical scales, which arose in multiple ancient cultures, is a construction of musical scales using only octaves and fifths.
-  Any scale constructed using only octaves and fifths is referred to as a <em>Pythagorean scale</em>.
+  One thing that is important to know about musical sound is that when a string vibrates, it propagates sound waves at more than one frequency.
+  In addition to the fundamental frequency <m>f</m> that it generates, the vibrating string also generates the frequencies <m>2f</m>, <m>3f</m>, <m>4f</m>, and so on.
+  These additional sound waves are called the <em>harmonics</em> of the fundamental frequency.
+  The harmonics are produced with varying amplitudes (i.e., loudness) depending on how the string was struck/activated/excited/etc.
+  Thus, we are led to the following principle.
 </p>
+
+<principle xml:id="principle-harmonics">
+  <statement>
+    <p>
+      If a vibrating string has fundamental frequency <m>f</m>, then it also produces harmonics of frequencies <m>2f</m>, <m>3f</m>, <m>4f</m>, and so on.
+      Thus, the intervals that are heard when a string vibrates include the following intervals between consecutive harmonics:
+      <ul>
+        <li>
+          <p>
+            an octave above <m>f</m>, ratio <m>\frac{2}{1}</m>, from <m>2f</m> to <m>f</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            a fifth above <m>2f</m>, ratio <m>\frac{3}{2}</m>, from <m>3f</m> to <m>2f</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            a fourth above <m>3f</m>, ratio <m>\frac{4}{3}</m>, from <m>4f</m> to <m>3f</m>
+          </p>
+        </li>
+      </ul>
+    </p>
+  </statement>
+</principle>
+
 
 <p>
-  
+  Intervals, fifths, and fourths therefore are important harmonics that arise naturally in the sound produced by vibrating strings.
+  As a result, these intervals play a fundamental role in many musical traditions around the world.
 </p>
-
 
 
 </section>
