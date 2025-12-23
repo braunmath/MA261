@@ -511,7 +511,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "Infinitude of Primes",
-  "body": " Infinitude of Primes  The most important question about primes that was asked in ancient times is the following.   How many primes are there? Are there only finitely many? Or are there infinitely many?   Let's look at some data. Define to be the number of primes less than or equal to . (Here is the Greek letter corresponding to \"p\", not the number .) So, for example, since are the four primes less than or equal to .  The following code will plot a point at for every prime up to . What happens if we change the upper bound to ?   L = [] M = 100 for i in range(M): if i in Primes(): L.append([i,len(L)+1]) points(L,xmax=M,ymax=M)   As was discovered thousands of years ago, the answer to our question is the following theorem, recorded in Euclid's Elements .    There are infinitely many primes.    We will give two versions of Euclid's proof. The first is a constructive proof.   We will apply the following operation: given a set of primes , produce the number . We will call this a Euclid step .  Note that does not divide , since dividing by leaves a remainder of . Similarly, dividing by leaves a remainder of . The same holds for every . Therefore, is a number that is not divisible by any of the primes we have, and by , there is a new prime that divides .  Thus, starting with , we obtain the prime . From there, we can produce the prime . From there, we can produce the prime . From there, we can produce the number . We can pick either of or to add to our list of primes.  With each application of a Euclid step, we produce a new prime. Thus, this yields an algorithm for constructing an infinite sequence of prime numbers.    What are the first few primes do you get when you start this process with the prime instead of the prime as your first value?    What makes sense about this proof? Do you feel that this proof is primarily embodied, symbolic, formal, or a combination of these worlds? Why?   Next we will consider Euclid's original version of this proof, which is a proof by contradiction . In a proof by contradiction, you suppose that the result is false, and show that this leads to a contradiction, hence the result must be true.   Suppose for contradiction that there are only finitely many primes, call them . If we apply a Euclid step (as defined in the previous proof) to these primes, then this produces a new prime that is not in our list. This contradicts our assumption that there are only finitely many primes, and thus there must be infinitely many primes.       Discuss the proof by contradiction. Does it make sense why this shows there are infinitely many primes?    Which proof do you prefer, the constructive or contradiction proof? Why?      "
+  "body": " Infinitude of Primes  The most important question about primes that was asked in ancient times is the following.   How many primes are there? Are there only finitely many? Or are there infinitely many?   Let's look at some data. Define to be the number of primes less than or equal to . (Here is the Greek letter corresponding to \"p\", not the number .) So, for example, since are the four primes less than or equal to .  The following code will plot a point at for every prime up to . What happens if we change the upper bound to ?   L = [] M = 100 for i in range(M): if i in Primes(): L.append([i,len(L)+1]) points(L,xmax=M,ymax=M)   As was discovered thousands of years ago, the answer to our question is the following theorem, recorded in Euclid's Elements .    There are infinitely many primes.    We will give two versions of Euclid's proof. The first is a constructive proof.   We will apply the following operation: given a set of primes , produce the number . We will call this a Euclid step .  Note that does not divide , since dividing by leaves a remainder of . Similarly, dividing by leaves a remainder of . The same holds for every . Therefore, is a number that is not divisible by any of the primes we have, and by , there is a new prime that divides .  Thus, starting with , we obtain the prime . From there, we can produce the prime . From there, we can produce the prime . From there, we can produce the number . We can pick either of or to add to our list of primes.  With each application of a Euclid step, we produce a new prime. Thus, this yields an algorithm for constructing an infinite sequence of prime numbers.    What are the first few primes do you get when you start this process with the prime instead of the prime as your first value?    What makes sense about this proof? Do you feel that this proof is primarily embodied, symbolic, formal, or a combination of these worlds? Why?   Next we will consider Euclid's original version of this proof, which is a proof by contradiction . In a proof by contradiction, you suppose that the result is false, and show that this leads to a contradiction, hence the result must be true.   Suppose for contradiction that there are only finitely many primes, call them . If we apply a Euclid step (as defined in the previous proof) to these primes, then this produces a new prime that is not in our list. This contradicts our assumption that there are only finitely many primes, and thus there must be infinitely many primes.       Discuss the proof by contradiction. Does it make sense why this shows there are infinitely many primes?    Which of the two proofs do you prefer, constructive or contradiction? Why?      "
 },
 {
   "id": "infinitudeofprimes-3",
@@ -574,7 +574,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "3.2.5",
   "title": "",
-  "body": "    Discuss the proof by contradiction. Does it make sense why this shows there are infinitely many primes?    Which proof do you prefer, the constructive or contradiction proof? Why?     "
+  "body": "    Discuss the proof by contradiction. Does it make sense why this shows there are infinitely many primes?    Which of the two proofs do you prefer, constructive or contradiction? Why?     "
 },
 {
   "id": "fundthmarithmetic",
@@ -683,6 +683,213 @@ var ptx_lunr_docs = [
   "number": "3.3.9",
   "title": "",
   "body": "    What stood out to you about the mathematics in the video? Did anything surprise you?    Did you find the story of the Mertens conjecture interesting? Why or why not?    What aspects of embodied, symbolic, and formal mathematics are present in this video?     "
+},
+{
+  "id": "FTAcorollaries",
+  "level": "1",
+  "url": "FTAcorollaries.html",
+  "type": "Section",
+  "number": "3.4",
+  "title": "Consequences of the Fundamental Theorem",
+  "body": " Consequences of the Fundamental Theorem  We will now investigate consequences of the Fundamental Theorem of Arithmetic.   Euclid's Lemma   Let be a prime. If and are natural numbers such that , then or .     Write the prime factorizations and . Then we have If divides the product, then must appear in the list of primes in the factorization of . Therefore, must be a divisor of one or both of and .    With your group, work through the logic of this proof using and the numbers and . Does the proof make sense? Why or why not?     Suppose that . If is any divisor of , then Where each .     If divides and , then . Thus, any power of a prime dividing must also divide .   We next define the greatest common divisor and least common multiple of two numbers, and express these quantities in terms of prime factorizations.    Let and be natural numbers. The greatest common divisor of and , denoted , is given by the largest natural number dividing both and . If , we say that and are coprime . The least common multiple of and , denoted , is given by the smallest natural number divisible by both and .     Find the greatest common divisor and the least common multiple for the following pairs of numbers.   5, 11    15, 36    367, 854      Using prime factorizations, it is straightforward to determine these values.    Suppose and are natural numbers. If is a prime such that appears in the prime factorization of and appears in the prime factorization of , then:    appears in the prime factorization of , and     appears in the prime factorization of .        The proposition is a consequence of the following two observations. The largest power of that divides both and is the minimum of the two exponents. The smallest power of that is divisible by both and is the maximum of the two exponents.    Discuss the above \"sketch\" of the proof with your group. Are you convinced by this? Do you feel it needs more details? Why or why not?   The Fundamental Theorem of Arithmetic is also the key ingredient in many classical proofs of irrationality. Here are three examples.    The value is irrational.     Suppose for a contradiction that for natural numbers and where the fraction is fully reduced; in other words, and are coprime. Then squaring both sides, we have that and therefore . However, this implies that there are an odd number of s in the prime factorization of the left side, while there are an even number in the prime factorization on the right. This is a contradiction, and therefore is not rational.       Discuss this proof. Does it make sense? Why or why not?    Modify this proof to show that is irrational.        The value is irrational.     Suppose for contradiction that for coprime numbers and . Then we have that , which implies that This implies that which is impossible by the uniqueness of prime factorization, yielding the desired contradiction.    Discuss this proof. Does it make sense? Why or why not?   "
+},
+{
+  "id": "lem-euclidslemma",
+  "level": "2",
+  "url": "FTAcorollaries.html#lem-euclidslemma",
+  "type": "Lemma",
+  "number": "3.4.1",
+  "title": "Euclid’s Lemma.",
+  "body": " Euclid's Lemma   Let be a prime. If and are natural numbers such that , then or .   "
+},
+{
+  "id": "FTAcorollaries-4",
+  "level": "2",
+  "url": "FTAcorollaries.html#FTAcorollaries-4",
+  "type": "Proof",
+  "number": "3.4.1",
+  "title": "",
+  "body": " Write the prime factorizations and . Then we have If divides the product, then must appear in the list of primes in the factorization of . Therefore, must be a divisor of one or both of and .  "
+},
+{
+  "id": "FTAcorollaries-5",
+  "level": "2",
+  "url": "FTAcorollaries.html#FTAcorollaries-5",
+  "type": "Checkpoint",
+  "number": "3.4.2",
+  "title": "",
+  "body": " With your group, work through the logic of this proof using and the numbers and . Does the proof make sense? Why or why not?  "
+},
+{
+  "id": "cor-factordivisorform",
+  "level": "2",
+  "url": "FTAcorollaries.html#cor-factordivisorform",
+  "type": "Corollary",
+  "number": "3.4.3",
+  "title": "",
+  "body": "  Suppose that . If is any divisor of , then Where each .   "
+},
+{
+  "id": "FTAcorollaries-7",
+  "level": "2",
+  "url": "FTAcorollaries.html#FTAcorollaries-7",
+  "type": "Proof",
+  "number": "3.4.2",
+  "title": "",
+  "body": " If divides and , then . Thus, any power of a prime dividing must also divide .  "
+},
+{
+  "id": "def-gcdlcm",
+  "level": "2",
+  "url": "FTAcorollaries.html#def-gcdlcm",
+  "type": "Definition",
+  "number": "3.4.4",
+  "title": "",
+  "body": "  Let and be natural numbers. The greatest common divisor of and , denoted , is given by the largest natural number dividing both and . If , we say that and are coprime . The least common multiple of and , denoted , is given by the smallest natural number divisible by both and .   "
+},
+{
+  "id": "FTAcorollaries-10",
+  "level": "2",
+  "url": "FTAcorollaries.html#FTAcorollaries-10",
+  "type": "Checkpoint",
+  "number": "3.4.5",
+  "title": "",
+  "body": " Find the greatest common divisor and the least common multiple for the following pairs of numbers.   5, 11    15, 36    367, 854     "
+},
+{
+  "id": "prop-gcdlcmfactorizations",
+  "level": "2",
+  "url": "FTAcorollaries.html#prop-gcdlcmfactorizations",
+  "type": "Proposition",
+  "number": "3.4.6",
+  "title": "",
+  "body": "  Suppose and are natural numbers. If is a prime such that appears in the prime factorization of and appears in the prime factorization of , then:    appears in the prime factorization of , and     appears in the prime factorization of .      "
+},
+{
+  "id": "FTAcorollaries-13",
+  "level": "2",
+  "url": "FTAcorollaries.html#FTAcorollaries-13",
+  "type": "Proof",
+  "number": "3.4.3",
+  "title": "",
+  "body": " The proposition is a consequence of the following two observations. The largest power of that divides both and is the minimum of the two exponents. The smallest power of that is divisible by both and is the maximum of the two exponents.  "
+},
+{
+  "id": "FTAcorollaries-14",
+  "level": "2",
+  "url": "FTAcorollaries.html#FTAcorollaries-14",
+  "type": "Checkpoint",
+  "number": "3.4.7",
+  "title": "",
+  "body": " Discuss the above \"sketch\" of the proof with your group. Are you convinced by this? Do you feel it needs more details? Why or why not?  "
+},
+{
+  "id": "thm-sqrt2irrational",
+  "level": "2",
+  "url": "FTAcorollaries.html#thm-sqrt2irrational",
+  "type": "Theorem",
+  "number": "3.4.8",
+  "title": "",
+  "body": "  The value is irrational.   "
+},
+{
+  "id": "FTAcorollaries-17",
+  "level": "2",
+  "url": "FTAcorollaries.html#FTAcorollaries-17",
+  "type": "Proof",
+  "number": "3.4.4",
+  "title": "",
+  "body": " Suppose for a contradiction that for natural numbers and where the fraction is fully reduced; in other words, and are coprime. Then squaring both sides, we have that and therefore . However, this implies that there are an odd number of s in the prime factorization of the left side, while there are an even number in the prime factorization on the right. This is a contradiction, and therefore is not rational.  "
+},
+{
+  "id": "FTAcorollaries-18",
+  "level": "2",
+  "url": "FTAcorollaries.html#FTAcorollaries-18",
+  "type": "Checkpoint",
+  "number": "3.4.9",
+  "title": "",
+  "body": "    Discuss this proof. Does it make sense? Why or why not?    Modify this proof to show that is irrational.     "
+},
+{
+  "id": "thm-log32irrational",
+  "level": "2",
+  "url": "FTAcorollaries.html#thm-log32irrational",
+  "type": "Theorem",
+  "number": "3.4.10",
+  "title": "",
+  "body": "  The value is irrational.   "
+},
+{
+  "id": "FTAcorollaries-20",
+  "level": "2",
+  "url": "FTAcorollaries.html#FTAcorollaries-20",
+  "type": "Proof",
+  "number": "3.4.5",
+  "title": "",
+  "body": " Suppose for contradiction that for coprime numbers and . Then we have that , which implies that This implies that which is impossible by the uniqueness of prime factorization, yielding the desired contradiction.  "
+},
+{
+  "id": "FTAcorollaries-21",
+  "level": "2",
+  "url": "FTAcorollaries.html#FTAcorollaries-21",
+  "type": "Checkpoint",
+  "number": "3.4.11",
+  "title": "",
+  "body": " Discuss this proof. Does it make sense? Why or why not?  "
+},
+{
+  "id": "harmonics",
+  "level": "1",
+  "url": "harmonics.html",
+  "type": "Section",
+  "number": "3.5",
+  "title": "Harmonics and Temperament",
+  "body": " Harmonics and Temperament  We are now able to develop our first applications of number theory to music theory, specifically the theory of harmonics and temperament. For a detailed treatment of mathematical aspects of music, including the way that the physiology of the ear influences perception of music, see David Benson's 2008 book Music: A Mathematical Offering .  Sound waves occur as sequences of high and low pressure moving through air, i.e., as an oscillation of pressure. Sound is perceived through our ears as a sequence of \"beats\" of pressure. The number of beats that is heard per second is the frequency of the wave, which is measured in Hertz . One Hertz, written as Hz, is equal to one beat per second. The human ear can perceive frequencies ranging from around 20 Hz to between 16,000 and 20,000 Hz.  An aside for those students who have musical experience: in this class, we will use the term \"frequency\" rather than \"pitch\", because they are technically different; pitch is the human perception of frequency, which does not always correspond accurately to the physical frequency. However, for typical musical purposes, the words pitch and frequency are used as synonyms.  We can experience \"pure\" sound waves using a tone generator, such as . Let's experiment listening to the following frequencies:   1 Hz using a square wave (this is 1 beat per second), then increase to 440 Hz (which is a concert \"A\" pitch).    20 Hz using a sine wave (this is a smoothly-varying pressure wave with 20 high pressure beats per second), then increase to 880 Hz.     A natural way to think about sound waves is as a sequence of beats, or pulses of pressure. When those beats are synchronized in some way, they are aligned. For example, consider the sound of two simultaneous sine waves, one at 220 Hz and one at 440 Hz, using . What is happening is that we hear 220 beats per second from one wave, and 440 beats per second from another. Thus, these are impacting our ear in a synchronized manner.  Next, listen to what happens when we add another wave at 660 Hz, which is three times the original wave in frequency. This is the sound of three simultaneous sound waves, where the lowest has frequency Hz, and the other two have frequencies and .  We typically represent the sequence of beats as a sine wave. For example, the following figure shows four frequencies which are a fundamental frequency with a single peak, along with the sine waves corresponding to , , and .   Four frequencies, three of which are small multiples of the fundamental frequency.   Four sine waves where three are obtained as small multiples of the frequency of another.     Discuss the figure above. Does it make sense how the peaks and valleys of the sine wave correspond to the beats in a given time interval?   What happens when we cut out the original frequency, and only play the frequencies for and ? It sounds different, because the ratio of beats per second is different between and than between and . Specifically, when we listen to and , then we are hearing 2 beats of the second frequency for each beat of the first frequency, giving a ratio of . However, when we listen to and , then we are hearing 3 beats of the third frequency for every 2 beats of the second frequency, giving a ratio of . This leads us to a fundamental observation: when considering a pair of frequencies, what matters for our perception of their interaction is the ratio of their frequencies .   Discuss the following concepts with your group. What questions do you have about them?   Hertz as beats per minute    Sound as sequences of \"beats\" of pressure in the air being sensed by our ears    Using the ratio between two frequencies to measure how those frequencies are related.      We are now in a position to give precise mathematical definitions for some musical terms.       Given two frequencies Hz and Hz, the interval from to is given by the ratio . If two ratios are equivalent as fractions, then we say that they define the same interval.    Two frequencies differ by an octave if their interval is .    Two frequencies differ by a fifth if their interval is .    A scale is any sequence of notes starting at a root frequency and ending at the octave .           What frequency is two octaves above 236 Hz?    What frequency is one fifth above 440 Hz?    What frequency is three fifths above 220 Hz?    What frequency is one octave above the fifth above 440 Hz?      Intervals and fifths play a fundamental role in many musical traditions around the world. Part of the reason for this is because the ratios for octaves and fifths involve fractions with small integer values. A classical construction of musical scales, which arose in multiple ancient cultures, is a construction of musical scales using only octaves and fifths. Any scale constructed using only octaves and fifths is referred to as a Pythagorean scale .    "
+},
+{
+  "id": "fig-frequencies",
+  "level": "2",
+  "url": "harmonics.html#fig-frequencies",
+  "type": "Figure",
+  "number": "3.5.1",
+  "title": "",
+  "body": " Four frequencies, three of which are small multiples of the fundamental frequency.   Four sine waves where three are obtained as small multiples of the frequency of another.   "
+},
+{
+  "id": "harmonics-10",
+  "level": "2",
+  "url": "harmonics.html#harmonics-10",
+  "type": "Checkpoint",
+  "number": "3.5.2",
+  "title": "",
+  "body": " Discuss the figure above. Does it make sense how the peaks and valleys of the sine wave correspond to the beats in a given time interval?  "
+},
+{
+  "id": "harmonics-12",
+  "level": "2",
+  "url": "harmonics.html#harmonics-12",
+  "type": "Checkpoint",
+  "number": "3.5.3",
+  "title": "",
+  "body": " Discuss the following concepts with your group. What questions do you have about them?   Hertz as beats per minute    Sound as sequences of \"beats\" of pressure in the air being sensed by our ears    Using the ratio between two frequencies to measure how those frequencies are related.     "
+},
+{
+  "id": "def-intervals",
+  "level": "2",
+  "url": "harmonics.html#def-intervals",
+  "type": "Definition",
+  "number": "3.5.4",
+  "title": "",
+  "body": "     Given two frequencies Hz and Hz, the interval from to is given by the ratio . If two ratios are equivalent as fractions, then we say that they define the same interval.    Two frequencies differ by an octave if their interval is .    Two frequencies differ by a fifth if their interval is .    A scale is any sequence of notes starting at a root frequency and ending at the octave .      "
+},
+{
+  "id": "harmonics-15",
+  "level": "2",
+  "url": "harmonics.html#harmonics-15",
+  "type": "Checkpoint",
+  "number": "3.5.5",
+  "title": "",
+  "body": "    What frequency is two octaves above 236 Hz?    What frequency is one fifth above 440 Hz?    What frequency is three fifths above 220 Hz?    What frequency is one octave above the fifth above 440 Hz?     "
 },
 {
   "id": "divisionalgorithm",
