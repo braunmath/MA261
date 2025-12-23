@@ -843,8 +843,8 @@ var ptx_lunr_docs = [
   "url": "harmonics.html",
   "type": "Section",
   "number": "3.5",
-  "title": "Harmonics and Temperament",
-  "body": " Harmonics and Temperament  We are now able to develop our first applications of number theory to music theory, specifically the theory of harmonics and temperament. For a detailed treatment of mathematical aspects of music, including the way that the physiology of the ear influences perception of music, see David Benson's 2008 book Music: A Mathematical Offering .  Sound waves occur as sequences of high and low pressure moving through air, i.e., as an oscillation of pressure. Sound is perceived through our ears as a sequence of \"beats\" of pressure. The number of beats that is heard per second is the frequency of the wave, which is measured in Hertz . One Hertz, written as Hz, is equal to one beat per second. The human ear can perceive frequencies ranging from around 20 Hz to between 16,000 and 20,000 Hz.  An aside for those students who have musical experience: in this class, we will use the term \"frequency\" rather than \"pitch\", because they are technically different; pitch is the human perception of frequency, which does not always correspond accurately to the physical frequency. However, for typical musical purposes, the words pitch and frequency are used as synonyms.  We can experience \"pure\" sound waves using a tone generator, such as . Let's experiment listening to the following frequencies:   1 Hz using a square wave (this is 1 beat per second), then increase to 440 Hz (which is a concert \"A\" pitch).    20 Hz using a sine wave (this is a smoothly-varying pressure wave with 20 high pressure beats per second), then increase to 880 Hz.     A natural way to think about sound waves is as a sequence of beats, or pulses of pressure. When those beats are synchronized in some way, they are aligned. For example, consider the sound of two simultaneous sine waves, one at 220 Hz and one at 440 Hz, using . What is happening is that we hear 220 beats per second from one wave, and 440 beats per second from another. Thus, these are impacting our ear in a synchronized manner.  Next, listen to what happens when we add another wave at 660 Hz, which is three times the original wave in frequency. This is the sound of three simultaneous sound waves, where the lowest has frequency Hz, and the other two have frequencies and .  We typically represent the sequence of beats as a sine wave. For example, the following figure shows four frequencies which are a fundamental frequency with a single peak, along with the sine waves corresponding to , , and .   Four frequencies, three of which are small multiples of the fundamental frequency.   Four sine waves where three are obtained as small multiples of the frequency of another.     Discuss the figure above. Does it make sense how the peaks and valleys of the sine wave correspond to the beats in a given time interval?   What happens when we cut out the original frequency, and only play the frequencies for and ? It sounds different, because the ratio of beats per second is different between and than between and . Specifically, when we listen to and , then we are hearing 2 beats of the second frequency for each beat of the first frequency, giving a ratio of . However, when we listen to and , then we are hearing 3 beats of the third frequency for every 2 beats of the second frequency, giving a ratio of . This leads us to a fundamental observation: when considering a pair of frequencies, what matters for our perception of their interaction is the ratio of their frequencies .   Discuss the following concepts with your group. What questions do you have about them?   Hertz as beats per minute    Sound as sequences of \"beats\" of pressure in the air being sensed by our ears    Using the ratio between two frequencies to measure how those frequencies are related.      We are now in a position to give precise mathematical definitions for some musical terms.       Given two frequencies Hz and Hz, the interval from to is given by the ratio . If two ratios are equivalent as fractions, then we say that they define the same interval.    Two frequencies differ by an octave if their interval is .    Two frequencies differ by a fifth if their interval is .    A scale is any sequence of notes starting at a root frequency and ending at the octave .           What frequency is two octaves above 236 Hz?    What frequency is one fifth above 440 Hz?    What frequency is three fifths above 220 Hz?    What frequency is one octave above the fifth above 440 Hz?      Intervals and fifths play a fundamental role in many musical traditions around the world. Part of the reason for this is because the ratios for octaves and fifths involve fractions with small integer values. A classical construction of musical scales, which arose in multiple ancient cultures, is a construction of musical scales using only octaves and fifths. Any scale constructed using only octaves and fifths is referred to as a Pythagorean scale .    "
+  "title": "Harmonics",
+  "body": " Harmonics  We are now able to develop our first applications of number theory to music theory, specifically the theory of harmonics and temperament. For a detailed treatment of mathematical aspects of music, including the way that the physiology of the ear influences perception of music, see David Benson's 2008 book Music: A Mathematical Offering .  Sound waves occur as sequences of high and low pressure moving through air, i.e., as an oscillation of pressure. Sound is perceived through our ears as a sequence of \"beats\" of pressure. The number of beats that is heard per second is the frequency of the wave, which is measured in Hertz . One Hertz, written as Hz, is equal to one beat per second. The human ear can perceive frequencies ranging from around 20 Hz to around 20,000 Hz.   An aside for those students who have musical experience: In this class, we will use the term \"frequency\" rather than \"pitch\", because they are technically different; pitch is the human perception of frequency, which does not always correspond accurately to the physical frequency. However, for typical musical purposes, the words pitch and frequency are used as synonyms.  We can experience \"pure\" sound waves using a tone generator, such as . Let's experiment listening to the following frequencies:   1 Hz using a square wave (this is 1 beat per second), then increase to 440 Hz (which is a concert \"A\" pitch).    20 Hz using a sine wave (this is a smoothly-varying pressure wave with 20 pressure beats per second), then increase to 880 Hz.     A natural way to think about sound waves is as a sequence of beats, or pulses of pressure. When those beats are synchronized in some way, they are aligned. For example, consider the sound of two simultaneous sine waves, one at 220 Hz and one at 440 Hz, using . What is happening is that we hear 220 beats per second from one wave, and 440 beats per second from another. Thus, these are impacting our ear in a synchronized manner.  Next, listen to what happens when we add another wave at 660 Hz, which is three times the original wave in frequency. This is the sound of three simultaneous sound waves, where the lowest has frequency Hz, and the other two have frequencies and .  We typically represent the sequence of beats as a sine wave. For example, the following figure shows four frequencies which are a fundamental frequency with a single peak, along with the sine waves corresponding to , , and .   Four frequencies, three of which are small multiples of the fundamental frequency.   Four sine waves where three are obtained as small multiples of the frequency of another.     Discuss the figure above. Does it make sense how the peaks and valleys of the sine wave correspond to the beats in a given time interval?   What happens when we cut out the original frequency, and only play the frequencies for and ? It sounds different, because the ratio of beats per second is different between and than between and . Specifically, when we listen to and , then we are hearing 2 beats of the second frequency for each beat of the first frequency, giving a ratio of . However, when we listen to and , then we are hearing 3 beats of the third frequency for every 2 beats of the second frequency, giving a ratio of . This leads us to a fundamental observation: when considering a pair of frequencies, what matters for our perception of their interaction is the ratio of their frequencies .   Discuss the following concepts with your group. What questions do you have about them?   Sound as sequences of \"beats\" of pressure in the air being sensed by our ears    Hertz as beats per second    Using the ratio between two frequencies to measure how those frequencies are related.      We are now in a position to give precise mathematical definitions for some musical terms.       Given two frequencies Hz and Hz, the interval from to is given by the ratio . If two ratios are equivalent as real numbers, then we say that they define the same interval.    Two frequencies differ by an octave if their interval is .    Two frequencies differ by a fifth if their interval is .    Two frequencies differ by a fourth if their interval is .    A scale is any sequence of notes starting at a root frequency and ending at the octave .           What frequency is two octaves above 236 Hz?    What frequency is one fifth above 440 Hz?    What frequency is three fifths above 220 Hz?    Suppose that the frequency is a fourth above a frequency . Show that the fifth above is , the octave above .    What frequency is one octave above the fifth above 440 Hz?    Show that the frequency is obtained by going up by two fifths from the frequency followed by going down by one octave from the resulting frequency.      One thing that is important to know about musical sound is that when a string vibrates, it propagates sound waves at more than one frequency. In addition to the fundamental frequency that it generates, the vibrating string also generates the frequencies , , , and so on. These additional sound waves are called the harmonics of the fundamental frequency. The harmonics are produced with varying amplitudes (i.e., loudness) depending on how the string was struck\/activated\/excited\/etc. Thus, we are led to the following principle.    If a vibrating string has fundamental frequency , then it also produces harmonics of frequencies , , , and so on. Thus, the intervals that are heard when a string vibrates include the following intervals between consecutive harmonics:   an octave above , ratio , from to     a fifth above , ratio , from to     a fourth above , ratio , from to        Intervals, fifths, and fourths therefore are important harmonics that arise naturally in the sound produced by vibrating strings. As a result, these intervals play a fundamental role in many musical traditions around the world.  "
 },
 {
   "id": "fig-frequencies",
@@ -871,7 +871,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "3.5.3",
   "title": "",
-  "body": " Discuss the following concepts with your group. What questions do you have about them?   Hertz as beats per minute    Sound as sequences of \"beats\" of pressure in the air being sensed by our ears    Using the ratio between two frequencies to measure how those frequencies are related.     "
+  "body": " Discuss the following concepts with your group. What questions do you have about them?   Sound as sequences of \"beats\" of pressure in the air being sensed by our ears    Hertz as beats per second    Using the ratio between two frequencies to measure how those frequencies are related.     "
 },
 {
   "id": "def-intervals",
@@ -880,7 +880,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "3.5.4",
   "title": "",
-  "body": "     Given two frequencies Hz and Hz, the interval from to is given by the ratio . If two ratios are equivalent as fractions, then we say that they define the same interval.    Two frequencies differ by an octave if their interval is .    Two frequencies differ by a fifth if their interval is .    A scale is any sequence of notes starting at a root frequency and ending at the octave .      "
+  "body": "     Given two frequencies Hz and Hz, the interval from to is given by the ratio . If two ratios are equivalent as real numbers, then we say that they define the same interval.    Two frequencies differ by an octave if their interval is .    Two frequencies differ by a fifth if their interval is .    Two frequencies differ by a fourth if their interval is .    A scale is any sequence of notes starting at a root frequency and ending at the octave .      "
 },
 {
   "id": "harmonics-15",
@@ -889,7 +889,61 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "3.5.5",
   "title": "",
-  "body": "    What frequency is two octaves above 236 Hz?    What frequency is one fifth above 440 Hz?    What frequency is three fifths above 220 Hz?    What frequency is one octave above the fifth above 440 Hz?     "
+  "body": "    What frequency is two octaves above 236 Hz?    What frequency is one fifth above 440 Hz?    What frequency is three fifths above 220 Hz?    Suppose that the frequency is a fourth above a frequency . Show that the fifth above is , the octave above .    What frequency is one octave above the fifth above 440 Hz?    Show that the frequency is obtained by going up by two fifths from the frequency followed by going down by one octave from the resulting frequency.     "
+},
+{
+  "id": "principle-harmonics",
+  "level": "2",
+  "url": "harmonics.html#principle-harmonics",
+  "type": "Principle",
+  "number": "3.5.6",
+  "title": "",
+  "body": "  If a vibrating string has fundamental frequency , then it also produces harmonics of frequencies , , , and so on. Thus, the intervals that are heard when a string vibrates include the following intervals between consecutive harmonics:   an octave above , ratio , from to     a fifth above , ratio , from to     a fourth above , ratio , from to       "
+},
+{
+  "id": "sec-temperament",
+  "level": "1",
+  "url": "sec-temperament.html",
+  "type": "Section",
+  "number": "3.6",
+  "title": "The Pythagorean Scale and Equal Temperament",
+  "body": " The Pythagorean Scale and Equal Temperament  Because of the critical role played by octaves and fifths, ancient cultures developed musical scales generated by those intervals. A scale is called if it is generated by octaves and fifths. As we will see, the Fundamental Theorem of Arithmetic forces such scales to have inherent dissonance, because of the answer to the following question.    Suppose we start with a fundamental frequency and we consider the sequence of octaves for and fifths for . Are there values of and that produce the same frequency? In other words, can we produce the same frequency above in two ways, one way using only octaves and another way using only fifths?    This question is important, because if there are no values and that do this, then going up by fifths and going up by octaves will never resolve to the same frequency.   With your group, explore this question.     There are no values of and such that .     Suppose for a contradiction that such values did exist. This would imply the following: Thus, we would have that , which would imply that is rational. However, we proved that this value is irrational in using the Fundamental Theorem of Arithmetic, which is a contradiction.   The implications of this theorem is that the frequencies generated by using only octaves and fifths frequently produce dissonance.  "
+},
+{
+  "id": "assumption-octavesandfifths",
+  "level": "2",
+  "url": "sec-temperament.html#assumption-octavesandfifths",
+  "type": "Question",
+  "number": "3.6.1",
+  "title": "",
+  "body": "  Suppose we start with a fundamental frequency and we consider the sequence of octaves for and fifths for . Are there values of and that produce the same frequency? In other words, can we produce the same frequency above in two ways, one way using only octaves and another way using only fifths?   "
+},
+{
+  "id": "sec-temperament-5",
+  "level": "2",
+  "url": "sec-temperament.html#sec-temperament-5",
+  "type": "Checkpoint",
+  "number": "3.6.2",
+  "title": "",
+  "body": " With your group, explore this question.  "
+},
+{
+  "id": "thm-fifthoctaveissue",
+  "level": "2",
+  "url": "sec-temperament.html#thm-fifthoctaveissue",
+  "type": "Theorem",
+  "number": "3.6.3",
+  "title": "",
+  "body": "  There are no values of and such that .   "
+},
+{
+  "id": "sec-temperament-7",
+  "level": "2",
+  "url": "sec-temperament.html#sec-temperament-7",
+  "type": "Proof",
+  "number": "3.6.1",
+  "title": "",
+  "body": " Suppose for a contradiction that such values did exist. This would imply the following: Thus, we would have that , which would imply that is rational. However, we proved that this value is irrational in using the Fundamental Theorem of Arithmetic, which is a contradiction.  "
 },
 {
   "id": "divisionalgorithm",
