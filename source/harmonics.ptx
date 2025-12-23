@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="harmonics" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Harmonics and Temperament</title>
+
+<p>
+  We are now able to develop our first applications of number theory to music theory, specifically the theory of harmonics and temperament.
+  For a detailed treatment of mathematical aspects of music, including the way that the physiology of the ear influences perception of music, see David Benson's 2008 book <url href="https://homepages.abdn.ac.uk/d.j.benson/pages/html/maths-music.html">Music: A Mathematical Offering</url>.
+</p>
+
+<p>
+  Sound waves occur as sequences of high and low pressure moving through air, i.e., as an oscillation of pressure.
+  Sound is perceived through our ears as a sequence of "beats" of pressure.
+  The number of beats that is heard per second is the <em>frequency</em> of the wave, which is measured in <em>Hertz</em>.
+  One Hertz, written as <m>1</m> Hz, is equal to one beat per second.
+  The human ear can perceive frequencies ranging from around 20 Hz to between 16,000 and 20,000 Hz.
+</p>
+
+<p>
+  An aside for those students who have musical experience: in this class, we will use the term "frequency" rather than "pitch", because they are technically different; pitch is the human perception of frequency, which does not always correspond accurately to the physical frequency.
+  However, for typical musical purposes, the words pitch and frequency are used as synonyms.
+</p>
+
+<p>
+  We can experience "pure" sound waves using a tone generator, such as <url href="https://onlinesound.net/oscillator-modulator"/>.
+  Let's experiment listening to the following frequencies:
+  <ul>
+    <li>
+      <p>
+        1 Hz using a square wave (this is 1 beat per second), then increase to 440 Hz (which is a concert "A" pitch).
+      </p>
+    </li>
+    <li>
+      <p>
+        20 Hz using a sine wave (this is a smoothly-varying pressure wave with 20 high pressure beats per second), then increase to 880 Hz.
+      </p>
+    </li>
+  </ul>
+</p>
+
+<p>
+  A natural way to think about sound waves is as a sequence of beats, or pulses of pressure.
+  When those beats are synchronized in some way, they are aligned.
+  For example, consider the sound of two simultaneous sine waves, one at 220 Hz and one at 440 Hz, using <url href="https://onlinesound.net/oscillator-modulator"/>.
+  What is happening is that we hear 220 beats per second from one wave, and 440 beats per second from another.
+  Thus, these are impacting our ear in a synchronized manner.
+</p>
+<p>  
+  Next, listen to what happens when we add another wave at 660 Hz, which is three times the original wave in frequency.
+  This is the sound of three simultaneous sound waves, where the lowest has frequency <m>f=220</m> Hz, and the other two have frequencies <m>2f=440</m> and <m>3f=660</m>.
+</p>
+
+<p>
+  We typically represent the sequence of beats as a sine wave. 
+  For example, the following figure shows four frequencies which are a fundamental frequency <m>f</m> with a single peak, along with the sine waves corresponding to <m>2f</m>, <m>3f</m>, and <m>4f</m>.
+</p>
+<figure xml:id="fig-frequencies">
+  <caption>Four frequencies, three of which are small multiples of the fundamental frequency.</caption>
+  <image source="frequencies.png">
+    <shortdescription>Four sine waves where three are obtained as small multiples of the frequency of another.</shortdescription>
+  </image>
+</figure>
+
+<exercise>
+  <p>
+    Discuss the figure above.
+    Does it make sense how the peaks and valleys of the sine wave correspond to the beats in a given time interval?
+  </p>
+</exercise>
+
+<p>
+  What happens when we cut out the original frequency, and only play the frequencies for <m>2f</m> and <m>3f</m>?
+  It sounds different, because the ratio of beats per second is different between <m>2f</m> and <m>3f</m> than between <m>f</m> and <m>2f</m>.
+  Specifically, when we listen to <m>f</m> and <m>2f</m>, then we are hearing 2 beats of the second frequency for each beat of the first frequency, giving a ratio of <m>2:1</m>.
+  However, when we listen to <m>2f</m> and <m>3f</m>, then we are hearing 3 beats of the third frequency for every 2 beats of the second frequency, giving a ratio of <m>3:2</m>.
+  This leads us to a fundamental observation: <alert>when considering a pair of frequencies, what matters for our perception of their interaction is the ratio of their frequencies</alert>. 
+</p>
+
+<exercise>
+  <p>
+    Discuss the following concepts with your group. What questions do you have about them?
+    <ol>
+      <li>
+        <p>
+          Hertz as beats per minute
+        </p>
+      </li>
+      <li>
+        <p>
+          Sound as sequences of "beats" of pressure in the air being sensed by our ears
+        </p>
+      </li>
+      <li>
+        <p>
+          Using the <alert>ratio</alert> between two frequencies to measure how those frequencies are related.
+        </p>
+      </li>
+    </ol>
+  </p>
+</exercise>
+
+<p>
+ We are now in a position to give precise mathematical definitions for some musical terms.
+</p>
+
+<definition xml:id="def-intervals">
+  <statement>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Given two frequencies <m>f_1</m> Hz and <m>f_2</m> Hz, the <em>interval</em> from <m>f_1</m> to <m>f_2</m> is given by the ratio <m>f_1:f_2</m>.
+            If two ratios are equivalent as fractions, then we say that they define the same interval.
+          </p>
+        </li>
+        <li>
+          <p>
+            Two frequencies differ by an <em>octave</em> if their interval is <m>2:1</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Two frequencies differ by a <em>fifth</em> if their interval is <m>3:2</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            A <em>scale</em> is any sequence of notes starting at a root frequency <m>f</m> and ending at the octave <m>2f</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+</definition>
+
+<exercise>
+  <p>
+    <ol>
+      <li>
+        <p>
+          What frequency is two octaves above 236 Hz?
+        </p>
+      </li>
+      <li>
+        <p>
+          What frequency is one fifth above 440 Hz?
+        </p>
+      </li>
+      <li>
+        <p>
+          What frequency is three fifths above 220 Hz?
+        </p>
+      </li>
+      <li>
+        <p>
+          What frequency is one octave above the fifth above 440 Hz?
+        </p>
+      </li>
+    </ol>
+  </p>
+</exercise>
+
+<p>
+  Intervals and fifths play a fundamental role in many musical traditions around the world.
+  Part of the reason for this is because the ratios for octaves and fifths involve fractions with small integer values.
+  A classical construction of musical scales, which arose in multiple ancient cultures, is a construction of musical scales using only octaves and fifths.
+  Any scale constructed using only octaves and fifths is referred to as a <em>Pythagorean scale</em>.
+</p>
+
+<p>
+  
+</p>
+
+
+
+</section>

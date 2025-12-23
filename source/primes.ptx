@@ -7,6 +7,7 @@
   <xi:include href="prime-numbers.ptx" />
   <xi:include href="infinitudeofprimes.ptx" />
   <xi:include href="fundthmarithmetic.ptx" />
-    
+  <xi:include href="FTAcorollaries.ptx" />
+  <xi:include href="harmonics.ptx" />
 
 </chapter>

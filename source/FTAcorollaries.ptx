@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="FTAcorollaries" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Consequences of the Fundamental Theorem</title>
+
+<p>
+  We will now investigate consequences of the Fundamental Theorem of Arithmetic.
+</p>
+
+<lemma xml:id="lem-euclidslemma">
+  <title>Euclid's Lemma</title>  
+  <statement>
+    <p>
+      Let <m>p</m> be a prime.
+      If <m>a</m> and <m>b</m> are natural numbers such that <m>p\mid ab</m>, then <m>p\mid a</m> or <m>p\mid b</m>.
+    </p>
+  </statement>
+</lemma>
+
+<proof>
+  <p>
+    Write the prime factorizations <m>a=p_1^{\alpha_1}\cdots p_k^{\alpha_k}</m> and <m>b=q_1^{\beta_1}\cdots q_t^{\beta_t}</m>.
+    Then we have
+    <me>
+      ab = p_1^{\alpha_1}\cdots p_k^{\alpha_k}q_1^{\beta_1}\cdots q_t^{\beta_t} \, .
+    </me>
+    If <m>p</m> divides the product, then <m>p</m> must appear in the list of primes in the factorization of <m>ab</m>.
+    Therefore, <m>p</m> must be a divisor of one or both of <m>a</m> and <m>b</m>.
+  </p>
+</proof>
+
+<exercise>
+  <p>
+    With your group, work through the logic of this proof using <m>p=7</m> and the numbers <m>a=105=3\cdot 5\cdot 7</m> and <m>b=231=3\cdot 7\cdot 11</m>.
+    Does the proof make sense? Why or why not?
+  </p>
+</exercise>
+
+<corollary xml:id="cor-factordivisorform">
+  <statement>
+    <p>
+      Suppose that <m>b=p_1^{\beta_1}\cdots p_k^{\beta_k}</m>.
+      If <m>a</m> is any divisor of <m>b</m>, then 
+      <me>
+        a = p_1^{\alpha_1}\cdots p_k^{\alpha_k}
+      </me>
+      Where each <m>\alpha_i\leq \beta_i</m>.      
+    </p>
+  </statement>
+</corollary>
+
+<proof>
+  <p>
+    If <m>p^\alpha</m> divides <m>a</m> and <m>a\mid b</m>, then <m>p^{\alpha} \mid b</m>.
+    Thus, any power of a prime dividing <m>a</m> must also divide <m>b</m>.
+  </p>
+</proof>
+
+<p>
+  We next define the greatest common divisor and least common multiple of two numbers, and express these quantities in terms of prime factorizations.
+</p>
+
+<definition xml:id="def-gcdlcm">
+  <statement>
+    <p>
+      Let <m>a</m> and <m>b</m> be natural numbers.
+      The <em>greatest common divisor</em> of <m>a</m> and <m>b</m>, denoted <m>\gcd(a,b)</m>, is given by the largest natural number dividing both <m>a</m> and <m>b</m>.
+      If <m>\gcd(a,b)=1</m>, we say that <m>a</m> and <m>b</m> are <em>coprime</em>.
+      The <em>least common multiple</em> of <m>a</m> and <m>b</m> , denoted <m>\lcm(a,b)</m>, is given by the smallest natural number divisible by both <m>a</m> and <m>b</m>.
+    </p>
+  </statement>
+</definition>
+
+<exercise>
+  <p>
+    Find the greatest common divisor and the least common multiple for the following pairs of numbers.
+    <ol>
+      <li>
+        <p>
+          5, 11
+        </p>
+      </li>
+      <li>
+        <p>
+          15, 36
+        </p>
+      </li>
+      <li>
+        <p>
+          367, 854
+        </p>
+      </li>
+    </ol>
+  </p>
+</exercise>
+
+<p>
+  Using prime factorizations, it is straightforward to determine these values.
+</p>
+
+<proposition xml:id="prop-gcdlcmfactorizations">
+  <statement>
+    <p>
+      Suppose <m>a</m> and <m>b</m> are natural numbers.
+      If <m>p</m> is a prime such that <m>p^{\alpha}</m> appears in the prime factorization of <m>a</m> and <m>p^{\beta}</m> appears in the prime factorization of <m>b</m>, then:
+      <ol>
+        <li>
+          <p>
+            <m>p^{\min(\alpha,\beta)}</m> appears in the prime factorization of <m>\gcd(a,b)</m>, and
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>p^{\max(\alpha,\beta)}</m> appears in the prime factorization of <m>\lcm(a,b)</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </statement>
+</proposition>
+
+<proof>
+  <p>
+    The proposition is a consequence of the following two observations.
+    The largest power of <m>p</m> that divides both <m>a</m> and <m>b</m> is the minimum of the two exponents.
+    The smallest power of <m>p</m> that is divisible by both <m>p^{\alpha}</m> and <m>p^{\beta}</m> is the maximum of the two exponents.
+  </p>
+</proof>
+
+<exercise>
+  <p>
+    Discuss the above "sketch" of the proof with your group.
+    Are you convinced by this? Do you feel it needs more details? Why or why not?
+  </p>
+</exercise>
+
+<p>
+  The Fundamental Theorem of Arithmetic is also the key ingredient in many classical proofs of irrationality.
+  Here are three examples.
+</p>
+
+<theorem xml:id="thm-sqrt2irrational">
+  <statement>
+    <p>
+      The value <m>\sqrt{2}</m> is irrational.
+    </p>
+  </statement>
+</theorem>
+
+<proof>
+  <p>
+    Suppose for a contradiction that <m>\sqrt{2}=a/b</m> for natural numbers <m>a</m> and <m>b</m> where the fraction is fully reduced; in other words, <m>a</m> and <m>b</m> are coprime.
+    Then squaring both sides, we have that
+    <me>
+      2=a^2/b^2
+    </me>
+    and therefore <m>2b^2=a^2</m>.
+    However, this implies that there are an odd number of <m>2</m>s in the prime factorization of the left side, while there are an even number in the prime factorization on the right.
+    This is a contradiction, and therefore <m>\sqrt{2}</m> is not rational.    
+  </p>
+</proof>
+
+<exercise>
+  <p>
+    <ol>
+      <li>
+        <p>
+          Discuss this proof. Does it make sense? Why or why not?
+        </p>
+      </li>
+      <li>
+        <p>
+          Modify this proof to show that <m>\sqrt[12]{2}</m> is irrational.
+        </p>
+      </li>
+    </ol>
+  </p>
+</exercise>
+
+<theorem xml:id="thm-log32irrational">
+  <statement>
+    <p>
+      The value <m>\log_2(3/2)</m> is irrational.
+    </p>
+  </statement>
+</theorem>
+
+<proof>
+  <p>
+    Suppose for contradiction that <m>\log_2(3/2)=a/b</m> for coprime numbers <m>a</m> and <m>b</m>.
+    Then we have that <m>\log_2((3/2)^b)=a</m>, which implies that
+    <me>
+      (3/2)^b=2^a \, .
+    </me>
+    This implies that 
+    <me>
+      3^b=2^{a-b} \, ,
+    </me>
+    which is impossible by the uniqueness of prime factorization, yielding the desired contradiction.
+  </p>
+</proof>
+
+<exercise>
+  <p>
+    Discuss this proof. Does it make sense? Why or why not?
+  </p>
+</exercise>
+
+
+
+</section>

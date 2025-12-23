@@ -204,7 +204,7 @@
       and
       <md>
         <mrow>n \amp = q_1^{b_1}\cdots q_s^{b_s} - p_1q_1^{b_1-1}q_2^{b_2}q_3^{b_3}\cdots q_s^{b_s}</mrow>
-        <mrow> \amp = (q_1-p_1)q_1^{b_1-1}q_2^{b_2}q_3^{b_3}\cdots q_s^{b_s}</mrow> \, .
+        <mrow> \amp = (q_1-p_1)q_1^{b_1-1}q_2^{b_2}q_3^{b_3}\cdots q_s^{b_s}\, . </mrow> 
       </md>
     Notice that <m>n</m> is less than <m>N</m>, because it is created by subtracting a positive value from <m>N</m>.
     Therefore, <m>n</m> has a unique factorization.
