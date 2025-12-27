@@ -991,6 +991,33 @@ var ptx_lunr_docs = [
   "body": " The Euclidean Algorithm    "
 },
 {
+  "id": "bezoutidentity",
+  "level": "1",
+  "url": "bezoutidentity.html",
+  "type": "Section",
+  "number": "4.3",
+  "title": "The Bezout Identity",
+  "body": " The Bezout Identity    "
+},
+{
+  "id": "lineardiophantine",
+  "level": "1",
+  "url": "lineardiophantine.html",
+  "type": "Section",
+  "number": "4.4",
+  "title": "Linear Diophantine Equations",
+  "body": " Linear Diophantine Equations    "
+},
+{
+  "id": "euclideanrhythms",
+  "level": "1",
+  "url": "euclideanrhythms.html",
+  "type": "Section",
+  "number": "4.5",
+  "title": "Euclidean Rhythms",
+  "body": " Euclidean Rhythms    "
+},
+{
   "id": "equivalencerelations",
   "level": "1",
   "url": "equivalencerelations.html",
