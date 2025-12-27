@@ -64,9 +64,26 @@
     <statement>
       <p>
         Let <m>a</m> and <m>b</m> be integers with <m>b \neq 0</m>.
-        We say that <m>a</m> is <em>divisible by</em> <m>b</m> if there exists an integer <m>k</m> such that <m>a = bk</m>.
-        If <m>a</m> is divisible by <m>b</m>, we also say that <m>b</m> <em>divides</em> <m>a</m> and we write <m>b \mid a</m>.
-        If <m>a</m> is not divisible by <m>b</m>, we write <m>b \nmid a</m>.
+        <ul>
+          <li>
+            <p>
+                      We say that <m>a</m> is <em>divisible by</em> <m>b</m> if there exists an integer <m>k</m> such that <m>a = bk</m>.
+
+            </p>
+          </li>
+          <li>
+            <p>
+                      If <m>a</m> is divisible by <m>b</m>, we also say that <m>b</m> <em>divides</em> <m>a</m> and we write <m>b \mid a</m>.
+
+            </p>
+          </li>
+          <li>
+            <p>
+                      If <m>a</m> is not divisible by <m>b</m>, we write <m>b \nmid a</m>.
+
+            </p>
+          </li>
+        </ul>
       </p>
     </statement>
   </definition>
