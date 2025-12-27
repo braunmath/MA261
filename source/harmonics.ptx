@@ -120,12 +120,17 @@
         </li>
         <li>
           <p>
-            Two frequencies differ by a <em>fifth</em> if their interval is <m>3:2</m>.
+            Two frequencies differ by a <em>perfect fifth</em> if their interval is <m>3:2</m>.
           </p>
         </li>
         <li>
           <p>
-            Two frequencies differ by a <em>fourth</em> if their interval is <m>4:3</m>.
+            Two frequencies differ by a <em>perfect fourth</em> if their interval is <m>4:3</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Two frequencies are said to produce <em>equivalent notes</em> if they differ by some number of octaves, i.e., <m>f</m> and <m>g</m> are equivalent notes if <m>f=2^ng</m> for some integer <m>n</m>.
           </p>
         </li>
         <li>
@@ -170,6 +175,11 @@
       <li>
         <p>
           Show that the frequency <m>\frac{9}{8}f</m> is obtained by going up by two fifths from the frequency <m>f</m> followed by going down by one octave from the resulting frequency.
+        </p>
+      </li>
+      <li>
+        <p>
+          Are the frequencies 440 Hz and 1740 Hz equivalent notes?
         </p>
       </li>
     </ol>
