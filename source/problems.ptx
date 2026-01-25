@@ -221,19 +221,88 @@ Your grade is based on completion only (in other words, if you complete the assi
     
     <problem>
         <title>P6</title>
-        <p>
+        <p>The <alert>Sylvester sequence</alert> is the sequence of positive integers defined by <m>s_0=2</m> and <m>s_n=1+s_0s_1s_2\cdots s_{n-1}</m> for all <m>n\geq 1</m>.
+            <ol>
+                <li>
+                    <p>
+                        Prove by induction on <m>n</m> that for all <m>n\geq 1</m>, we have <m>s_n=s_{n-1}^2 - s_{n-1}+1</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Prove that if <m>p</m> is a prime number that divides <m>s_k</m> for some <m>k\geq 0</m>, then <m>p</m> does not divide <m>s_j</m> for any <m>j\geq k</m>.
+                        Explain why this implies that there are infinitely many prime numbers.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Explain in a few sentences how the Sylvester sequence is related to Euclid's proof of the infinitude of primes.
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
     <problem>
         <title>P7</title>
-        <p>
+        <p>We will show in this problem how the fundamental theorem of arithmetic can be used to prove that there are infinitely many primes.
+            Recall that <m>\pi(N)</m> is the number of primes less than or equal to <m>N</m>.
+            This problem will lead you through the steps of a proof due to Paul Erdős.
+            <ol>
+                <li>
+                    <p>
+                        Prove that every integer <m>n</m> can be expressed as <m>n=a^2b</m>, where <m>a</m> and <m>b</m> are positive integers and <m>b</m> is square-free (meaning that no prime number divides <m>b</m> more than once).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Prove that there are at most <m>2^{\pi(N)}</m> square-free integers less than or equal to <m>N</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Prove that there are at most <m>\sqrt{N}</m> integers less than or equal to <m>N</m> that are of the form <m>a^2</m> for some positive integer <m>a</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Use the previous parts to prove that <m>N\leq 2^{\pi(N)}\sqrt{N}</m> for all positive integers <m>N</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Show that the inequality in the previous part implies that <m>\pi(n)\geq \frac{\log(n)}{\log(4)}</m> for all <m>n\geq 1</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Explain why this proves that there are infinitely many prime numbers.
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
     <problem>
         <title>P8</title>
+        <p>The following problem is an open problem in mathematics, meaning that it is a problem that has not been solved by anyone.
+            The <alert>Euclid-Mullin sequence</alert> is the sequence of prime numbers that starts with <m>2</m> and continues by taking the smallest prime number produced by a Euclid step, as defined in <xref ref="infinitudeofprimes"/>.
+            Thus, the Euclid-Mullin sequence starts with <me>2,3,7,43,13,53,5,6221671,38709183810571, 139, \ldots \, .</me>
+            If you are interested, you can read about this sequence at <url href="https://en.wikipedia.org/wiki/Euclid%E2%80%93Mullin_sequence"/>.
+        </p>
+          <p>The open problem is: Does every prime number appear in the Euclid-Mullin sequence?
+            For example, no one knows whether or not the prime <m>41</m> is produced by this process.
+        </p>
         <p>
+            Make as much progress as you can on this open problem; I don't expect you to find a solution, but you should spend 2-3 hours thinking about this!
+            Your goal is to do something more than check examples; the examples should lead you to make some interesting observations about the problem, to understand it a bit better.
+            Why do you think it might be true?  
+            Why might it be false?
+            Are there any properties of binomial coefficients that support your comments?
+            Are there any positive integers for which this is obviously true?
+            You can do this using only pencil and paper, or using mostly computational experiments, or you can use a mix of these.
+            However, you need to provide a narrative in sentences/paragraphs explaining your thinking and the results of your investigations.
+            (Seriously, write down everything you're thinking and every idea you try, even if it doesn't go anywhere.)
         </p>
     </problem>
 
