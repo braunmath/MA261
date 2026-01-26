@@ -230,7 +230,7 @@ Your grade is based on completion only (in other words, if you complete the assi
                 </li>
                 <li>
                     <p>
-                        Prove that if <m>p</m> is a prime number that divides <m>s_k</m> for some <m>k\geq 0</m>, then <m>p</m> does not divide <m>s_j</m> for any <m>j\geq k</m>.
+                        Prove that if <m>p</m> is a prime number that divides <m>s_k</m> for some <m>k\geq 0</m>, then <m>p</m> does not divide <m>s_j</m> for any <m>j\gt k</m>.
                         Explain why this implies that there are infinitely many prime numbers.
                     </p>
                 </li>
