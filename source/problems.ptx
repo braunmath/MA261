@@ -309,18 +309,56 @@ Your grade is based on completion only (in other words, if you complete the assi
     <problem>
         <title>P9</title>
         <p>
+            We say a <em>divisor</em> of a positive integer <m>n</m> is a positive integer <m>d</m> such that <m>d\mid n</m>.
+            The sum of divisors function <m>\sigma(n)</m> is defined to be the sum of all the divisors of <m>n</m>.
+            For example, the divisors of <m>6</m> are <m>1,2,3,6</m>, so <m>\sigma(6)=1+2+3+6=12</m>.
+            <ol>
+                <li>
+                    <p>
+                        Suppose <m>n=p^k</m> for some prime number <m>p</m> and some positive integer <m>k</m>.
+                        Prove that <m>\sigma(n)=1+p+p^2+\cdots +p^k</m>. Then, use this to prove that <m>\sigma(n)=\frac{p^{k+1}-1}{p-1}</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Suppose <m>n=p_1^{k_1}p_2^{k_2}\cdots p_m^{k_m}</m> is the prime factorization of <m>n</m>.
+                        Use the fundamental theorem of arithmetic to prove that <me>\sigma(n)=\sigma(p_1^{k_1})\sigma(p_2^{k_2})\cdots \sigma(p_m^{k_m}) \, .</me>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Use the previous two parts to find the values of <m>\sigma(50)</m> and <m>\sigma(99)</m>.
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
     <problem>
         <title>P10</title>
         <p>
+            Let <m>n\geq 3</m> be a positive integer.
+            Consider the sequence of numbers given by <me>n!+2,n!+3,n!+4,\ldots , n!+n \, .</me>
+            Prove that this sequence does not contain any prime number.
+            Explain why this shows that there are arbitrarily long sequences of consecutive composite numbers.
         </p>
     </problem>
 
     <problem>
         <title>P11</title>
         <p>
+            <ol>
+                <li>
+                    <p>
+                        Prove that <m>2^{ab}-1</m> is divisible by <m>2^a-1</m> for all positive integers <m>a</m> and <m>b</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Prove that if <m>n</m> is a composite number, then <m>2^n-1</m> is also a composite number.
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
