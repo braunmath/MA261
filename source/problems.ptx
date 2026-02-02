@@ -355,7 +355,7 @@ Your grade is based on completion only (in other words, if you complete the assi
                 </li>
                 <li>
                     <p>
-                        Prove that if <m>n</m> is a composite number, then <m>2^n-1</m> is also a composite number.
+                        Use the first part to prove that if <m>n</m> is a composite number, then <m>2^n-1</m> is also a composite number.
                     </p>
                 </li>
             </ol>
