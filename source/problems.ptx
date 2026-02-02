@@ -322,7 +322,7 @@ Your grade is based on completion only (in other words, if you complete the assi
                 <li>
                     <p>
                         Suppose <m>n=p_1^{k_1}p_2^{k_2}\cdots p_m^{k_m}</m> is the prime factorization of <m>n</m>.
-                        Use the fundamental theorem of arithmetic to prove that <me>\sigma(n)=\sigma(p_1^{k_1})\sigma(p_2^{k_2})\cdots \sigma(p_m^{k_m}) \, .</me>
+                        Prove that <me>\sigma(n)=\sigma(p_1^{k_1})\sigma(p_2^{k_2})\cdots \sigma(p_m^{k_m}) \, .</me>
                     </p>
                 </li>
                 <li>
