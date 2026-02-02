@@ -350,7 +350,7 @@ Your grade is based on completion only (in other words, if you complete the assi
             <ol>
                 <li>
                     <p>
-                        Prove that <m>2^{ab}-1</m> is divisible by <m>2^a-1</m> for all positive integers <m>a</m> and <m>b</m>.
+                        Prove that the polynomial <m>x^{ab}-1</m> is divisible by <m>x^a-1</m> for all positive integers <m>a</m> and <m>b</m>.
                     </p>
                 </li>
                 <li>
