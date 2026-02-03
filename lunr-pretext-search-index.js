@@ -10,45 +10,45 @@ var ptx_lunr_docs = [
   "body": " Introduction to MA 261  Welcome to MA 261, Intro to Number Theory! This course serves two purposes for students at UK:   Students are introduced to fundamental concepts in elementary number theory, including divisibility, prime numbers, modular arithmetic, approximating real numbers by continued fractions, and Pythagorean triples.    MA 261 is a required course in the UK Math major \"Foundations of Mathematics\" track, in which students learn to read, construct, and critique mathematical proofs, along with learning about the role of proof in mathematics.     In this particular course, we will also explore applications of number theory in music, specifically to the theory of rhythm and the theory of scales and temperament.  First, let's address the elephant in the room: Many students are afraid of, or have had bad previous experiences, with proofs in mathematics.   If you are already comfortable with proofs, that's great! If not, then you are in the right course. This course is intended to help you gain familiarity and skill with proof-based mathematics. The first thing that we will do is to look at a simple theorem in number theory and use it as the basis for a larger conversation about different types of mathematical reasoning, and how those types of mathematical reasoning are reflected in different approaches to proof.  "
 },
 {
-  "id": "123n",
+  "id": "s123n",
   "level": "1",
-  "url": "123n.html",
+  "url": "s123n.html",
   "type": "Section",
   "number": "2.1",
   "title": "Mathematics Begins With Questions",
   "body": " Mathematics Begins With Questions  Mathematical reasoning always begins with a question. Most students experience math in school, including in university, as a sequence of answers to questions that they have never heard asked. Don't believe this lie! Mathematics is about wondering, questioning, being curious, and making sense of the world. So let's begin with a question.   What is the value of the sum for different positive integer values of ?    In this class, we will frequently engage in collaborative activities, which we will call checkpoints. Here are the expectations for checkpoints, which will usually either be a problem to solve or a question to discuss:   First, begin the discussion by going around your group and having each person spend 10-seconds sharing an initial strategy for solving the problem, or sharing a answer to the question if it is a discussion question.    Second, go around the group again and give a 10-second follow-up answer. This allows everyone to have a chance to offer their thoughts before the general problem-solving or discussion begins.    Third, as a group, solve the problem or engage in the discussion for the checkpoint.       Discuss with your neighbors:   What qualities would you want to see in a \"good\" answer to the question above?    What are some different approaches that you could use to start trying to answer the question?      "
 },
 {
-  "id": "123n-3",
+  "id": "s123n-3",
   "level": "2",
-  "url": "123n.html#123n-3",
+  "url": "s123n.html#s123n-3",
   "type": "Question",
   "number": "2.1.1",
   "title": "",
   "body": " What is the value of the sum for different positive integer values of ?  "
 },
 {
-  "id": "123n-4",
+  "id": "s123n-4",
   "level": "2",
-  "url": "123n.html#123n-4",
+  "url": "s123n.html#s123n-4",
   "type": "Remark",
   "number": "2.1.2",
   "title": "",
   "body": " In this class, we will frequently engage in collaborative activities, which we will call checkpoints. Here are the expectations for checkpoints, which will usually either be a problem to solve or a question to discuss:   First, begin the discussion by going around your group and having each person spend 10-seconds sharing an initial strategy for solving the problem, or sharing a answer to the question if it is a discussion question.    Second, go around the group again and give a 10-second follow-up answer. This allows everyone to have a chance to offer their thoughts before the general problem-solving or discussion begins.    Third, as a group, solve the problem or engage in the discussion for the checkpoint.     "
 },
 {
-  "id": "123n-5",
+  "id": "s123n-5",
   "level": "2",
-  "url": "123n.html#123n-5",
+  "url": "s123n.html#s123n-5",
   "type": "Checkpoint",
   "number": "2.1.3",
   "title": "",
   "body": " Discuss with your neighbors:   What qualities would you want to see in a \"good\" answer to the question above?    What are some different approaches that you could use to start trying to answer the question?     "
 },
 {
-  "id": "123napproaches",
+  "id": "s123napproaches",
   "level": "1",
-  "url": "123napproaches.html",
+  "url": "s123napproaches.html",
   "type": "Section",
   "number": "2.2",
   "title": "Exploration Leads to Conjecture",
@@ -57,16 +57,16 @@ var ptx_lunr_docs = [
 {
   "id": "principle-smallexamples",
   "level": "2",
-  "url": "123napproaches.html#principle-smallexamples",
+  "url": "s123napproaches.html#principle-smallexamples",
   "type": "Principle",
   "number": "2.2.1",
   "title": "",
   "body": "  Work out small examples with pencil and paper.   "
 },
 {
-  "id": "123napproaches-4",
+  "id": "s123napproaches-4",
   "level": "2",
-  "url": "123napproaches.html#123napproaches-4",
+  "url": "s123napproaches.html#s123napproaches-4",
   "type": "Checkpoint",
   "number": "2.2.2",
   "title": "",
@@ -75,16 +75,16 @@ var ptx_lunr_docs = [
 {
   "id": "principle-drawapicture",
   "level": "2",
-  "url": "123napproaches.html#principle-drawapicture",
+  "url": "s123napproaches.html#principle-drawapicture",
   "type": "Principle",
   "number": "2.2.3",
   "title": "",
   "body": "  Draw various pictures or diagrams to visualize the problem, theorem, definition, etc.   "
 },
 {
-  "id": "123napproaches-6",
+  "id": "s123napproaches-6",
   "level": "2",
-  "url": "123napproaches.html#123napproaches-6",
+  "url": "s123napproaches.html#s123napproaches-6",
   "type": "Checkpoint",
   "number": "2.2.4",
   "title": "",
@@ -93,16 +93,16 @@ var ptx_lunr_docs = [
 {
   "id": "principle-computationalexperiments",
   "level": "2",
-  "url": "123napproaches.html#principle-computationalexperiments",
+  "url": "s123napproaches.html#principle-computationalexperiments",
   "type": "Principle",
   "number": "2.2.5",
   "title": "",
   "body": "  Use a computer to conduct experiments and generate data.   "
 },
 {
-  "id": "123napproaches-12",
+  "id": "s123napproaches-12",
   "level": "2",
-  "url": "123napproaches.html#123napproaches-12",
+  "url": "s123napproaches.html#s123napproaches-12",
   "type": "Checkpoint",
   "number": "2.2.6",
   "title": "",
@@ -111,16 +111,16 @@ var ptx_lunr_docs = [
 {
   "id": "conj-123nsum",
   "level": "2",
-  "url": "123napproaches.html#conj-123nsum",
+  "url": "s123napproaches.html#conj-123nsum",
   "type": "Conjecture",
   "number": "2.2.7",
   "title": "",
   "body": "      "
 },
 {
-  "id": "123nproofs",
+  "id": "s123nproofs",
   "level": "1",
-  "url": "123nproofs.html",
+  "url": "s123nproofs.html",
   "type": "Section",
   "number": "2.3",
   "title": "Conjecture Requires Experimental Verification and Proof",
@@ -129,7 +129,7 @@ var ptx_lunr_docs = [
 {
   "id": "principle-testmore",
   "level": "2",
-  "url": "123nproofs.html#principle-testmore",
+  "url": "s123nproofs.html#principle-testmore",
   "type": "Principle",
   "number": "2.3.1",
   "title": "",
@@ -138,16 +138,16 @@ var ptx_lunr_docs = [
 {
   "id": "fig-threeworlds",
   "level": "2",
-  "url": "123nproofs.html#fig-threeworlds",
+  "url": "s123nproofs.html#fig-threeworlds",
   "type": "Figure",
   "number": "2.3.2",
   "title": "",
   "body": " David Tall's Three Worlds of Mathematics, from Proof and Proving in Mathematics Education , page 24.   A picture of David Tall's Three Worlds of Mathematics with images and words illustrating the embodied, symbolic, and formal worlds of mathematics.   "
 },
 {
-  "id": "123nembodied",
+  "id": "s123nembodied",
   "level": "1",
-  "url": "123nembodied.html",
+  "url": "s123nembodied.html",
   "type": "Section",
   "number": "2.4",
   "title": "Embodied Proof",
@@ -156,70 +156,70 @@ var ptx_lunr_docs = [
 {
   "id": "fig-embodied123nsum",
   "level": "2",
-  "url": "123nembodied.html#fig-embodied123nsum",
+  "url": "s123nembodied.html#fig-embodied123nsum",
   "type": "Figure",
   "number": "2.4.1",
   "title": "",
   "body": " A 10 by 11 grid illustrating the embodied proof of our conjecture.   A 10 by 11 grid where the squares in the lower left half are shaded.   "
 },
 {
-  "id": "123nembodied-7",
+  "id": "s123nembodied-7",
   "level": "2",
-  "url": "123nembodied.html#123nembodied-7",
+  "url": "s123nembodied.html#s123nembodied-7",
   "type": "Checkpoint",
   "number": "2.4.2",
   "title": "",
   "body": " Discuss this picture. Why is this a proof of the conjecture? Can you see how to generalize this picture to justify that our conjecture is true for any positive integer ?  "
 },
 {
-  "id": "123nsymbolic",
+  "id": "s123nsymbolic",
   "level": "1",
-  "url": "123nsymbolic.html",
+  "url": "s123nsymbolic.html",
   "type": "Section",
   "number": "2.5",
   "title": "Symbolic Proof",
   "body": " Symbolic Proof  Here is a description of the symbolic world from David Tall's paper \"Building Theories: The Three Worlds of Mathematics\", published in For the Learning of Mathematics in 2004 .   The second world is the world of symbols that we use for calculation and manipulation in arithmetic, algebra, calculus and so on. These begin with actions (such as pointing and counting) that are encapsulated as concepts by using symbols that allow us to switch effortlessly from processes to do mathematics, to concepts to think about... The initial stages of counting and early arithmetic are largely embodied. But the focus on the properties of the symbols and the relationship between them moves away from the physical meaning to a symbolic activity in arithmetic. This becomes increasingly sophisticated, with the introduction of more sophisticated number concepts (fractions, negatives, rationals, irrationals, infinite decimals, complex numbers, vectors in two and three, then n dimensions, and so on) that enable us to calculate and manipulate symbols with great accuracy and precision.   An example of an embodied-symbolic proof of our conjecture for is the following. Take two copies of our sum and add them together, but place one copy on top of the other, with the second set of summands appearing in the opposite order: When these two sums are added together, the summands pair to produce the sum of six copies of . Thus, the initial sum, , must be half of this total, is equal to half of , which is .  This proof is embodied because it relies on visualizing the two sums being added together in this way, and because it relies on the physical action of pairing the summands. It is symbolic because it relies on manipulating the symbols of addition and equality to arrive at the conclusion.   Discuss the proof above. Does it make sense? Why or why not?   Next, let's look at a more general version of this proof that would be considered symbolic . When writing a proof that is more symbolic or formal (which we will discuss next), we usually will place our argument in a proof environment that begins with the word \"Proof\" and ends with either a small box symbol or the letters \"QED\" (which stands for the Latin phrase quod erat demonstrandum , meaning \"which was to be demonstrated\"). This is what you should do when writing your own symbolic and\/or formal proofs.  In the proof below, we will use the sigma notation for sums. Remember that the notation means to sum the terms . Using this notation, our conjecture can be written as    Proof of  We write the sum twice, once in the usual order and once in reverse order, and add them together: Therefore, the equation above gives from which it follows that     Discuss this proof. Does it make sense? Why or why not?    Which of the three proofs (embodied, embodied-symbolic, and symbolic) that we have seen so far do you prefer? Why? Which of these proofs most makes you believe that our conjecture is true? Why?   "
 },
 {
-  "id": "123nsymbolic-6",
+  "id": "s123nsymbolic-6",
   "level": "2",
-  "url": "123nsymbolic.html#123nsymbolic-6",
+  "url": "s123nsymbolic.html#s123nsymbolic-6",
   "type": "Checkpoint",
   "number": "2.5.1",
   "title": "",
   "body": " Discuss the proof above. Does it make sense? Why or why not?  "
 },
 {
-  "id": "123nsymbolic-9",
+  "id": "s123nsymbolic-9",
   "level": "2",
-  "url": "123nsymbolic.html#123nsymbolic-9",
+  "url": "s123nsymbolic.html#s123nsymbolic-9",
   "type": "Proof",
   "number": "2.5.1",
   "title": "Proof of Conjecture 2.2.7.",
   "body": " Proof of  We write the sum twice, once in the usual order and once in reverse order, and add them together: Therefore, the equation above gives from which it follows that   "
 },
 {
-  "id": "123nsymbolic-10",
+  "id": "s123nsymbolic-10",
   "level": "2",
-  "url": "123nsymbolic.html#123nsymbolic-10",
+  "url": "s123nsymbolic.html#s123nsymbolic-10",
   "type": "Checkpoint",
   "number": "2.5.2",
   "title": "",
   "body": " Discuss this proof. Does it make sense? Why or why not?  "
 },
 {
-  "id": "123nsymbolic-11",
+  "id": "s123nsymbolic-11",
   "level": "2",
-  "url": "123nsymbolic.html#123nsymbolic-11",
+  "url": "s123nsymbolic.html#s123nsymbolic-11",
   "type": "Checkpoint",
   "number": "2.5.3",
   "title": "",
   "body": " Which of the three proofs (embodied, embodied-symbolic, and symbolic) that we have seen so far do you prefer? Why? Which of these proofs most makes you believe that our conjecture is true? Why?  "
 },
 {
-  "id": "123nformal",
+  "id": "s123nformal",
   "level": "1",
-  "url": "123nformal.html",
+  "url": "s123nformal.html",
   "type": "Section",
   "number": "2.6",
   "title": "Formal Proof",
@@ -228,16 +228,16 @@ var ptx_lunr_docs = [
 {
   "id": "ques-twocolorregions",
   "level": "2",
-  "url": "123nformal.html#ques-twocolorregions",
+  "url": "s123nformal.html#ques-twocolorregions",
   "type": "Question",
   "number": "2.6.1",
   "title": "",
   "body": "  Consider any map formed by drawing straight lines in the plane, each line extending infinitely in both directions, to represent the boundaries of the regions. Some regions will be compact and bounded, others will be unbounded and go off to infinity. Is it always possible to color the regions using only two colors, say white and gray, in such a way that white and gray regions never share an edge? In other words, the edges between regions always have white on one side and gray on the other side. If yes, why? If no, why not?   "
 },
 {
-  "id": "123nformal-7",
+  "id": "s123nformal-7",
   "level": "2",
-  "url": "123nformal.html#123nformal-7",
+  "url": "s123nformal.html#s123nformal-7",
   "type": "Checkpoint",
   "number": "2.6.2",
   "title": "",
@@ -246,43 +246,43 @@ var ptx_lunr_docs = [
 {
   "id": "thm-twocolors",
   "level": "2",
-  "url": "123nformal.html#thm-twocolors",
+  "url": "s123nformal.html#thm-twocolors",
   "type": "Theorem",
   "number": "2.6.3",
   "title": "",
   "body": "  The answer to is yes.   "
 },
 {
-  "id": "123nformal-9",
+  "id": "s123nformal-9",
   "level": "2",
-  "url": "123nformal.html#123nformal-9",
+  "url": "s123nformal.html#s123nformal-9",
   "type": "Proof",
   "number": "2.6.1",
   "title": "",
   "body": " We will prove by mathematical induction on the number of lines, . For the base case, when , there are two regions separated by a single line. We can color one region white and the other gray, so the base case holds.  Next, we prove the inductive step. Assume that for some arbitrary value , any map formed by lines can be colored using only two colors so that no two adjacent regions share the same color. Now, consider a map formed by lines. We can think of this map as being formed by first drawing lines, and then adding one additional line. By our inductive hypothesis, we can color the regions formed by the first lines using only two colors. Now, when we add the st line, it will intersect some of the existing regions, dividing them into two new regions. To ensure that no two adjacent regions share the same color, we can simply switch the colors of all the regions on one side of the new line. This way, the regions on either side of the new line will have different colors, and the coloring of the other regions remains the same. Further, none of the adjacent regions have the same color.  "
 },
 {
-  "id": "123nformal-10",
+  "id": "s123nformal-10",
   "level": "2",
-  "url": "123nformal.html#123nformal-10",
+  "url": "s123nformal.html#s123nformal-10",
   "type": "Checkpoint",
   "number": "2.6.4",
   "title": "",
   "body": " Discuss this proof. Does it make sense? Why or why not?  "
 },
 {
-  "id": "123nformal-12",
+  "id": "s123nformal-12",
   "level": "2",
-  "url": "123nformal.html#123nformal-12",
+  "url": "s123nformal.html#s123nformal-12",
   "type": "Proof",
   "number": "2.6.2",
   "title": "Proof of Conjecture 2.2.7.",
   "body": " Proof of  We use induction. For the base case, when , we have so the base case holds.  For the inductive step, assume that for some arbitrary value , we have We need to show that this implies that Starting from the left-hand side, we have This completes the inductive step, and therefore our proof by induction is complete.  "
 },
 {
-  "id": "123nformal-13",
+  "id": "s123nformal-13",
   "level": "2",
-  "url": "123nformal.html#123nformal-13",
+  "url": "s123nformal.html#s123nformal-13",
   "type": "Checkpoint",
   "number": "2.6.5",
   "title": "",
@@ -291,16 +291,16 @@ var ptx_lunr_docs = [
 {
   "id": "principle-induction",
   "level": "2",
-  "url": "123nformal.html#principle-induction",
+  "url": "s123nformal.html#principle-induction",
   "type": "Principle",
   "number": "2.6.6",
   "title": "Principle of Mathematical Induction.",
   "body": " Principle of Mathematical Induction   Suppose we have a sequence of mathematical statements (one for each natural number). If the following two properties hold, then is true for every natural number :   The base case : is true.    The induction step : If for a natural number the statement is true, then is true.      "
 },
 {
-  "id": "123nformal-16",
+  "id": "s123nformal-16",
   "level": "2",
-  "url": "123nformal.html#123nformal-16",
+  "url": "s123nformal.html#s123nformal-16",
   "type": "Checkpoint",
   "number": "2.6.7",
   "title": "",
@@ -309,16 +309,16 @@ var ptx_lunr_docs = [
 {
   "id": "principle-strong-induction",
   "level": "2",
-  "url": "123nformal.html#principle-strong-induction",
+  "url": "s123nformal.html#principle-strong-induction",
   "type": "Principle",
   "number": "2.6.8",
   "title": "Principle of Strong Mathematical Induction.",
   "body": " Principle of Strong Mathematical Induction   Suppose we have a sequence of mathematical statements (one for each natural number). If the following two properties hold, then is true for every natural number :   The base case : is true.    The induction step : If for every natural number the statement is true for all , then is true.      "
 },
 {
-  "id": "123ncoding",
+  "id": "s123ncoding",
   "level": "1",
-  "url": "123ncoding.html",
+  "url": "s123ncoding.html",
   "type": "Section",
   "number": "2.7",
   "title": "Computational Experiments in SageMath",
@@ -327,7 +327,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-range",
   "level": "2",
-  "url": "123ncoding.html#def-range",
+  "url": "s123ncoding.html#def-range",
   "type": "Definition",
   "number": "2.7.1",
   "title": "",
@@ -336,7 +336,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-forloop",
   "level": "2",
-  "url": "123ncoding.html#def-forloop",
+  "url": "s123ncoding.html#def-forloop",
   "type": "Definition",
   "number": "2.7.2",
   "title": "",
@@ -345,7 +345,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-ifstatements",
   "level": "2",
-  "url": "123ncoding.html#def-ifstatements",
+  "url": "s123ncoding.html#def-ifstatements",
   "type": "Definition",
   "number": "2.7.3",
   "title": "",
@@ -354,7 +354,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-append",
   "level": "2",
-  "url": "123ncoding.html#def-append",
+  "url": "s123ncoding.html#def-append",
   "type": "Definition",
   "number": "2.7.4",
   "title": "",
@@ -363,7 +363,7 @@ var ptx_lunr_docs = [
 {
   "id": "def-length",
   "level": "2",
-  "url": "123ncoding.html#def-length",
+  "url": "s123ncoding.html#def-length",
   "type": "Definition",
   "number": "2.7.5",
   "title": "",
@@ -979,7 +979,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.1",
   "title": "The Division Algorithm",
-  "body": " The Division Algorithm  In this chapter, we will explore divisibility in the study of solving equations using integers and developing algorithms for effective computation. We begin with the following problem.    Which triples of positive integers have integer solutions and to the equation      Investigate which values of from to yield an integer solution for each of the following equations.                         When are integers, the equation is called a linear Diophantine equation . In general, a Diophantine equation is a polynomial equation with integer coefficients for which we study solutions that are integer values. A linear Diophantine equation is a linear equation with integer coefficients, where we want to find integer solutions. Diophantine equations are named after Diophantus of Alexandria, a Greek mathematician who made significant contributions to number theory.   A former University of Kentucky undergraduate math and classics double-major, Cyrus Hettle, conducted undergraduate research on Diophantus's work and published a nice article about it in the Journal of Humanistic Mathematics: Cyrus Hettle, \"The Symbolic and Mathematical Influence of Diophantus's Arithmetica,\" Journal of Humanistic Mathematics, Volume 5 Issue 1 (January 2015), pages 139-166. Available at: https:\/\/scholarship.claremont.edu\/jhm\/vol5\/iss1\/8    From your investigations with the previous checkpoint, you might have been led to conjecture that the equation has integer solutions if and only if is a multiple of the greatest common divisor of and . We will prove that this is true later in this chapter, but first we will develop a broad theory regarding both greatest common divisors and the solution of linear Diophantine equations. We will begin with the division algorithm , which is a simple but powerful tool in number theory.   The Division Algorithm   Let and be positive integers, i.e., . Then there exist unique integers and such that and .    Before we prove , let's give some names to the quantities involved. We call the quotient and the remainder when is divided by . Observe that if and only if divides , by the definition of divisibility.   Let and . Then by the division algorithm, there exist unique integers and such that and . In this case, we have and , since .    Find the quotient and remainder when each of the following integers is divided by the given divisor.    , .     , .     , .      While it might seem clear when doing examples that we can always find such integers and given and , neither this nor the uniqueness part of the theorem is not immediately obvious. Let's provide a proof to verify this formally.   Consider the set which is the set of all positive multiples of that are greater than . We first want to show that this set is not the empty set. Since , we know that , so . Thus, By the well-ordering principle , since is a non-empty set of positive integers, it must have a smallest element; call this element .  Write for some , and note that by the minimality of . Then we have Subtracting from each part of this inequality yields So, define . Then we have and   To see that and are unique, suppose that there exist integers and such that with . Then we have Rearranging this equation yields If , then , so . But since , we have , which is a contradiction. Thus, we must have , which implies that as well. Therefore, the integers and are unique.   "
+  "body": " The Division Algorithm  In this chapter, we will explore divisibility in the study of solving equations using integers and developing algorithms for effective computation. We begin with the following problem.    Which triples of positive integers have integer solutions and to the equation      Investigate which values of from to yield an integer solution for each of the following equations.                         When are integers, the equation is called a linear Diophantine equation . In general, a Diophantine equation is a polynomial equation with integer coefficients for which we study solutions that are integer values. A linear Diophantine equation is a linear equation with integer coefficients, where we want to find integer solutions. Diophantine equations are named after Diophantus of Alexandria, a Greek mathematician who made significant contributions to number theory.   A former University of Kentucky undergraduate math and classics double-major, Cyrus Hettle, conducted undergraduate research on Diophantus's work and published a nice article about it in the Journal of Humanistic Mathematics: Cyrus Hettle, \"The Symbolic and Mathematical Influence of Diophantus's Arithmetica,\" Journal of Humanistic Mathematics, Volume 5 Issue 1 (January 2015), pages 139-166. Available at: https:\/\/scholarship.claremont.edu\/jhm\/vol5\/iss1\/8    From your investigations with the previous checkpoint, you might have been led to conjecture that the equation has integer solutions if and only if is a multiple of the greatest common divisor of and . We will prove that this is true later in this chapter, but first we will develop a broad theory regarding both greatest common divisors and the solution of linear Diophantine equations. We will begin with the division algorithm , which is a simple but powerful tool in number theory.   The Division Algorithm   Let and be positive integers, i.e., . Then there exist unique integers and such that and .    Before we prove , let's give some names to the quantities involved. We call the quotient and the remainder when is divided by . Observe that if and only if divides , by the definition of divisibility.   Let and . Then by the division algorithm, there exist unique integers and such that and . In this case, we have and , since .    Find the quotient and remainder when each of the following integers is divided by the given divisor.    , .     , .     , .      While it might seem clear when doing examples that we can always find such integers and given and , neither this nor the uniqueness part of the theorem is immediately obvious. Let's provide a proof to verify this formally.   Consider the set which is the set of all positive multiples of that are greater than . We first want to show that this set is not the empty set. Since , we know that , so . Thus, By the well-ordering principle , since is a non-empty set of positive integers, it must have a smallest element; call this element .  Write for some , and note that by the minimality of . Then we have Subtracting from each part of this inequality yields So, define . Then we have and   To see that and are unique, suppose that there exist integers and such that with . Then we have Rearranging this equation yields If , then , so . But since , we have , which is a contradiction. Thus, we must have , which implies that as well. Therefore, the integers and are unique.    Discuss the proof with your group. Does it make sense? Why or why not?  Draw a diagram with a number line to justify that if then .   Let's put the division algorithm to work with several applications. The first is a method to test whether or not two numbers have the same remainder when divided by a positive integer .    Let . The numbers and have the same remainder when divided by if and only if .     For each of the following pairs of integers and , determine whether or not they have the same remainder when divided by the given value . Check this using both of the equivalent criteria in the theorem, i.e., first compute both their remainders and second check whether divides their difference.    , , .     , , .     , , .       We first prove that if and have the same remainder when divided by , then By the division algorithm, there exist unique integers such that with . Similarly, there exist unique integers such that with . Since and have the same remainder when divided by , we have . Thus, we have Therefore,   We next prove the converse, that is, we prove that if then and have the same remainder when divided by . Since there exists an integer such that By the division algorithm, there exist unique integers such that with . Similarly, there exist unique integers such that with . Substituting these expressions for and into the equation we have Rearranging this equation yields Since , the only way for to be a multiple of is if so that . Therefore, and have the same remainder when divided by .    Discuss the proof with your group. Does it make sense? Why or why not?   Our second application is related to prime numbers. We know that is the only even prime number, since every other even number is divisible by . An equivalent way to say this is that there are only finitely many primes that have remainder when divided by . What can we say about remainders of primes when divide by other numbers? Here is a classic result.   Dirichlet's Theorem on Arithmetic Progressions   Given any two positive integers and that are relatively prime, i.e., there are infinitely many primes that have remainder when divided by .    We should look at various examples of this theorem to get a feel for what it is saying, and examples can be found on the wikipedia page for Dirichlet's theorem .  A proof of Dirichlet's theorem is far beyond the scope of this course, but it shows that primes are widely distributed across all possible remainders when divided by a positive integer , as long as the remainder and the divisor are relatively prime. However, we will give a proof of a special case of this theorem that illustrates the main idea of the result.   Special case of Dirichlet's theorem   There are infinitely many primes that have remainder when divided by .    We will provide a proof given by Silverman's book A friendly introduction to number theory , which is also given on the wikipedia page for Dirichlet's theorem .   We will prove this in a similar manner to Euclid's proof that there are infinitely many primes. Specifically, we will construct an infinite sequence of primes that are of the form .  We will need a simple lemma first: suppose that are positive integers where each for some integer . Then the product is also of the form for some integer . We prove this by observing that the product of two numbers of the form is also of the form . Specifically, if and , then Thus, using an argument by induction, it can be shown that the product of any finite number of integers of the form is also of the form .  Now, suppose that we have a list of prime numbers of the form , say , where none of these primes are equal to . So, we can start with the prime . Define and observe that none of the primes divides . Note that would imply that , which is false, and would imply that , which is also false since none of the are equal to . Thus, any prime factor of must be of the form or .  If every prime factor of were of the form , then by our lemma, their product (which is equal to ) would also be of the form , which is a contradiction since is of the form . Therefore, must have at least one prime factor of the form that is not in our original list of primes.  We can then iterate this process to generate an infinite list of primes of the form .    Discuss the proof with your group. Does it make sense? Why or why not?    Start with the prime and use the method in the proof of to produce three primes of the form .   What is interesting is that Dirichlet's theorem on arithmetic progressions contrasts with what we know about the distribution of the primes throughout the integers, which is given in the following famous result.  In order to state this theorem, we need to introduce one piece of notation. Given two functions and defined on the positive integers, we write to mean that If , we say that and are asymptotically equivalent . In other words, the functions and are asymptotically equivalent if their ratio approaches as approaches infinity.  You have actually seen many examples in calculus of functions that are asymptotically equivalent. For example, consider the function and the function . Then we have so . Thus, for large values of , the function behaves like the function .   Discuss this definition and example with your group. Does it make sense? Why or why not?   It is important to note that the difference of two asymptotically equivalent functions does not necessarily approach as approaches infinity. For example, the difference between our functions and is which approaches infinity as approaches infinity. However, the ratio of to does approach .  So, two functions being asymptotically equivalent have the same rate of growth, meaning that the difference between them becomes insignificant compared to their size as becomes very large.   Does the distinction between limits of ratios and differences above make sense? Why or why not?    Prime Number Theorem   Recall that denotes the number of primes less than or equal to . Then we have where is the natural logarithm of .    What this says is that the fraction of the numbers between and that are prime is approximately .   Discuss with your group the following two questions.   Why does this mean that the fraction of the numbers between and that are prime is approximately ?    Why does imply that the fraction of the primes among the integers approaches as approaches infinity?   `   The big takeaway from these two theorems is that there is a tension between the fact that (A) the primes become more and more rare as we consider larger and larger numbers and (B) the primes are distributed in infinite quantities across all possible remainders when divided by a positive integer , as long as the remainder and the divisor are relatively prime.   Discuss with your group: do you agree that this is a tension? Why or why not? Are you surprised by either of these results?   As you can see, while writing a number in quotient-remainder form might seem simple, it has profound consequences in number theory. We will next use the division algorithm to develop the theory of greatest common divisors and to solve linear Diophantine equations.  "
 },
 {
   "id": "question-lineardiophantine",
@@ -1045,13 +1045,148 @@ var ptx_lunr_docs = [
   "body": " Consider the set which is the set of all positive multiples of that are greater than . We first want to show that this set is not the empty set. Since , we know that , so . Thus, By the well-ordering principle , since is a non-empty set of positive integers, it must have a smallest element; call this element .  Write for some , and note that by the minimality of . Then we have Subtracting from each part of this inequality yields So, define . Then we have and   To see that and are unique, suppose that there exist integers and such that with . Then we have Rearranging this equation yields If , then , so . But since , we have , which is a contradiction. Thus, we must have , which implies that as well. Therefore, the integers and are unique.  "
 },
 {
+  "id": "divisionalgorithm-14",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-14",
+  "type": "Checkpoint",
+  "number": "4.1.7",
+  "title": "",
+  "body": " Discuss the proof with your group. Does it make sense? Why or why not?  Draw a diagram with a number line to justify that if then .  "
+},
+{
+  "id": "thm-remainderequivalence",
+  "level": "2",
+  "url": "divisionalgorithm.html#thm-remainderequivalence",
+  "type": "Theorem",
+  "number": "4.1.8",
+  "title": "",
+  "body": "  Let . The numbers and have the same remainder when divided by if and only if .   "
+},
+{
+  "id": "divisionalgorithm-17",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-17",
+  "type": "Checkpoint",
+  "number": "4.1.9",
+  "title": "",
+  "body": " For each of the following pairs of integers and , determine whether or not they have the same remainder when divided by the given value . Check this using both of the equivalent criteria in the theorem, i.e., first compute both their remainders and second check whether divides their difference.    , , .     , , .     , , .     "
+},
+{
+  "id": "divisionalgorithm-18",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-18",
+  "type": "Proof",
+  "number": "4.1.2",
+  "title": "",
+  "body": " We first prove that if and have the same remainder when divided by , then By the division algorithm, there exist unique integers such that with . Similarly, there exist unique integers such that with . Since and have the same remainder when divided by , we have . Thus, we have Therefore,   We next prove the converse, that is, we prove that if then and have the same remainder when divided by . Since there exists an integer such that By the division algorithm, there exist unique integers such that with . Similarly, there exist unique integers such that with . Substituting these expressions for and into the equation we have Rearranging this equation yields Since , the only way for to be a multiple of is if so that . Therefore, and have the same remainder when divided by .  "
+},
+{
+  "id": "divisionalgorithm-19",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-19",
+  "type": "Checkpoint",
+  "number": "4.1.10",
+  "title": "",
+  "body": " Discuss the proof with your group. Does it make sense? Why or why not?  "
+},
+{
+  "id": "thm-dirichletarithmeticprogressions",
+  "level": "2",
+  "url": "divisionalgorithm.html#thm-dirichletarithmeticprogressions",
+  "type": "Theorem",
+  "number": "4.1.11",
+  "title": "Dirichlet’s Theorem on Arithmetic Progressions.",
+  "body": " Dirichlet's Theorem on Arithmetic Progressions   Given any two positive integers and that are relatively prime, i.e., there are infinitely many primes that have remainder when divided by .   "
+},
+{
+  "id": "thm-threemodfourprimes",
+  "level": "2",
+  "url": "divisionalgorithm.html#thm-threemodfourprimes",
+  "type": "Theorem",
+  "number": "4.1.12",
+  "title": "Special case of Dirichlet’s theorem.",
+  "body": " Special case of Dirichlet's theorem   There are infinitely many primes that have remainder when divided by .   "
+},
+{
+  "id": "divisionalgorithm-26",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-26",
+  "type": "Proof",
+  "number": "4.1.3",
+  "title": "",
+  "body": " We will prove this in a similar manner to Euclid's proof that there are infinitely many primes. Specifically, we will construct an infinite sequence of primes that are of the form .  We will need a simple lemma first: suppose that are positive integers where each for some integer . Then the product is also of the form for some integer . We prove this by observing that the product of two numbers of the form is also of the form . Specifically, if and , then Thus, using an argument by induction, it can be shown that the product of any finite number of integers of the form is also of the form .  Now, suppose that we have a list of prime numbers of the form , say , where none of these primes are equal to . So, we can start with the prime . Define and observe that none of the primes divides . Note that would imply that , which is false, and would imply that , which is also false since none of the are equal to . Thus, any prime factor of must be of the form or .  If every prime factor of were of the form , then by our lemma, their product (which is equal to ) would also be of the form , which is a contradiction since is of the form . Therefore, must have at least one prime factor of the form that is not in our original list of primes.  We can then iterate this process to generate an infinite list of primes of the form .  "
+},
+{
+  "id": "divisionalgorithm-27",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-27",
+  "type": "Checkpoint",
+  "number": "4.1.13",
+  "title": "",
+  "body": " Discuss the proof with your group. Does it make sense? Why or why not?  "
+},
+{
+  "id": "divisionalgorithm-28",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-28",
+  "type": "Checkpoint",
+  "number": "4.1.14",
+  "title": "",
+  "body": " Start with the prime and use the method in the proof of to produce three primes of the form .  "
+},
+{
+  "id": "divisionalgorithm-32",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-32",
+  "type": "Checkpoint",
+  "number": "4.1.15",
+  "title": "",
+  "body": " Discuss this definition and example with your group. Does it make sense? Why or why not?  "
+},
+{
+  "id": "divisionalgorithm-35",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-35",
+  "type": "Checkpoint",
+  "number": "4.1.16",
+  "title": "",
+  "body": " Does the distinction between limits of ratios and differences above make sense? Why or why not?  "
+},
+{
+  "id": "thm-primenumbertheorem",
+  "level": "2",
+  "url": "divisionalgorithm.html#thm-primenumbertheorem",
+  "type": "Theorem",
+  "number": "4.1.17",
+  "title": "Prime Number Theorem.",
+  "body": " Prime Number Theorem   Recall that denotes the number of primes less than or equal to . Then we have where is the natural logarithm of .   "
+},
+{
+  "id": "divisionalgorithm-38",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-38",
+  "type": "Checkpoint",
+  "number": "4.1.18",
+  "title": "",
+  "body": " Discuss with your group the following two questions.   Why does this mean that the fraction of the numbers between and that are prime is approximately ?    Why does imply that the fraction of the primes among the integers approaches as approaches infinity?   `  "
+},
+{
+  "id": "divisionalgorithm-40",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-40",
+  "type": "Checkpoint",
+  "number": "4.1.19",
+  "title": "",
+  "body": " Discuss with your group: do you agree that this is a tension? Why or why not? Are you surprised by either of these results?  "
+},
+{
   "id": "euclideanalgorithm",
   "level": "1",
   "url": "euclideanalgorithm.html",
   "type": "Section",
   "number": "4.2",
   "title": "The Euclidean Algorithm",
-  "body": " The Euclidean Algorithm    "
+  "body": " The Euclidean Algorithm  We started the previous section by looking at linear Diophantine equations of the form , where , , and are given integers and we want to find integer solutions . What we observed is that there seems to be a connection between the solvability of this equation and the greatest common divisor of and . In this section, we will develop the theory of greatest common divisors using the division algorithm.  Recall that in we showed how to compute the greatest common divisor of two numbers if you know the prime factorizations of those numbers. Unfortunately, it is famously difficult to find the prime factorization of large numbers. In fact, the security of many modern cryptographic systems relies on this difficulty, see https:\/\/en.wikipedia.org\/wiki\/Integer_factorization for more information. So, we need to find a better way to compute greatest common divisors without having to factor the numbers first.  Fortunately, this was first accomplished by the ancient Greek mathematician Euclid around 300 BC. This is the same Euclid who wrote The Elements , one of the most influential works in the history of mathematics, and whose proof of the infinitude of primes we saw previously in the course. Our development of the Euclidean algorithm follows Weissman's development in his book An Illustrated Theory of Numbers .  "
 },
 {
   "id": "bezoutidentity",

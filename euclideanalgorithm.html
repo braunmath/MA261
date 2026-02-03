@@ -147,13 +147,13 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="reasoning.html" class="internal"><span class="codenumber">2</span> <span class="title">Mathematical Reasoning</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="123n.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Mathematics Begins With Questions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="123napproaches.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Exploration Leads to Conjecture</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="123nproofs.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Conjecture Requires Experimental Verification and Proof</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="123nembodied.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Embodied Proof</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="123nsymbolic.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Symbolic Proof</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="123nformal.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Formal Proof</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="123ncoding.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Computational Experiments in SageMath</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123n.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Mathematics Begins With Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123napproaches.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Exploration Leads to Conjecture</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123nproofs.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Conjecture Requires Experimental Verification and Proof</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123nembodied.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Embodied Proof</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123nsymbolic.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Symbolic Proof</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123nformal.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Formal Proof</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123ncoding.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Computational Experiments in SageMath</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -194,7 +194,20 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="euclideanalgorithm"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Euclidean Algorithm</span>
 </h2>
-<div class="para" id="euclideanalgorithm-2"><div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
+<div class="para logical" id="euclideanalgorithm-2">
+<div class="para">We started the previous section by looking at linear Diophantine equations of the form</div>
+<div class="displaymath process-math" id="euclideanalgorithm-2-1">
+\begin{equation*}
+ax + by = c\text{,}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> are given integers and we want to find integer solutions <span class="process-math">\(x,y\text{.}\)</span> What we observed is that there seems to be a connection between the solvability of this equation and the greatest common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> In this section, we will develop the theory of greatest common divisors using the division algorithm.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="euclideanalgorithm-3">Recall that in <a href="FTAcorollaries.html#prop-gcdlcmfactorizations" class="xref" data-knowl="./knowl/xref/prop-gcdlcmfactorizations.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.4.6">Proposition 3.4.6</a> we showed how to compute the greatest common divisor of two numbers if you know the prime factorizations of those numbers. Unfortunately, it is famously difficult to find the prime factorization of large numbers. In fact, the security of many modern cryptographic systems relies on this difficulty, see <a class="external" href="" target="_blank">https://en.wikipedia.org/wiki/Integer_factorization</a> for more information. So, we need to find a better way to compute greatest common divisors without having to factor the numbers first.<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="euclideanalgorithm-4">Fortunately, this was first accomplished by the ancient Greek mathematician Euclid around 300 BC. This is the same Euclid who wrote <em class="emphasis">The Elements</em>, one of the most influential works in the history of mathematics, and whose proof of the infinitude of primes we saw previously in the course. Our development of the Euclidean algorithm follows Weissman’s development in his book <em class="emphasis">An Illustrated Theory of Numbers</em>.<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
 <div class="autopermalink" data-description="Section 4.2: The Euclidean Algorithm"><a href="#euclideanalgorithm" title="Copy heading and permalink for Section 4.2: The Euclidean Algorithm" aria-label="Copy heading and permalink for Section 4.2: The Euclidean Algorithm">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="divisionalgorithm.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="bezoutidentity.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>

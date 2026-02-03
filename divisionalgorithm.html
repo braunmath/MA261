@@ -147,13 +147,13 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-chapter">
 <div class="toc-title-box"><a href="reasoning.html" class="internal"><span class="codenumber">2</span> <span class="title">Mathematical Reasoning</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="123n.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Mathematics Begins With Questions</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="123napproaches.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Exploration Leads to Conjecture</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="123nproofs.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Conjecture Requires Experimental Verification and Proof</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="123nembodied.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Embodied Proof</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="123nsymbolic.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Symbolic Proof</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="123nformal.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Formal Proof</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="123ncoding.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Computational Experiments in SageMath</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123n.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Mathematics Begins With Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123napproaches.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Exploration Leads to Conjecture</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123nproofs.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Conjecture Requires Experimental Verification and Proof</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123nembodied.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Embodied Proof</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123nsymbolic.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Symbolic Proof</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123nformal.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Formal Proof</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123ncoding.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Computational Experiments in SageMath</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -324,7 +324,7 @@ a = bq + r
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Checkpoint 4.1.6"><a href="#divisionalgorithm-11" title="Copy heading and permalink for Checkpoint 4.1.6" aria-label="Copy heading and permalink for Checkpoint 4.1.6">🔗</a></div></article></details><div class="para" id="divisionalgorithm-12">While it might seem clear when doing examples that we can always find such integers <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> given <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> neither this nor the uniqueness part of the theorem is not immediately obvious. Let’s provide a proof to verify this formally.<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Checkpoint 4.1.6"><a href="#divisionalgorithm-11" title="Copy heading and permalink for Checkpoint 4.1.6" aria-label="Copy heading and permalink for Checkpoint 4.1.6">🔗</a></div></article></details><div class="para" id="divisionalgorithm-12">While it might seem clear when doing examples that we can always find such integers <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> given <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> neither this nor the uniqueness part of the theorem is immediately obvious. Let’s provide a proof to verify this formally.<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <details id="divisionalgorithm-13" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="divisionalgorithm-13-1">
 <div class="para">Consider the set</div>
@@ -386,7 +386,299 @@ b(q - q') = r' - r \, .
 <div class="para">If <span class="process-math">\(q \neq q'\text{,}\)</span> then <span class="process-math">\(|q - q'| \geq 1\text{,}\)</span> so <span class="process-math">\(|b(q - q')| \geq b\text{.}\)</span> But since <span class="process-math">\(0 \leq r,r' \lt b\text{,}\)</span> we have <span class="process-math">\(|r' - r| \lt b\text{,}\)</span> which is a contradiction. Thus, we must have <span class="process-math">\(q = q'\text{,}\)</span> which implies that <span class="process-math">\(r = r'\)</span> as well. Therefore, the integers <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> are unique.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-13-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 4.1.1"><a href="#divisionalgorithm-13" title="Copy heading and permalink for Proof 4.1.1" aria-label="Copy heading and permalink for Proof 4.1.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section 4.1: The Division Algorithm"><a href="#divisionalgorithm" title="Copy heading and permalink for Section 4.1: The Division Algorithm" aria-label="Copy heading and permalink for Section 4.1: The Division Algorithm">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Proof 4.1.1"><a href="#divisionalgorithm-13" title="Copy heading and permalink for Proof 4.1.1" aria-label="Copy heading and permalink for Proof 4.1.1">🔗</a></div></article></details><details id="divisionalgorithm-14" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="divisionalgorithm-14-1">Discuss the proof with your group. Does it make sense? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-14-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="divisionalgorithm-14-2">Draw a diagram with a number line to justify that if <span class="process-math">\(0 \leq r,r' \lt b\)</span> then <span class="process-math">\(|r' - r| \lt b\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-14-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.1.7"><a href="#divisionalgorithm-14" title="Copy heading and permalink for Checkpoint 4.1.7" aria-label="Copy heading and permalink for Checkpoint 4.1.7">🔗</a></div></article></details><div class="para" id="divisionalgorithm-15">Let’s put the division algorithm to work with several applications. The first is a method to test whether or not two numbers have the same remainder when divided by a positive integer <span class="process-math">\(d\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-remainderequivalence"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm-remainderequivalence-1-1">Let <span class="process-math">\(d,m,n\in \mathbb{N}\text{.}\)</span> The numbers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> have the same remainder when divided by <span class="process-math">\(d\)</span> if and only if <span class="process-math">\(d \mid (m - n)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-remainderequivalence-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 4.1.8"><a href="#thm-remainderequivalence" title="Copy heading and permalink for Theorem 4.1.8" aria-label="Copy heading and permalink for Theorem 4.1.8">🔗</a></div></article><details id="divisionalgorithm-17" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="divisionalgorithm-17-1">
+<div class="para">For each of the following pairs of integers <span class="process-math">\(m\)</span> and <span class="process-math">\(n\text{,}\)</span> determine whether or not they have the same remainder when divided by the given value <span class="process-math">\(d\text{.}\)</span> Check this using both of the equivalent criteria in the theorem, i.e., first compute both their remainders and second check whether <span class="process-math">\(d\)</span> divides their difference.</div>
+<ol class="decimal" id="divisionalgorithm-17-1-5">
+<li id="divisionalgorithm-17-1-5-1">
+<div class="para" id="divisionalgorithm-17-1-5-1-1">
+<span class="process-math">\(m=29\text{,}\)</span> <span class="process-math">\(n=15\text{,}\)</span> <span class="process-math">\(d=7\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-17-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.1.9.1"><a href="#divisionalgorithm-17-1-5-1" title="Copy heading and permalink for Item 4.1.9.1" aria-label="Copy heading and permalink for Item 4.1.9.1">🔗</a></div>
+</li>
+<li id="divisionalgorithm-17-1-5-2">
+<div class="para" id="divisionalgorithm-17-1-5-2-1">
+<span class="process-math">\(m=100\text{,}\)</span> <span class="process-math">\(n=56\text{,}\)</span> <span class="process-math">\(d=9\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-17-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.1.9.2"><a href="#divisionalgorithm-17-1-5-2" title="Copy heading and permalink for Item 4.1.9.2" aria-label="Copy heading and permalink for Item 4.1.9.2">🔗</a></div>
+</li>
+<li id="divisionalgorithm-17-1-5-3">
+<div class="para" id="divisionalgorithm-17-1-5-3-1">
+<span class="process-math">\(m=8297\text{,}\)</span> <span class="process-math">\(n=10286\text{,}\)</span> <span class="process-math">\(d=153\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-17-1-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.1.9.3"><a href="#divisionalgorithm-17-1-5-3" title="Copy heading and permalink for Item 4.1.9.3" aria-label="Copy heading and permalink for Item 4.1.9.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-17-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.1.9"><a href="#divisionalgorithm-17" title="Copy heading and permalink for Checkpoint 4.1.9" aria-label="Copy heading and permalink for Checkpoint 4.1.9">🔗</a></div></article></details><details id="divisionalgorithm-18" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="divisionalgorithm-18-1">
+<div class="para">We first prove that if <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> have the same remainder when divided by <span class="process-math">\(d\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="divisionalgorithm-18-1-4">
+\begin{equation*}
+d \mid (m - n) \, .
+\end{equation*}
+</div>
+<div class="para">By the division algorithm, there exist unique integers <span class="process-math">\(q_1,r_1\)</span> such that</div>
+<div class="displaymath process-math" id="divisionalgorithm-18-1-6">
+\begin{equation*}
+m = d q_1 + r_1 \, ,
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(0 \leq r_1 \lt d\text{.}\)</span> Similarly, there exist unique integers <span class="process-math">\(q_2,r_2\)</span> such that</div>
+<div class="displaymath process-math" id="divisionalgorithm-18-1-9">
+\begin{equation*}
+n = d q_2 + r_2 \, ,
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(0 \leq r_2 \lt d\text{.}\)</span> Since <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> have the same remainder when divided by <span class="process-math">\(d\text{,}\)</span> we have <span class="process-math">\(r_1 = r_2\text{.}\)</span> Thus, we have</div>
+<div class="displaymath process-math" id="divisionalgorithm-18-1-15">
+\begin{equation*}
+m - n = (d q_1 + r_1) - (d q_2 + r_2) = d (q_1 - q_2) \, .
+\end{equation*}
+</div>
+<div class="para">Therefore,</div>
+<div class="displaymath process-math" id="divisionalgorithm-18-1-16">
+\begin{equation*}
+d \mid (m - n) \, .
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-18-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="divisionalgorithm-18-2">
+<div class="para">We next prove the converse, that is, we prove that if</div>
+<div class="displaymath process-math" id="divisionalgorithm-18-2-1">
+\begin{equation*}
+d \mid (m - n) \, ,
+\end{equation*}
+</div>
+<div class="para">then <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> have the same remainder when divided by <span class="process-math">\(d\text{.}\)</span> Since</div>
+<div class="displaymath process-math" id="divisionalgorithm-18-2-5">
+\begin{equation*}
+d \mid (m - n) \, ,
+\end{equation*}
+</div>
+<div class="para">there exists an integer <span class="process-math">\(k\)</span> such that</div>
+<div class="displaymath process-math" id="divisionalgorithm-18-2-7">
+\begin{equation*}
+m - n = d k \, .
+\end{equation*}
+</div>
+<div class="para">By the division algorithm, there exist unique integers <span class="process-math">\(q_1,r_1\)</span> such that</div>
+<div class="displaymath process-math" id="divisionalgorithm-18-2-9">
+\begin{equation*}
+m = d q_1 + r_1 \, ,
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(0 \leq r_1 \lt d\text{.}\)</span> Similarly, there exist unique integers <span class="process-math">\(q_2,r_2\)</span> such that</div>
+<div class="displaymath process-math" id="divisionalgorithm-18-2-12">
+\begin{equation*}
+n = d q_2 + r_2 \, ,
+\end{equation*}
+</div>
+<div class="para">with <span class="process-math">\(0 \leq r_2 \lt d\text{.}\)</span> Substituting these expressions for <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> into the equation</div>
+<div class="displaymath process-math" id="divisionalgorithm-18-2-16">
+\begin{equation*}
+m - n = d k \, ,
+\end{equation*}
+</div>
+<div class="para">we have</div>
+<div class="displaymath process-math" id="divisionalgorithm-18-2-17">
+\begin{equation*}
+(d q_1 + r_1) - (d q_2 + r_2) = d k \, .
+\end{equation*}
+</div>
+<div class="para">Rearranging this equation yields</div>
+<div class="displaymath process-math" id="divisionalgorithm-18-2-18">
+\begin{equation*}
+r_1 - r_2 = d (k - (q_1 - q_2)) \, .
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(0 \leq r_1,r_2 \lt d\text{,}\)</span> the only way for <span class="process-math">\(r_1 - r_2\)</span> to be a multiple of <span class="process-math">\(d\)</span> is if <span class="process-math">\(r_1 = r_2\)</span> so that <span class="process-math">\(r_1-r_2=0\text{.}\)</span> Therefore, <span class="process-math">\(m\)</span> and <span class="process-math">\(n\)</span> have the same remainder when divided by <span class="process-math">\(d\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-18-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.1.2"><a href="#divisionalgorithm-18" title="Copy heading and permalink for Proof 4.1.2" aria-label="Copy heading and permalink for Proof 4.1.2">🔗</a></div></article></details><details id="divisionalgorithm-19" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="divisionalgorithm-19-1">Discuss the proof with your group. Does it make sense? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-19-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.1.10"><a href="#divisionalgorithm-19" title="Copy heading and permalink for Checkpoint 4.1.10" aria-label="Copy heading and permalink for Checkpoint 4.1.10">🔗</a></div></article></details><div class="para" id="divisionalgorithm-20">Our second application is related to prime numbers. We know that <span class="process-math">\(2\)</span> is the only even prime number, since every other even number is divisible by <span class="process-math">\(2\text{.}\)</span> An equivalent way to say this is that there are only finitely many primes that have remainder <span class="process-math">\(0\)</span> when divided by <span class="process-math">\(2\text{.}\)</span> What can we say about remainders of primes when divide by other numbers? Here is a classic result.<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-dirichletarithmeticprogressions"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Dirichlet’s Theorem on Arithmetic Progressions.</span>
+</h3>
+<div class="para logical" id="thm-dirichletarithmeticprogressions-2-1">
+<div class="para">Given any two positive integers <span class="process-math">\(a\)</span> and <span class="process-math">\(d\)</span> that are relatively prime, i.e.,</div>
+<div class="displaymath process-math" id="thm-dirichletarithmeticprogressions-2-1-3">
+\begin{equation*}
+\gcd(a,d)=1 \, ,
+\end{equation*}
+</div>
+<div class="para">there are infinitely many primes that have remainder <span class="process-math">\(a\)</span> when divided by <span class="process-math">\(d\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-dirichletarithmeticprogressions-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 4.1.11: Dirichlet’s Theorem on Arithmetic Progressions"><a href="#thm-dirichletarithmeticprogressions" title="Copy heading and permalink for Theorem 4.1.11: Dirichlet’s Theorem on Arithmetic Progressions" aria-label="Copy heading and permalink for Theorem 4.1.11: Dirichlet’s Theorem on Arithmetic Progressions">🔗</a></div></article><div class="para" id="divisionalgorithm-22">We should look at various examples of this theorem to get a feel for what it is saying, and examples can be found on the <a class="external" href="https://en.wikipedia.org/wiki/Dirichlet%27s_theorem_on_arithmetic_progressions" target="_blank">wikipedia page for Dirichlet’s theorem</a>.<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-22" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="divisionalgorithm-23">A proof of Dirichlet’s theorem is far beyond the scope of this course, but it shows that primes are widely distributed across all possible remainders when divided by a positive integer <span class="process-math">\(d\text{,}\)</span> as long as the remainder and the divisor are relatively prime. However, we will give a proof of a special case of this theorem that illustrates the main idea of the result.<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-threemodfourprimes"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Special case of Dirichlet’s theorem.</span>
+</h3>
+<div class="para" id="thm-threemodfourprimes-2-1">There are infinitely many primes that have remainder <span class="process-math">\(3\)</span> when divided by <span class="process-math">\(4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-threemodfourprimes-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 4.1.12: Special case of Dirichlet’s theorem"><a href="#thm-threemodfourprimes" title="Copy heading and permalink for Theorem 4.1.12: Special case of Dirichlet’s theorem" aria-label="Copy heading and permalink for Theorem 4.1.12: Special case of Dirichlet’s theorem">🔗</a></div></article><div class="para" id="divisionalgorithm-25">We will provide a proof given by Silverman’s book <em class="emphasis">A friendly introduction to number theory</em>, which is also given on the <a class="external" href="https://en.wikipedia.org/wiki/Dirichlet%27s_theorem_on_arithmetic_progressions" target="_blank">wikipedia page for Dirichlet’s theorem</a>.<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="divisionalgorithm-26" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="divisionalgorithm-26-1">We will prove this in a similar manner to Euclid’s proof that there are infinitely many primes. Specifically, we will construct an infinite sequence of primes that are of the form <span class="process-math">\(4k+3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-26-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="divisionalgorithm-26-2">
+<div class="para">We will need a simple lemma first: suppose that <span class="process-math">\(a_1,a_2,\ldots,a_n\)</span> are positive integers where each <span class="process-math">\(a_i=4k_i+1\)</span> for some integer <span class="process-math">\(k_i\text{.}\)</span> Then the product</div>
+<div class="displaymath process-math" id="divisionalgorithm-26-2-4">
+\begin{equation*}
+A = a_1 a_2 \cdots a_n \, 
+\end{equation*}
+</div>
+<div class="para">is also of the form <span class="process-math">\(4k+1\)</span> for some integer <span class="process-math">\(k\text{.}\)</span> We prove this by observing that the product of two numbers of the form <span class="process-math">\(4k+1\)</span> is also of the form <span class="process-math">\(4k+1\text{.}\)</span> Specifically, if <span class="process-math">\(a=4k_1+1\)</span> and <span class="process-math">\(b=4k_2+1\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="divisionalgorithm-26-2-11">
+\begin{align*}
+ab \amp = (4k_1+1)(4k_2+1) = 16k_1k_2 + 4k_1 + 4k_2 + 1 \\
+\amp = 4(4k_1k_2 + k_1 + k_2) + 1 \, .
+\end{align*}
+</div>
+<div class="para">Thus, using an argument by induction, it can be shown that the product of any finite number of integers of the form <span class="process-math">\(4k+1\)</span> is also of the form <span class="process-math">\(4k+1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-26-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="divisionalgorithm-26-3">
+<div class="para">Now, suppose that we have a list of prime numbers of the form <span class="process-math">\(4k+3\text{,}\)</span> say <span class="process-math">\(p_1, p_2, \ldots, p_n\text{,}\)</span> where none of these primes are equal to <span class="process-math">\(3\text{.}\)</span> So, we can start with the prime <span class="process-math">\(7\text{.}\)</span> Define</div>
+<div class="displaymath process-math" id="divisionalgorithm-26-3-5">
+\begin{equation*}
+N=4 p_1 p_2 \cdots p_n +3\, ,
+\end{equation*}
+</div>
+<div class="para">and observe that none of the primes <span class="process-math">\(3,p_1,p_2,\ldots,p_n\)</span> divides <span class="process-math">\(N\text{.}\)</span> Note that <span class="process-math">\(3\mid N\)</span> would imply that <span class="process-math">\(3\mid 4\text{,}\)</span> which is false, and <span class="process-math">\(p_i \mid N\)</span> would imply that <span class="process-math">\(p_i \mid 3\text{,}\)</span> which is also false since none of the <span class="process-math">\(p_i\)</span> are equal to <span class="process-math">\(3\text{.}\)</span> Thus, any prime factor of <span class="process-math">\(N\)</span> must be of the form <span class="process-math">\(4k+1\)</span> or <span class="process-math">\(4k+3\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-26-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="divisionalgorithm-26-4">If every prime factor of <span class="process-math">\(N\)</span> were of the form <span class="process-math">\(4k+1\text{,}\)</span> then by our lemma, their product (which is equal to <span class="process-math">\(N\)</span>) would also be of the form <span class="process-math">\(4k+1\text{,}\)</span> which is a contradiction since <span class="process-math">\(N\)</span> is of the form <span class="process-math">\(4k+3\text{.}\)</span> Therefore, <span class="process-math">\(N\)</span> must have at least one prime factor of the form <span class="process-math">\(4k+3\)</span> that is not in our original list of primes.<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-26-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="divisionalgorithm-26-5">We can then iterate this process to generate an infinite list of primes of the form <span class="process-math">\(4k+3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-26-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.1.3"><a href="#divisionalgorithm-26" title="Copy heading and permalink for Proof 4.1.3" aria-label="Copy heading and permalink for Proof 4.1.3">🔗</a></div></article></details><details id="divisionalgorithm-27" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="divisionalgorithm-27-1">Discuss the proof with your group. Does it make sense? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-27-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.1.13"><a href="#divisionalgorithm-27" title="Copy heading and permalink for Checkpoint 4.1.13" aria-label="Copy heading and permalink for Checkpoint 4.1.13">🔗</a></div></article></details><details id="divisionalgorithm-28" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.14</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="divisionalgorithm-28-1">Start with the prime <span class="process-math">\(7\)</span> and use the method in the proof of <a href="divisionalgorithm.html#thm-threemodfourprimes" class="xref" data-knowl="./knowl/xref/thm-threemodfourprimes.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.1.12: Special case of Dirichlet’s theorem">Theorem 4.1.12</a> to produce three primes of the form <span class="process-math">\(4k+3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-28-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.1.14"><a href="#divisionalgorithm-28" title="Copy heading and permalink for Checkpoint 4.1.14" aria-label="Copy heading and permalink for Checkpoint 4.1.14">🔗</a></div></article></details><div class="para" id="divisionalgorithm-29">What is interesting is that Dirichlet’s theorem on arithmetic progressions contrasts with what we know about the distribution of the primes throughout the integers, which is given in the following famous result.<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-29" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="divisionalgorithm-30">
+<div class="para">In order to state this theorem, we need to introduce one piece of notation. Given two functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> defined on the positive integers, we write</div>
+<div class="displaymath process-math" id="divisionalgorithm-30-3">
+\begin{equation*}
+f(x) \sim g(x) \, 
+\end{equation*}
+</div>
+<div class="para">to mean that</div>
+<div class="displaymath process-math" id="divisionalgorithm-30-4">
+\begin{equation*}
+\lim_{x \to \infty} \frac{f(x)}{g(x)} = 1 \, .
+\end{equation*}
+</div>
+<div class="para">If <span class="process-math">\(f\sim g\text{,}\)</span> we say that <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are <em class="alert">asymptotically equivalent</em>. In other words, the functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> are asymptotically equivalent if their ratio approaches <span class="process-math">\(1\)</span> as <span class="process-math">\(x\)</span> approaches infinity.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-30" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="divisionalgorithm-31">
+<div class="para">You have actually seen many examples in calculus of functions that are asymptotically equivalent. For example, consider the function <span class="process-math">\(f(x)=x^2 + 3x + 2\)</span> and the function <span class="process-math">\(g(x)=x^2\text{.}\)</span> Then we have</div>
+<div class="displaymath process-math" id="divisionalgorithm-31-3">
+\begin{equation*}
+\lim_{x \to \infty} \frac{f(x)}{g(x)} = \lim_{x \to \infty} \frac{x^2 + 3x + 2}{x^2} = \lim_{x \to \infty} \left(1 + \frac{3}{x} + \frac{2}{x^2}\right) = 1 \, ,
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(f \sim g\text{.}\)</span> Thus, for large values of <span class="process-math">\(x\text{,}\)</span> the function <span class="process-math">\(f(x)\)</span> behaves like the function <span class="process-math">\(g(x)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-31" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="divisionalgorithm-32" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.15</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="divisionalgorithm-32-1">Discuss this definition and example with your group. Does it make sense? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-32-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.1.15"><a href="#divisionalgorithm-32" title="Copy heading and permalink for Checkpoint 4.1.15" aria-label="Copy heading and permalink for Checkpoint 4.1.15">🔗</a></div></article></details><div class="para logical" id="divisionalgorithm-33">
+<div class="para">It is important to note that the difference <span class="process-math">\(f-g\)</span> of two asymptotically equivalent functions does not necessarily approach <span class="process-math">\(0\)</span> as <span class="process-math">\(x\)</span> approaches infinity. For example, the difference between our functions <span class="process-math">\(f\)</span> and <span class="process-math">\(g\)</span> is</div>
+<div class="displaymath process-math" id="divisionalgorithm-33-6">
+\begin{equation*}
+f(x) - g(x) = (x^2 + 3x + 2) - x^2 = 3x + 2 \, ,
+\end{equation*}
+</div>
+<div class="para">which approaches infinity as <span class="process-math">\(x\)</span> approaches infinity. However, the ratio of <span class="process-math">\(f(x)\)</span> to <span class="process-math">\(g(x)\)</span> does approach <span class="process-math">\(1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-33" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="divisionalgorithm-34">So, two functions being asymptotically equivalent have the same rate of growth, meaning that the difference between them becomes insignificant compared to their size as <span class="process-math">\(x\)</span> becomes very large.<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-34" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="divisionalgorithm-35" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.16</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="divisionalgorithm-35-1">Does the distinction between limits of ratios and differences above make sense? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-35-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.1.16"><a href="#divisionalgorithm-35" title="Copy heading and permalink for Checkpoint 4.1.16" aria-label="Copy heading and permalink for Checkpoint 4.1.16">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-primenumbertheorem"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.17</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Prime Number Theorem.</span>
+</h3>
+<div class="para logical" id="thm-primenumbertheorem-2-1">
+<div class="para">Recall that <span class="process-math">\(\pi(n)\)</span> denotes the number of primes less than or equal to <span class="process-math">\(n\text{.}\)</span> Then we have</div>
+<div class="displaymath process-math" id="thm-primenumbertheorem-2-1-3">
+\begin{equation*}
+\pi(n) \sim \frac{n}{\log(n)} \, ,
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\log(n)\)</span> is the natural logarithm of <span class="process-math">\(n\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-primenumbertheorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 4.1.17: Prime Number Theorem"><a href="#thm-primenumbertheorem" title="Copy heading and permalink for Theorem 4.1.17: Prime Number Theorem" aria-label="Copy heading and permalink for Theorem 4.1.17: Prime Number Theorem">🔗</a></div></article><div class="para" id="divisionalgorithm-37">What this says is that the fraction of the numbers between <span class="process-math">\(1\)</span> and <span class="process-math">\(n\)</span> that are prime is approximately <span class="process-math">\(\frac{1}{\log{n}}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-37" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="divisionalgorithm-38" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.18</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="divisionalgorithm-38-1">
+<div class="para">Discuss with your group the following two questions.</div>
+<ol class="decimal" id="divisionalgorithm-38-1-1">
+<li id="divisionalgorithm-38-1-1-1">
+<div class="para" id="divisionalgorithm-38-1-1-1-1">Why does this mean that the fraction of the numbers between <span class="process-math">\(1\)</span> and <span class="process-math">\(n\)</span> that are prime is approximately <span class="process-math">\(\frac{1}{\log{n}}\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-38-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.1.18.1"><a href="#divisionalgorithm-38-1-1-1" title="Copy heading and permalink for Item 4.1.18.1" aria-label="Copy heading and permalink for Item 4.1.18.1">🔗</a></div>
+</li>
+<li id="divisionalgorithm-38-1-1-2">
+<div class="para" id="divisionalgorithm-38-1-1-2-1">Why does <a href="divisionalgorithm.html#thm-primenumbertheorem" class="xref" data-knowl="./knowl/xref/thm-primenumbertheorem.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 4.1.17: Prime Number Theorem">Theorem 4.1.17</a> imply that the fraction of the primes among the integers approaches <span class="process-math">\(0\)</span> as <span class="process-math">\(n\)</span> approaches infinity?<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-38-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.1.18.2"><a href="#divisionalgorithm-38-1-1-2" title="Copy heading and permalink for Item 4.1.18.2" aria-label="Copy heading and permalink for Item 4.1.18.2">🔗</a></div>
+</li>
+</ol>
+<div class="para">`</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-38-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.1.18"><a href="#divisionalgorithm-38" title="Copy heading and permalink for Checkpoint 4.1.18" aria-label="Copy heading and permalink for Checkpoint 4.1.18">🔗</a></div></article></details><div class="para" id="divisionalgorithm-39">The big takeaway from these two theorems is that there is a tension between the fact that (A) the primes become more and more rare as we consider larger and larger numbers and (B) the primes are distributed in infinite quantities across all possible remainders when divided by a positive integer <span class="process-math">\(d\text{,}\)</span> as long as the remainder and the divisor are relatively prime.<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-39" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="divisionalgorithm-40" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.1.19</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="divisionalgorithm-40-1">Discuss with your group: do you agree that this is a tension? Why or why not? Are you surprised by either of these results?<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-40-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.1.19"><a href="#divisionalgorithm-40" title="Copy heading and permalink for Checkpoint 4.1.19" aria-label="Copy heading and permalink for Checkpoint 4.1.19">🔗</a></div></article></details><div class="para" id="divisionalgorithm-41">As you can see, while writing a number in quotient-remainder form might seem simple, it has profound consequences in number theory. We will next use the division algorithm to develop the theory of greatest common divisors and to solve linear Diophantine equations.<div class="autopermalink" data-description="Paragraph"><a href="#divisionalgorithm-41" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 4.1: The Division Algorithm"><a href="#divisionalgorithm" title="Copy heading and permalink for Section 4.1: The Division Algorithm" aria-label="Copy heading and permalink for Section 4.1: The Division Algorithm">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="divisibility.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="euclideanalgorithm.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
