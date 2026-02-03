@@ -979,7 +979,70 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.1",
   "title": "The Division Algorithm",
-  "body": " The Division Algorithm    "
+  "body": " The Division Algorithm  In this chapter, we will explore divisibility in the study of solving equations using integers and developing algorithms for effective computation. We begin with the following problem.    Which triples of positive integers have integer solutions and to the equation      Investigate which values of from to yield an integer solution for each of the following equations.                         When are integers, the equation is called a linear Diophantine equation . In general, a Diophantine equation is a polynomial equation with integer coefficients for which we study solutions that are integer values. A linear Diophantine equation is a linear equation with integer coefficients, where we want to find integer solutions. Diophantine equations are named after Diophantus of Alexandria, a Greek mathematician who made significant contributions to number theory.   A former University of Kentucky undergraduate math and classics double-major, Cyrus Hettle, conducted undergraduate research on Diophantus's work and published a nice article about it in the Journal of Humanistic Mathematics: Cyrus Hettle, \"The Symbolic and Mathematical Influence of Diophantus's Arithmetica,\" Journal of Humanistic Mathematics, Volume 5 Issue 1 (January 2015), pages 139-166. Available at: https:\/\/scholarship.claremont.edu\/jhm\/vol5\/iss1\/8    From your investigations with the previous checkpoint, you might have been led to conjecture that the equation has integer solutions if and only if is a multiple of the greatest common divisor of and . We will prove that this is true later in this chapter, but first we will develop a broad theory regarding both greatest common divisors and the solution of linear Diophantine equations. We will begin with the division algorithm , which is a simple but powerful tool in number theory.   The Division Algorithm   Let and be positive integers, i.e., . Then there exist unique integers and such that and .    Before we prove , let's give some names to the quantities involved. We call the quotient and the remainder when is divided by . Observe that if and only if divides , by the definition of divisibility.   Let and . Then by the division algorithm, there exist unique integers and such that and . In this case, we have and , since .    Find the quotient and remainder when each of the following integers is divided by the given divisor.    , .     , .     , .      While it might seem clear when doing examples that we can always find such integers and given and , neither this nor the uniqueness part of the theorem is not immediately obvious. Let's provide a proof to verify this formally.   Consider the set which is the set of all positive multiples of that are greater than . We first want to show that this set is not the empty set. Since , we know that , so . Thus, By the well-ordering principle , since is a non-empty set of positive integers, it must have a smallest element; call this element .  Write for some , and note that by the minimality of . Then we have Subtracting from each part of this inequality yields So, define . Then we have and   To see that and are unique, suppose that there exist integers and such that with . Then we have Rearranging this equation yields If , then , so . But since , we have , which is a contradiction. Thus, we must have , which implies that as well. Therefore, the integers and are unique.   "
+},
+{
+  "id": "question-lineardiophantine",
+  "level": "2",
+  "url": "divisionalgorithm.html#question-lineardiophantine",
+  "type": "Question",
+  "number": "4.1.1",
+  "title": "",
+  "body": "  Which triples of positive integers have integer solutions and to the equation    "
+},
+{
+  "id": "divisionalgorithm-4",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-4",
+  "type": "Checkpoint",
+  "number": "4.1.2",
+  "title": "",
+  "body": " Investigate which values of from to yield an integer solution for each of the following equations.                        "
+},
+{
+  "id": "divisionalgorithm-6",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-6",
+  "type": "Remark",
+  "number": "4.1.3",
+  "title": "",
+  "body": " A former University of Kentucky undergraduate math and classics double-major, Cyrus Hettle, conducted undergraduate research on Diophantus's work and published a nice article about it in the Journal of Humanistic Mathematics: Cyrus Hettle, \"The Symbolic and Mathematical Influence of Diophantus's Arithmetica,\" Journal of Humanistic Mathematics, Volume 5 Issue 1 (January 2015), pages 139-166. Available at: https:\/\/scholarship.claremont.edu\/jhm\/vol5\/iss1\/8   "
+},
+{
+  "id": "thm-divisionalgorithm",
+  "level": "2",
+  "url": "divisionalgorithm.html#thm-divisionalgorithm",
+  "type": "Theorem",
+  "number": "4.1.4",
+  "title": "The Division Algorithm.",
+  "body": " The Division Algorithm   Let and be positive integers, i.e., . Then there exist unique integers and such that and .   "
+},
+{
+  "id": "divisionalgorithm-10",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-10",
+  "type": "Example",
+  "number": "4.1.5",
+  "title": "",
+  "body": " Let and . Then by the division algorithm, there exist unique integers and such that and . In this case, we have and , since .  "
+},
+{
+  "id": "divisionalgorithm-11",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-11",
+  "type": "Checkpoint",
+  "number": "4.1.6",
+  "title": "",
+  "body": " Find the quotient and remainder when each of the following integers is divided by the given divisor.    , .     , .     , .     "
+},
+{
+  "id": "divisionalgorithm-13",
+  "level": "2",
+  "url": "divisionalgorithm.html#divisionalgorithm-13",
+  "type": "Proof",
+  "number": "4.1.1",
+  "title": "",
+  "body": " Consider the set which is the set of all positive multiples of that are greater than . We first want to show that this set is not the empty set. Since , we know that , so . Thus, By the well-ordering principle , since is a non-empty set of positive integers, it must have a smallest element; call this element .  Write for some , and note that by the minimality of . Then we have Subtracting from each part of this inequality yields So, define . Then we have and   To see that and are unique, suppose that there exist integers and such that with . Then we have Rearranging this equation yields If , then , so . But since , we have , which is a contradiction. Thus, we must have , which implies that as well. Therefore, the integers and are unique.  "
 },
 {
   "id": "euclideanalgorithm",
