@@ -4,7 +4,7 @@
   <title>The Division Algorithm</title>
 
   <p>
-    In this chapter, we will explore divisibility of integers in more detail.
+    In this chapter, we will explore divisibility in the study of solving equations using integers and developing algorithms for effective computation.
     We begin with the following problem.
   </p>
 
@@ -18,7 +18,7 @@
 
   <exercise>
     <p>
-      Investigate which values of <m>c</m> yield an integer solution <m>x,y</m> for each of the following equations.
+      Investigate which values of <m>c</m> from <m>1</m> to <m>10</m> yield an integer solution <m>x,y</m> for each of the following equations.
       <ol>
         <li>
           <p>
@@ -45,17 +45,101 @@
   </exercise>
 
   <p>
-    While it is not immediately obvious, this question is closely related to questions regarding greatest common divisors and divisibility, and thus this question motivates our study of divisibility.
-    We will begin with a fundamental result about division of integers known as the division algorithm.
+    When <m>a,b,c</m> are integers, the equation <me>ax+by=c</me> is called a <em>linear Diophantine equation</em>.
+    In general, a <em>Diophantine equation</em> is a polynomial equation with integer coefficients for which we study solutions that are integer values.
+    A linear Diophantine equation is a linear equation with integer coefficients, where we want to find integer solutions.
+    Diophantine equations are named after Diophantus of Alexandria, a Greek mathematician who made significant contributions to number theory.
+  </p>
+
+  <remark>
+    <p>
+      A former University of Kentucky undergraduate math and classics double-major, Cyrus Hettle, conducted undergraduate research on Diophantus's work and published a nice article about it in the Journal of Humanistic Mathematics: Cyrus Hettle, "The Symbolic and Mathematical Influence of Diophantus's Arithmetica," Journal of Humanistic Mathematics, Volume 5 Issue 1 (January 2015), pages 139-166. Available at: <url>https://scholarship.claremont.edu/jhm/vol5/iss1/8</url>
+    </p>
+  </remark>
+
+  <p>
+    From your investigations with the previous checkpoint, you might have been led to conjecture that the equation <me>ax+by=c</me> has integer solutions <m>x,y</m> if and only if <m>c</m> is a multiple of the greatest common divisor of <m>a</m> and <m>b</m>.
+    We will prove that this is true later in this chapter, but first we will develop a broad theory regarding both greatest common divisors and the solution of linear Diophantine equations.
+    We will begin with the <em>division algorithm</em>, which is a simple but powerful tool in number theory.
   </p>
 
   <theorem xml:id="thm-divisionalgorithm">
+    <title>The Division Algorithm</title>
     <statement>
       <p>
-        
+        Let <m>a</m> and <m>b</m> be positive integers, i.e., <m>a,b\in \mathbb{N}</m>.
+        Then there exist unique integers <m>q</m> and <m>r</m> such that <me>a = bq + r</me> and <m>0 \leq r \lt b</m>.
       </p>
     </statement>
   </theorem>
+
+  <p>
+    Before we prove <xref ref="thm-divisionalgorithm"/>, let's give some names to the quantities involved.
+    We call <m>q</m> the <alert>quotient</alert> and <m>r</m> the <alert>remainder</alert> when <m>a</m> is divided by <m>b</m>.
+    Observe that <m>r=0</m> if and only if <m>b</m> divides <m>a</m>, by the definition of divisibility.
+  </p>
+
+  <example>
+    <p>
+      Let <m>a=17</m> and <m>b=5</m>.
+      Then by the division algorithm, there exist unique integers <m>q</m> and <m>r</m> such that <me>17 = 5q + r</me> and <m>0 \leq r \lt 5</m>.
+      In this case, we have <m>q=3</m> and <m>r=2</m>, since <me>17 = 5\cdot 3 + 2</me>.
+    </p>
+  </example>
+
+  <exercise>
+    <p>
+      Find the quotient and remainder when each of the following integers is divided by the given divisor.
+      <ol>
+        <li>
+          <p>
+            <m>a=24</m>, <m>b=7</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>a=100</m>, <m>b=15</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>a=264893</m>, <m>b=36578</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+
+  <p>
+    While it might seem clear when doing examples that we can always find such integers <m>q</m> and <m>r</m> given <m>a</m> and <m>b</m>, neither this nor the uniqueness part of the theorem is not immediately obvious.
+    Let's provide a proof to verify this formally.
+  </p>
+
+  <proof>
+    <p>
+      Consider the set <me>S=\{j\in \mathbb{N}:jb\gt a\} \, ,</me> which is the set of all positive multiples of <m>b</m> that are greater than <m>a</m>.
+      We first want to show that this set is not the empty set.
+      Since <m>b\gt 0</m>, we know that <m>(a+1)b\geq a+1\gt a</m>, so <m>(a+1)b\in S</m>.
+      Thus, <me>S\neq \emptyset \, .</me>
+      By the well-ordering principle <xref ref="principle-wellorderingprinciple"/>, since <m>S</m> is a non-empty set of positive integers, it must have a smallest element; call this element <m>t</m>.
+    </p>
+    <p>
+      Write <m>t=q+1</m> for some <m>q\in \mathbb{Z}_{\geq 0}</m>, and note that <m>q \notin S</m> by the minimality of <m>t</m>.
+      Then we have <me>(q+1)b = tb \gt a \geq qb \, .</me>
+      Subtracting <m>qb</m> from each part of this inequality yields <me>b\gt a - qb \geq 0 \, .</me>
+      So, define <m>r = a - qb</m>.
+      Then we have <m>0 \leq r \lt b</m> and <me>a = bq + r \, .</me>
+    </p>
+    <p>
+      To see that <m>q</m> and <m>r</m> are unique, suppose that there exist integers <m>q'</m> and <m>r'</m> such that <me>a = bq' + r' \, ,</me> with <m>0 \leq r' \lt b</m>.
+      Then we have <me>bq + r = bq' + r' \, .</me>
+      Rearranging this equation yields <me>b(q - q') = r' - r \, .</me>
+      If <m>q \neq q'</m>, then <m>|q - q'| \geq 1</m>, so <m>|b(q - q')| \geq b</m>.
+      But since <m>0 \leq r,r' \lt b</m>, we have <m>|r' - r| \lt b</m>, which is a contradiction.
+      Thus, we must have <m>q = q'</m>, which implies that <m>r = r'</m> as well.
+      Therefore, the integers <m>q</m> and <m>r</m> are unique.
+    </p>
+  </proof>
   
 
 
