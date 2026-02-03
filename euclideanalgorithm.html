@@ -201,12 +201,404 @@ eBookConfig.enable_chatcodes =  false;
 ax + by = c\text{,}
 \end{equation*}
 </div>
-<div class="para">where <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> are given integers and we want to find integer solutions <span class="process-math">\(x,y\text{.}\)</span> What we observed is that there seems to be a connection between the solvability of this equation and the greatest common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> In this section, we will develop the theory of greatest common divisors using the division algorithm.</div>
+<div class="para">where <span class="process-math">\(a\text{,}\)</span> <span class="process-math">\(b\text{,}\)</span> and <span class="process-math">\(c\)</span> are given integers and we want to find integer solutions <span class="process-math">\(x,y\text{.}\)</span> What we observed is that there seems to be a connection between the solvability of this equation and the greatest common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{,}\)</span> which we will establish in detail later in this chapter. In this section, we will develop the theory of greatest common divisors using the division algorithm, which we will need for our study of linear Diophantine equations.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="euclideanalgorithm-3">Recall that in <a href="FTAcorollaries.html#prop-gcdlcmfactorizations" class="xref" data-knowl="./knowl/xref/prop-gcdlcmfactorizations.html" data-reveal-label="Reveal" data-close-label="Close" title="Proposition 3.4.6">Proposition 3.4.6</a> we showed how to compute the greatest common divisor of two numbers if you know the prime factorizations of those numbers. Unfortunately, it is famously difficult to find the prime factorization of large numbers. In fact, the security of many modern cryptographic systems relies on this difficulty, see <a class="external" href="" target="_blank">https://en.wikipedia.org/wiki/Integer_factorization</a> for more information. So, we need to find a better way to compute greatest common divisors without having to factor the numbers first.<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="euclideanalgorithm-4">Fortunately, this was first accomplished by the ancient Greek mathematician Euclid around 300 BC. This is the same Euclid who wrote <em class="emphasis">The Elements</em>, one of the most influential works in the history of mathematics, and whose proof of the infinitude of primes we saw previously in the course. Our development of the Euclidean algorithm follows Weissman’s development in his book <em class="emphasis">An Illustrated Theory of Numbers</em>.<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="euclideanalgorithm-4">Fortunately, this was first accomplished by the ancient Greek mathematician Euclid around 300 BC. This is the same Euclid who wrote <em class="emphasis">The Elements</em>, one of the most influential works in the history of mathematics, and whose proof of the infinitude of primes we saw previously in the course.<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="euclideanalgorithm-5">The idea of the Euclidean algorithm is to apply the division algorithm repeatedly. Why does this help us? It is because the division algorithm is closely related to the greatest common divisor, as the following lemma shows.<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="lemma theorem-like" id="lem-divisionalgorithmgcd"><h3 class="heading">
+<span class="type">Lemma</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="lem-divisionalgorithmgcd-1-1">
+<div class="para">Let <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> be positive integers and use the division algorithm to write</div>
+<div class="displaymath process-math" id="lem-divisionalgorithmgcd-1-1-3">
+\begin{equation*}
+a = bq + r
+\end{equation*}
+</div>
+<div class="para">for some integers <span class="process-math">\(q\)</span> and <span class="process-math">\(r\)</span> with <span class="process-math">\(0 \leq r\lt b\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="lem-divisionalgorithmgcd-1-1-7">
+\begin{equation*}
+\gcd(a,b) = \gcd(b,r)\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#lem-divisionalgorithmgcd-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Lemma 4.2.1"><a href="#lem-divisionalgorithmgcd" title="Copy heading and permalink for Lemma 4.2.1" aria-label="Copy heading and permalink for Lemma 4.2.1">🔗</a></div></article><div class="para logical" id="euclideanalgorithm-7">
+<div class="para">Let’s look at an example. Suppose <span class="process-math">\(a=15\)</span> and <span class="process-math">\(b=6\text{.}\)</span> Using the division algorithm, we can write</div>
+<div class="displaymath process-math" id="euclideanalgorithm-7-3">
+\begin{equation*}
+15 = 6 \cdot 2 + 3\text{.}
+\end{equation*}
+</div>
+<div class="para">According to the lemma, we have</div>
+<div class="displaymath process-math" id="euclideanalgorithm-7-4">
+\begin{equation*}
+\gcd(15,6) = 3 = \gcd(6,3)\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="euclideanalgorithm-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="euclideanalgorithm-8-1">
+<div class="para">Verify the lemma on the following pairs. You might want to use <a class="external" href="" target="_blank">https://sagecell.sagemath.org/</a> with the command gcd(a,b) to help find the greatest common divisors. Also, the command a % b computes the remainder when <span class="process-math">\(a\)</span> is divided by <span class="process-math">\(b\text{.}\)</span> Finally, the command N(a/b) computes the decimal approximation to the quotient <span class="process-math">\(a/b\text{,}\)</span> which you can round down to find <span class="process-math">\(q\text{.}\)</span>
+</div>
+<ol class="decimal" id="euclideanalgorithm-8-1-9">
+<li id="euclideanalgorithm-8-1-9-1">
+<div class="para" id="euclideanalgorithm-8-1-9-1-1">
+<span class="process-math">\(a=28\text{,}\)</span> <span class="process-math">\(b=12\)</span><div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-8-1-9-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.2.2.1"><a href="#euclideanalgorithm-8-1-9-1" title="Copy heading and permalink for Item 4.2.2.1" aria-label="Copy heading and permalink for Item 4.2.2.1">🔗</a></div>
+</li>
+<li id="euclideanalgorithm-8-1-9-2">
+<div class="para" id="euclideanalgorithm-8-1-9-2-1">
+<span class="process-math">\(a=1071\text{,}\)</span> <span class="process-math">\(b=462\)</span><div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-8-1-9-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.2.2.2"><a href="#euclideanalgorithm-8-1-9-2" title="Copy heading and permalink for Item 4.2.2.2" aria-label="Copy heading and permalink for Item 4.2.2.2">🔗</a></div>
+</li>
+<li id="euclideanalgorithm-8-1-9-3">
+<div class="para" id="euclideanalgorithm-8-1-9-3-1">
+<span class="process-math">\(a=26435\text{,}\)</span> <span class="process-math">\(b=7578\)</span><div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-8-1-9-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4.2.2.3"><a href="#euclideanalgorithm-8-1-9-3" title="Copy heading and permalink for Item 4.2.2.3" aria-label="Copy heading and permalink for Item 4.2.2.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.2.2"><a href="#euclideanalgorithm-8" title="Copy heading and permalink for Checkpoint 4.2.2" aria-label="Copy heading and permalink for Checkpoint 4.2.2">🔗</a></div></article></details><details id="euclideanalgorithm-9" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="euclideanalgorithm-9-1">
+<div class="para">We first show that any common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> is also a common divisor of <span class="process-math">\(b\)</span> and <span class="process-math">\(r\text{.}\)</span> Let <span class="process-math">\(d\)</span> be a common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="euclideanalgorithm-9-1-8">
+\begin{equation*}
+a = dm_1
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="euclideanalgorithm-9-1-9">
+\begin{equation*}
+b = dm_2
+\end{equation*}
+</div>
+<div class="para">for some integers <span class="process-math">\(m_1\)</span> and <span class="process-math">\(m_2\text{.}\)</span> Substituting into the equation</div>
+<div class="displaymath process-math" id="euclideanalgorithm-9-1-12">
+\begin{equation*}
+a = bq + r
+\end{equation*}
+</div>
+<div class="para">gives</div>
+<div class="displaymath process-math" id="euclideanalgorithm-9-1-13">
+\begin{equation*}
+dm_1 = dm_2 q + r\text{,}
+\end{equation*}
+</div>
+<div class="para">which implies</div>
+<div class="displaymath process-math" id="euclideanalgorithm-9-1-14">
+\begin{equation*}
+r = d(m_1 - m_2 q)\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus, <span class="process-math">\(d\)</span> divides <span class="process-math">\(r\text{,}\)</span> and so <span class="process-math">\(d\)</span> is a common divisor of <span class="process-math">\(b\)</span> and <span class="process-math">\(r\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="euclideanalgorithm-9-2">
+<div class="para">We next show that any common divisor of <span class="process-math">\(b\)</span> and <span class="process-math">\(r\)</span> is also a common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span> Let <span class="process-math">\(d\)</span> be a common divisor of <span class="process-math">\(b\)</span> and <span class="process-math">\(r\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="euclideanalgorithm-9-2-8">
+\begin{equation*}
+b = dm_2
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="euclideanalgorithm-9-2-9">
+\begin{equation*}
+r = dm_3
+\end{equation*}
+</div>
+<div class="para">for some integers <span class="process-math">\(m_2\)</span> and <span class="process-math">\(m_3\text{.}\)</span> Substituting into the equation</div>
+<div class="displaymath process-math" id="euclideanalgorithm-9-2-12">
+\begin{equation*}
+a = bq + r
+\end{equation*}
+</div>
+<div class="para">gives</div>
+<div class="displaymath process-math" id="euclideanalgorithm-9-2-13">
+\begin{equation*}
+a = dm_2 q + dm_3\text{,}
+\end{equation*}
+</div>
+<div class="para">which implies</div>
+<div class="displaymath process-math" id="euclideanalgorithm-9-2-14">
+\begin{equation*}
+a = d(m_2 q + m_3)\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus, <span class="process-math">\(d\)</span> divides <span class="process-math">\(a\text{,}\)</span> and so <span class="process-math">\(d\)</span> is a common divisor of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-9-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="euclideanalgorithm-9-3">Since the sets of common divisors of <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> and of <span class="process-math">\(b\)</span> and <span class="process-math">\(r\)</span> are the same, their greatest common divisors must also be the same.<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-9-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.2.1"><a href="#euclideanalgorithm-9" title="Copy heading and permalink for Proof 4.2.1" aria-label="Copy heading and permalink for Proof 4.2.1">🔗</a></div></article></details><details id="euclideanalgorithm-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="euclideanalgorithm-10-1">Discuss this proof with your group. Does it make sense? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.2.3"><a href="#euclideanalgorithm-10" title="Copy heading and permalink for Checkpoint 4.2.3" aria-label="Copy heading and permalink for Checkpoint 4.2.3">🔗</a></div></article></details><div class="para" id="euclideanalgorithm-11">So, how does the Euclidean algorithm work? It works by allowing us to replace the pair <span class="process-math">\((a,b)\)</span> by the smaller pair <span class="process-math">\((b,r)\)</span> without changing the greatest common divisor. We can repeat this process until the remainder is zero. At that point, the other number is the greatest common divisor. Let’s do an example before we write down the algorithm formally.<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="euclideanalgorithm-12">
+<div class="para">Suppose <span class="process-math">\(a=2542\)</span> and <span class="process-math">\(b=1056\text{.}\)</span>
+</div>
+<ul class="disc" id="euclideanalgorithm-12-3">
+<li id="euclideanalgorithm-12-3-1">
+<div class="para logical" id="euclideanalgorithm-12-3-1-1">
+<div class="para">Using the division algorithm, we have</div>
+<div class="displaymath process-math" id="euclideanalgorithm-12-3-1-1-1">
+\begin{equation*}
+2542 = 1056 \cdot 2 + 430\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus,</div>
+<div class="displaymath process-math" id="euclideanalgorithm-12-3-1-1-2">
+\begin{equation*}
+\gcd(2542,1056) = \gcd(1056,430).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-12-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#euclideanalgorithm-12-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="euclideanalgorithm-12-3-2">
+<div class="para logical" id="euclideanalgorithm-12-3-2-1">
+<div class="para">Next, we apply the division algorithm again to get</div>
+<div class="displaymath process-math" id="euclideanalgorithm-12-3-2-1-1">
+\begin{equation*}
+1056 = 430 \cdot 2 + 196\text{.}
+\end{equation*}
+</div>
+<div class="para">So, <span class="process-math">\(\gcd(1056,430) = \gcd(430,196)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-12-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#euclideanalgorithm-12-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="euclideanalgorithm-12-3-3">
+<div class="para logical" id="euclideanalgorithm-12-3-3-1">
+<div class="para">Next, we have</div>
+<div class="displaymath process-math" id="euclideanalgorithm-12-3-3-1-1">
+\begin{equation*}
+430 = 196 \cdot 2 + 38\text{,}
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(\gcd(430,196) = \gcd(196,38)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-12-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#euclideanalgorithm-12-3-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="euclideanalgorithm-12-3-4">
+<div class="para logical" id="euclideanalgorithm-12-3-4-1">
+<div class="para">Next, we have</div>
+<div class="displaymath process-math" id="euclideanalgorithm-12-3-4-1-1">
+\begin{equation*}
+196 = 38 \cdot 5 + 6\text{,}
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(\gcd(196,38) = \gcd(38,6)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-12-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#euclideanalgorithm-12-3-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="euclideanalgorithm-12-3-5">
+<div class="para logical" id="euclideanalgorithm-12-3-5-1">
+<div class="para">Next, we have</div>
+<div class="displaymath process-math" id="euclideanalgorithm-12-3-5-1-1">
+\begin{equation*}
+38 = 6 \cdot 6 + 2\text{,}
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(\gcd(38,6) = \gcd(6,2)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-12-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#euclideanalgorithm-12-3-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="euclideanalgorithm-12-3-6">
+<div class="para logical" id="euclideanalgorithm-12-3-6-1">
+<div class="para">Finally, we have</div>
+<div class="displaymath process-math" id="euclideanalgorithm-12-3-6-1-1">
+\begin{equation*}
+6 = 2 \cdot 3 + 0\text{,}
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(\gcd(6,2) = 2\text{.}\)</span> Thus, tracing back through all the equalities of the gcd’s, we have</div>
+<div class="displaymath process-math" id="euclideanalgorithm-12-3-6-1-3">
+\begin{equation*}
+\gcd(2542,1056) = 2 \, .
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-12-3-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#euclideanalgorithm-12-3-6" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="euclideanalgorithm-13" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="euclideanalgorithm-13-1">Discuss this example with your group. Does it make sense? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.2.4"><a href="#euclideanalgorithm-13" title="Copy heading and permalink for Checkpoint 4.2.4" aria-label="Copy heading and permalink for Checkpoint 4.2.4">🔗</a></div></article></details><details id="euclideanalgorithm-14" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="euclideanalgorithm-14-1">Use this approach to compute the greatest common divisor of <span class="process-math">\(5234\)</span> and <span class="process-math">\(1435\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-14-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.2.5"><a href="#euclideanalgorithm-14" title="Copy heading and permalink for Checkpoint 4.2.5" aria-label="Copy heading and permalink for Checkpoint 4.2.5">🔗</a></div></article></details><div class="para" id="euclideanalgorithm-15">Let’s now give a formal description of the Euclidean algorithm.<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="algorithm theorem-like" id="alg-euclideanalgorithm"><h3 class="heading">
+<span class="type">Algorithm</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">The Euclidean Algorithm.</span>
+</h3>
+<div class="para logical" id="alg-euclideanalgorithm-2-1">
+<div class="para">Suppose that <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are positive integers with <span class="process-math">\(a \geq b\text{.}\)</span> The Euclidean algorithm computes <span class="process-math">\(\gcd(a,b)\)</span> as follows:</div>
+<ol class="decimal" id="alg-euclideanalgorithm-2-1-5">
+<li id="alg-euclideanalgorithm-2-1-5-1">
+<div class="para logical" id="alg-euclideanalgorithm-2-1-5-1-1">
+<div class="para">Use the division algorithm to write</div>
+<div class="displaymath process-math" id="alg-euclideanalgorithm-2-1-5-1-1-1">
+\begin{equation*}
+a = bq_1 + r_1
+\end{equation*}
+</div>
+<div class="para">for some integers <span class="process-math">\(q_1\)</span> and <span class="process-math">\(r_1\)</span> with <span class="process-math">\(0 \leq r_1 \lt b\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#alg-euclideanalgorithm-2-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#alg-euclideanalgorithm-2-1-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="alg-euclideanalgorithm-2-1-5-2">
+<div class="para" id="alg-euclideanalgorithm-2-1-5-2-1">If <span class="process-math">\(r_1 = 0\text{,}\)</span> then stop and output <span class="process-math">\(b\)</span> as the greatest common divisor. Otherwise, continue to the next step.<div class="autopermalink" data-description="Paragraph"><a href="#alg-euclideanalgorithm-2-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#alg-euclideanalgorithm-2-1-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="alg-euclideanalgorithm-2-1-5-3">
+<div class="para logical" id="alg-euclideanalgorithm-2-1-5-3-1">
+<div class="para">Use the division algorithm to write</div>
+<div class="displaymath process-math" id="alg-euclideanalgorithm-2-1-5-3-1-1">
+\begin{equation*}
+b = r_1 q_2 + r_2
+\end{equation*}
+</div>
+<div class="para">for some integers <span class="process-math">\(q_2\)</span> and <span class="process-math">\(r_2\)</span> with <span class="process-math">\(0 \leq r_2 \lt r_1\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#alg-euclideanalgorithm-2-1-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#alg-euclideanalgorithm-2-1-5-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="alg-euclideanalgorithm-2-1-5-4">
+<div class="para" id="alg-euclideanalgorithm-2-1-5-4-1">If <span class="process-math">\(r_2 = 0\text{,}\)</span> then stop and output <span class="process-math">\(r_1\)</span> as the greatest common divisor. Otherwise, continue to the next step.<div class="autopermalink" data-description="Paragraph"><a href="#alg-euclideanalgorithm-2-1-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#alg-euclideanalgorithm-2-1-5-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="alg-euclideanalgorithm-2-1-5-5">
+<div class="para" id="alg-euclideanalgorithm-2-1-5-5-1">Continue this process, at each step using the division algorithm to divide the previous divisor by the previous remainder, until a remainder of zero is obtained. The last nonzero remainder is the greatest common divisor <span class="process-math">\(\gcd(a,b)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#alg-euclideanalgorithm-2-1-5-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#alg-euclideanalgorithm-2-1-5-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#alg-euclideanalgorithm-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Algorithm 4.2.6: The Euclidean Algorithm"><a href="#alg-euclideanalgorithm" title="Copy heading and permalink for Algorithm 4.2.6: The Euclidean Algorithm" aria-label="Copy heading and permalink for Algorithm 4.2.6: The Euclidean Algorithm">🔗</a></div></article><details id="euclideanalgorithm-17" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="euclideanalgorithm-17-1">The correctness of the algorithm follows by repeated application of <a href="euclideanalgorithm.html#lem-divisionalgorithmgcd" class="xref" data-knowl="./knowl/xref/lem-divisionalgorithmgcd.html" data-reveal-label="Reveal" data-close-label="Close" title="Lemma 4.2.1">Lemma 4.2.1</a>.<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-17-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 4.2.2"><a href="#euclideanalgorithm-17" title="Copy heading and permalink for Proof 4.2.2" aria-label="Copy heading and permalink for Proof 4.2.2">🔗</a></div></article></details><div class="para" id="euclideanalgorithm-18">Let’s think a little bit about the practical efficiency of the Euclidean algorithm. Intuitively, if we have a step where the quotient <span class="process-math">\(q\)</span> is large, then we quickly reduce the size of the numbers we are working with. On the other hand, if the quotients are all small, then we reduce the size of the numbers more slowly. So, what happens in the case where every quotient is as small as possible, that is, every quotient is equal to 1?<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-18" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="euclideanalgorithm-19">
+<div class="para">Suppose that <span class="process-math">\(\gcd(a,b)=1\)</span> and that every quotient in the Euclidean algorithm is equal to 1. Suppose that with our first step we have</div>
+<div class="displaymath process-math" id="euclideanalgorithm-19-2">
+\begin{equation*}
+a = b \cdot 1 + r_1\text{,}
+\end{equation*}
+</div>
+<div class="para">and with our second step we have</div>
+<div class="displaymath process-math" id="euclideanalgorithm-19-3">
+\begin{equation*}
+b = r_1 \cdot 1 + r_2\text{,}
+\end{equation*}
+</div>
+<div class="para">and with our third step we have</div>
+<div class="displaymath process-math" id="euclideanalgorithm-19-4">
+\begin{equation*}
+r_1 = r_2 \cdot 1 + r_3\text{,}
+\end{equation*}
+</div>
+<div class="para">and so on. Eventually, we will reach a final step where</div>
+<div class="displaymath process-math" id="euclideanalgorithm-19-5">
+\begin{equation*}
+r_{n-1} = r_{n} \cdot 1 + 0\text{,}
+\end{equation*}
+</div>
+<div class="para">so that <span class="process-math">\(r_{n} = \gcd(a,b) = 1\text{.}\)</span> If we rewrite all of these equations, we get that</div>
+<div class="displaymath process-math" id="euclideanalgorithm-19-7">
+\begin{equation*}
+r_{n} = 1\text{,}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="euclideanalgorithm-19-8">
+\begin{equation*}
+r_{n-1} = 1 + 0 = 1\text{,}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="euclideanalgorithm-19-9">
+\begin{equation*}
+r_{n-2} = 1 + 1 = 2\text{,}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="euclideanalgorithm-19-10">
+\begin{equation*}
+r_{n-3} = 2 + 1 = 3\text{,}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="euclideanalgorithm-19-11">
+\begin{equation*}
+r_{n-4} = 3 + 2 = 5\text{,}
+\end{equation*}
+</div>
+<div class="displaymath process-math" id="euclideanalgorithm-19-12">
+\begin{equation*}
+r_{n-5} = 5 + 3 = 8\text{,}
+\end{equation*}
+</div>
+<div class="para">and so on. In other words, we start with the numbers <span class="process-math">\(1\)</span> and <span class="process-math">\(1\text{,}\)</span> and each new number is the sum of the previous two numbers.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="euclideanalgorithm-20" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="euclideanalgorithm-20-1">Discuss this computation. Does it make sense? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-20-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 4.2.7"><a href="#euclideanalgorithm-20" title="Copy heading and permalink for Checkpoint 4.2.7" aria-label="Copy heading and permalink for Checkpoint 4.2.7">🔗</a></div></article></details><div class="para" id="euclideanalgorithm-21">The numbers that arise from this process are the following.<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-21" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-fibonaccinumbers"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-fibonaccinumbers-1-1">
+<div class="para">Let <span class="process-math">\(F_0 = 1\)</span> and <span class="process-math">\(F_1 = 1\text{,}\)</span> and for each integer <span class="process-math">\(n \geq 2\text{,}\)</span> let</div>
+<div class="displaymath process-math" id="def-fibonaccinumbers-1-1-4">
+\begin{equation*}
+F_n = F_{n-1} + F_{n-2}\text{.}
+\end{equation*}
+</div>
+<div class="para">The resulting sequence of numbers <span class="process-math">\(F_0, F_1, F_2, \ldots\)</span> are called the <em class="emphasis">Fibonacci numbers</em>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-fibonaccinumbers-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 4.2.8"><a href="#def-fibonaccinumbers" title="Copy heading and permalink for Definition 4.2.8" aria-label="Copy heading and permalink for Definition 4.2.8">🔗</a></div></article><div class="para" id="euclideanalgorithm-23">Our calculation above proves the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-23" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-fibonaccieuclidean"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.2.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm-fibonaccieuclidean-1-1">If the Euclidean algorithm is applied to two relatively prime positive integers <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> with <span class="process-math">\(a \geq b\)</span> and every quotient in the algorithm is equal to <span class="process-math">\(1\text{,}\)</span> then <span class="process-math">\(a\)</span> and <span class="process-math">\(b\)</span> are consecutive Fibonacci numbers.<div class="autopermalink" data-description="Paragraph"><a href="#thm-fibonaccieuclidean-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 4.2.9"><a href="#thm-fibonaccieuclidean" title="Copy heading and permalink for Theorem 4.2.9" aria-label="Copy heading and permalink for Theorem 4.2.9">🔗</a></div></article><div class="para" id="euclideanalgorithm-25">In the next section, we will investigate a connection between the Euclidean algorithm and linear Diophantine equations.<div class="autopermalink" data-description="Paragraph"><a href="#euclideanalgorithm-25" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Section 4.2: The Euclidean Algorithm"><a href="#euclideanalgorithm" title="Copy heading and permalink for Section 4.2: The Euclidean Algorithm" aria-label="Copy heading and permalink for Section 4.2: The Euclidean Algorithm">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">

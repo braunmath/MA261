@@ -1186,7 +1186,106 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.2",
   "title": "The Euclidean Algorithm",
-  "body": " The Euclidean Algorithm  We started the previous section by looking at linear Diophantine equations of the form , where , , and are given integers and we want to find integer solutions . What we observed is that there seems to be a connection between the solvability of this equation and the greatest common divisor of and . In this section, we will develop the theory of greatest common divisors using the division algorithm.  Recall that in we showed how to compute the greatest common divisor of two numbers if you know the prime factorizations of those numbers. Unfortunately, it is famously difficult to find the prime factorization of large numbers. In fact, the security of many modern cryptographic systems relies on this difficulty, see https:\/\/en.wikipedia.org\/wiki\/Integer_factorization for more information. So, we need to find a better way to compute greatest common divisors without having to factor the numbers first.  Fortunately, this was first accomplished by the ancient Greek mathematician Euclid around 300 BC. This is the same Euclid who wrote The Elements , one of the most influential works in the history of mathematics, and whose proof of the infinitude of primes we saw previously in the course. Our development of the Euclidean algorithm follows Weissman's development in his book An Illustrated Theory of Numbers .  "
+  "body": " The Euclidean Algorithm  We started the previous section by looking at linear Diophantine equations of the form , where , , and are given integers and we want to find integer solutions . What we observed is that there seems to be a connection between the solvability of this equation and the greatest common divisor of and , which we will establish in detail later in this chapter. In this section, we will develop the theory of greatest common divisors using the division algorithm, which we will need for our study of linear Diophantine equations.  Recall that in we showed how to compute the greatest common divisor of two numbers if you know the prime factorizations of those numbers. Unfortunately, it is famously difficult to find the prime factorization of large numbers. In fact, the security of many modern cryptographic systems relies on this difficulty, see https:\/\/en.wikipedia.org\/wiki\/Integer_factorization for more information. So, we need to find a better way to compute greatest common divisors without having to factor the numbers first.  Fortunately, this was first accomplished by the ancient Greek mathematician Euclid around 300 BC. This is the same Euclid who wrote The Elements , one of the most influential works in the history of mathematics, and whose proof of the infinitude of primes we saw previously in the course.  The idea of the Euclidean algorithm is to apply the division algorithm repeatedly. Why does this help us? It is because the division algorithm is closely related to the greatest common divisor, as the following lemma shows.    Let and be positive integers and use the division algorithm to write for some integers and with . Then .    Let's look at an example. Suppose and . Using the division algorithm, we can write . According to the lemma, we have .   Verify the lemma on the following pairs. You might want to use https:\/\/sagecell.sagemath.org\/ with the command gcd(a,b) to help find the greatest common divisors. Also, the command a % b computes the remainder when is divided by . Finally, the command N(a\/b) computes the decimal approximation to the quotient , which you can round down to find .    ,      ,      ,        We first show that any common divisor of and is also a common divisor of and . Let be a common divisor of and . Then and for some integers and . Substituting into the equation gives , which implies . Thus, divides , and so is a common divisor of and .  We next show that any common divisor of and is also a common divisor of and . Let be a common divisor of and . Then and for some integers and . Substituting into the equation gives , which implies . Thus, divides , and so is a common divisor of and .  Since the sets of common divisors of and and of and are the same, their greatest common divisors must also be the same.    Discuss this proof with your group. Does it make sense? Why or why not?   So, how does the Euclidean algorithm work? It works by allowing us to replace the pair by the smaller pair without changing the greatest common divisor. We can repeat this process until the remainder is zero. At that point, the other number is the greatest common divisor. Let's do an example before we write down the algorithm formally.  Suppose and .   Using the division algorithm, we have . Thus,     Next, we apply the division algorithm again to get . So, .    Next, we have , so .    Next, we have , so .    Next, we have , so .    Finally, we have , so . Thus, tracing back through all the equalities of the gcd's, we have       Discuss this example with your group. Does it make sense? Why or why not?    Use this approach to compute the greatest common divisor of and .   Let's now give a formal description of the Euclidean algorithm.   The Euclidean Algorithm   Suppose that and are positive integers with . The Euclidean algorithm computes as follows:   Use the division algorithm to write for some integers and with .    If , then stop and output as the greatest common divisor. Otherwise, continue to the next step.    Use the division algorithm to write for some integers and with .    If , then stop and output as the greatest common divisor. Otherwise, continue to the next step.    Continue this process, at each step using the division algorithm to divide the previous divisor by the previous remainder, until a remainder of zero is obtained. The last nonzero remainder is the greatest common divisor .        The correctness of the algorithm follows by repeated application of .   Let's think a little bit about the practical efficiency of the Euclidean algorithm. Intuitively, if we have a step where the quotient is large, then we quickly reduce the size of the numbers we are working with. On the other hand, if the quotients are all small, then we reduce the size of the numbers more slowly. So, what happens in the case where every quotient is as small as possible, that is, every quotient is equal to 1?  Suppose that and that every quotient in the Euclidean algorithm is equal to 1. Suppose that with our first step we have , and with our second step we have , and with our third step we have , and so on. Eventually, we will reach a final step where , so that . If we rewrite all of these equations, we get that , , , , , , and so on. In other words, we start with the numbers and , and each new number is the sum of the previous two numbers.   Discuss this computation. Does it make sense? Why or why not?   The numbers that arise from this process are the following.    Let and , and for each integer , let . The resulting sequence of numbers are called the Fibonacci numbers .    Our calculation above proves the following theorem.    If the Euclidean algorithm is applied to two relatively prime positive integers and with and every quotient in the algorithm is equal to , then and are consecutive Fibonacci numbers.    In the next section, we will investigate a connection between the Euclidean algorithm and linear Diophantine equations.  "
+},
+{
+  "id": "lem-divisionalgorithmgcd",
+  "level": "2",
+  "url": "euclideanalgorithm.html#lem-divisionalgorithmgcd",
+  "type": "Lemma",
+  "number": "4.2.1",
+  "title": "",
+  "body": "  Let and be positive integers and use the division algorithm to write for some integers and with . Then .   "
+},
+{
+  "id": "euclideanalgorithm-8",
+  "level": "2",
+  "url": "euclideanalgorithm.html#euclideanalgorithm-8",
+  "type": "Checkpoint",
+  "number": "4.2.2",
+  "title": "",
+  "body": " Verify the lemma on the following pairs. You might want to use https:\/\/sagecell.sagemath.org\/ with the command gcd(a,b) to help find the greatest common divisors. Also, the command a % b computes the remainder when is divided by . Finally, the command N(a\/b) computes the decimal approximation to the quotient , which you can round down to find .    ,      ,      ,      "
+},
+{
+  "id": "euclideanalgorithm-9",
+  "level": "2",
+  "url": "euclideanalgorithm.html#euclideanalgorithm-9",
+  "type": "Proof",
+  "number": "4.2.1",
+  "title": "",
+  "body": " We first show that any common divisor of and is also a common divisor of and . Let be a common divisor of and . Then and for some integers and . Substituting into the equation gives , which implies . Thus, divides , and so is a common divisor of and .  We next show that any common divisor of and is also a common divisor of and . Let be a common divisor of and . Then and for some integers and . Substituting into the equation gives , which implies . Thus, divides , and so is a common divisor of and .  Since the sets of common divisors of and and of and are the same, their greatest common divisors must also be the same.  "
+},
+{
+  "id": "euclideanalgorithm-10",
+  "level": "2",
+  "url": "euclideanalgorithm.html#euclideanalgorithm-10",
+  "type": "Checkpoint",
+  "number": "4.2.3",
+  "title": "",
+  "body": " Discuss this proof with your group. Does it make sense? Why or why not?  "
+},
+{
+  "id": "euclideanalgorithm-13",
+  "level": "2",
+  "url": "euclideanalgorithm.html#euclideanalgorithm-13",
+  "type": "Checkpoint",
+  "number": "4.2.4",
+  "title": "",
+  "body": " Discuss this example with your group. Does it make sense? Why or why not?  "
+},
+{
+  "id": "euclideanalgorithm-14",
+  "level": "2",
+  "url": "euclideanalgorithm.html#euclideanalgorithm-14",
+  "type": "Checkpoint",
+  "number": "4.2.5",
+  "title": "",
+  "body": " Use this approach to compute the greatest common divisor of and .  "
+},
+{
+  "id": "alg-euclideanalgorithm",
+  "level": "2",
+  "url": "euclideanalgorithm.html#alg-euclideanalgorithm",
+  "type": "Algorithm",
+  "number": "4.2.6",
+  "title": "The Euclidean Algorithm.",
+  "body": " The Euclidean Algorithm   Suppose that and are positive integers with . The Euclidean algorithm computes as follows:   Use the division algorithm to write for some integers and with .    If , then stop and output as the greatest common divisor. Otherwise, continue to the next step.    Use the division algorithm to write for some integers and with .    If , then stop and output as the greatest common divisor. Otherwise, continue to the next step.    Continue this process, at each step using the division algorithm to divide the previous divisor by the previous remainder, until a remainder of zero is obtained. The last nonzero remainder is the greatest common divisor .      "
+},
+{
+  "id": "euclideanalgorithm-17",
+  "level": "2",
+  "url": "euclideanalgorithm.html#euclideanalgorithm-17",
+  "type": "Proof",
+  "number": "4.2.2",
+  "title": "",
+  "body": " The correctness of the algorithm follows by repeated application of .  "
+},
+{
+  "id": "euclideanalgorithm-20",
+  "level": "2",
+  "url": "euclideanalgorithm.html#euclideanalgorithm-20",
+  "type": "Checkpoint",
+  "number": "4.2.7",
+  "title": "",
+  "body": " Discuss this computation. Does it make sense? Why or why not?  "
+},
+{
+  "id": "def-fibonaccinumbers",
+  "level": "2",
+  "url": "euclideanalgorithm.html#def-fibonaccinumbers",
+  "type": "Definition",
+  "number": "4.2.8",
+  "title": "",
+  "body": "  Let and , and for each integer , let . The resulting sequence of numbers are called the Fibonacci numbers .   "
+},
+{
+  "id": "thm-fibonaccieuclidean",
+  "level": "2",
+  "url": "euclideanalgorithm.html#thm-fibonaccieuclidean",
+  "type": "Theorem",
+  "number": "4.2.9",
+  "title": "",
+  "body": "  If the Euclidean algorithm is applied to two relatively prime positive integers and with and every quotient in the algorithm is equal to , then and are consecutive Fibonacci numbers.   "
 },
 {
   "id": "bezoutidentity",
@@ -1195,7 +1294,115 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.3",
   "title": "The Bezout Identity",
-  "body": " The Bezout Identity    "
+  "body": " The Bezout Identity  We now arrive at a beautiful result known as the Bézout identity.   Bézout Identity   Let with not both and . There exist such that         Find values and such that     Find values and such that     Find values and such that       Let's think about this equation for a moment.  We know that the greatest common divisor of and divides both and , thus it divides . So, any number of the form must be a multiple of .  The Bézout identity says that there is some choice of and such that is exactly equal to . In other words, the smallest possible integer that one could get from the expression , which is , is always obtainable using some integers and .  This is a remarkable fact, and it has many applications in number theory and beyond. In this section, we will give three different proofs of the Bézout identity, each highlighting a different proof technique.  For our first proof, we will use the Euclidean algorithm to construct the integers and needed for the identity.   Proof of Bézout Using the Euclidean Algorithm  Suppose that the Euclidean algorithm applied to produces nonzero remainders, i.e., that we have the following sequence of equations: Thus, we have that .  We can write in terms of and by rearranging the first two equations: Similarly, we can write in terms of and by substituting our expressions for and into the third equation: For simplicity, let's denote the coefficients of and in these expressions as follows: Similarly, we can write in terms of and by substituting our expressions for and into the fourth equation: where in the last equation we have defined and . Continuing in this manner, we can express each remainder as for some integers . In particular, we have that for some integers . Since , we have found integers and such that This completes the proof of the Bézout identity using the Euclidean algorithm.      Discuss the proof with your group. Does it make sense? Why or why not?    Use the technique from the proof to find integers and such that      We will next look at a proof of the Bézout identity using the well-ordering principle, which is completely different from the previous proof. The difference is that the proof using the Euclidean algorithm is constructive: it shows us how to find the integers and . In contrast, the proof using the well-ordering principle is non-constructive: it shows us that such integers must exist, but does not provide a method for finding them.   Proof of Bézout Identity using the well-ordering principle  Consider the set of all positive integers that can be expressed in the form for some integers and : Observe that is non-empty since, for example, we can take and to get . Thus, by the well-ordering principle, has a smallest element. Our goal is to show that is the smallest element of .  Call the smallest element of by the name . If we divide by , we get a quotient and a remainder such that with . We know that there exist integers and such that Substituting this into the equation for , we have: Rearranging, we find that: Since is expressed in the form for some integers and , it follows that if , then . But this contradicts the minimality of since . Therefore, we must have , which means that divides . By a similar argument, we can show that divides . Thus, is a common divisor of and .  It follows that . However, we also know that divides both and , and thus divides . Therefore, divides , which implies that . Combining these inequalities, we conclude that . This completes the proof.    Discuss the proof with your group. Does it make sense? Why or why not?   The third proof we will look at is similar in spirit to the proof using the Euclidean algorithm, but it is written as an inductive proof using only the division algorithm.   Proof of Bézout Identity using Induction  We will prove the Bézout identity by strong induction on . For the base cases, suppose first that . Without loss of generality, assume that . Then . We can write , so the Bézout identity holds. Second, suppose that . Without loss of generality, assume that . Then . We can write , so the Bézout identity holds.  For the inductive step, assume that the Bézout identity holds for all pairs of non-negative integers with for some . Now consider a pair of non-negative integers with . Without loss of generality, assume that . By the division algorithm, we can write for some integers and . Note that since . By the inductive hypothesis, there exist integers and such that Since and , we have: Thus, setting and , we have found integers and such that This completes the inductive step and thus the proof of the Bézout identity.    Discuss the proof with your group. Does it make sense? Why or why not?    Discuss the following questions with your group.   Which of these three proofs did you like the most? Why?    Which of these three proofs did you find the most informative\/insightful\/enlightening? Why?    Which of these three proofs did you find the most difficult to understand? Why?      We will end with a corollary that strengthens our understanding of the greatest common divisor.    If divides both and , then divides .     Use the Bézout identity to write for some integers and . Since divides both and , it divides and . Therefore, divides the sum , which is equal to .   This corollary tells us that not only is the greatest common divisor the largest divisor of and , but every divisor of and must also be a divisor of the greatest common divisor.   Discuss the corollary and its proof with your group. Does it make sense? Why or why not?   Now that we have the Bézout identity, we are in a position to classify all the solutions to linear Diophantine equations of the form , which we will do in the next section.  "
+},
+{
+  "id": "thm-bezoutidentity",
+  "level": "2",
+  "url": "bezoutidentity.html#thm-bezoutidentity",
+  "type": "Theorem",
+  "number": "4.3.1",
+  "title": "Bézout Identity.",
+  "body": " Bézout Identity   Let with not both and . There exist such that    "
+},
+{
+  "id": "bezoutidentity-4",
+  "level": "2",
+  "url": "bezoutidentity.html#bezoutidentity-4",
+  "type": "Checkpoint",
+  "number": "4.3.2",
+  "title": "",
+  "body": "    Find values and such that     Find values and such that     Find values and such that      "
+},
+{
+  "id": "bezoutidentity-7",
+  "level": "2",
+  "url": "bezoutidentity.html#bezoutidentity-7",
+  "type": "Proof",
+  "number": "4.3.1",
+  "title": "Proof of Bézout Using the Euclidean Algorithm.",
+  "body": " Proof of Bézout Using the Euclidean Algorithm  Suppose that the Euclidean algorithm applied to produces nonzero remainders, i.e., that we have the following sequence of equations: Thus, we have that .  We can write in terms of and by rearranging the first two equations: Similarly, we can write in terms of and by substituting our expressions for and into the third equation: For simplicity, let's denote the coefficients of and in these expressions as follows: Similarly, we can write in terms of and by substituting our expressions for and into the fourth equation: where in the last equation we have defined and . Continuing in this manner, we can express each remainder as for some integers . In particular, we have that for some integers . Since , we have found integers and such that This completes the proof of the Bézout identity using the Euclidean algorithm.  "
+},
+{
+  "id": "bezoutidentity-8",
+  "level": "2",
+  "url": "bezoutidentity.html#bezoutidentity-8",
+  "type": "Checkpoint",
+  "number": "4.3.3",
+  "title": "",
+  "body": "   Discuss the proof with your group. Does it make sense? Why or why not?    Use the technique from the proof to find integers and such that     "
+},
+{
+  "id": "bezoutidentity-10",
+  "level": "2",
+  "url": "bezoutidentity.html#bezoutidentity-10",
+  "type": "Proof",
+  "number": "4.3.2",
+  "title": "Proof of Bézout Identity using the well-ordering principle.",
+  "body": " Proof of Bézout Identity using the well-ordering principle  Consider the set of all positive integers that can be expressed in the form for some integers and : Observe that is non-empty since, for example, we can take and to get . Thus, by the well-ordering principle, has a smallest element. Our goal is to show that is the smallest element of .  Call the smallest element of by the name . If we divide by , we get a quotient and a remainder such that with . We know that there exist integers and such that Substituting this into the equation for , we have: Rearranging, we find that: Since is expressed in the form for some integers and , it follows that if , then . But this contradicts the minimality of since . Therefore, we must have , which means that divides . By a similar argument, we can show that divides . Thus, is a common divisor of and .  It follows that . However, we also know that divides both and , and thus divides . Therefore, divides , which implies that . Combining these inequalities, we conclude that . This completes the proof.  "
+},
+{
+  "id": "bezoutidentity-11",
+  "level": "2",
+  "url": "bezoutidentity.html#bezoutidentity-11",
+  "type": "Checkpoint",
+  "number": "4.3.4",
+  "title": "",
+  "body": " Discuss the proof with your group. Does it make sense? Why or why not?  "
+},
+{
+  "id": "bezoutidentity-13",
+  "level": "2",
+  "url": "bezoutidentity.html#bezoutidentity-13",
+  "type": "Proof",
+  "number": "4.3.3",
+  "title": "Proof of Bézout Identity using Induction.",
+  "body": " Proof of Bézout Identity using Induction  We will prove the Bézout identity by strong induction on . For the base cases, suppose first that . Without loss of generality, assume that . Then . We can write , so the Bézout identity holds. Second, suppose that . Without loss of generality, assume that . Then . We can write , so the Bézout identity holds.  For the inductive step, assume that the Bézout identity holds for all pairs of non-negative integers with for some . Now consider a pair of non-negative integers with . Without loss of generality, assume that . By the division algorithm, we can write for some integers and . Note that since . By the inductive hypothesis, there exist integers and such that Since and , we have: Thus, setting and , we have found integers and such that This completes the inductive step and thus the proof of the Bézout identity.  "
+},
+{
+  "id": "bezoutidentity-14",
+  "level": "2",
+  "url": "bezoutidentity.html#bezoutidentity-14",
+  "type": "Checkpoint",
+  "number": "4.3.5",
+  "title": "",
+  "body": " Discuss the proof with your group. Does it make sense? Why or why not?  "
+},
+{
+  "id": "bezoutidentity-15",
+  "level": "2",
+  "url": "bezoutidentity.html#bezoutidentity-15",
+  "type": "Checkpoint",
+  "number": "4.3.6",
+  "title": "",
+  "body": " Discuss the following questions with your group.   Which of these three proofs did you like the most? Why?    Which of these three proofs did you find the most informative\/insightful\/enlightening? Why?    Which of these three proofs did you find the most difficult to understand? Why?     "
+},
+{
+  "id": "cor-gcddivisors",
+  "level": "2",
+  "url": "bezoutidentity.html#cor-gcddivisors",
+  "type": "Corollary",
+  "number": "4.3.7",
+  "title": "",
+  "body": "  If divides both and , then divides .   "
+},
+{
+  "id": "bezoutidentity-18",
+  "level": "2",
+  "url": "bezoutidentity.html#bezoutidentity-18",
+  "type": "Proof",
+  "number": "4.3.4",
+  "title": "",
+  "body": " Use the Bézout identity to write for some integers and . Since divides both and , it divides and . Therefore, divides the sum , which is equal to .  "
+},
+{
+  "id": "bezoutidentity-20",
+  "level": "2",
+  "url": "bezoutidentity.html#bezoutidentity-20",
+  "type": "Checkpoint",
+  "number": "4.3.8",
+  "title": "",
+  "body": " Discuss the corollary and its proof with your group. Does it make sense? Why or why not?  "
 },
 {
   "id": "lineardiophantine",
