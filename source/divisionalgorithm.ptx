@@ -4,8 +4,61 @@
   <title>The Division Algorithm</title>
 
   <p>
-    
+    In this chapter, we will explore divisibility of integers in more detail.
+    We begin with the following problem.
   </p>
+
+  <assumption xml:id="question-lineardiophantine">
+    <statement>
+      <p>
+        Which triples of positive integers <m>a,b,c</m> have integer solutions <m>x</m> and <m>y</m> to the equation <me>ax+by=c \, ?</me>
+      </p>
+    </statement>
+  </assumption>
+
+  <exercise>
+    <p>
+      Investigate which values of <m>c</m> yield an integer solution <m>x,y</m> for each of the following equations.
+      <ol>
+        <li>
+          <p>
+            <m>2x+3y=c</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>4x+10y=c</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>5x+7y=c</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>6x+9y=c</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+
+  <p>
+    While it is not immediately obvious, this question is closely related to questions regarding greatest common divisors and divisibility, and thus this question motivates our study of divisibility.
+    We will begin with a fundamental result about division of integers known as the division algorithm.
+  </p>
+
+  <theorem xml:id="thm-divisionalgorithm">
+    <statement>
+      <p>
+        
+      </p>
+    </statement>
+  </theorem>
+  
+
+
 
 
 </section>
