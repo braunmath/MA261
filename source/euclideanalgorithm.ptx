@@ -4,7 +4,26 @@
   <title>The Euclidean Algorithm</title>
 
   <p>
+    We started the previous section by looking at linear Diophantine equations of the form <me>ax + by = c</me>, where <m>a</m>, <m>b</m>, and <m>c</m> are given integers and we want to find integer solutions <m>x,y</m>.
+    What we observed is that there seems to be a connection between the solvability of this equation and the greatest common divisor of <m>a</m> and <m>b</m>.
+    In this section, we will develop the theory of greatest common divisors using the division algorithm.
   </p>
 
+  <p>
+    Recall that in <xref ref="prop-gcdlcmfactorizations"/> we showed how to compute the greatest common divisor of two numbers if you know the prime factorizations of those numbers.
+    Unfortunately, it is famously difficult to find the prime factorization of large numbers.
+    In fact, the security of many modern cryptographic systems relies on this difficulty, see <url>https://en.wikipedia.org/wiki/Integer_factorization</url> for more information.
+    So, we need to find a better way to compute greatest common divisors without having to factor the numbers first.
+  </p>
+
+  <p>
+    Fortunately, this was first accomplished by the ancient Greek mathematician Euclid around 300 BC.
+    This is the same Euclid who wrote <em>The Elements</em>, one of the most influential works in the history of mathematics, and whose proof of the infinitude of primes we saw previously in the course.
+    Our development of the Euclidean algorithm follows Weissman's development in his book <em>An Illustrated Theory of Numbers</em>.
+  </p>
+
+  
+
+  
 
 </section>

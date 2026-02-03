@@ -111,7 +111,7 @@
   </exercise>
 
   <p>
-    While it might seem clear when doing examples that we can always find such integers <m>q</m> and <m>r</m> given <m>a</m> and <m>b</m>, neither this nor the uniqueness part of the theorem is not immediately obvious.
+    While it might seem clear when doing examples that we can always find such integers <m>q</m> and <m>r</m> given <m>a</m> and <m>b</m>, neither this nor the uniqueness part of the theorem is immediately obvious.
     Let's provide a proof to verify this formally.
   </p>
 
@@ -140,8 +140,262 @@
       Therefore, the integers <m>q</m> and <m>r</m> are unique.
     </p>
   </proof>
-  
 
+  <exercise>
+    <p>
+      Discuss the proof with your group. Does it make sense? Why or why not?
+    </p>
+    <p>
+      Draw a diagram with a number line to justify that if <m>0 \leq r,r' \lt b</m> then <m>|r' - r| \lt b</m>.
+    </p>
+  </exercise>
+
+  <p>
+    Let's put the division algorithm to work with several applications.
+    The first is a method to test whether or not two numbers have the same remainder when divided by a positive integer <m>d</m>.
+  </p>
+
+  <theorem xml:id="thm-remainderequivalence">
+    <statement>
+      <p>
+        Let <m>d,m,n\in \mathbb{N}</m>.
+        The numbers <m>m</m> and <m>n</m> have the same remainder when divided by <m>d</m> if and only if <m>d \mid (m - n)</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <exercise>
+    <p>
+      For each of the following pairs of integers <m>m</m> and <m>n</m>, determine whether or not they have the same remainder when divided by the given value <m>d</m>.
+      Check this using both of the equivalent criteria in the theorem, i.e., first compute both their remainders and second check whether <m>d</m> divides their difference.
+      <ol>
+        <li>
+          <p>
+            <m>m=29</m>, <m>n=15</m>, <m>d=7</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>m=100</m>, <m>n=56</m>, <m>d=9</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>m=8297</m>, <m>n=10286</m>, <m>d=153</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+
+  <proof>
+    <p>
+      We first prove that if <m>m</m> and <m>n</m> have the same remainder when divided by <m>d</m>, then <me>d \mid (m - n) \, .</me>
+      By the division algorithm, there exist unique integers <m>q_1,r_1</m> such that <me>m = d q_1 + r_1 \, ,</me> with <m>0 \leq r_1 \lt d</m>.
+      Similarly, there exist unique integers <m>q_2,r_2</m> such that <me>n = d q_2 + r_2 \, ,</me> with <m>0 \leq r_2 \lt d</m>.
+      Since <m>m</m> and <m>n</m> have the same remainder when divided by <m>d</m>, we have <m>r_1 = r_2</m>.
+      Thus, we have
+      <me>m - n = (d q_1 + r_1) - (d q_2 + r_2) = d (q_1 - q_2) \, .</me>
+      Therefore, <me>d \mid (m - n) \, .</me> 
+    </p>
+    <p>
+      We next prove the converse, that is, we prove that if <me>d \mid (m - n) \, ,</me> then <m>m</m> and <m>n</m> have the same remainder when divided by <m>d</m>.
+      Since <me>d \mid (m - n) \, ,</me> there exists an integer <m>k</m> such that <me>m - n = d k \, .</me>
+      By the division algorithm, there exist unique integers <m>q_1,r_1</m> such that <me>m = d q_1 + r_1 \, ,</me> with <m>0 \leq r_1 \lt d</m>.
+      Similarly, there exist unique integers <m>q_2,r_2</m> such that <me>n = d q_2 + r_2 \, ,</me> with <m>0 \leq r_2 \lt d</m>.
+      Substituting these expressions for <m>m</m> and <m>n</m> into the equation <me>m - n = d k \, ,</me> we have
+      <me>(d q_1 + r_1) - (d q_2 + r_2) = d k \, .</me>
+      Rearranging this equation yields
+      <me>r_1 - r_2 = d (k - (q_1 - q_2)) \, .</me>
+      Since <m>0 \leq r_1,r_2 \lt d</m>, the only way for <m>r_1 - r_2</m> to be a multiple of <m>d</m> is if <m>r_1 = r_2</m> so that <m>r_1-r_2=0</m>.
+      Therefore, <m>m</m> and <m>n</m> have the same remainder when divided by <m>d</m>.
+    </p>
+  </proof>
+
+  <exercise>
+    <p>
+      Discuss the proof with your group. Does it make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <p>
+    Our second application is related to prime numbers.
+    We know that <m>2</m> is the only even prime number, since every other even number is divisible by <m>2</m>.
+    An equivalent way to say this is that there are only finitely many primes that have remainder <m>0</m> when divided by <m>2</m>.
+    What can we say about remainders of primes when divide by other numbers?
+    Here is a classic result.
+  </p>
+
+  <theorem xml:id="thm-dirichletarithmeticprogressions">
+    <title>Dirichlet's Theorem on Arithmetic Progressions</title>
+    <statement>
+      <p>
+        Given any two positive integers <m>a</m> and <m>d</m> that are relatively prime, i.e., <me>\gcd(a,d)=1 \, ,</me> there are infinitely many primes that have remainder <m>a</m> when divided by <m>d</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    We should look at various examples of this theorem to get a feel for what it is saying, and examples can be found on the <url href="https://en.wikipedia.org/wiki/Dirichlet%27s_theorem_on_arithmetic_progressions">wikipedia page for Dirichlet's theorem</url>.
+  </p>
+  <p> 
+    A proof of Dirichlet's theorem is far beyond the scope of this course, but it shows that primes are widely distributed across all possible remainders when divided by a positive integer <m>d</m>, as long as the remainder and the divisor are relatively prime.
+    However, we will give a proof of a special case of this theorem that illustrates the main idea of the result.
+  </p>
+
+  <theorem xml:id="thm-threemodfourprimes">
+    <title>Special case of Dirichlet's theorem</title>
+    <statement>
+      <p>
+        There are infinitely many primes that have remainder <m>3</m> when divided by <m>4</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>      
+    We will provide a proof given by Silverman's book <em>A friendly introduction to number theory</em>, which is also given on the <url href="https://en.wikipedia.org/wiki/Dirichlet%27s_theorem_on_arithmetic_progressions">wikipedia page for Dirichlet's theorem</url>.
+  </p>
+
+  <proof>
+    <p>
+      We will prove this in a similar manner to Euclid's proof that there are infinitely many primes.
+      Specifically, we will construct an infinite sequence of primes that are of the form <m>4k+3</m>.
+    </p>
+    <p>
+      We will need a simple lemma first: suppose that <m>a_1,a_2,\ldots,a_n</m> are positive integers where each <m>a_i=4k_i+1</m> for some integer <m>k_i</m>.
+      Then the product <me>A = a_1 a_2 \cdots a_n \, </me> is also of the form <m>4k+1</m> for some integer <m>k</m>.
+      We prove this by observing that the product of two numbers of the form <m>4k+1</m> is also of the form <m>4k+1</m>.
+      Specifically, if <m>a=4k_1+1</m> and <m>b=4k_2+1</m>, then
+      <md>
+        <mrow>ab \amp = (4k_1+1)(4k_2+1) = 16k_1k_2 + 4k_1 + 4k_2 + 1 </mrow>
+        <mrow>\amp = 4(4k_1k_2 + k_1 + k_2) + 1 \, .</mrow>
+      </md>
+      Thus, using an argument by induction, it can be shown that the product of any finite number of integers of the form <m>4k+1</m> is also of the form <m>4k+1</m>.
+    </p>
+
+    <p>
+      Now, suppose that we have a list of prime numbers of the form <m>4k+3</m>, say <m>p_1, p_2, \ldots, p_n</m>, where none of these primes are equal to <m>3</m>.
+      So, we can start with the prime <m>7</m>.
+      Define
+      <me>N=4 p_1 p_2 \cdots p_n +3\, ,</me>
+      and observe that none of the primes <m>3,p_1,p_2,\ldots,p_n</m> divides <m>N</m>.
+      Note that <m>3\mid N</m> would imply that <m>3\mid 4</m>, which is false, and <m>p_i \mid N</m> would imply that <m>p_i \mid 3</m>, which is also false since none of the <m>p_i</m> are equal to <m>3</m>.
+      Thus, any prime factor of <m>N</m> must be of the form <m>4k+1</m> or <m>4k+3</m>.
+    </p>
+    <p>
+      If every prime factor of <m>N</m> were of the form <m>4k+1</m>, then by our lemma, their product (which is equal to <m>N</m>) would also be of the form <m>4k+1</m>, which is a contradiction since <m>N</m> is of the form <m>4k+3</m>.
+      Therefore, <m>N</m> must have at least one prime factor of the form <m>4k+3</m> that is not in our original list of primes.
+    </p>
+    <p>
+      We can then iterate this process to generate an infinite list of primes of the form <m>4k+3</m>.
+    </p>
+  </proof>
+
+  <exercise>
+    <p>
+      Discuss the proof with your group. Does it make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      Start with the prime <m>7</m> and use the method in the proof of <xref ref="thm-threemodfourprimes"/> to produce three primes of the form <m>4k+3</m>.
+    </p>
+  </exercise>
+
+  <p>
+    What is interesting is that Dirichlet's theorem on arithmetic progressions contrasts with what we know about the distribution of the primes throughout the integers, which is given in the following famous result.
+  </p>
+
+  <p>
+    In order to state this theorem, we need to introduce one piece of notation.
+    Given two functions <m>f</m> and <m>g</m> defined on the positive integers, we write <me>f(x) \sim g(x) \, </me> to mean that
+    <me>\lim_{x \to \infty} \frac{f(x)}{g(x)} = 1 \, .</me>
+    If <m>f\sim g</m>, we say that <m>f</m> and <m>g</m> are <alert>asymptotically equivalent</alert>.
+    In other words, the functions <m>f</m> and <m>g</m> are asymptotically equivalent if their ratio approaches <m>1</m> as <m>x</m> approaches infinity.
+  </p>
+
+  <p>
+    You have actually seen many examples in calculus of functions that are asymptotically equivalent.
+    For example, consider the function <m>f(x)=x^2 + 3x + 2</m> and the function <m>g(x)=x^2</m>.
+    Then we have
+    <me>\lim_{x \to \infty} \frac{f(x)}{g(x)} = \lim_{x \to \infty} \frac{x^2 + 3x + 2}{x^2} = \lim_{x \to \infty} \left(1 + \frac{3}{x} + \frac{2}{x^2}\right) = 1 \, ,</me>
+    so <m>f \sim g</m>.
+    Thus, for large values of <m>x</m>, the function <m>f(x)</m> behaves like the function <m>g(x)</m>.
+  </p>
+
+  <exercise>
+    <p>
+      Discuss this definition and example with your group.
+      Does it make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <p>
+    It is important to note that the difference <m>f-g</m> of two asymptotically equivalent functions does not necessarily approach <m>0</m> as <m>x</m> approaches infinity.
+    For example, the difference between our functions <m>f</m> and <m>g</m> is <me>f(x) - g(x) = (x^2 + 3x + 2) - x^2 = 3x + 2 \, ,</me>
+    which approaches infinity as <m>x</m> approaches infinity.
+    However, the ratio of <m>f(x)</m> to <m>g(x)</m> does approach <m>1</m>.
+  </p>
+
+  <p>
+    So, two functions being asymptotically equivalent have the same rate of growth, meaning that the difference between them becomes insignificant compared to their size as <m>x</m> becomes very large.
+  </p>
+
+  <exercise>
+    <p>
+      Does the distinction between limits of ratios and differences above make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <theorem xml:id="thm-primenumbertheorem">
+    <title>Prime Number Theorem</title>
+    <statement>
+      <p>
+        Recall that <m>\pi(n)</m> denotes the number of primes less than or equal to <m>n</m>.
+        Then we have <me>\pi(n) \sim \frac{n}{\log(n)} \, ,</me> where <m>\log(n)</m> is the natural logarithm of <m>n</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    What this says is that the fraction of the numbers between <m>1</m> and <m>n</m> that are prime is approximately <m>\frac{1}{\log{n}}</m>.
+  </p>
+
+  <exercise>
+    <p>
+      Discuss with your group the following two questions.
+      <ol>
+        <li>
+          <p>
+            Why does this mean that the fraction of the numbers between <m>1</m> and <m>n</m> that are prime is approximately <m>\frac{1}{\log{n}}</m>?
+          </p>
+        </li>
+        <li>
+          <p>
+            Why does <xref ref="thm-primenumbertheorem"/> imply that the fraction of the primes among the integers approaches <m>0</m> as <m>n</m> approaches infinity?
+          </p>
+        </li>
+      </ol>
+`    </p>
+  </exercise>
+
+      <p>
+        The big takeaway from these two theorems is that there is a tension between the fact that (A) the primes become more and more rare as we consider larger and larger numbers and (B) the primes are distributed in infinite quantities across all possible remainders when divided by a positive integer <m>d</m>, as long as the remainder and the divisor are relatively prime.
+      </p>
+
+      <exercise>
+        <p>
+          Discuss with your group: do you agree that this is a tension?
+          Why or why not?
+          Are you surprised by either of these results?
+        </p>
+      </exercise>
+
+      <p>
+        As you can see, while writing a number in quotient-remainder form might seem simple, it has profound consequences in number theory.
+        We will next use the division algorithm to develop the theory of greatest common divisors and to solve linear Diophantine equations.
+      </p>
 
 
 

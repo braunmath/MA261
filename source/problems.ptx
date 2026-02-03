@@ -93,7 +93,7 @@ Your grade is based on completion only (in other words, if you complete the assi
         <title>P2</title>
         <p>
             In this problem, you will complete several computational exercises using SageMath.
-            Before starting this problem, you should read <xref ref="123ncoding"/>.
+            Before starting this problem, you should read <xref ref="s123ncoding"/>.
             These exercises will require you to modify the code found in that section.
         </p>
         <p>
