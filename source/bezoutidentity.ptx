@@ -4,7 +4,263 @@
   <title>The Bezout Identity</title>
 
   <p>
+    We now arrive at a beautiful result known as the Bézout identity.
   </p>
 
+  <theorem xml:id="thm-bezoutidentity">
+    <title>Bézout Identity</title>
+    <statement>
+      <p>
+        Let <m>a,b\in \mathbb{Z}_{\geq 0}</m> with not both <m>a = 0</m> and <m>b = 0</m>.
+        There exist <m>x,y\in \mathbb{Z}</m> such that <me>\gcd(a,b) = ax + by \, .</me>
+      </p>
+    </statement>
+  </theorem>
+
+  <exercise>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Find values <m>x</m> and <m>y</m> such that <me>11 = \gcd(11,0) = 11x + 0y \, .</me>
+          </p>
+        </li>
+        <li>
+          <p>
+             Find values <m>x</m> and <m>y</m> such that <me>4 = \gcd(12,8) = 12x + 8y \, .</me>
+          </p>
+        </li>
+        <li>
+          <p>
+            Find values <m>x</m> and <m>y</m> such that <me>1 = \gcd(15,28) = 15x + 28y \, .</me>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+  
+  <p>
+    Let's think about this equation for a moment.
+    <ol>
+      <li>
+        We know that the greatest common divisor of <m>a</m> and <m>b</m> divides both <m>a</m> and <m>b</m>, thus it divides <m>ax+by</m>.
+        So, any number of the form <m>ax+by</m> must be a multiple of <m>\gcd(a,b)</m>.
+      </li>
+      <li>
+        The Bézout identity says that there is some choice of <m>x</m> and <m>y</m> such that <m>ax+by</m> is exactly equal to <m>\gcd(a,b)</m>.
+        In other words, the smallest possible integer that one could get from the expression <m>ax+by</m>, which is <m>\gcd(a,b)</m>, is always obtainable using some integers <m>x</m> and <m>y</m>.
+      </li>
+    </ol>
+    This is a remarkable fact, and it has many applications in number theory and beyond.
+    In this section, we will give three different proofs of the Bézout identity, each highlighting a different proof technique.
+  </p>
+
+  <p>
+    For our first proof, we will use the Euclidean algorithm to construct the integers <m>x</m> and <m>y</m> needed for the identity.
+  </p>
+
+  <proof>
+    <title>Proof of Bézout Using the Euclidean Algorithm</title>
+    <p>
+      Suppose that the Euclidean algorithm applied to <m>a\gt b</m> produces <m>n</m> nonzero remainders, i.e., that we have the following sequence of equations:
+      <md>
+        <mrow>a \amp =q_1b+r_1</mrow>
+        <mrow>b \amp =q_2r_1+r_2</mrow>
+        <mrow>r_1 \amp =q_3r_2+r_3</mrow>
+        <mrow>r_2 \amp = q_4r_3 + r_4 </mrow>
+        <mrow>\amp \ldots</mrow>
+        <mrow>r_{n-2} \amp =q_nr_{n-1}+r_n</mrow>
+        <mrow>r_{n-1} \amp =q_{n+1}r_n+0</mrow>
+      </md>
+      Thus, we have that <m>\gcd(a,b) = r_n</m>.
+    </p>
+    <p> 
+      We can write <m>r_2</m> in terms of <m>a</m> and <m>b</m> by rearranging the first two equations:
+      <md>
+        <mrow>r_1 \amp = a - q_1b</mrow>
+        <mrow>r_2 \amp = b - q_2r_1 = b - q_2(a - q_1b) = -q_2a + (1 + q_1q_2)b</mrow>
+      </md>
+      Similarly, we can write <m>r_3</m> in terms of <m>a</m> and <m>b</m> by substituting our expressions for <m>r_1</m> and <m>r_2</m> into the third equation:
+      <md>
+        <mrow>r_3 \amp = r_1 - q_3r_2 = (a - q_1b) - q_3(-q_2a + (1 + q_1q_2)b)</mrow>
+        <mrow>\amp = (1 + q_2q_3)a + (-q_1 - q_3 - q_1q_2q_3)b</mrow>
+      </md>
+      For simplicity, let's denote the coefficients of <m>a</m> and <m>b</m> in these expressions as follows:
+      <md>
+        <mrow>r_2 \amp = X_2a + Y_2b \amp \text{where } \amp X_2 = -q_2, \ Y_2 = 1 + q_1q_2</mrow>
+        <mrow>r_3 \amp = X_3a + Y_3b \amp \text{where } \amp X_3 = 1 + q_2q_3, \ Y_3 = -q_1 - q_3 - q_1q_2q_3</mrow>
+      </md>
+      Similarly, we can write <m>r_4</m> in terms of <m>a</m> and <m>b</m> by substituting our expressions for <m>r_2</m> and <m>r_3</m> into the fourth equation:
+      <md>
+        <mrow>r_4 \amp = r_2 - q_4r_3 = (X_2a + Y_2b) - q_4(X_3a + Y_3b)</mrow>
+        <mrow>\amp = (X_2 - q_4X_3)a + (Y_2 - q_4Y_3)b</mrow>
+        <mrow> \amp = X_4a + Y_4b</mrow>
+      </md>
+      where in the last equation we have defined <m>X_4 = X_2 - q_4X_3</m> and <m>Y_4 = Y_2 - q_4Y_3</m>.
+      Continuing in this manner, we can express each remainder <m>r_k</m> as <m>r_k = X_ka + Y_kb</m> for some integers <m>X_k, Y_k \in \mathbb{Z}</m>.
+      In particular, we have that <m>r_n = X_na + Y_nb</m> for some integers <m>X_n, Y_n \in \mathbb{Z}</m>.
+      Since <m>r_n = \gcd(a,b)</m>, we have found integers <m>X_n</m> and <m>Y_n</m> such that <me>\gcd(a,b) = aX_n + bY_n \, .</me>
+      This completes the proof of the Bézout identity using the Euclidean algorithm.
+    </p>
+  </proof>
+
+  <exercise>
+    <ol>
+      <li>
+        <p>
+          Discuss the proof with your group. Does it make sense? Why or why not?
+        </p>
+      </li>
+      <li>
+        <p>
+          Use the technique from the proof to find integers <m>x</m> and <m>y</m> such that <me>1 = \gcd(15,28) = 15x + 28y \, .</me>
+        </p>
+      </li>
+    </ol>
+  </exercise>
+
+  <p>
+    We will next look at a proof of the Bézout identity using the well-ordering principle, which is completely different from the previous proof.
+    The difference is that the proof using the Euclidean algorithm is constructive: it shows us how to find the integers <m>x</m> and <m>y</m>.
+    In contrast, the proof using the well-ordering principle is non-constructive: it shows us that such integers must exist, but does not provide a method for finding them.
+  </p>
+
+  <proof>
+    <title>Proof of Bézout Identity using the well-ordering principle</title>
+    <p>
+      Consider the set of all positive integers that can be expressed in the form <m>ax + by</m> for some integers <m>x</m> and <m>y</m>:
+      <me>S = \{ax + by : x,y \in \mathbb{Z} \text{ and } ax + by \gt 0 \} \, .</me>
+      Observe that <m>S</m> is non-empty since, for example, we can take <m>x = 1</m> and <m>y = 1</m> to get <m>a+b \gt 0</m>.
+      Thus, by the well-ordering principle, <m>S</m> has a smallest element.
+      Our goal is to show that <m>\gcd(a,b)</m> is the smallest element of <m>S</m>.
+    </p>
+    <p>
+      Call the smallest element of <m>S</m> by the name <m>d</m>.
+      If we divide <m>a</m> by <m>d</m>, we get a quotient <m>q</m> and a remainder <m>r</m> such that <me>a = qd + r</me> with <m>0 \leq r \lt d</m>.
+      We know that there exist integers <m>x_0</m> and <m>y_0</m> such that <me>d = ax_0 + by_0 \, .</me>
+      Substituting this into the equation for <m>a</m>, we have:
+      <md>
+        <mrow>a \amp = q(ax_0 + by_0) + r</mrow>
+        <mrow>\amp = a(qx_0) + b(qy_0) + r</mrow>
+      </md>
+      Rearranging, we find that:
+      <me>r = a(1 - qx_0) + b(-qy_0) \, .</me>
+      Since <m>r</m> is expressed in the form <m>ax + by</m> for some integers <m>x</m> and <m>y</m>, it follows that if <m>r \gt 0</m>, then <m>r \in S</m>.
+      But this contradicts the minimality of <m>d</m> since <m>r \lt d</m>.
+      Therefore, we must have <m>r = 0</m>, which means that <m>d</m> divides <m>a</m>.
+      By a similar argument, we can show that <m>d</m> divides <m>b</m>.
+      Thus, <m>d</m> is a common divisor of <m>a</m> and <m>b</m>.
+    </p>
+    <p> 
+      It follows that <me>d \leq \gcd(a,b)</me>.
+      However, we also know that <m>\gcd(a,b)</m> divides both <m>a</m> and <m>b</m>, and thus divides <m>ax_0 + by_0=d</m>.
+      Therefore, <m>\gcd(a,b)</m> divides <m>d</m>, which implies that <me>\gcd(a,b) \leq d</me>.
+      Combining these inequalities, we conclude that <m>d = \gcd(a,b)</m>.
+      This completes the proof. 
+    </p> 
+  </proof>
+
+  <exercise>
+    <p>
+      Discuss the proof with your group. Does it make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <p>
+    The third proof we will look at is similar in spirit to the proof using the Euclidean algorithm, but it is written as an inductive proof using only the division algorithm.
+  </p>
+
+  <proof>
+    <title>Proof of Bézout Identity using Induction</title>
+    <p>
+      We will prove the Bézout identity by strong induction on <m>\min(a,b)</m>.
+      For the base cases, suppose first that <m>\min(a,b) = 0</m>.
+      Without loss of generality, assume that <m>b = 0</m>.
+      Then <m>\gcd(a,b) = \gcd(a,0) = a</m>.
+      We can write <m>a = a \cdot 1 + 0 \cdot 0</m>, so the Bézout identity holds.
+      Second, suppose that <m>\min(a,b) = 1</m>.
+      Without loss of generality, assume that <m>b = 1</m>.
+      Then <m>\gcd(a,b) = \gcd(a,1) = 1</m>.
+      We can write <m>1 = a \cdot 0 + 1 \cdot 1</m>, so the Bézout identity holds.
+    </p>
+    <p>
+      For the inductive step, assume that the Bézout identity holds for all pairs of non-negative integers <m>(a',b')</m> with <m>\min(a',b') \lt n</m> for some <m>n \geq 2</m>.
+      Now consider a pair of non-negative integers <m>(a,b)</m> with <m>\min(a,b) = n</m>.
+      Without loss of generality, assume that <m>a \geq b</m>.
+      By the division algorithm, we can write <m>a = qb + r</m> for some integers <m>q \geq 1</m> and <m>0 \leq r \lt b</m>.
+      Note that <m>\min(b,r) \lt n</m> since <m>r \lt b \leq a</m>.
+      By the inductive hypothesis, there exist integers <m>x_1</m> and <m>y_1</m> such that <me>\gcd(b,r) = bx_1 + ry_1 \, .</me>
+      Since <m>\gcd(a,b) = \gcd(b,r)</m> and <m>r=a-qb</m>, we have:
+      <md>
+        <mrow>\gcd(a,b) \amp = bx_1 + (a - qb)y_1</mrow>
+        <mrow>\amp = ay_1 + b(x_1 - qy_1)</mrow>
+      </md>
+      Thus, setting <m>x = y_1</m> and <m>y = x_1 - qy_1</m>, we have found integers <m>x</m> and <m>y</m> such that <me>\gcd(a,b) = ax + by \, .</me>
+      This completes the inductive step and thus the proof of the Bézout identity.
+    </p> 
+  </proof>
+
+  <exercise>
+    <p>
+      Discuss the proof with your group. Does it make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      Discuss the following questions with your group.
+      <ol>
+        <li>
+          <p>
+            Which of these three proofs did you like the most? Why?
+          </p>
+        </li>
+        <li>
+          <p>
+            Which of these three proofs did you find the most informative/insightful/enlightening? Why?
+            </p>
+        </li>
+        <li>
+          <p>
+            Which of these three proofs did you find the most difficult to understand? Why?
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+
+  <p>
+    We will end with a corollary that strengthens our understanding of the greatest common divisor.
+  </p>
+
+  <corollary xml:id="cor-gcddivisors">
+    <statement>
+      <p>
+        If <m>d</m> divides both <m>a</m> and <m>b</m>, then <m>d</m> divides <m>\gcd(a,b)</m>.
+      </p>
+    </statement>
+  </corollary>
+
+  <proof>
+    <p>
+      Use the Bézout identity to write <m>\gcd(a,b) = ax + by</m> for some integers <m>x</m> and <m>y</m>.
+      Since <m>d</m> divides both <m>a</m> and <m>b</m>, it divides <m>ax</m> and <m>by</m>.
+      Therefore, <m>d</m> divides the sum <m>ax + by</m>, which is equal to <m>\gcd(a,b)</m>.
+    </p>
+  </proof>
+
+  <p>
+    This corollary tells us that not only is the greatest common divisor the largest divisor of <m>a</m> and <m>b</m>, but every divisor of <m>a</m> and <m>b</m> must also be a divisor of the greatest common divisor.
+  </p>
+
+  <exercise>
+    <p>
+      Discuss the corollary and its proof with your group. Does it make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <p>
+    Now that we have the Bézout identity, we are in a position to classify all the solutions to linear Diophantine equations of the form <m>ax + by = c</m>, which we will do in the next section.
+  </p>
 
 </section>
