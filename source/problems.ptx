@@ -365,18 +365,63 @@ Your grade is based on completion only (in other words, if you complete the assi
     <problem>
         <title>P12</title>
         <p>
+            <ol>
+                <li>
+                    <p>
+                        Prove that <m>\sqrt{35}</m> is irrational.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Prove that <m>\log_{21}(121)</m> is irrational.
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
     <problem>
         <title>P13</title>
         <p>
+            Prove that for any two positive integers <m>a</m> and <m>b</m>, we have
+            <me>\gcd(a,b)\cdot \lcm(a,b)=ab \, .</me>
         </p>
     </problem>
 
     <problem>
         <title>P14</title>
-        <p>
+        <p>The following problems involve <xref ref="def-intervals"/>.
+            <ol>
+                <li>
+                    <p>
+                        Do the frequencies <m>f=372\, Hz</m> and <m>g=2976 \, Hz</m> produce equivalent notes? Why or why not?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Do the frequencies <m>f=372\, Hz</m> and <m>g=2232 \, Hz</m> produce equivalent notes? Why or why not?
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If you start with the frequency <m>f=440\, Hz</m>, what is the frequency that is obtained by going up by two perfect fourths and then up by a perfect fifth?
+                        Explain your work.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If you start with the frequency <m>f=440\, Hz</m>, what is the frequency that is obtained by going up by a perfect fifth and then up by two perfect fourths?
+                        Explain your work.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Suppose that you start with a frequency <m>f</m> and you go up by a sequence of perfect fourths and perfect fifths, where you have a total of <m>a</m> perfect fourths and <m>b</m> perfect fifths.
+                        Is it possible for you to get different frequencies if you go up by the perfect fourths and perfect fifths in different orders?
+                        Why or why not?
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
