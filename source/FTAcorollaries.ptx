@@ -194,7 +194,7 @@
     </me>
     This implies that 
     <me>
-      3^b=2^{a-b} \, ,
+      3^b=2^{a+b} \, ,
     </me>
     which is impossible by the uniqueness of prime factorization, yielding the desired contradiction.
   </p>
