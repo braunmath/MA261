@@ -46,7 +46,8 @@
       <md>
         <mrow>2^af \amp = (3/2)^bf \implies </mrow>
         <mrow> 2^a \amp = (3/2)^b \implies </mrow>
-        <mrow> 2^{a/b} \amp = (3/2) </mrow>
+        <mrow> a \amp = \log_2((3/2)^b) = b\log_2(3/2) \implies </mrow>
+        <mrow>a/b \amp = \log_2(3/2) \, .</mrow>
       </md>
       Thus, we would have that <m>\log_2(3/2)=a/b</m>, which would imply that <m>\log_2(3/2)</m> is rational.
       However, we proved that this value is irrational in <xref ref="thm-log32irrational"/> using the Fundamental Theorem of Arithmetic, which is a contradiction.
