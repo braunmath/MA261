@@ -428,18 +428,39 @@ Your grade is based on completion only (in other words, if you complete the assi
     <problem>
         <title>P15</title>
         <p>
+            Prove a similar result to <xref ref="thm-fifthoctaveissue"/> but for perfect fourths instead of perfect fifths.
+            In other words, prove that if you start with a frequency <m>f</m> and you go up by a sequence of perfect fourths, then you will never obtain a note equivalent to <m>f</m>.
         </p>
     </problem>
 
     <problem>
         <title>P16</title>
         <p>
+            Use <xref ref="thm-divisionalgorithm"/> to prove that <me>n^4+9n^3+n^2+7n+11</me> is odd for any integer <m>n\geq 0</m>.
         </p>
     </problem>
 
     <problem>
         <title>P17</title>
         <p>
+            This problem is an exploration of <xref ref="thm-primenumbertheorem"/> given at the end of Section 4.1.
+            <ol>
+                <li>
+                    <p>
+                        Prove using calculus that the function <m>x/\log(x)</m> is increasing for all <m>x\geq 2</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Prove using calculus that <me>\lim_{x\to \infty} \frac{x}{\log(x)}=\infty \, .</me>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Using the prime number theorem and the previous result, prove that <m>\lim_{n\to \infty} \pi(n)=\infty</m>.
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
