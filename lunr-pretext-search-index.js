@@ -1411,7 +1411,88 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.4",
   "title": "Linear Diophantine Equations",
-  "body": " Linear Diophantine Equations    "
+  "body": " Linear Diophantine Equations  Now that we have proved the Bézout identity, we are in a position to fully answer : when does a linear Diophantine equation have a solution, and what are all of the solutions?  Recall that we computed examples at the start of this chapter, where we found the following:    has a solution for any .     has a solution for any even .     has a solution for any .     has a solution for any that is a multiple of .   This suggests that the of and dividing is important. In fact, this condition completely determines when solutions exist.    Consider the linear Diophantine equation for positive integers . This equation has an integer solution if and only if      We prove the forward direction first. Suppose has an integer solution, and let . Then we have and therefore .  We next prove the reverse direction. Suppose that and . From the Bézout identity we have a solution and therefore as well. Thus, a solution exists, as claimed.    Discuss this proof. Does it make sense? Why or why not?   We now want to ask a related question: if has an integer solution, how are the other solutions related to this one?   For each of the following equations, find multiple solutions. How are these related to each other?                           Suppose that and that is an integer solution to Let and . Then every integer solution to this equation is of the form for some .     Suppose that we have two solutions to , call them: Taking the difference of these equations we have Thus, is a solution to the linear homogeneous equation And we see that any two solutions to differ by a solution to . Thus, every solution is of the form   We can divide by to reduce this equation to the form from which we get However, and are coprime, and both and are multiples of . Therefore, for some , which implies that any solution satisfies This shows that every solution to is of the form for some integer , which completes the proof.    Discuss the proof. Does it make sense? Why or why not?   We will call the solution the particular solution and the solutions to the homogeneous solutions .   To find all possible solutions to , we first find a particular solution, which can be done by using the Euclidean algorithm: Working backwards, we find from which it follows that is a particular solution.  We then note that all homogeneous solutions are of the form for . Thus, the full solution set is     For each of the following linear Diophantine equations, find the complete solution set.                    There is one final observation to make about the classification of solutions to linear Diophantine equations. We see that the full solution set is of the form which you will also see in MA 322 (Matrix Algebra) when solving systems of linear equations, and in MA 214 (Calculus IV) when solving linear systems of differential equations. This type of solution set is a characteristic of linear equations across multiple fields of mathematics, so you should keep watch for when this type of solution set appears.  "
+},
+{
+  "id": "thm-lineardiophantine",
+  "level": "2",
+  "url": "lineardiophantine.html#thm-lineardiophantine",
+  "type": "Theorem",
+  "number": "4.4.1",
+  "title": "",
+  "body": "  Consider the linear Diophantine equation for positive integers . This equation has an integer solution if and only if    "
+},
+{
+  "id": "lineardiophantine-5",
+  "level": "2",
+  "url": "lineardiophantine.html#lineardiophantine-5",
+  "type": "Proof",
+  "number": "4.4.1",
+  "title": "",
+  "body": " We prove the forward direction first. Suppose has an integer solution, and let . Then we have and therefore .  We next prove the reverse direction. Suppose that and . From the Bézout identity we have a solution and therefore as well. Thus, a solution exists, as claimed.  "
+},
+{
+  "id": "lineardiophantine-6",
+  "level": "2",
+  "url": "lineardiophantine.html#lineardiophantine-6",
+  "type": "Checkpoint",
+  "number": "4.4.2",
+  "title": "",
+  "body": " Discuss this proof. Does it make sense? Why or why not?  "
+},
+{
+  "id": "lineardiophantine-8",
+  "level": "2",
+  "url": "lineardiophantine.html#lineardiophantine-8",
+  "type": "Checkpoint",
+  "number": "4.4.3",
+  "title": "",
+  "body": " For each of the following equations, find multiple solutions. How are these related to each other?                        "
+},
+{
+  "id": "thm-lineardiophantinesolutionset",
+  "level": "2",
+  "url": "lineardiophantine.html#thm-lineardiophantinesolutionset",
+  "type": "Theorem",
+  "number": "4.4.4",
+  "title": "",
+  "body": "  Suppose that and that is an integer solution to Let and . Then every integer solution to this equation is of the form for some .   "
+},
+{
+  "id": "lineardiophantine-10",
+  "level": "2",
+  "url": "lineardiophantine.html#lineardiophantine-10",
+  "type": "Proof",
+  "number": "4.4.2",
+  "title": "",
+  "body": " Suppose that we have two solutions to , call them: Taking the difference of these equations we have Thus, is a solution to the linear homogeneous equation And we see that any two solutions to differ by a solution to . Thus, every solution is of the form   We can divide by to reduce this equation to the form from which we get However, and are coprime, and both and are multiples of . Therefore, for some , which implies that any solution satisfies This shows that every solution to is of the form for some integer , which completes the proof.  "
+},
+{
+  "id": "lineardiophantine-11",
+  "level": "2",
+  "url": "lineardiophantine.html#lineardiophantine-11",
+  "type": "Checkpoint",
+  "number": "4.4.5",
+  "title": "",
+  "body": " Discuss the proof. Does it make sense? Why or why not?  "
+},
+{
+  "id": "lineardiophantine-13",
+  "level": "2",
+  "url": "lineardiophantine.html#lineardiophantine-13",
+  "type": "Example",
+  "number": "4.4.6",
+  "title": "",
+  "body": " To find all possible solutions to , we first find a particular solution, which can be done by using the Euclidean algorithm: Working backwards, we find from which it follows that is a particular solution.  We then note that all homogeneous solutions are of the form for . Thus, the full solution set is   "
+},
+{
+  "id": "lineardiophantine-14",
+  "level": "2",
+  "url": "lineardiophantine.html#lineardiophantine-14",
+  "type": "Checkpoint",
+  "number": "4.4.7",
+  "title": "",
+  "body": " For each of the following linear Diophantine equations, find the complete solution set.                   "
 },
 {
   "id": "euclideanrhythms",
@@ -1420,7 +1501,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.5",
   "title": "Euclidean Rhythms",
-  "body": " Euclidean Rhythms    "
+  "body": " Euclidean Rhythms  Our final topic of this chapter is an application of the Euclidean algorithm to the theory of rhythm in music.  "
 },
 {
   "id": "equivalencerelations",
