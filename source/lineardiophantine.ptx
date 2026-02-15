@@ -4,7 +4,224 @@
   <title>Linear Diophantine Equations</title>
 
   <p>
+    Now that we have proved the Bézout identity, we are in a position to fully answer <xref ref="question-lineardiophantine"/>: when does a linear Diophantine equation have a solution, and what are all of the solutions?
   </p>
 
+  <p>
+    Recall that we computed examples at the start of this chapter, where we found the following:
+    <ol>
+        <li>
+          <p>
+            <m>2x+3y=c</m> has a solution for any <m>c</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>4x+10y=c</m> has a solution for any even <m>c</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>5x+7y=c</m> has a solution for any <m>c</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>6x+9y=c</m> has a solution for any <m>c</m> that is a multiple of <m>3</m>.
+          </p>
+        </li>
+      </ol>
+      This suggests that the <m>\gcd</m> of <m>a</m> and <m>b</m> dividing <m>c</m> is important.
+      In fact, this condition completely determines when solutions exist.
+  </p>
+
+  <theorem xml:id="thm-lineardiophantine">
+    <statement>
+      <p>
+        Consider the linear Diophantine equation
+        <me>ax+by=c</me>
+          for positive integers <m>a,b,c</m>.
+          This equation has an integer solution if and only if 
+      <me>\gcd(a,b) \mid c \, .</me>
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      We prove the forward direction first. 
+      Suppose <me>ax+by=c</me> has an integer solution, and let <m>d=\gcd(a,b)</m>.
+      Then we have
+      <me>ax+by=da'x+db'y=d(a'x+b'y)=c</me>
+      and therefore <m>d\mid c</m>.
+    </p>
+    <p>
+      We next prove the reverse direction.
+      Suppose that <m>d=\gcd(a,b)</m> and <m>dm=c</m>.
+      From the Bézout identity we have a solution
+      <me>ax+by=d</me>
+      and therefore
+      <me>a(xm)+b(ym)=dm=c</me>
+      as well.
+      Thus, a solution exists, as claimed.
+    </p>
+  </proof>
+
+  <exercise>
+    <p>
+      Discuss this proof. Does it make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <p>
+    We now want to ask a related question: if <me>ax+by=c</me> has an integer solution, how are the other solutions related to this one?
+  </p>
+
+  <exercise>
+    <p>
+      For each of the following equations, find multiple solutions. How are these related to each other?
+      <ol>
+        <li>
+          <p>
+            <m>2x+3y=1</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>4x+10y=4</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>5x+7y=3</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>6x+9y=3</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+  
+  <theorem xml:id="thm-lineardiophantinesolutionset">
+    <statement>
+      <p>
+        Suppose that <m>d=\gcd(a,b)\mid c</m> and that <m>(x_0,y_0)</m> is an integer solution to
+        <me>ax+by=c \, .</me>
+        Let <m>b'=b/d</m> and <m>a'=a/d</m>.
+        Then every integer solution to this equation is of the form
+        <me>(x,y)=(x_0+b't,y_0-a't)=(x_0,y_0)+t(b',-a')</me>
+        for some <m>t\in \Z</m>.        
+      </p>
+    </statement>
+  </theorem>
+  
+  <proof>
+    <p>
+      Suppose that we have two solutions to <me>ax+by=c</me>, call them:
+      <md>
+        <mrow>ax_1+by_1=c</mrow>
+        <mrow>ax_0+by_0=c</mrow>
+      </md>
+      Taking the difference of these equations we have
+      <md>
+        a(x_1-x_0)+b(y_1-y_0)=0 \, .
+      </md>
+      Thus, <m>(x_1-x_0,y_1-y_0)</m> is a solution to the linear homogeneous equation
+      <md>
+        ax+by=0
+      </md>
+      And we see that any two solutions to <m>ax+by=c</m> differ by a solution to <m>ax+by=0</m>.
+      Thus, every solution is of the form
+      <md>
+        (x_0,y_0)+\text{ solution to }c=0\text{ case } \, .
+      </md>
+    </p>
+    <p>
+      We can divide by <m>d</m> to reduce this equation to the form
+      <me>a'x+b'y=0 </me>
+      from which we get
+      <md>
+        a'x=-b'y \, .
+      </md>
+      However, <m>a'</m> and <m>b'</m> are coprime, and both <m>a'x</m> and <m>b'y</m> are multiples of <m>\lcm(a',b')</m>.
+      Therefore, <m>-b'y=a'x=t\lcm(a',b')=ta'b'</m> for some <m>t</m>, which implies that any solution <m>(x,y)</m> satisfies
+      <me>(x,y)=(tb',-ta')=t(b',-a') \, .</me>
+      This shows that every solution to
+      <md>
+        ax+by=0
+      </md>
+      is of the form 
+      <md>
+        t(b',-a')
+      </md>
+      for some integer <m>t</m>, which completes the proof.
+    </p>
+  </proof>
+
+  <exercise>
+    <p>
+      Discuss the proof. Does it make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <p>
+    We will call the solution <m>(x_0,y_0)</m> the <alert>particular solution</alert> and the solutions to <m>ax+by=0</m> the <alert>homogeneous solutions</alert>.
+  </p>
+
+  <example>
+    <p>
+      To find all possible solutions to <m>3x+8y=1</m>, we first find a particular solution, which can be done by using the Euclidean algorithm:
+      <md>
+        <mrow>8=3\cdot 2 + 2</mrow>
+        <mrow>3=2\cdot 1 + 1</mrow>
+        <mrow>2 = 1 \cdot 2 + 0</mrow>
+      </md>
+      Working backwards, we find <me>1 = 3-2\cdot 1 = 3-(8-3\cdot 2)\cdot 1 = 3\cdot 3 - 8</me> from which it follows that
+      <m>(x_0,y_0)=(3,-1)</m> is a particular solution.
+    </p>
+    <p>
+      We then note that all homogeneous solutions are of the form <m>t(8,-3)</m> for <m>t\in \Z</m>.
+      Thus, the full solution set is 
+      <md>
+        \{(3,-1)+t(8,-3):t\in \Z\}\, .
+      </md>
+    </p>
+  </example>
+
+  <exercise>
+    <p>
+      For each of the following linear Diophantine equations, find the complete solution set.
+      <ol>
+        <li>
+          <p>
+            <m>4x+5y=2</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>6x+2y=4</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>7x+2y=1</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+
+  <p>
+    There is one final observation to make about the classification of solutions to linear Diophantine equations.
+    We see that the full solution set is of the form 
+    <md>
+      \text{particular }+\text{ homogeneous}
+    </md>
+    which you will also see in MA 322 (Matrix Algebra) when solving systems of linear equations, and in MA 214 (Calculus IV) when solving linear systems of differential equations.
+    This type of solution set is a characteristic of linear equations across multiple fields of mathematics, so you should keep watch for when this type of solution set appears.    
+  </p>
 
 </section>
