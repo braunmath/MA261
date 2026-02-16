@@ -4,8 +4,300 @@
   <title>Euclidean Rhythms</title>
 
   <p>
-    Our final topic of this chapter is an application of the Euclidean algorithm to the theory of rhythm in music.
+    Our final topic of this chapter is an application of the Euclidean algorithm to the theory of musical rhythm.
+    We will discuss in this section the theory of <alert>Euclidean Rhythms</alert> first outlined in Godfried Toussaint in 2005 and more fully developed by Toussaint and his coauthors in the following paper:
+    <ul>
+      <li>
+        <p>
+          Erik D. Demaine, Francisco Gomez-Martin, Henk Meijer, David Rappaport, Perouz Taslakian, Godfried T. Toussaint, Terry Winograd, David R. Wood,
+The distance geometry of music,
+Computational Geometry,
+Volume 42, Issue 5,
+2009,
+Pages 429-454,
+ISSN 0925-7721,
+<url href="https://doi.org/10.1016/j.comgeo.2008.04.005">https://doi.org/10.1016/j.comgeo.2008.04.005</url>
+        </p>
+      </li>
+    </ul>
+    This paper is freely available at the doi link above, if you are interested in reading more details.
   </p>
 
+  <p>
+    We will begin by looking at four examples of rhythms, which will help us introduce the notation and language we will need.
+  </p>
+
+  <p>
+    The first example we will consider is a rhythm known as the <alert>Cuban tresillo</alert>, though it is also found in the music of Central and West Africa as well as India.
+
+<figure>
+  <caption>A clock diagram of the Cuban <em>tresillo</em> rhythm.</caption>
+  <image width="65%">
+    <shortdescription>A clock diagram of the Cuban tresillo rhythm.</shortdescription>
+    <latex-image>
+\begin{tikzpicture}[scale=3]
+
+% radius
+\def\R{1.2}
+
+% outer 8-gon
+\draw
+  (90:\R)
+  \foreach \k in {1,...,7} {
+    -- ({90-360*\k/8}:\R)
+  }
+  -- cycle;
+
+% thick triangle (vertices 1,4,7)
+\draw[line width=1.5pt]
+  (90:\R)         % 1
+  -- (-180:\R)    % 7
+  -- (-45:\R)       % 4
+  -- cycle;
+  
+\fill[gray!60]
+  (90:\R)         % 1
+  -- (-180:\R)    % 7
+  -- (-45:\R)       % 4
+  -- cycle;
+
+% vertices
+\foreach \k in {0,...,7} {
+  \ifnum\k=0
+    \fill ({90-360*\k/8}:\R) circle (0.035);
+  \else\ifnum\k=3
+    \fill ({90-360*\k/8}:\R) circle (0.035);
+  \else\ifnum\k=6
+    \fill ({90-360*\k/8}:\R) circle (0.035);
+  \else
+    \draw ({90-360*\k/8}:\R) circle (0.035);
+  \fi\fi\fi
+}
+
+% edge labels
+\node at (135:0.95) {2};
+\node at (10:0.55) {3};
+\node at (-125:0.55) {3};
+
+% labels 1--8
+\foreach \k in {0,...,7} {
+  \node[font=\small]
+    at ({90-360*\k/8}:1.4) {\number\numexpr\k+1\relax};
+}
+
+\end{tikzpicture}
+</latex-image>
+  </image>
+  </figure>
+
+  </p>
+
+
+<p>
+    The second example we will consider is the <alert>Cuban cinquillo</alert> rhythm, which is also known as the <alert>Malfuf</alert> rhythmic pattern of Egypt and the Korean <alert>Nong P'yon</alert> drum pattern.
+
+<figure>
+  <caption>A clock diagram of the <em>cinquillo</em> rhythm.</caption>
+  <image width="65%">
+    <shortdescription>A clock diagram of the cinquillo rhythm.</shortdescription>
+    <latex-image>
+\begin{tikzpicture}[scale=3]
+
+% radius
+\def\R{1.2}
+
+% outer 8-gon
+\draw
+  (90:\R)
+  \foreach \k in {1,...,7} {
+    -- ({90-360*\k/8}:\R)
+  }
+  -- cycle;
+
+% thick pentagon
+\draw[line width=1.5pt]
+  (90:\R)         
+  -- (-180:\R) 
+  -- (-135:\R)    
+  -- (-45:\R)    
+  -- (0:\R)
+  -- cycle;
+
+\fill[gray!60]
+  (90:\R)         
+  -- (-180:\R) 
+  -- (-135:\R)    
+  -- (-45:\R)    
+  -- (0:\R)
+  -- cycle;
+
+% vertices
+\foreach \k in {0,...,7} {
+  \ifnum\k=0
+    \fill ({90-360*\k/8}:\R) circle (0.035);
+  \else\ifnum\k=3
+    \fill ({90-360*\k/8}:\R) circle (0.035);
+  \else\ifnum\k=6
+    \fill ({90-360*\k/8}:\R) circle (0.035);
+  \else\ifnum\k=2
+    \fill ({90-360*\k/8}:\R) circle (0.035);
+  \else\ifnum\k=5
+    \fill ({90-360*\k/8}:\R) circle (0.035);
+  \else
+    \draw ({90-360*\k/8}:\R) circle (0.035);
+  \fi\fi\fi\fi\fi
+}
+
+% labels 1--8
+\foreach \k in {0,...,7} {
+  \node[font=\small]
+    at ({90-360*\k/8}:1.4) {\number\numexpr\k+1\relax};
+}
+\end{tikzpicture}
+</latex-image>
+  </image>
+  </figure>
+
+  </p>
+
+
+
+  <p>
+    The third example we will consider is the <alert>clave son</alert> rhythm.
+
+<figure>
+  <caption>A clock diagram of the <em>clave son</em> rhythm.</caption>
+  <image width="65%">
+    <shortdescription>A clock diagram of the clave son rhythm.</shortdescription>
+    <latex-image>
+\begin{tikzpicture}[scale=3]
+
+% radius
+\def\R{1.2}
+
+% outer 16-gon
+\draw
+  (90:\R)
+  \foreach \k in {1,...,15} {
+    -- ({90-360*\k/16}:\R)
+  }
+  -- cycle;
+
+% shaded pentagon: vertices 1,4,7,11,13
+\fill[gray!60]
+  (90:\R)        % 1
+  -- (22.5:\R)   % 4
+  -- (-45:\R)    % 7
+  -- (-135:\R)   % 11
+  -- (-180:\R)    % 13
+  -- cycle;
+
+% pentagon outline
+\draw[thick]
+  (90:\R)
+  -- (22.5:\R)
+  -- (-45:\R)
+  -- (-135:\R)
+  -- (180:\R)
+  -- cycle;
+
+% vertices (filled = pentagon vertices)
+\foreach \k in {0,...,15} {
+  \ifnum\k=0
+    \fill ({90-360*\k/16}:\R) circle (0.03);
+  \else\ifnum\k=3
+    \fill ({90-360*\k/16}:\R) circle (0.03);
+  \else\ifnum\k=6
+    \fill ({90-360*\k/16}:\R) circle (0.03);
+  \else\ifnum\k=10
+    \fill ({90-360*\k/16}:\R) circle (0.03);
+  \else\ifnum\k=12
+    \fill ({90-360*\k/16}:\R) circle (0.03);
+  \else
+    \draw ({90-360*\k/16}:\R) circle (0.03);
+  \fi\fi\fi\fi\fi
+}
+
+% labels: 1--16
+\foreach \k in {0,...,15} {
+  \node[font=\small]
+    at ({90-360*\k/16}:1.35) {\number\numexpr\k+1\relax};
+}
+
+\end{tikzpicture}
+</latex-image>
+  </image>
+  </figure>
+</p>
+
+
+
+  <p>
+    The fourth example we will consider is the <alert>Bossa-Nova</alert> rhythm from Brazil.
+
+<figure>
+  <caption>A clock diagram of the <em>Bossa-Nova</em> rhythm.</caption>
+  <image width="65%">
+    <shortdescription>A clock diagram of the Bossa-Nova rhythm.</shortdescription>
+    <latex-image>
+\begin{tikzpicture}[scale=3]
+
+% radius
+\def\R{1.2}
+
+% outer 16-gon
+\draw
+  (90:\R)
+  \foreach \k in {1,...,15} {
+    -- ({90-360*\k/16}:\R)
+  }
+  -- cycle;
+
+% shaded pentagon: vertices 1,4,7,11,14
+\fill[gray!60]
+  (90:\R)        % 1
+  -- (22.5:\R)   % 4
+  -- (-45:\R)    % 7
+  -- (-135:\R)   % 11
+  -- (180-22.5:\R)    % 14
+  -- cycle;
+
+% pentagon outline
+\draw[thick]
+  (90:\R)
+  -- (22.5:\R)
+  -- (-45:\R)
+  -- (-135:\R)
+  -- (180-22.5:\R)
+  -- cycle;
+
+% vertices (filled = pentagon vertices)
+\foreach \k in {0,...,15} {
+  \ifnum\k=0
+    \fill ({90-360*\k/16}:\R) circle (0.03);
+  \else\ifnum\k=3
+    \fill ({90-360*\k/16}:\R) circle (0.03);
+  \else\ifnum\k=6
+    \fill ({90-360*\k/16}:\R) circle (0.03);
+  \else\ifnum\k=10
+    \fill ({90-360*\k/16}:\R) circle (0.03);
+  \else\ifnum\k=13
+    \fill ({90-360*\k/16}:\R) circle (0.03);
+  \else
+    \draw ({90-360*\k/16}:\R) circle (0.03);
+  \fi\fi\fi\fi\fi
+}
+
+% labels: 1--16
+\foreach \k in {0,...,15} {
+  \node[font=\small]
+    at ({90-360*\k/16}:1.35) {\number\numexpr\k+1\relax};
+}
+
+\end{tikzpicture}
+</latex-image>
+  </image>
+  </figure>
+</p>
 
 </section>
