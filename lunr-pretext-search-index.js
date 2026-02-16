@@ -1501,7 +1501,43 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.5",
   "title": "Euclidean Rhythms",
-  "body": " Euclidean Rhythms  Our final topic of this chapter is an application of the Euclidean algorithm to the theory of rhythm in music.  "
+  "body": " Euclidean Rhythms  Our final topic of this chapter is an application of the Euclidean algorithm to the theory of musical rhythm. We will discuss in this section the theory of Euclidean Rhythms first outlined in Godfried Toussaint in 2005 and more fully developed by Toussaint and his coauthors in the following paper:   Erik D. Demaine, Francisco Gomez-Martin, Henk Meijer, David Rappaport, Perouz Taslakian, Godfried T. Toussaint, Terry Winograd, David R. Wood, The distance geometry of music, Computational Geometry, Volume 42, Issue 5, 2009, Pages 429-454, ISSN 0925-7721, https:\/\/doi.org\/10.1016\/j.comgeo.2008.04.005    This paper is freely available at the doi link above, if you are interested in reading more details.  We will begin by looking at four examples of rhythms, which will help us introduce the notation and language we will need.  The first example we will consider is a rhythm known as the Cuban tresillo , though it is also found in the music of Central and West Africa as well as India.  A clock diagram of the Cuban tresillo rhythm.   A clock diagram of the Cuban tresillo rhythm.      The second example we will consider is the Cuban cinquillo rhythm, which is also known as the Malfuf rhythmic pattern of Egypt and the Korean Nong P'yon drum pattern.  A clock diagram of the cinquillo rhythm.   A clock diagram of the cinquillo rhythm.      The third example we will consider is the clave son rhythm.  A clock diagram of the clave son rhythm.   A clock diagram of the clave son rhythm.      The fourth example we will consider is the Bossa-Nova rhythm from Brazil.  A clock diagram of the Bossa-Nova rhythm.   A clock diagram of the Bossa-Nova rhythm.      "
+},
+{
+  "id": "euclideanrhythms-4-2",
+  "level": "2",
+  "url": "euclideanrhythms.html#euclideanrhythms-4-2",
+  "type": "Figure",
+  "number": "4.5.1",
+  "title": "",
+  "body": " A clock diagram of the Cuban tresillo rhythm.   A clock diagram of the Cuban tresillo rhythm.    "
+},
+{
+  "id": "euclideanrhythms-5-4",
+  "level": "2",
+  "url": "euclideanrhythms.html#euclideanrhythms-5-4",
+  "type": "Figure",
+  "number": "4.5.2",
+  "title": "",
+  "body": " A clock diagram of the cinquillo rhythm.   A clock diagram of the cinquillo rhythm.    "
+},
+{
+  "id": "euclideanrhythms-6-2",
+  "level": "2",
+  "url": "euclideanrhythms.html#euclideanrhythms-6-2",
+  "type": "Figure",
+  "number": "4.5.3",
+  "title": "",
+  "body": " A clock diagram of the clave son rhythm.   A clock diagram of the clave son rhythm.    "
+},
+{
+  "id": "euclideanrhythms-7-2",
+  "level": "2",
+  "url": "euclideanrhythms.html#euclideanrhythms-7-2",
+  "type": "Figure",
+  "number": "4.5.4",
+  "title": "",
+  "body": " A clock diagram of the Bossa-Nova rhythm.   A clock diagram of the Bossa-Nova rhythm.    "
 },
 {
   "id": "equivalencerelations",
