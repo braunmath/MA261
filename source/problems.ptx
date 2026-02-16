@@ -447,7 +447,7 @@ Your grade is based on completion only (in other words, if you complete the assi
             <ol>
                 <li>
                     <p>
-                        Prove using calculus that the function <m>x/\log(x)</m> is increasing for all <m>x\geq 2</m>.
+                        Prove using calculus that the function <m>x/\log(x)</m> is increasing for all <m>x\geq 3</m>.
                     </p>
                 </li>
                 <li>
