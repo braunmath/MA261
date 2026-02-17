@@ -70,13 +70,13 @@
           </li>
           <li>
             <p>
-              Else, write <m>n=kq+r</m> with <m>0\leq r\lt k</m> and define the vector 
+              Else, write <m>n=kq+r</m> with <m>0\leq r\lt k</m> and compute the sequence 
               <md>
-                (x_1,\ldots,x_r)= \textrm{ER}(r,k) \, ,
+                (x_1,\ldots,x_r)= \textrm{ER}(r,k) \, .
               </md>
-              then return the vector
+              Then, return the sequence
               <md>
-                (\underbrace{\lfloor \frac{n}{k} \rfloor,\ldots, \lfloor \frac{n}{k} \rfloor}_{x_1-1\text{ times}}, \lceil \frac{n}{k} \rceil, \underbrace{\lfloor \frac{n}{k} \rfloor,\ldots, \lfloor \frac{n}{k} \rfloor}_{x_2-1\text{ times}}, \lceil \frac{n}{k} \rceil,\ldots,\underbrace{\lfloor \frac{n}{k} \rfloor,\ldots, \lfloor \frac{n}{k} \rfloor}_{x_1-1\text{ times}}, \lceil \frac{n}{k} \rceil) \, .
+                (\underbrace{\left\lfloor \frac{n}{k} \right\rfloor,\ldots, \left\lfloor \frac{n}{k} \right\rfloor}_{x_1-1\text{ times}}, \left\lceil \frac{n}{k} \right\rceil, \underbrace{\left\lfloor \frac{n}{k} \right\rfloor,\ldots, \left\lfloor \frac{n}{k} \right\rfloor}_{x_2-1\text{ times}}, \left\lceil \frac{n}{k} \right\rceil,\ldots,\underbrace{\left\lfloor \frac{n}{k} \right\rfloor,\ldots, \left\lfloor \frac{n}{k} \right\rfloor}_{x_r-1\text{ times}}, \left\lceil \frac{n}{k} \right\rceil) \, .
               </md>
             </p>
           </li>
@@ -137,8 +137,14 @@
         </p>
       </li>
     </ul>
-    Thus, any algorithm can be obtained by rotating the clock diagram for <m>(2,3,3,2,3)</m> is a Euclidean rhythm from <m>k=5</m> and <m>n=13</m>.
+    Any rhythm that can be obtained by rotating the clock diagram for <m>(2,3,3,2,3)</m> is a Euclidean rhythm from <m>k=5</m> and <m>n=13</m>.
   </p>
+
+  <exercise>
+    <p>
+      Discuss the example above. What questions do you have?
+    </p>
+  </exercise>
 
   <p>
     Note that if we rotate the clock diagram for <m>(2,3,3,2,3)</m> clockwise by three beats, then we get <m>(3,2,3,3,2)</m>, which is obtained from the original sequence by moving the last entry to the beginning of the sequence.
@@ -166,7 +172,7 @@
         </li>
         <li>
           <p>
-            <m>\textrm{ER}(5,12)</m> (rotations include a common rhythm of the <em>Aka</em> Pygmies in Central Africa, the South African <em>Venda</em> clapping pattern from a children's song, ) 
+            <m>\textrm{ER}(5,12)</m> (rotations include a common rhythm of the <em>Aka</em> Pygmies in Central Africa and the South African <em>Venda</em> clapping pattern from a children's song.) 
           </p>
         </li>
         <li>
@@ -177,5 +183,63 @@
       </ol>
     </p>
   </exercise>
+
+  <p>
+  Demaine et al. prove that a rhythm is maximally even if and only if it is a rotation of one produced by the <m>\textrm{ER}</m> process.
+  We will omit this proof, because it is very technical.
+  However, we should at least verify that the Euclidean rhythm algorithm produces a rhythm with <m>k</m> onsets among <m>n</m> possible beats.
+  It is not immediately clear that this is the case from the statement of the algorithm.
+  </p>
+
+  <theorem xml:id="thm-euclideanrhythmcorrectness">
+    <statement>
+      <p>
+        The output of <m>\textrm{ER}(k,n)</m> is a sequence of <m>k</m> integers that sum to <m>n</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      We will use strong induction on <m>k</m>.
+      The base case is when <m>k\mid n</m>, for which we have 
+      <md>
+        \textrm{ER}(k,n)=(\underbrace{\frac{n}{k},\frac{n}{k},\ldots, \frac{n}{k}}_{k\text{ times}})
+      </md>
+      and the result clearly holds in this case.      
+    </p>
+    <p>
+      For the induction step, suppose <m>k\nmid n</m> and write <m>n=kq+r</m> with <m>0\leq r\lt k</m>.
+      Since <m>r\lt k</m>, by induction we have that if
+      <me>
+        (x_1,\ldots,x_r)=\textrm{ER}(r,k)
+      </me>
+      then <m>x_1+\cdots +x_r=k</m>.
+      Therefore, the sequence
+      <me>
+        \textrm{ER}(k,n)=(\underbrace{\left\lfloor \frac{n}{k} \right\rfloor,\ldots, \left\lfloor \frac{n}{k} \right\rfloor}_{x_1-1\text{ times}}, \left\lceil \frac{n}{k} \right\rceil, \underbrace{\left\lfloor \frac{n}{k} \right\rfloor,\ldots, \left\lfloor \frac{n}{k} \right\rfloor}_{x_2-1\text{ times}}, \left\lceil \frac{n}{k} \right\rceil,\ldots,\underbrace{\left\lfloor \frac{n}{k} \right\rfloor,\ldots, \left\lfloor \frac{n}{k} \right\rfloor}_{x_r-1\text{ times}}, \left\lceil \frac{n}{k} \right\rceil)
+      </me>
+      has <m>k</m> entries and has a sum given by
+      <md>
+        <mrow> r\left\lceil \frac{n}{k} \right\rceil + \left\lfloor \frac{n}{k} \right\rfloor \sum_{i=1}^r (x_i-1) \amp = r\left\lceil \frac{n}{k} \right\rceil + \left\lfloor \frac{n}{k} \right\rfloor (k-r)</mrow>
+        <mrow> \amp = r\left( 1+\left\lfloor \frac{n}{k}\right\rfloor \right) + \left\lfloor \frac{n}{k}\right\rfloor (k-r)</mrow>
+        <mrow> \amp = r+ k\left\lfloor \frac{n}{k}\right\rfloor </mrow>
+        <mrow> \amp = r+kq </mrow>
+        <mrow> \amp = n </mrow>
+      </md>
+      which completes the proof.     
+    </p>
+  </proof>
+  
+  <exercise>
+    <p>
+      Discuss this proof with your group. Does it make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <p>
+    There are many fascinating mathematical connections with the theory of musical rhythm, these connections with the Euclidean algorithm are only one example.
+    What is remarkable is that it took until the 21st century for people to discover these connections between rhythm and the Euclidean algorithm, an algorithm that is over 2,000 years old!
+  </p>
 
 </section>
