@@ -5,7 +5,7 @@
 
   <p>
     Our final topic of this chapter is an application of the Euclidean algorithm to the theory of musical rhythm.
-    We will discuss in this section a family of rhythms first described by Godfried Toussaint in 2005 and more fully developed by Toussaint and his coauthors in the following paper:
+    We will discuss in this section examples of rhythms and language to describe rhythms, which we will use to study a family of rhythms first described by Godfried Toussaint in 2005 and more fully developed by Toussaint and his coauthors in the following paper:
     <ul>
       <li>
         <p>
@@ -30,15 +30,15 @@ ISSN 0925-7721,
   <p>
     The first example we will consider is a rhythm known as the <alert>Cuban tresillo</alert>, though it is also found in the music of Central and West Africa as well as India.
     The tresillo consists of three beats during an eight-count, with beats occurring on counts 1, 4, and 7.
-    We can represent this using a "box-like" representation as follows:
+    We can represent this using a "box-like" representation as follows, where a "<m>\times</m>" denotes a beat onset and a "<m>\cdot</m>" represents a pause or quiet count:
     <me>
       [\times \cdot \cdot \times \cdot \cdot \times \cdot \, ]
     </me>
-    We can also represent this rhythm using a "clockwise distance sequence" that records the lengths of the intervals between beats; for a tresillo, this would be
+    We can also represent this rhythm using a "clockwise distance sequence" that records the lengths of the intervals between onsets; for a tresillo, this would be
     <me>
       (3,3,2)
     </me>
-    where the final <m>2</m> represents the wrap-around from the last beat back to the first.
+    where the final <m>2</m> represents the wrap-around from the last onset back to the first.
     Finally, we can represent this rhythm using a "clock diagram" as in the following figure.
   </p>
 
@@ -105,7 +105,7 @@ ISSN 0925-7721,
 
   <exercise>
     <p>
-      As a class, we will (quietly) clap out the tresillo rhythm together.
+      As a class, we will (quietly) tap the tresillo rhythm together.
     </p>
   </exercise>
 
@@ -198,7 +198,7 @@ ISSN 0925-7721,
 
     <exercise>
     <p>
-      As a class, we will (quietly) clap out the cinquillo rhythm together.
+      As a class, we will (quietly) tap the cinquillo rhythm together.
     </p>
   </exercise>
 
@@ -278,7 +278,7 @@ ISSN 0925-7721,
 
     <exercise>
     <p>
-      As a class, we will (quietly) clap out the clave son rhythm together.
+      As a class, we will (quietly) tap the clave son rhythm together.
     </p>
   </exercise>
 
@@ -356,7 +356,7 @@ ISSN 0925-7721,
 
     <exercise>
     <p>
-      As a class, we will (quietly) clap out the Bossa-Nova rhythm together.
+      As a class, we will (quietly) tap the Bossa-Nova rhythm together.
     </p>
   </exercise>
 
