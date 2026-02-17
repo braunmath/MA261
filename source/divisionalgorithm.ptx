@@ -112,7 +112,9 @@
 
   <p>
     While it might seem clear when doing examples that we can always find such integers <m>q</m> and <m>r</m> given <m>a</m> and <m>b</m>, neither this nor the uniqueness part of the theorem is immediately obvious.
-    Let's provide a proof to verify this formally.
+    An embodied proof of the existence and uniqueness of the division algorithm might go as follows: "Move up the number line until you find the biggest multiple of <m>b</m> below <m>a</m>. This gives you your multiple <m>qb</m> and the difference between it and <m>a</m> is equal to <m>r</m>, and this is obviously unique."
+    There are several assumptions that are being made in this argument, first the use of the number line to visualize "moving up" among the multiples of <m>b</m> and second the "obvious" remainder statement.
+    Let's look at what a purely formal proof looks like, relying on the well-ordering principle and careful logical arguments involving inequalities rather than visual intuition.
   </p>
 
   <proof>

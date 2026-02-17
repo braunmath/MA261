@@ -8,6 +8,7 @@
   <xi:include href="euclideanalgorithm.ptx" />
   <xi:include href="bezoutidentity.ptx" />
   <xi:include href="lineardiophantine.ptx" />
+  <xi:include href="rhythms.ptx" />
   <xi:include href="euclideanrhythms.ptx" />
 
 </chapter>
