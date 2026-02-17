@@ -4,7 +4,178 @@
   <title>Euclidean Rhythms</title>
 
   <p>
-    
+    Our goal in this section is to describe one of the algorithms that generates maximally even rhythms.
+    This algorithm is similar to the Euclidean algorithm.
+    We will begin with reformulating the Euclidean algorithm as follows.
   </p>
+
+  <algorithm xml:id="alg-euclideanremix">
+    <statement>
+      <p>
+        Suppose <m>a\gt b</m> are positive integers.
+        The algorithm <m>\textrm{EUCLID}(b,a)</m> runs as follows.
+        <ol>
+          <li>
+            <p>
+              If <m>b=0</m> then return <m>a</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Else, write <m>a=bq+r</m> and return <m>\textrm{EUCLID}(r,b)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </algorithm>
+
+  <p>
+    This is a concise way of writing the Euclidean algorithm using recursion and an if-else structure.
+  </p>
+
+  <exercise>
+    <p>
+      Work through the steps of <m>\textrm{EUCLID}(7,27)</m> with your group.
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      Discuss the reformulated Euclidean algorithm above.
+      Does it make sense why it is the same algorithm as the Euclidean algorithm we described previously?
+      Why or why not?
+    </p>
+  </exercise>
+
+  <p>
+    We will now introduce an algorithm similar to the Euclidean algorithm that produces rhythms.
+    This algorithm will be called <m>\textrm{ER}</m> for Euclidean Rhythm, it will have input a pair of integers <m>k,n</m> and it will output a distance sequence defining a rhythm.
+  </p>
+
+  <algorithm xml:id="alg-euclideanrhythm">
+    <title>Euclidean Rhythm Algorithm</title>
+    <statement>
+      <p>
+        Suppose <m>n\gt k</m> are positive integers.
+        The algorithm <m>\textrm{ER}(k,n)</m> runs as follows.
+        <ul>
+          <li>
+            <p>
+              If <m>k</m> evenly divides <m>n</m>, then return
+              <md>
+                (\underbrace{\frac{n}{k},\frac{n}{k},\ldots, \frac{n}{k}}_{k\text{ times}}) \, .
+              </md>
+            </p>
+          </li>
+          <li>
+            <p>
+              Else, write <m>n=kq+r</m> with <m>0\leq r\lt k</m> and define the vector 
+              <md>
+                (x_1,\ldots,x_r)= \textrm{ER}(r,k) \, ,
+              </md>
+              then return the vector
+              <md>
+                (\underbrace{\lfloor \frac{n}{k} \rfloor,\ldots, \lfloor \frac{n}{k} \rfloor}_{x_1-1\text{ times}}, \lceil \frac{n}{k} \rceil, \underbrace{\lfloor \frac{n}{k} \rfloor,\ldots, \lfloor \frac{n}{k} \rfloor}_{x_2-1\text{ times}}, \lceil \frac{n}{k} \rceil,\ldots,\underbrace{\lfloor \frac{n}{k} \rfloor,\ldots, \lfloor \frac{n}{k} \rfloor}_{x_1-1\text{ times}}, \lceil \frac{n}{k} \rceil) \, .
+              </md>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </algorithm>
+
+  <p>
+    Let's look at some examples.
+  </p>
+  <p>
+    First, suppose that <m>n=12</m> and <m>k=4</m>.
+    Then <m>\textrm{ER}(4,12)</m> returns <m>(3,3,3,3)</m>, since <m>4\mid 12</m>.
+    This corresponds to the rhythm
+    <md>
+      [\times \cdot \cdot \cdot \times \cdot \cdot \cdot \times \cdot \cdot \cdot \times \cdot \cdot \cdot ]
+    </md>
+    which is maximally even.    
+  </p>
+
+  <p>
+    Next consider <m>n=13</m> and <m>k=5</m>.
+    <ul>
+      <li>
+        <p>
+          Observe that since <m>5\nmid 13</m>, in the "else" step of the algorithm we will need to call <m>\textrm{ER}(3,5)</m> since <m>13=5\cdot 2 + 3</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          In order to compute <m>\textrm{ER}(3,5)</m>, we will need to compute <m>\textrm{ER}(2,3)</m> in the "else" step.
+        </p>
+      </li>
+      <li>
+        <p>
+          In order to compute <m>\textrm{ER}(2,3)</m>, we will need to compute <m>\textrm{ER}(1,2)</m> in the "else" step.
+        </p>
+      </li>
+    </ul>
+    Thus, in order to work backwards through the recursion, we need to start with <m>\textrm{ER}(1,2)=(2)</m>.
+    From here, we can work in reverse order.
+    <ul>
+      <li>
+        <p>
+          <m>\textrm{ER}(2,3)=(1,2)</m>, since we have <m>(x_1)=(2)</m> and <m>\lfloor 3/2\rfloor=1</m> while <m>\lceil 3/2\rceil=2</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>\textrm{ER}(3,5)=(2,1,2)</m> since <m>(x_1,x_2)=(1,2)</m> and <m>\lfloor 5/3\rfloor=1</m> while <m>\lceil 5/3 \rceil=2</m>.
+          So, there are <m>x_1-1=0</m> copies of <m>1</m> to start, followed by one copy of <m>2</m>, followed by one copy of <m>1</m>, followed by one copy of <m>2</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>\textrm{ER}(5,13)=(2,3,3,2,3)</m> since <m>(x_1,x_2,x_3)=(2,1,2)</m> and <m>\lfloor 13/5\rfloor=2</m> while <m>\lceil 13/5 \rceil=3</m>.
+        </p>
+      </li>
+    </ul>
+    Thus, any algorithm can be obtained by rotating the clock diagram for <m>(2,3,3,2,3)</m> is a Euclidean rhythm from <m>k=5</m> and <m>n=13</m>.
+  </p>
+
+  <p>
+    Note that if we rotate the clock diagram for <m>(2,3,3,2,3)</m> clockwise by three beats, then we get <m>(3,2,3,3,2)</m>, which is obtained from the original sequence by moving the last entry to the beginning of the sequence.
+    Thus, if we have a Euclidean rhythm sequence, any sequence obtained by repeatedly moving the last entry to the beginning of the sequence is the same up to clock rotation, and is therefore maximally even.
+  </p>
+
+  <exercise>
+    <p>
+      Find all rotation-equivalent rhythms for the following Euclidean rhythms.
+      <ol>
+        <li>
+          <p>
+            <m>\textrm{ER}(3,8)</m> (generates the tresillo)
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\textrm{ER}(5,8)</m> (generates the cinquillo)
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\textrm{ER}(5,16)</m> (generates the Bossa-Nova)
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\textrm{ER}(5,12)</m> (rotations include a common rhythm of the <em>Aka</em> Pygmies in Central Africa, the South African <em>Venda</em> clapping pattern from a children's song, ) 
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>\textrm{ER}(7,16)</m> (includes a Samba rhythm from Brazil in the rotational patterns)
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
 
 </section>
