@@ -676,6 +676,7 @@ You should include your code and the results in your submission.
                 <li>
                     <p>
                         How many lattice points are on the line segment connecting the points <m>(0,0)</m> and <m>(a,b)</m> for arbitrary positive integers <m>a</m> and <m>b</m>?
+                        Prove that your answer is correct.
                     </p>
                 </li>
             </ol>
@@ -689,7 +690,7 @@ You should include your code and the results in your submission.
                 <li>
                     <p>
                         First, show the (simple) calculations to establish that <md>
-                            \frac{1}{\sqrt{2}+1}=\frac{\sqrt{2}-1}{1}
+                            \frac{1}{\sqrt{2}+1}=\sqrt{2}-1
                         </md>
                         and
                         <md>
@@ -704,7 +705,7 @@ You should include your code and the results in your submission.
                         <md>
                             <mrow>\sqrt{2} = 1\cdot 1 + (\sqrt{2}-1)\, . </mrow>
                         </md>
-                        Use the two calculations from part 1 to explain how you can obtain the following infinite continued fraction formula for <m>\sqrt{2}</m>:
+                        Starting from this observation, prove that you can use the two calculations from part 1 to obtain the following infinite continued fraction formula for <m>\sqrt{2}</m>:
                         <md>
                             \sqrt{2} = 1 + \cfrac{1}{2 + \cfrac{1}{
                                 2 + \cfrac{1}{
@@ -713,6 +714,20 @@ You should include your code and the results in your submission.
                                 }
                             } \, .
                         </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        If you stop the infinite continued fraction at any point, you get a rational number approximating <m>\sqrt{2}</m>.
+                        For example, if you stop after the first term, you get <m>1</m>.
+                        If you stop after the second term, you get <m>1+\frac{1}{2}=\frac{3}{2}\, .</m>
+                        If you stop after the third term, you get <m>1+\frac{1}{2+\frac{1}{2}}=\frac{7}{5}\, .</m>
+                        If you stop after the fourth term, you get <m>1+\frac{1}{2+\frac{1}{2+\frac{1}{2}}}=\frac{17}{12}\, .</m>
+                    </p>
+                    <p>
+                        Compute the rational numbers that you get by stopping the infinite continued fraction for <m>\sqrt{2}</m> after the first 4 terms, after the first 5 terms, and after the first 6 terms.
+                        Then, compute the decimal approximations of these rational numbers and compare them to the decimal approximation of <m>\sqrt{2}</m>.
+                        What do you observe about these approximations?
                     </p>
                 </li>
             </ol>
