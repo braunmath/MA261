@@ -111,9 +111,54 @@
           Discuss the proof with your group. Does it make sense? Why or why not?
         </p>
       </li>
+    </ol>
+  </exercise>
+
+  <p>
+  Let's use this proof technique to find integers <m>x</m> and <m>y</m> such that <me>1 = \gcd(15,28) = 15x + 28y \, .</me>
+  First, we write
+  <md>
+    28 = 15\cdot 1 + 13 \, ,
+  </md>
+  which we can rearrange to get
+  <md>
+    28 + 15\cdot (-1) = 13 = r_1 \, .
+  </md>
+  Next, we write
+  <md>
+    15 = 13\cdot 1 + 2
+  </md>
+  which we can rearrange to get
+  <md>
+    15 + 13\cdot (-1) = 2 = r_2 \, .
+  </md>
+  Substituting in our expression for <m>13</m>, we have
+  <md>
+    <mrow>2 \amp = 15 + (28 + 15\cdot (-1))\cdot (-1) </mrow>
+    <mrow> \amp = 15\cdot 2 + 28\cdot (-1) \, .</mrow>
+  </md>
+  Thus, we have written <m>r_2=2</m> in the form <m>15x + 28y</m>.
+  Next, we write
+  <md>
+    13 = 2\cdot 6 + 1
+  </md>
+  which we can rearrange to get
+  <md>
+    13 + 2\cdot (-6) = 1 = r_3 \, .
+  </md>
+  Substituting in our previous expressions for <m>13</m> and <m>2</m> involving <m>15</m> and <m>28</m>, we have
+  <md>
+    <mrow>1 \amp = (28 + 15\cdot (-1)) + (15\cdot 2+28\cdot (-1))\cdot (-6) </mrow>
+    <mrow>\amp = 15\cdot (-13) + 28\cdot 7 \, .</mrow>
+  </md> 
+  Thus, we have found integers <m>x = -13</m> and <m>y = 7</m> such that <me>1 = \gcd(15,28) = 15x + 28y \, .</me>  
+  </p>
+
+  <exercise>
+    <ol>
       <li>
         <p>
-          Use the technique from the proof to find integers <m>x</m> and <m>y</m> such that <me>1 = \gcd(15,28) = 15x + 28y \, .</me>
+          Use the technique from the proof to find integers <m>x</m> and <m>y</m> such that <me>1 = \gcd(15,28) = 28x + 100y \, .</me>
         </p>
       </li>
     </ol>

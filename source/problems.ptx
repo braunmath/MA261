@@ -643,19 +643,79 @@ You should include your code and the results in your submission.
 
     <problem>
         <title>P21</title>
-        <p>
+        <p>Use the Euclidean algorithm to find integers <m>x</m> and <m>y</m> such that <m>ax+by=\gcd(a,b)</m> for the following pairs, using the technique given in our first proof of the Bézout identity.
+            <ol>
+                <li>
+                    <p>
+                        <m>a=21,b=9</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>a=153,b=26</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>a=5382,b=394</m>
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
     <problem>
         <title>P22</title>
-        <p>
+        <p>A point <m>(a,b)\in \mathbb{R}^2</m> is called a <em>lattice point</em> if both <m>a</m> and <m>b</m> are integers.
+            <ol>
+                <li>
+                    <p>
+                        Find the number of lattice points that are on the line segment connecting the points <m>(0,0)</m> and <m>(21,9)</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        How many lattice points are on the line segment connecting the points <m>(0,0)</m> and <m>(a,b)</m> for arbitrary positive integers <m>a</m> and <m>b</m>?
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
     <problem>
         <title>P23</title>
-        <p>
+        <p>In this problem we consider what the Euclidean algorithm might look like if we apply it to an irrational number.
+            <ol>
+                <li>
+                    <p>
+                        First, show the (simple) calculations to establish that <md>
+                            \frac{1}{\sqrt{2}+1}=\frac{\sqrt{2}-1}{1}
+                        </md>
+                        and
+                        <md>
+                            \sqrt{2}+1 = 2+\sqrt{2}-1 \, .
+                        </md>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Suppose we tried to apply the Euclidean algorithm to the number <m>\sqrt{2}</m> dividing it by <m>1</m>.
+                        In this case, we would get 
+                        <md>
+                            <mrow>\sqrt{2} = 1\cdot 1 + (\sqrt{2}-1)\, . </mrow>
+                        </md>
+                        Use the two calculations from part 1 to explain how you can obtain the following infinite continued fraction formula for <m>\sqrt{2}</m>:
+                        <md>
+                            \sqrt{2} = 1 + \cfrac{1}{2 + \cfrac{1}{
+                                2 + \cfrac{1}{
+                                    2 + \cfrac{1}{  \ddots
+                                    }                                }
+                                }
+                            } \, .
+                        </md>
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
