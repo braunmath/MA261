@@ -6,6 +6,14 @@
 
      <!-- include sections  -->
   <xi:include href="equivalencerelations.ptx" />
+
+  <xi:include href="modulararithmetic.ptx" />
+
+  <xi:include href="chineseremaindertheorem.ptx" />
+
+  <xi:include href="fermatslittletheorem.ptx" />
+
+  <xi:include href="musicalscalesandkeys.ptx" />
     
 
 </chapter>
