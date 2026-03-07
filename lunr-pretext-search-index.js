@@ -1717,16 +1717,214 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.1",
   "title": "Equivalence Relations",
-  "body": " Equivalence Relations    "
+  "body": " Equivalence Relations  Throughout mathematics, we rely on the remainder of a division operation. For example, even and odd numbers are numbers that have remainder or when divided by . We proved that there are infinitely many primes that have remainder when divided by .  More practically, we rely on remainders all the time in our daily life. When we measure time, we have seconds in a minute, minutes in an hour, hours in a day, and days in a week. So, for example, if it is am, then in minutes it will be am. We know this because minutes is hour and minutes, and adding that to am gives us minutes after am. If it is a Tuesday, then days later it will be a Thursday, since has remainder when divided by and two days after Tuesday is Thursday. When we do these types of calculations with time, we are taking remainders using the numbers , , and .  When we measure angles, we have degrees in a circle. So, when a snowboarder does a trick that involves spinning around by degrees, we know that they have spun around twice and are facing the same direction as when they started, since has remainder when divided by . On the other hand, if they do a degree spin, then they have spun around once and a half times, and are facing the opposite direction as when they started, since has remainder when divided by .  In this way, we see that there are certain days that are equivalent; every Tuesday differs from every other Tuesday by a multiple of days. Every May differs from every other May by a multiple of months. A snowboarder is facing the same direction as every other snowboarder who has gone through a spin that differs from theirs by a multiple of degrees.  These are all examples of equivalence relations , which are a fundamental concept in formal mathematics. We will develop the theory of equivalence relations in this section, and then we will use it to define a new type of arithmetic on a finite set of numbers called modular arithmetic .  Motivated by the examples above, we will begin with the formal definition of an equivalence relation.    A binary relation on a set is a subset of the Cartesian product . We write to indicate that the ordered pair is in the binary relation.    In other words, a binary relation on is a collection of ordered pairs of elements of . We say that two elements are related if . An equivalence relation is a special type of binary relation.   What binary relation on is represented by the graph of the function ?     Let be a set. An equivalence relation on is a binary relation on such that for all , we have:  (reflexivity)  if , then (symmetry)  if and , then (transitivity).       Show that the binary relation on defined by the ordered pairs is not an equivalence relation.   Here is a key observation: Many of the things students have been trained to think of as \"equalities\" are actually \"equivalences\". Let's look at some examples.   Consider the set of all lines in the plane. We can define a relation on this set by saying that two lines are related if they are parallel. This relation is an equivalence relation, which we can check as follows. First, since every line is parallel to itself, reflexivity is satisfied. Second, note that if a line is parallel to another line, then the second line is parallel to the first line. Thus, symmetry is satisfied. Third, if a line is parallel to a second line, and the second line is parallel to a third line, then the first line is parallel to the third line. Thus, transitivity is satisfied. So, parallelism is an equivalence relation on the set of lines in the plane.    Students are taught that . However, this is not actually an equality! For example, if I have two apples and I take one of them, this is not the same as if I have four apples and I take two of them. So, one out of two is not the same as two out of four. However, we can define that the fractions and are equivalent if , and we write . With this definition, we see that , and by tradition we write this as an equality.   Prove that this relation on fractions satisfies reflexivity, symmetry, and transitivity.      What the previous exercise shows is that the set of all fractions breaks up into classes of fractions that are equivalent to each other. What we \"know\" from elementary school is that each fraction is in a unique class. This turns out to be a general property of equivalence relations.    For each element , we define the equivalence class of to be the set     For example, the equivalence class of the fraction is the set     An equivalence relation on a set partitions as a disjoint union of the equivalence classes for .     First, note that every element is in its own equivalence class, since . Thus, the union of all the equivalence classes is equal to . Second, we will show that if two equivalence classes have a common element, then they are equal. So, let and be two equivalence classes, and suppose that they have a common element . Then, by definition of equivalence class, we have and . By transitivity of the equivalence relation, we have .    Discuss the proof above. Does it make sense? Why or why not?   Here is an interesting question: how do we know that if we pick two different elements from two different equivalence classes, and add them together, that they give the same equivalence class as a result? For example, if we take a representative of the equivalence class of , such as , and a representative of the equivalence class of , such as , and we add them together, we get . So, we have that . But, if we take different representatives of the same equivalence classes, such as and , and we add them together, we get . So, we have that . How do we know that and are always the same equivalence class?    The addition operation is well-defined on equivalence classes of fractions. In other words, if and , then .     We have that means that , and means that . We need to show that , which is the required condition for . We see that Therefore, the result holds.    Discuss the proof above. Does it make sense? Why or why not?   The previous two theorems show that we can treat the equivalence classes of fractions as if they were fractions themselves, and we can add them together and get the same result regardless of which representatives we choose to add together. We will do something similar when we construct the modular arithmetic system in the next section.   Prove that the multiplication operation is well-defined on equivalence classes of fractions.   "
 },
 {
-  "id": "continuedfractions",
+  "id": "def-binaryrelation",
+  "level": "2",
+  "url": "equivalencerelations.html#def-binaryrelation",
+  "type": "Definition",
+  "number": "5.1.1",
+  "title": "",
+  "body": "  A binary relation on a set is a subset of the Cartesian product . We write to indicate that the ordered pair is in the binary relation.   "
+},
+{
+  "id": "equivalencerelations-10",
+  "level": "2",
+  "url": "equivalencerelations.html#equivalencerelations-10",
+  "type": "Checkpoint",
+  "number": "5.1.2",
+  "title": "",
+  "body": " What binary relation on is represented by the graph of the function ?  "
+},
+{
+  "id": "def-equivalencerelation",
+  "level": "2",
+  "url": "equivalencerelations.html#def-equivalencerelation",
+  "type": "Definition",
+  "number": "5.1.3",
+  "title": "",
+  "body": "  Let be a set. An equivalence relation on is a binary relation on such that for all , we have:  (reflexivity)  if , then (symmetry)  if and , then (transitivity).     "
+},
+{
+  "id": "equivalencerelations-12",
+  "level": "2",
+  "url": "equivalencerelations.html#equivalencerelations-12",
+  "type": "Checkpoint",
+  "number": "5.1.4",
+  "title": "",
+  "body": " Show that the binary relation on defined by the ordered pairs is not an equivalence relation.  "
+},
+{
+  "id": "equivalencerelations-14",
+  "level": "2",
+  "url": "equivalencerelations.html#equivalencerelations-14",
+  "type": "Example",
+  "number": "5.1.5",
+  "title": "",
+  "body": " Consider the set of all lines in the plane. We can define a relation on this set by saying that two lines are related if they are parallel. This relation is an equivalence relation, which we can check as follows. First, since every line is parallel to itself, reflexivity is satisfied. Second, note that if a line is parallel to another line, then the second line is parallel to the first line. Thus, symmetry is satisfied. Third, if a line is parallel to a second line, and the second line is parallel to a third line, then the first line is parallel to the third line. Thus, transitivity is satisfied. So, parallelism is an equivalence relation on the set of lines in the plane.  "
+},
+{
+  "id": "equivalencerelations-15",
+  "level": "2",
+  "url": "equivalencerelations.html#equivalencerelations-15",
+  "type": "Checkpoint",
+  "number": "5.1.6",
+  "title": "",
+  "body": " Students are taught that . However, this is not actually an equality! For example, if I have two apples and I take one of them, this is not the same as if I have four apples and I take two of them. So, one out of two is not the same as two out of four. However, we can define that the fractions and are equivalent if , and we write . With this definition, we see that , and by tradition we write this as an equality.   Prove that this relation on fractions satisfies reflexivity, symmetry, and transitivity.     "
+},
+{
+  "id": "def-equivalenceclass",
+  "level": "2",
+  "url": "equivalencerelations.html#def-equivalenceclass",
+  "type": "Definition",
+  "number": "5.1.7",
+  "title": "",
+  "body": "  For each element , we define the equivalence class of to be the set    "
+},
+{
+  "id": "thm-equivalencepartition",
+  "level": "2",
+  "url": "equivalencerelations.html#thm-equivalencepartition",
+  "type": "Theorem",
+  "number": "5.1.8",
+  "title": "",
+  "body": "  An equivalence relation on a set partitions as a disjoint union of the equivalence classes for .   "
+},
+{
+  "id": "equivalencerelations-20",
+  "level": "2",
+  "url": "equivalencerelations.html#equivalencerelations-20",
+  "type": "Proof",
+  "number": "5.1.1",
+  "title": "",
+  "body": " First, note that every element is in its own equivalence class, since . Thus, the union of all the equivalence classes is equal to . Second, we will show that if two equivalence classes have a common element, then they are equal. So, let and be two equivalence classes, and suppose that they have a common element . Then, by definition of equivalence class, we have and . By transitivity of the equivalence relation, we have .  "
+},
+{
+  "id": "equivalencerelations-21",
+  "level": "2",
+  "url": "equivalencerelations.html#equivalencerelations-21",
+  "type": "Checkpoint",
+  "number": "5.1.9",
+  "title": "",
+  "body": " Discuss the proof above. Does it make sense? Why or why not?  "
+},
+{
+  "id": "thm-addingfractions",
+  "level": "2",
+  "url": "equivalencerelations.html#thm-addingfractions",
+  "type": "Theorem",
+  "number": "5.1.10",
+  "title": "",
+  "body": "  The addition operation is well-defined on equivalence classes of fractions. In other words, if and , then .   "
+},
+{
+  "id": "equivalencerelations-24",
+  "level": "2",
+  "url": "equivalencerelations.html#equivalencerelations-24",
+  "type": "Proof",
+  "number": "5.1.2",
+  "title": "",
+  "body": " We have that means that , and means that . We need to show that , which is the required condition for . We see that Therefore, the result holds.  "
+},
+{
+  "id": "equivalencerelations-25",
+  "level": "2",
+  "url": "equivalencerelations.html#equivalencerelations-25",
+  "type": "Checkpoint",
+  "number": "5.1.11",
+  "title": "",
+  "body": " Discuss the proof above. Does it make sense? Why or why not?  "
+},
+{
+  "id": "equivalencerelations-27",
+  "level": "2",
+  "url": "equivalencerelations.html#equivalencerelations-27",
+  "type": "Checkpoint",
+  "number": "5.1.12",
+  "title": "",
+  "body": " Prove that the multiplication operation is well-defined on equivalence classes of fractions.  "
+},
+{
+  "id": "modulararithmetic",
   "level": "1",
-  "url": "continuedfractions.html",
+  "url": "modulararithmetic.html",
+  "type": "Section",
+  "number": "5.2",
+  "title": "Modular Arithmetic",
+  "body": " Modular Arithmetic    "
+},
+{
+  "id": "chineseremaindertheorem",
+  "level": "1",
+  "url": "chineseremaindertheorem.html",
+  "type": "Section",
+  "number": "5.3",
+  "title": "Chinese Remainder Theorem",
+  "body": " Chinese Remainder Theorem    "
+},
+{
+  "id": "fermatslittletheorem",
+  "level": "1",
+  "url": "fermatslittletheorem.html",
+  "type": "Section",
+  "number": "5.4",
+  "title": "Fermat’s Little Theorem",
+  "body": " Fermat's Little Theorem    "
+},
+{
+  "id": "musicalscalesandkeys",
+  "level": "1",
+  "url": "musicalscalesandkeys.html",
+  "type": "Section",
+  "number": "5.5",
+  "title": "Musical Scales and Keys",
+  "body": " Musical Scales and Keys    "
+},
+{
+  "id": "decimalexpansions",
+  "level": "1",
+  "url": "decimalexpansions.html",
   "type": "Section",
   "number": "6.1",
-  "title": "Continued Fractions",
-  "body": " Continued Fractions    "
+  "title": "Decimal Expansions",
+  "body": " Decimal Expansions    "
+},
+{
+  "id": "finitecontinuedfractions",
+  "level": "1",
+  "url": "finitecontinuedfractions.html",
+  "type": "Section",
+  "number": "6.2",
+  "title": "Finite Continued Fractions",
+  "body": " Finite Continued Fractions    "
+},
+{
+  "id": "infinitecontinuedfractions",
+  "level": "1",
+  "url": "infinitecontinuedfractions.html",
+  "type": "Section",
+  "number": "6.3",
+  "title": "Infinite Continued Fractions",
+  "body": " Infinite Continued Fractions    "
+},
+{
+  "id": "convergents",
+  "level": "1",
+  "url": "convergents.html",
+  "type": "Section",
+  "number": "6.4",
+  "title": "Convergents",
+  "body": " Convergents    "
+},
+{
+  "id": "microtonalscales",
+  "level": "1",
+  "url": "microtonalscales.html",
+  "type": "Section",
+  "number": "6.5",
+  "title": "Microtonal Scales",
+  "body": " Microtonal Scales    "
 },
 {
   "id": "pythagoreantheorem",
