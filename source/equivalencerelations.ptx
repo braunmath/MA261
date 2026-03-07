@@ -4,7 +4,89 @@
   <title>Equivalence Relations</title>
 
   <p>
-    
+    Throughout mathematics, we rely on the remainder of a division operation.
+    For example, even and odd numbers are numbers that have remainder <m>0</m> or <m>1</m> when divided by <m>2</m>.
+    We proved that there are infinitely many primes that have remainder <m>3</m> when divided by <m>4</m>.
   </p>
+  <p>
+    More practically, we rely on remainders all the time in our daily life.
+    When we measure time, we have <m>60</m> seconds in a minute, <m>60</m> minutes in an hour, <m>24</m> hours in a day, and <m>7</m> days in a week.
+    So, for example, if it is <m>10:35</m>am, then in <m>75</m> minutes it will be <m>11:50</m>am.
+    We know this because <m>75</m> minutes is <m>1</m> hour and <m>15</m> minutes, and adding that to <m>10:35</m>am gives us <m>15</m> minutes after <m>11:35</m>am.
+    If it is a Tuesday, then <m>9</m> days later it will be a Thursday, since <m>9</m> has remainder <m>2</m> when divided by <m>7</m> and two days after Tuesday is Thursday.
+    When we do these types of calculations with time, we are taking remainders using the numbers <m>60</m>, <m>24</m>, and <m>7</m>.
+  </p>
+  <p>
+    When we measure angles, we have <m>360</m> degrees in a circle.
+    So, when a snowboarder does a trick that involves spinning around by <m>720</m> degrees, we know that they have spun around twice and are facing the same direction as when they started, since <m>720</m> has remainder <m>0</m> when divided by <m>360</m>.
+    On the other hand, if they do a <m>540</m> degree spin, then they have spun around once and a half times, and are facing the opposite direction as when they started, since <m>540</m> has remainder <m>180</m> when divided by <m>360</m>.
+  </p>
+  <p>
+    In this way, we see that there are certain days that are equivalent; every Tuesday differs from every other Tuesday by a multiple of <m>7</m> days.
+    Every May differs from every other May by a multiple of <m>12</m> months.
+    A snowboarder is facing the same direction as every other snowboarder who has gone through a spin that differs from theirs by a multiple of <m>360</m> degrees.
+  </p>
+  <p>
+    These are all examples of <em>equivalence relations</em>, which are a fundamental concept in formal mathematics.
+    We will develop the theory of equivalence relations in this section, and then we will use it to define a new type of arithmetic on a finite set of numbers <m>\{0,1,2,\ldots,n-1\}</m> called <em>modular arithmetic</em>.
+  </p>
+  <p>
+    Motivated by the examples above, we will begin with the formal definition of an equivalence relation.
+    </p>
+
+    <definition xml:id="def-equivalencerelation">
+      <statement>
+        <p>
+          Let <m>S</m> be a set.
+          An <alert>equivalence relation</alert> on <m>S</m> is a binary relation <m>\cong</m> on <m>S</m> such that for all <m>a,b,c \in S</m>, we have:
+          <ul>
+            <li><m>a \cong a</m> (reflexivity)</li>
+            <li>if <m>a \cong b</m>, then <m>b \cong a</m> (symmetry)</li>
+            <li>if <m>a \cong b</m> and <m>b \cong c</m>, then <m>a \cong c</m> (transitivity).</li>
+          </ul> 
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Here is a key observation:
+      <center>
+        <em>Many of the things students think of as "equalities" are actually equivalences.</em>
+      </center>
+      Let's look at some examples.
+    </p>
+
+    <example>
+      <p>
+      Consider the set of all lines in the plane.
+      We can define a relation on this set by saying that two lines are related if they are parallel.
+      This relation is an equivalence relation, which we can check as follows.
+      First, since every line is parallel to itself, reflexivity is satisfied.
+      Second, note that if a line is parallel to another line, then the second line is parallel to the first line. 
+      Thus, symmetry is satisfied.
+      Third, if a line is parallel to a second line, and the second line is parallel to a third line, then the first line is parallel to the third line.
+      Thus, transitivity is satisfied.
+      So, parallelism is an equivalence relation on the set of lines in the plane.
+      </p>
+    </example>
+
+    <exercise>
+      <p>
+        Students are taught that <m>\frac{1}{2} = \frac{2}{4}</m>.
+        However, this is not actually an equality!
+        For example, if I have two apples and I take one of them, this is not the same as if I have four apples and I take two of them.
+        So, one out of two is not the same as two out of four.
+        However, we <em>define</em> that the fractions <m>\frac{a}{b}</m> and <m>\frac{c}{d}</m> are equivalent if <m>ad = bc</m>.
+        With this definition, we see that <m>\frac{1}{2} \cong \frac{2}{4}</m>.
+        <ol>
+          <li>
+            <p>
+              Prove that this relation satisfies reflexivity, symmetry, and transitivity.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </exercise>
+
 
 </section>
