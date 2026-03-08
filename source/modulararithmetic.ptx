@@ -4,7 +4,341 @@
   <title>Modular Arithmetic</title>
 
   <p>
-    
+    Now that we have developed the concept of equivalence relations and equivalence classes, we can use this to construct systems of modular arithmetic.
   </p>
+
+  <definition xml:id="def-congruence">
+    <statement>
+      <p>
+        Let <m>a,b,n \in \mathbb{Z}</m> with <m>n \gt 0</m>.
+        We say that <m>a</m> is <alert>congruent</alert> to <m>b</m> modulo <m>n</m>, written <me>a \equiv b \pmod{n}\, ,</me> if <m>n \mid (a-b)</m>.
+        In other words, <m>a</m> and <m>b</m> are congruent modulo <m>n</m> if their difference is divisible by <m>n</m>, which is the same as saying that <m>a</m> and <m>b</m> have the same remainder when divided by <m>n</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    For example, we have that <m>17 \equiv 5 \pmod{12}</m>, because <m>17-5=12</m> is divisible by <m>12</m>.
+    We also have that <m>17 \equiv 29 \pmod{12}</m>, because <m>17-29=-12</m> is divisible by <m>12</m>.
+    Thus, the set of integers that are congruent to <m>17</m> modulo <m>12</m> is
+    <me> \{17+12t: t\in \mathbb{Z}\} = \{\ldots, -7, 5, 17, 29, 41, \ldots\} \, .</me>
+  </p>
+
+  <theorem xml:id="thm-congruenceequivalence">
+    <statement>
+      <p>
+        The relation of congruence modulo <m>n</m> is an equivalence relation on <m>\mathbb{Z}</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      We need to show that the relation of congruence modulo <m>n</m> is reflexive, symmetric, and transitive.
+      <ol>
+        <li>
+          <p>
+            To show that the relation is reflexive, we need to show that <m>a \equiv a \pmod{n}</m> for all <m>a \in \mathbb{Z}</m>.
+            This is true because <m>a-a=0</m> is divisible by <m>n</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            To show that the relation is symmetric, we need to show that if <m>a \equiv b \pmod{n}</m>, then <m>b \equiv a \pmod{n}</m>.
+            This is true because if <m>a \equiv b \pmod{n}</m>, then <m>n \mid (a-b)</m>, which means that <m>n \mid (b-a)</m>, which means that <m>b \equiv a \pmod{n}</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            To show that the relation is transitive, we need to show that if <m>a \equiv b \pmod{n}</m> and <m>b \equiv c \pmod{n}</m>, then <m>a \equiv c \pmod{n}</m>.
+            Observe that if <m>a \equiv b \pmod{n}</m>, then <m>n \mid (a-b)</m>.
+            Also, if <m>b \equiv c \pmod{n}</m>, then <m>n \mid (b-c)</m>.
+            Adding these values, we have <m>n \mid ((a-b)+(b-c))</m>, which means that <m>n \mid (a-c)</m>.
+            Thus, we have <m>a \equiv c \pmod{n}</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </proof>
+
+  <exercise>
+    <p>
+      Discuss the proof above. Does it make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      Use set notation to write the following equivalence classes of integers.
+      <ol>
+        <li>
+          <p>
+            <m>[0]</m> modulo <m>7</m>.
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>[3]</m> modulo <m>17</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+  
+  <p>
+    We next wish to introduce an arithmetic structure on the equivalence classes of integers modulo <m>n</m>.
+  </p>
+
+  <definition xml:id="def-modulararithmetic">
+    <statement>
+      <p>
+        Let <m>n\gt 0</m>.
+        We write the set of equivalence classes of integers modulo <m>n</m> as <m>\mathbb{Z}/n\mathbb{Z}</m>, which we call "Z mod nZ".
+        We define addition and multiplication on <m>\mathbb{Z}/n\mathbb{Z}</m> as follows.
+        For <m>[a],[b] \in \mathbb{Z}/n\mathbb{Z}</m>, we define <me>[a]+[b] := [a+b]</me> and <me>[a][b] := [ab]</me>.
+        We call the resulting system of equivalence classes with these operations of addition and multiplication the <alert>modular arithmetic system</alert> modulo <m>n</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise>
+    <p>
+      In <m>\mathbb{Z}/12\mathbb{Z}</m>, compute the following sums and products.
+      Which of the resulting equivalence classes are the same?
+      <ol>
+        <li>
+          <p>
+            <m>[5]+[9]</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>[17]+[33]</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>[17][29]</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>[-7][41]</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+
+  <p>
+    As with the case of equivalent fractions, we need to prove that the operations of addition and multiplication on equivalence classes of integers modulo <m>n</m> are well-defined, meaning that the result does not depend on the choice of representatives of the equivalence classes we are adding or multiplying together.
+  </p>
+
+  <theorem xml:id="thm-modulararithmeticwelldefined">
+    <statement>
+      <p>
+        Modular arithmetic is well-defined.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      We first need to prove that addition is well-defined modulo <m>n</m>.
+      We need to show that if <m>[a] = [a']</m> and <m>[b] = [b']</m>, then <m>[a+b] = [a'+b']</m>.
+      Because <m>[a] = [a']</m>, we have that <m>n \mid (a-a')</m>, and similarly for <m>[b]=[b']</m>.
+      Thus, <me>n \mid (a-a' + b-b') = ((a+b) - (a'+b'))\, ,</me> which means that <m>[a+b] = [a'+b']</m>.
+    </p>
+    <p>
+      Next, we need to prove that multiplication is well-defined modulo <m>n</m>.
+      We need to show that if <m>[a] = [a']</m> and <m>[b] = [b']</m>, then <m>[ab] = [a'b']</m>.
+      Because <m>[a] = [a']</m>, we have that <m>n \mid (a-a')</m>, and similarly for <m>[b]=[b']</m>.
+      Thus, <me>n \mid ((a-a')b + a'(b-b')) = ab - a'b + a'b - a'b' = ab-a'b' \, ,</me> which means that <m>[ab] = [a'b']</m>.
+    </p>
+  </proof>
+
+  <exercise>
+    <p>
+      Discuss the proof above. Does it make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <p>
+    Because modular arithmetic is well-defined, we can treat the equivalence classes of integers modulo <m>n</m> as if they were independent objects, and we can add and multiply them together by selecting representatives of each class and get the same result regardless of which representatives we choose to add or multiply together.
+    In practice, we usually use the values <me>\{0,1,2,3,\ldots,n-1\}</me>, which we call <alert>distinguished representatives</alert>, as the representatives for each equivalence class.
+    When we add these values, we "reduce mod <m>n</m>", meaning that if we end up with a value larger than <m>n</m>, we replace that number with the remainder after dividing by <m>n</m>.
+  </p>
+
+  <p>
+    A common convention for representing the equivalence classes modulo <m>n</m> is to write the values <m>\{0,1,2,3,\ldots,n-1\}</m> on a clock.
+    For example, the equivalence classes of integers modulo <m>12</m> are represented on a clock with the numbers <m>0</m> through <m>11</m>, and we add by moving clockwise around the clock.
+  </p>
+
+  <exercise>
+    <p>
+      Represent the equivalence classes of integers modulo <m>5</m> on a clock with five hours, and use this to interpret the value of <me>[3]+[4]</me> and <me>[3][4]</me> in <m>\mathbb{Z}/5\mathbb{Z}</m>.
+    </p>
+  </exercise>
+
+    <p>
+      Our usual clock represents the equivalence classes of integers modulo <m>12</m>.
+      Thus, if it is 10 o'clock and we want to know what time it will be in 7 hours, we are computing <me>[10]+[7] = [17] = [5]</me> modulo <m>12</m>, so it will be 5 o'clock.
+    </p>
+  
+    <p>
+      Because modular arithmetic relies on addition and multiplication in the integers, we can use the properties of addition and multiplication in the integers to deduce properties of addition and multiplication in modular arithmetic.
+      This leads to the following theorem, which we will not prove in detail.
+    </p>
+
+    <theorem xml:id="thm-modulararithmeticproperties">
+      <statement>
+        <p>
+          Modular addition and multiplication are commutative, associative, and the distributive law holds.
+          Further, the cancellation law holds for addition, meaning that if <m>[a]+[c] = [b]+[c]</m>, then <m>[a] = [b]</m>.
+          An equivalent way to state the cancellation law is that if 
+          <me> a + c \equiv b +c \pmod{n} \, ,</me> then <me> a \equiv b \pmod{n} \, .</me>
+        </p>
+      </statement>
+    </theorem>
+
+    <exercise>
+      <p>
+        Discuss with your group: why does it make sense that the cancellation law holds?
+      </p>
+    </exercise>
+
+    <p>
+      There are some significant differences between arithmetic in the integers and modular arithmetic.
+      The first major difference is that it is possible to multiply two nonzero equivalence classes together and get the zero equivalence class.
+      For example, in <m>\mathbb{Z}/6\mathbb{Z}</m>, we have that <m>[2][3] = [6] = [0]</m>.
+    </p>
+
+    <definition xml:id="def-zerodivisor">
+      <statement>
+        <p>
+          A <alert>zero divisor</alert> in a modular arithmetic system is a nonzero equivalence class <m>[a]</m> such that there exists a nonzero equivalence class <m>[b]</m> with <m>[a][b] = [0]</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <exercise>
+      <p>
+        Find all of the zero divisors in <m>\mathbb{Z}/12\mathbb{Z}</m>.
+      </p>
+    </exercise>
+    
+      <p>
+        Another major difference is that it is not always possible to divide in modular arithmetic.
+        For example, in <m>\mathbb{Z}/6\mathbb{Z}</m>, we have that <m>[2][3] = [0]</m>, so if we try to divide both sides by <m>[2]</m>, we get <m>[3] = [0]</m>, which is not true.
+        This leads to the following definition.
+      </p>
+  
+        <definition xml:id="def-unit">
+          <statement>
+            <p>
+              A <alert>unit</alert> in <m>\mathbb{Z}/n\mathbb{Z}</m> is an equivalence class <m>[a]\neq [0]</m> such that there exists an equivalence class <m>[b]</m> with <m>[a][b] = [1]</m>.
+              In this case, we call <m>[b]</m> the <alert>multiplicative inverse</alert> of <m>[a]</m>, and denote it as <m>[a]^{-1}</m>.
+              Equivalently, <m>[a]</m> is a unit if there exists a non-zero <m>b</m> such that <me>ab \equiv 1 \pmod{n} \, .</me>
+            </p>
+          </statement>
+        </definition>
+  
+        <exercise>
+          <p>
+            Find all of the units in <m>\mathbb{Z}/12\mathbb{Z}</m> and their multiplicative inverses.
+          </p>
+        </exercise>
+
+        <p>
+          From the examples above, you might conjecture the following theorem.
+        </p>
+
+        <theorem xml:id="thm-modularunits">
+          <statement>
+            <p>
+              In <m>\mathbb{Z}/n\mathbb{Z}</m>, an equivalence class <m>[a]</m> is a unit if and only if <m>\gcd(a,n)=1</m>.
+            </p>
+          </statement>
+        </theorem>
+
+        <proof>
+          <p>
+            We first prove the forward direction.
+            Assume that <m>[a]</m> is a unit in <m>\mathbb{Z}/n\mathbb{Z}</m>.
+            Then there exists an equivalence class <m>[b]</m> such that <m>[a][b] = [1]</m>.
+            This means that <m>ab \equiv 1 \pmod{n}</m>, which means that <m>n \mid (ab-1)</m>.
+            Thus, there exists an integer <m>t</m> such that <m>ab-1 = nt</m>, which means that <m>ab + nt = 1</m>.
+            This is the Bezout identity, which implies that <m>\gcd(a,n)=1</m>.
+          </p>
+          <p>
+            We next prove the reverse direction.
+            Assume that <m>\gcd(a,n)=1</m>.
+            Then there exist integers <m>x</m> and <m>y</m> such that <m>ax + ny = 1</m>.
+            This means that <m>ax \equiv 1 \pmod{n}</m>, which means that <m>[a][x] = [1]</m>.
+            Thus, <m>[a]</m> is a unit in <m>\mathbb{Z}/n\mathbb{Z}</m>.
+          </p>
+        </proof>
+
+        <exercise>
+          <p>
+            Discuss the proof above. Does it make sense? Why or why not?
+          </p>
+        </exercise>
+        
+        <p>
+          Observe another interesting property of modular arithmetic: if we add a nonzero equivalence class to itself enough times, we can get the zero equivalence class.
+          For example, in <m>\mathbb{Z}/6\mathbb{Z}</m>, we have that <m>[2]+[2]+[2] = [6] = [0]</m>.
+          In general, we have that in <m>\mathbb{Z}/n\mathbb{Z}</m>, if we add <m>[a]</m> to itself <m>n</m> times, we get <m>[0]</m>.
+          This leads to the definition of the additive order of an equivalence class in modular arithmetic.
+        </p>
+
+        <definition xml:id="def-modularorder">
+          <statement>
+            <p>
+              Let <m>[a] \in \mathbb{Z}/n\mathbb{Z}</m>.
+              The <alert>additive order</alert> of <m>[a]</m> is the smallest positive integer <m>k</m> such that <me>[a]+[a]+\cdots+[a] = [0]\, ,</me> where there are <m>k</m> copies of <m>[a]</m> in the sum.
+              We denote the additive order by <m>|[a]|</m>.
+            </p>
+          </statement>
+        </definition>
+
+        <exercise>
+          <p>
+            Find the additive order of each equivalence class in <m>\mathbb{Z}/12\mathbb{Z}</m>.
+          </p>
+        </exercise>
+
+        <p>
+          From the examples you just worked out, we can see the following interesting fact: the order of an equivalence class in <m>\mathbb{Z}/n\mathbb{Z}</m> divides <m>n</m>.
+        </p>
+
+        <theorem xml:id="thm-modularorderdivides">
+          <statement>
+            <p>
+              Let <m>[a] \in \mathbb{Z}/n\mathbb{Z}</m>.
+              Then <m>|[a]|=n/\gcd(a,n)</m>, and thus the additive order divides <m>n</m>.
+            </p>
+          </statement>
+        </theorem>
+
+        <proof>
+          <p>
+            We set <m>d=\gcd(a,n)</m>.
+            Then we can write <m>a = da'</m> and <m>n = dn'</m> for some integers <m>a'</m> and <m>n'</m> with <m>\gcd(a',n')=1</m>.
+            We need to show that the smallest positive integer <m>k</m> such that <me>[a]+[a]+\cdots+[a] = [0]\, ,</me> where there are <m>k</m> copies of <m>[a]</m> in the sum, is equal to <m>n/\gcd(a,n) = n/d = n'</m>.
+            Observe that <me>[a]+[a]+\cdots+[a] = [ka] = [kda']\, .</me>
+            If we want this to be equal to <m>[0]</m>, we need <m>n\mid ka</m>, which is the same as <m>dn' \mid kda'</m>, which is the same as <m>n' \mid ka'</m>.
+            Because <m>\gcd(a',n')=1</m>, we have that <m>n' \mid ka'</m> if and only if <m>n'</m> divides <m>k</m>.
+            Thus, the smallest positive integer <m>k</m> such that <m>n'\mid ka'</m> is <m>n'</m>, which means that the smallest positive integer <m>k</m> such that <me>[a]+[a]+\cdots+[a] = [0]\, ,</me> where there are <m>k</m> copies of <m>[a]</m> in the sum, is <m>n'</m>.
+            Thus, the additive order of <m>[a]</m> is <m>n/d = n/\gcd(a,n)</m>, which divides <m>n</m>.
+          </p>
+        </proof>
+
+        <exercise>
+          <p>
+            Discuss the proof above. Does it make sense? Why or why not?
+          </p>
+        </exercise>
+        
 
 </section>

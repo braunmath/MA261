@@ -5,7 +5,7 @@
 
   <p>
     Throughout mathematics, we rely on the remainder of a division operation.
-    For example, even and odd numbers are numbers that have remainder <m>0</m> or <m>1</m> when divided by <m>2</m>.
+    For example, even and odd numbers are numbers that have remainder <m>0</m> and <m>1</m>, respectively, when divided by <m>2</m>.
     We proved that there are infinitely many primes that have remainder <m>3</m> when divided by <m>4</m>.
   </p>
   <p>
@@ -87,11 +87,25 @@
       Consider the set of all lines in the plane.
       We can define a relation on this set by saying that two lines are related if they are parallel.
       This relation is an equivalence relation, which we can check as follows.
-      First, since every line is parallel to itself, reflexivity is satisfied.
-      Second, note that if a line is parallel to another line, then the second line is parallel to the first line. 
+      <ul>
+        <li>
+          <p>
+                  First, since every line is parallel to itself, reflexivity is satisfied.
+          </p>
+        </li>
+        <li>
+          <p>
+            Second, note that if a line is parallel to another line, then the second line is parallel to the first line. 
       Thus, symmetry is satisfied.
-      Third, if a line is parallel to a second line, and the second line is parallel to a third line, then the first line is parallel to the third line.
+          </p>
+        </li>
+        <li>
+          <p>
+            Third, if a line is parallel to a second line, and the second line is parallel to a third line, then the first line is parallel to the third line.
       Thus, transitivity is satisfied.
+          </p>
+        </li>
+      </ul>
       So, parallelism is an equivalence relation on the set of lines in the plane.
       </p>
     </example>
@@ -109,13 +123,13 @@
       However, this is not actually an equality!
       For example, if I have two apples and I take one of them, this is not the same as if I have four apples and I take two of them.
       So, one out of two is not the same as two out of four.
-      However, we can <em>define</em> that the fractions <m>\frac{a}{b}</m> and <m>\frac{c}{d}</m> are equivalent if <m>ad = bc</m>, and we write <m>\frac{a}{b} \cong \frac{c}{d}</m>.
+      However, we can <em>define</em> that the fractions <m>\frac{a}{b}</m> and <m>\frac{c}{d}</m> are <alert>equivalent</alert> if <m>ad = bc</m>, and we write <me>\frac{a}{b} \cong \frac{c}{d}</me>.
       With this definition, we see that <m>\frac{1}{2} \cong \frac{2}{4}</m>, and by tradition we write this as an equality.
     </p>
 
     <exercise>
       <p>
-        Prove that this binary relation on fractions satisfies reflexivity, symmetry, and transitivity.
+        Prove that the binary relation defined above on fractions satisfies reflexivity, symmetry, and transitivity.
       </p>
     </exercise>
 
@@ -186,17 +200,18 @@
     </p>
     <p>
       For example, if we take a representative of the equivalence class of <m>[\frac{1}{2}]</m>, such as <m>\frac{2}{4}</m>, and a representative of the equivalence class of <m>[\frac{2}{3}]</m>, such as <m>\frac{6}{9}</m>, and we add them together, we get <m>\frac{2}{4}+\frac{6}{9}=\frac{42}{36}</m>.
-      So, we have that <m>[\frac{1}{2}]+[\frac{2}{3}] = [\frac{42}{36}]</m>.
-      But, if we take different representatives of the same equivalence classes, such as <m>\frac{3}{6}</m> and <m>\frac{4}{6}</m>, and we add them together, we get <m>\frac{3}{6}+\frac{4}{6}=\frac{7}{6}</m>.
-      So, we have that <m>[\frac{1}{2}]+[\frac{2}{3}] = [\frac{7}{6}]</m>.
+      So, we have that <me>[\frac{1}{2}]+[\frac{2}{3}] = [\frac{42}{36}]</me>.
+      But, if we take different representatives of the same equivalence classes, such as <m>\frac{3}{6}</m> and <m>\frac{4}{6}</m>, and we add them together, we get <me>\frac{3}{6}+\frac{4}{6}=\frac{7}{6}</me>.
+      So, we have that <me>[\frac{1}{2}]+[\frac{2}{3}] = [\frac{7}{6}]</me>.
       How do we know that <m>[\frac{42}{36}]</m> and <m>[\frac{7}{6}]</m> are always the same equivalence class?
+      How do we know that we always get the same equivalence class regardless of which of the infinitely many choices of representatives we pick from the equivalence classes we are adding?
     </p>
 
     <theorem xml:id="thm-addingfractions">
       <statement>
         <p>
           The addition operation is well-defined on equivalence classes of fractions.
-          In other words, if <m>\frac{a}{b} \cong \frac{a'}{b'}</m> and <m>\frac{c}{d} \cong \frac{c'}{d'}</m>, then <m>\frac{a}{b}+\frac{c}{d} \cong \frac{a'}{b'}+\frac{c'}{d'}</m>.
+          In other words, if <m>\frac{a}{b} \cong \frac{a'}{b'}</m> and <m>\frac{c}{d} \cong \frac{c'}{d'}</m>, then <me>\frac{a}{b}+\frac{c}{d} \cong \frac{a'}{b'}+\frac{c'}{d'}</me>.
         </p>
       </statement>
     </theorem>
@@ -204,8 +219,8 @@
     <proof>
       <p>
         We have that <m>\frac{a}{b} \cong \frac{a'}{b'}</m> means that <m>ab' = a'b</m>, and <m>\frac{c}{d} \cong \frac{c'}{d'}</m> means that <m>cd' = c'd</m>.
-        We need to show that <m>(ad+cb)(b'd') = (a'd'+c'b')(bd)</m>, which is the required condition for <m>\frac{a}{b}+\frac{c}{d} \cong \frac{a'}{b'}+\frac{c'}{d'}</m>.
-        We see that
+        We need to show that <me>(ad+cb)(b'd') = (a'd'+c'b')(bd)</me>, which is the required condition to establish that <me>\frac{a}{b}+\frac{c}{d} \cong \frac{a'}{b'}+\frac{c'}{d'}</me>.
+        Because <m>ab' = a'b</m> and <m>cd' = c'd</m>, we have
         <md>
           (ad+cb)(b'd') = adb'd' + cbb'd' = a'bdd' + c'bdd' = (a'd'+c'b')(bd) \, .
         </md>
@@ -221,6 +236,7 @@
 
     <p>
       The previous two theorems show that we can treat the equivalence classes of fractions as if they were independent objects, and we can add them together by selecting representatives of each class and get the same result regardless of which representatives we choose to add together.
+      Thus, addition of equivalence classes of fractions is "well-defined".
       We will do something similar when we construct the modular arithmetic system in the next section.
     </p>
 
