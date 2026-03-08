@@ -37,21 +37,22 @@
     <definition xml:id="def-binaryrelation">
       <statement>
         <p>
-          A <em>binary relation</em> on a set <m>S</m> is a subset of the Cartesian product <m>S \times S</m>.
-          We write <m>a \sim b</m> to indicate that the ordered pair <m>(a,b)</m> is in the binary relation.
+          A <alert>binary relation</alert> on a set <m>S</m> is a subset of the Cartesian product <m>S \times S:=\{(a,b) : a,b \in S\}</m>.
+          We write <m>a \cong b</m> to indicate that the ordered pair <m>(a,b)</m> is in the binary relation.
         </p>
       </statement>
     </definition>
 
       <p>
         In other words, a binary relation on <m>S</m> is a collection of ordered pairs of elements of <m>S</m>.
-        We say that two elements <m>a,b \in S</m> are <em>related</em> if <m>a \sim b</m>.
+        We say that two elements <m>a,b \in S</m> are <em>related</em> if <m>a \cong b</m>.
         An equivalence relation is a special type of binary relation.
       </p>
 
       <exercise>
         <p>
           What binary relation on <m>\mathbb{R}</m> is represented by the graph of the function <m>f(x)=x^2+1</m>?
+          (Recall that the graph of a function represents a specific collection of ordered pairs in <m>\mathbb{R}\times \mathbb{R}</m>.)
         </p>
       </exercise>
 
@@ -59,11 +60,11 @@
       <statement>
         <p>
           Let <m>S</m> be a set.
-          An <alert>equivalence relation</alert> on <m>S</m> is a binary relation <m>\sim</m> on <m>S</m> such that for all <m>a,b,c \in S</m>, we have:
+          An <alert>equivalence relation</alert> on <m>S</m> is a binary relation <m>\cong</m> on <m>S</m> such that for all <m>a,b,c \in S</m>, we have:
           <ul>
-            <li><m>a \sim a</m> (reflexivity)</li>
-            <li>if <m>a \sim b</m>, then <m>b \sim a</m> (symmetry)</li>
-            <li>if <m>a \sim b</m> and <m>b \sim c</m>, then <m>a \sim c</m> (transitivity).</li>
+            <li><m>a \cong a</m> (reflexivity)</li>
+            <li>if <m>a \cong b</m>, then <m>b \cong a</m> (symmetry)</li>
+            <li>if <m>a \cong b</m> and <m>b \cong c</m>, then <m>a \cong c</m> (transitivity).</li>
           </ul> 
         </p>
       </statement>
@@ -78,7 +79,7 @@
     <p>
       Here is a key observation:
         <em>Many of the things students have been trained to think of as "equalities" are actually "equivalences".</em>
-      Let's look at some examples.
+      Let's look at an example.
     </p>
 
     <example>
@@ -97,19 +98,24 @@
 
     <exercise>
       <p>
-        Students are taught that <m>\frac{1}{2} = \frac{2}{4}</m>.
-        However, this is not actually an equality!
-        For example, if I have two apples and I take one of them, this is not the same as if I have four apples and I take two of them.
-        So, one out of two is not the same as two out of four.
-        However, we can <em>define</em> that the fractions <m>\frac{a}{b}</m> and <m>\frac{c}{d}</m> are equivalent if <m>ad = bc</m>, and we write <m>\frac{a}{b} \sim \frac{c}{d}</m>.
-        With this definition, we see that <m>\frac{1}{2} \sim \frac{2}{4}</m>, and by tradition we write this as an equality.
-        <ol>
-          <li>
-            <p>
-              Prove that this relation on fractions satisfies reflexivity, symmetry, and transitivity.
-            </p>
-          </li>
-        </ol>
+        Discuss the example above. Does it make sense? Why or why not?
+      </p>
+    </exercise>
+
+    <p>
+      A very important example of an equivalence relation is the definition of when two fractions are equivalent.
+      We will focus on this case next.
+      Students are taught that <m>\frac{1}{2} = \frac{2}{4}</m>.
+      However, this is not actually an equality!
+      For example, if I have two apples and I take one of them, this is not the same as if I have four apples and I take two of them.
+      So, one out of two is not the same as two out of four.
+      However, we can <em>define</em> that the fractions <m>\frac{a}{b}</m> and <m>\frac{c}{d}</m> are equivalent if <m>ad = bc</m>, and we write <m>\frac{a}{b} \cong \frac{c}{d}</m>.
+      With this definition, we see that <m>\frac{1}{2} \cong \frac{2}{4}</m>, and by tradition we write this as an equality.
+    </p>
+
+    <exercise>
+      <p>
+        Prove that this binary relation on fractions satisfies reflexivity, symmetry, and transitivity.
       </p>
     </exercise>
 
@@ -120,7 +126,8 @@
       </md>
       breaks up into classes of fractions that are equivalent to each other.
       What we "know" from elementary school is that each fraction is in a unique class.
-      This turns out to be a general property of equivalence relations.     
+      In formal mathematics, this requires a proof!
+      It turns out that this represents a general property of equivalence relations.
     </p>
 
     <definition xml:id="def-equivalenceclass">
@@ -128,7 +135,7 @@
         <p>
           For each element <m>a \in S</m>, we define the <em>equivalence class</em> of <m>a</m> to be the set
         <md>
-          [a] = \{x \in S : x \sim a\} \, .
+          [a] = \{x \in S : x \cong a\} \, .
         </md>
         </p>
       </statement>
@@ -141,22 +148,28 @@
       </md>
     </p>
 
+    <exercise>
+      <p>
+        What is the equivalence class of the line <m>y=2x+3</m> under the parallelism equivalence relation?
+      </p>
+    </exercise>
+
     <theorem xml:id="thm-equivalencepartition">
       <statement>
         <p>
-          An equivalence relation <m>\sim</m> on a set <m>S</m> partitions <m>S</m> as a disjoint union of the equivalence classes for <m>\sim</m>.
+          An equivalence relation <m>\cong</m> on a set <m>S</m> partitions <m>S</m> as a disjoint union of the equivalence classes for <m>\cong</m>.
         </p>
       </statement>
     </theorem>
 
     <proof>
       <p>
-        First, note that every element <m>a \in S</m> is in its own equivalence class, since <m>a \sim a</m>.
+        First, note that every element <m>a \in S</m> is in its own equivalence class, since <m>a \cong a</m>.
         Thus, the union of all the equivalence classes is equal to <m>S</m>.
         Second, we will show that if two equivalence classes have a common element, then they are equal.
         So, let <m>[a]</m> and <m>[b]</m> be two equivalence classes, and suppose that they have a common element <m>x</m>.
-        Then, by definition of equivalence class, we have <m>a \sim x</m> and <m>x \sim b</m>.
-        By transitivity of the equivalence relation, we have <m>a\sim b</m>.
+        Then, by definition of equivalence class, we have <m>a \cong x</m> and <m>x \cong b</m>.
+        By transitivity of the equivalence relation, we have <m>a\cong b</m>.
       </p>
     </proof>
 
@@ -167,7 +180,11 @@
     </exercise>
 
     <p>
-      Here is an interesting question: how do we know that if we pick two different elements from two different equivalence classes, and add them together, that they give the same equivalence class as a result?
+      Let's return to our example of equivalent fractions.
+      Here is an interesting question: Suppose we pick two different representatives from each of two different equivalence classes of fractions and then we add them together. 
+      How do we know that these two addition processes result in fractions representing the same equivalence class?
+    </p>
+    <p>
       For example, if we take a representative of the equivalence class of <m>[\frac{1}{2}]</m>, such as <m>\frac{2}{4}</m>, and a representative of the equivalence class of <m>[\frac{2}{3}]</m>, such as <m>\frac{6}{9}</m>, and we add them together, we get <m>\frac{2}{4}+\frac{6}{9}=\frac{42}{36}</m>.
       So, we have that <m>[\frac{1}{2}]+[\frac{2}{3}] = [\frac{42}{36}]</m>.
       But, if we take different representatives of the same equivalence classes, such as <m>\frac{3}{6}</m> and <m>\frac{4}{6}</m>, and we add them together, we get <m>\frac{3}{6}+\frac{4}{6}=\frac{7}{6}</m>.
@@ -179,18 +196,18 @@
       <statement>
         <p>
           The addition operation is well-defined on equivalence classes of fractions.
-          In other words, if <m>\frac{a}{b} \sim \frac{a'}{b'}</m> and <m>\frac{c}{d} \sim \frac{c'}{d'}</m>, then <m>\frac{a}{b}+\frac{c}{d} \sim \frac{a'}{b'}+\frac{c'}{d'}</m>.
+          In other words, if <m>\frac{a}{b} \cong \frac{a'}{b'}</m> and <m>\frac{c}{d} \cong \frac{c'}{d'}</m>, then <m>\frac{a}{b}+\frac{c}{d} \cong \frac{a'}{b'}+\frac{c'}{d'}</m>.
         </p>
       </statement>
     </theorem>
 
     <proof>
       <p>
-        We have that <m>\frac{a}{b} \sim \frac{a'}{b'}</m> means that <m>ab' = a'b</m>, and <m>\frac{c}{d} \sim \frac{c'}{d'}</m> means that <m>cd' = c'd</m>.
-        We need to show that <m>(ad+cb)(b'd') = (a'd'+c'b')(bd)</m>, which is the required condition for <m>\frac{a}{b}+\frac{c}{d} \sim \frac{a'}{b'}+\frac{c'}{d'}</m>.
+        We have that <m>\frac{a}{b} \cong \frac{a'}{b'}</m> means that <m>ab' = a'b</m>, and <m>\frac{c}{d} \cong \frac{c'}{d'}</m> means that <m>cd' = c'd</m>.
+        We need to show that <m>(ad+cb)(b'd') = (a'd'+c'b')(bd)</m>, which is the required condition for <m>\frac{a}{b}+\frac{c}{d} \cong \frac{a'}{b'}+\frac{c'}{d'}</m>.
         We see that
         <md>
-          (ad+cb)(b'd') = adb'd' + cbb'd' = a'bdb'd' + c'bdb'd' = (a'd'+c'b')(bd) \, .
+          (ad+cb)(b'd') = adb'd' + cbb'd' = a'bdd' + c'bdd' = (a'd'+c'b')(bd) \, .
         </md>
         Therefore, the result holds.
       </p>
@@ -203,18 +220,21 @@
     </exercise>
 
     <p>
-      The previous two theorems show that we can treat the equivalence classes of fractions as if they were fractions themselves, and we can add them together and get the same result regardless of which representatives we choose to add together.
+      The previous two theorems show that we can treat the equivalence classes of fractions as if they were independent objects, and we can add them together by selecting representatives of each class and get the same result regardless of which representatives we choose to add together.
       We will do something similar when we construct the modular arithmetic system in the next section.
     </p>
+
+    <exercise>
+      <p>
+        Discuss the statement above. Does it make sense? Why or why not?
+      </p>
+    </exercise>
     
     <exercise>
       <p>
         Prove that the multiplication operation is well-defined on equivalence classes of fractions.
       </p>
-    </exercise>
-
-
-    
+    </exercise>  
     
 
 
