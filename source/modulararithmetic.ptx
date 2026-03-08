@@ -284,7 +284,65 @@
             Discuss the proof above. Does it make sense? Why or why not?
           </p>
         </exercise>
+
+        <p>
+          When <m>n</m> is a prime number, the condition <m>\gcd(a,n)=1</m> is always true for <m>a=1,2,\ldots,n-1</m>.
+          In this case, every non-zero equivalence class is a unit.
+          We record this formally below.
+        </p>
+
+        <corollary xml:id="cor-modularunitsprime">
+          <statement>
+            <p>
+              If <m>p</m> is prime, then every non-zero equivalence class in <m>\mathbb{Z}/p\mathbb{Z}</m> is a unit.
+            </p>
+          </statement>
+        </corollary>
+
+        <proof>
+          <p>
+            This follows immediately from the fact that if <m>p</m> is prime, then <m>\gcd(a,p)=1</m> for all <m>a=1,2,\ldots,p-1</m>.
+          </p>
+        </proof>
+
+        <p>
+          We use the Euclidean algorithm and the Bezout identity to find the multiplicative inverse of an equivalence class <m>[a]</m> in <m>\mathbb{Z}/n\mathbb{Z}</m> when <m>\gcd(a,n)=1</m>.
+          Specifically, we use the Euclidean algorithm to find integers <m>x</m> and <m>y</m> such that <m>ax + ny = 1</m>.
+          Then we have that <m>ax \equiv 1 \pmod{n}</m>, which means that <m>[a][x] = [1]</m>, so <m>[x]</m> is the multiplicative inverse of <m>[a]</m>.
+        </p>
+
+        <exercise>
+          <p>
+            Find the multiplicative inverse of <m>[5]</m> in <m>\mathbb{Z}/12\mathbb{Z}</m> using the Euclidean algorithm and the Bezout identity.
+          </p>
+        </exercise>
+
+        <p>
+          A key role played by units is that these are the only equivalence classes that we can cancel in modular arithmetic.
+        </p>
+
+        <theorem xml:id="thm-modularunitdivision">
+          <statement>
+            <p>
+              Suppose that <m>[a]</m> is a unit in <m>\mathbb{Z}/n\mathbb{Z}</m>, and suppose that <m>[a][b] = [a][c]</m>.
+              Then <m>[b] = [c]</m>. 
+            </p>
+          </statement>
+        </theorem>
         
+        <proof>
+          <p>
+            Because <m>[a]</m> is a unit, there exists an equivalence class <m>[d]</m> such that <m>[a][d] = [1]</m>.
+            Thus if <m>[a][b] = [a][c]</m>, we have that <me>[b] = [1][b] = [a][d][b] = [d][a][b] = [d][a][c] = [a][d][c] = [1][c] = [c]\, .</me>
+          </p>
+        </proof>
+
+        <exercise>
+          <p>
+            Discuss the proof above. Does it make sense? Why or why not?
+          </p>
+        </exercise>
+
         <p>
           Observe another interesting property of modular arithmetic: if we add a nonzero equivalence class to itself enough times, we can get the zero equivalence class.
           For example, in <m>\mathbb{Z}/6\mathbb{Z}</m>, we have that <m>[2]+[2]+[2] = [6] = [0]</m>.
