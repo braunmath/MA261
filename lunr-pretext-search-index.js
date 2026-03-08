@@ -1717,7 +1717,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.1",
   "title": "Equivalence Relations",
-  "body": " Equivalence Relations  Throughout mathematics, we rely on the remainder of a division operation. For example, even and odd numbers are numbers that have remainder or when divided by . We proved that there are infinitely many primes that have remainder when divided by .  More practically, we rely on remainders all the time in our daily life. When we measure time, we have seconds in a minute, minutes in an hour, hours in a day, and days in a week. So, for example, if it is am, then in minutes it will be am. We know this because minutes is hour and minutes, and adding that to am gives us minutes after am. If it is a Tuesday, then days later it will be a Thursday, since has remainder when divided by and two days after Tuesday is Thursday. When we do these types of calculations with time, we are taking remainders using the numbers , , and .  When we measure angles, we have degrees in a circle. So, when a snowboarder does a trick that involves spinning around by degrees, we know that they have spun around twice and are facing the same direction as when they started, since has remainder when divided by . On the other hand, if they do a degree spin, then they have spun around once and a half times, and are facing the opposite direction as when they started, since has remainder when divided by .  In this way, we see that there are certain days that are equivalent; every Tuesday differs from every other Tuesday by a multiple of days. Every May differs from every other May by a multiple of months. A snowboarder is facing the same direction as every other snowboarder who has gone through a spin that differs from theirs by a multiple of degrees.  These are all examples of equivalence relations , which are a fundamental concept in formal mathematics. We will develop the theory of equivalence relations in this section, and then we will use it to define a new type of arithmetic on a finite set of numbers called modular arithmetic .  Motivated by the examples above, we will begin with the formal definition of an equivalence relation.    A binary relation on a set is a subset of the Cartesian product . We write to indicate that the ordered pair is in the binary relation.    In other words, a binary relation on is a collection of ordered pairs of elements of . We say that two elements are related if . An equivalence relation is a special type of binary relation.   What binary relation on is represented by the graph of the function ? (Recall that the graph of a function represents a specific collection of ordered pairs in .)     Let be a set. An equivalence relation on is a binary relation on such that for all , we have:  (reflexivity)  if , then (symmetry)  if and , then (transitivity).       Show that the binary relation on defined by the ordered pairs is not an equivalence relation.   Here is a key observation: Many of the things students have been trained to think of as \"equalities\" are actually \"equivalences\". Let's look at an example.   Consider the set of all lines in the plane. We can define a relation on this set by saying that two lines are related if they are parallel. This relation is an equivalence relation, which we can check as follows. First, since every line is parallel to itself, reflexivity is satisfied. Second, note that if a line is parallel to another line, then the second line is parallel to the first line. Thus, symmetry is satisfied. Third, if a line is parallel to a second line, and the second line is parallel to a third line, then the first line is parallel to the third line. Thus, transitivity is satisfied. So, parallelism is an equivalence relation on the set of lines in the plane.    Discuss the example above. Does it make sense? Why or why not?   A very important example of an equivalence relation is the definition of when two fractions are equivalent. We will focus on this case next. Students are taught that . However, this is not actually an equality! For example, if I have two apples and I take one of them, this is not the same as if I have four apples and I take two of them. So, one out of two is not the same as two out of four. However, we can define that the fractions and are equivalent if , and we write . With this definition, we see that , and by tradition we write this as an equality.   Prove that this binary relation on fractions satisfies reflexivity, symmetry, and transitivity.   What the previous exercise shows is that the set of all fractions breaks up into classes of fractions that are equivalent to each other. What we \"know\" from elementary school is that each fraction is in a unique class. In formal mathematics, this requires a proof! It turns out that this represents a general property of equivalence relations.    For each element , we define the equivalence class of to be the set     For example, the equivalence class of the fraction is the set    What is the equivalence class of the line under the parallelism equivalence relation?     An equivalence relation on a set partitions as a disjoint union of the equivalence classes for .     First, note that every element is in its own equivalence class, since . Thus, the union of all the equivalence classes is equal to . Second, we will show that if two equivalence classes have a common element, then they are equal. So, let and be two equivalence classes, and suppose that they have a common element . Then, by definition of equivalence class, we have and . By transitivity of the equivalence relation, we have .    Discuss the proof above. Does it make sense? Why or why not?   Let's return to our example of equivalent fractions. Here is an interesting question: Suppose we pick two different representatives from each of two different equivalence classes of fractions and then we add them together. How do we know that these two addition processes result in fractions representing the same equivalence class?  For example, if we take a representative of the equivalence class of , such as , and a representative of the equivalence class of , such as , and we add them together, we get . So, we have that . But, if we take different representatives of the same equivalence classes, such as and , and we add them together, we get . So, we have that . How do we know that and are always the same equivalence class?    The addition operation is well-defined on equivalence classes of fractions. In other words, if and , then .     We have that means that , and means that . We need to show that , which is the required condition for . We see that Therefore, the result holds.    Discuss the proof above. Does it make sense? Why or why not?   The previous two theorems show that we can treat the equivalence classes of fractions as if they were independent objects, and we can add them together by selecting representatives of each class and get the same result regardless of which representatives we choose to add together. We will do something similar when we construct the modular arithmetic system in the next section.   Discuss the statement above. Does it make sense? Why or why not?    Prove that the multiplication operation is well-defined on equivalence classes of fractions.   "
+  "body": " Equivalence Relations  Throughout mathematics, we rely on the remainder of a division operation. For example, even and odd numbers are numbers that have remainder and , respectively, when divided by . We proved that there are infinitely many primes that have remainder when divided by .  More practically, we rely on remainders all the time in our daily life. When we measure time, we have seconds in a minute, minutes in an hour, hours in a day, and days in a week. So, for example, if it is am, then in minutes it will be am. We know this because minutes is hour and minutes, and adding that to am gives us minutes after am. If it is a Tuesday, then days later it will be a Thursday, since has remainder when divided by and two days after Tuesday is Thursday. When we do these types of calculations with time, we are taking remainders using the numbers , , and .  When we measure angles, we have degrees in a circle. So, when a snowboarder does a trick that involves spinning around by degrees, we know that they have spun around twice and are facing the same direction as when they started, since has remainder when divided by . On the other hand, if they do a degree spin, then they have spun around once and a half times, and are facing the opposite direction as when they started, since has remainder when divided by .  In this way, we see that there are certain days that are equivalent; every Tuesday differs from every other Tuesday by a multiple of days. Every May differs from every other May by a multiple of months. A snowboarder is facing the same direction as every other snowboarder who has gone through a spin that differs from theirs by a multiple of degrees.  These are all examples of equivalence relations , which are a fundamental concept in formal mathematics. We will develop the theory of equivalence relations in this section, and then we will use it to define a new type of arithmetic on a finite set of numbers called modular arithmetic .  Motivated by the examples above, we will begin with the formal definition of an equivalence relation.    A binary relation on a set is a subset of the Cartesian product . We write to indicate that the ordered pair is in the binary relation.    In other words, a binary relation on is a collection of ordered pairs of elements of . We say that two elements are related if . An equivalence relation is a special type of binary relation.   What binary relation on is represented by the graph of the function ? (Recall that the graph of a function represents a specific collection of ordered pairs in .)     Let be a set. An equivalence relation on is a binary relation on such that for all , we have:  (reflexivity)  if , then (symmetry)  if and , then (transitivity).       Show that the binary relation on defined by the ordered pairs is not an equivalence relation.   Here is a key observation: Many of the things students have been trained to think of as \"equalities\" are actually \"equivalences\". Let's look at an example.   Consider the set of all lines in the plane. We can define a relation on this set by saying that two lines are related if they are parallel. This relation is an equivalence relation, which we can check as follows.   First, since every line is parallel to itself, reflexivity is satisfied.    Second, note that if a line is parallel to another line, then the second line is parallel to the first line. Thus, symmetry is satisfied.    Third, if a line is parallel to a second line, and the second line is parallel to a third line, then the first line is parallel to the third line. Thus, transitivity is satisfied.   So, parallelism is an equivalence relation on the set of lines in the plane.    Discuss the example above. Does it make sense? Why or why not?   A very important example of an equivalence relation is the definition of when two fractions are equivalent. We will focus on this case next. Students are taught that . However, this is not actually an equality! For example, if I have two apples and I take one of them, this is not the same as if I have four apples and I take two of them. So, one out of two is not the same as two out of four. However, we can define that the fractions and are equivalent if , and we write . With this definition, we see that , and by tradition we write this as an equality.   Prove that the binary relation defined above on fractions satisfies reflexivity, symmetry, and transitivity.   What the previous exercise shows is that the set of all fractions breaks up into classes of fractions that are equivalent to each other. What we \"know\" from elementary school is that each fraction is in a unique class. In formal mathematics, this requires a proof! It turns out that this represents a general property of equivalence relations.    For each element , we define the equivalence class of to be the set     For example, the equivalence class of the fraction is the set    What is the equivalence class of the line under the parallelism equivalence relation?     An equivalence relation on a set partitions as a disjoint union of the equivalence classes for .     First, note that every element is in its own equivalence class, since . Thus, the union of all the equivalence classes is equal to . Second, we will show that if two equivalence classes have a common element, then they are equal. So, let and be two equivalence classes, and suppose that they have a common element . Then, by definition of equivalence class, we have and . By transitivity of the equivalence relation, we have .    Discuss the proof above. Does it make sense? Why or why not?   Let's return to our example of equivalent fractions. Here is an interesting question: Suppose we pick two different representatives from each of two different equivalence classes of fractions and then we add them together. How do we know that these two addition processes result in fractions representing the same equivalence class?  For example, if we take a representative of the equivalence class of , such as , and a representative of the equivalence class of , such as , and we add them together, we get . So, we have that . But, if we take different representatives of the same equivalence classes, such as and , and we add them together, we get . So, we have that . How do we know that and are always the same equivalence class? How do we know that we always get the same equivalence class regardless of which of the infinitely many choices of representatives we pick from the equivalence classes we are adding?    The addition operation is well-defined on equivalence classes of fractions. In other words, if and , then .     We have that means that , and means that . We need to show that , which is the required condition to establish that . Because and , we have Therefore, the result holds.    Discuss the proof above. Does it make sense? Why or why not?   The previous two theorems show that we can treat the equivalence classes of fractions as if they were independent objects, and we can add them together by selecting representatives of each class and get the same result regardless of which representatives we choose to add together. Thus, addition of equivalence classes of fractions is \"well-defined\". We will do something similar when we construct the modular arithmetic system in the next section.   Discuss the statement above. Does it make sense? Why or why not?    Prove that the multiplication operation is well-defined on equivalence classes of fractions.   "
 },
 {
   "id": "def-binaryrelation",
@@ -1762,7 +1762,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "5.1.5",
   "title": "",
-  "body": " Consider the set of all lines in the plane. We can define a relation on this set by saying that two lines are related if they are parallel. This relation is an equivalence relation, which we can check as follows. First, since every line is parallel to itself, reflexivity is satisfied. Second, note that if a line is parallel to another line, then the second line is parallel to the first line. Thus, symmetry is satisfied. Third, if a line is parallel to a second line, and the second line is parallel to a third line, then the first line is parallel to the third line. Thus, transitivity is satisfied. So, parallelism is an equivalence relation on the set of lines in the plane.  "
+  "body": " Consider the set of all lines in the plane. We can define a relation on this set by saying that two lines are related if they are parallel. This relation is an equivalence relation, which we can check as follows.   First, since every line is parallel to itself, reflexivity is satisfied.    Second, note that if a line is parallel to another line, then the second line is parallel to the first line. Thus, symmetry is satisfied.    Third, if a line is parallel to a second line, and the second line is parallel to a third line, then the first line is parallel to the third line. Thus, transitivity is satisfied.   So, parallelism is an equivalence relation on the set of lines in the plane.  "
 },
 {
   "id": "equivalencerelations-15",
@@ -1780,7 +1780,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "5.1.7",
   "title": "",
-  "body": " Prove that this binary relation on fractions satisfies reflexivity, symmetry, and transitivity.  "
+  "body": " Prove that the binary relation defined above on fractions satisfies reflexivity, symmetry, and transitivity.  "
 },
 {
   "id": "def-equivalenceclass",
@@ -1843,7 +1843,7 @@ var ptx_lunr_docs = [
   "type": "Proof",
   "number": "5.1.2",
   "title": "",
-  "body": " We have that means that , and means that . We need to show that , which is the required condition for . We see that Therefore, the result holds.  "
+  "body": " We have that means that , and means that . We need to show that , which is the required condition to establish that . Because and , we have Therefore, the result holds.  "
 },
 {
   "id": "equivalencerelations-29",
@@ -1879,7 +1879,232 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.2",
   "title": "Modular Arithmetic",
-  "body": " Modular Arithmetic    "
+  "body": " Modular Arithmetic  Now that we have developed the concept of equivalence relations and equivalence classes, we can use this to construct systems of modular arithmetic.    Let with . We say that is congruent to modulo , written if . In other words, and are congruent modulo if their difference is divisible by , which is the same as saying that and have the same remainder when divided by .    For example, we have that , because is divisible by . We also have that , because is divisible by . Thus, the set of integers that are congruent to modulo is     The relation of congruence modulo is an equivalence relation on .     We need to show that the relation of congruence modulo is reflexive, symmetric, and transitive.   To show that the relation is reflexive, we need to show that for all . This is true because is divisible by .    To show that the relation is symmetric, we need to show that if , then . This is true because if , then , which means that , which means that .    To show that the relation is transitive, we need to show that if and , then . Observe that if , then . Also, if , then . Adding these values, we have , which means that . Thus, we have .       Discuss the proof above. Does it make sense? Why or why not?    Use set notation to write the following equivalence classes of integers.    modulo .     modulo .      We next wish to introduce an arithmetic structure on the equivalence classes of integers modulo .    Let . We write the set of equivalence classes of integers modulo as , which we call \"Z mod nZ\". We define addition and multiplication on as follows. For , we define and . We call the resulting system of equivalence classes with these operations of addition and multiplication the modular arithmetic system modulo .     In , compute the following sums and products. Which of the resulting equivalence classes are the same?                         As with the case of equivalent fractions, we need to prove that the operations of addition and multiplication on equivalence classes of integers modulo are well-defined, meaning that the result does not depend on the choice of representatives of the equivalence classes we are adding or multiplying together.    Modular arithmetic is well-defined.     We first need to prove that addition is well-defined modulo . We need to show that if and , then . Because , we have that , and similarly for . Thus, which means that .  Next, we need to prove that multiplication is well-defined modulo . We need to show that if and , then . Because , we have that , and similarly for . Thus, which means that .    Discuss the proof above. Does it make sense? Why or why not?   Because modular arithmetic is well-defined, we can treat the equivalence classes of integers modulo as if they were independent objects, and we can add and multiply them together by selecting representatives of each class and get the same result regardless of which representatives we choose to add or multiply together. In practice, we usually use the values , which we call distinguished representatives , as the representatives for each equivalence class. When we add these values, we \"reduce mod \", meaning that if we end up with a value larger than , we replace that number with the remainder after dividing by .  A common convention for representing the equivalence classes modulo is to write the values on a clock. For example, the equivalence classes of integers modulo are represented on a clock with the numbers through , and we add by moving clockwise around the clock.   Represent the equivalence classes of integers modulo on a clock with five hours, and use this to interpret the value of and in .   Our usual clock represents the equivalence classes of integers modulo . Thus, if it is 10 o'clock and we want to know what time it will be in 7 hours, we are computing modulo , so it will be 5 o'clock.  Because modular arithmetic relies on addition and multiplication in the integers, we can use the properties of addition and multiplication in the integers to deduce properties of addition and multiplication in modular arithmetic. This leads to the following theorem, which we will not prove in detail.    Modular addition and multiplication are commutative, associative, and the distributive law holds. Further, the cancellation law holds for addition, meaning that if , then . An equivalent way to state the cancellation law is that if then      Discuss with your group: why does it make sense that the cancellation law holds?   There are some significant differences between arithmetic in the integers and modular arithmetic. The first major difference is that it is possible to multiply two nonzero equivalence classes together and get the zero equivalence class. For example, in , we have that .    A zero divisor in a modular arithmetic system is a nonzero equivalence class such that there exists a nonzero equivalence class with .     Find all of the zero divisors in .   Another major difference is that it is not always possible to divide in modular arithmetic. For example, in , we have that , so if we try to divide both sides by , we get , which is not true. This leads to the following definition.    A unit in is an equivalence class such that there exists an equivalence class with . In this case, we call the multiplicative inverse of , and denote it as . Equivalently, is a unit if there exists a non-zero such that      Find all of the units in and their multiplicative inverses.   From the examples above, you might conjecture the following theorem.    In , an equivalence class is a unit if and only if .     We first prove the forward direction. Assume that is a unit in . Then there exists an equivalence class such that . This means that , which means that . Thus, there exists an integer such that , which means that . This is the Bezout identity, which implies that .  We next prove the reverse direction. Assume that . Then there exist integers and such that . This means that , which means that . Thus, is a unit in .    Discuss the proof above. Does it make sense? Why or why not?   Observe another interesting property of modular arithmetic: if we add a nonzero equivalence class to itself enough times, we can get the zero equivalence class. For example, in , we have that . In general, we have that in , if we add to itself times, we get . This leads to the definition of the additive order of an equivalence class in modular arithmetic.    Let . The additive order of is the smallest positive integer such that where there are copies of in the sum. We denote the additive order by .     Find the additive order of each equivalence class in .   From the examples you just worked out, we can see the following interesting fact: the order of an equivalence class in divides .    Let . Then , and thus the additive order divides .     We set . Then we can write and for some integers and with . We need to show that the smallest positive integer such that where there are copies of in the sum, is equal to . Observe that If we want this to be equal to , we need , which is the same as , which is the same as . Because , we have that if and only if divides . Thus, the smallest positive integer such that is , which means that the smallest positive integer such that where there are copies of in the sum, is . Thus, the additive order of is , which divides .    Discuss the proof above. Does it make sense? Why or why not?   "
+},
+{
+  "id": "def-congruence",
+  "level": "2",
+  "url": "modulararithmetic.html#def-congruence",
+  "type": "Definition",
+  "number": "5.2.1",
+  "title": "",
+  "body": "  Let with . We say that is congruent to modulo , written if . In other words, and are congruent modulo if their difference is divisible by , which is the same as saying that and have the same remainder when divided by .   "
+},
+{
+  "id": "thm-congruenceequivalence",
+  "level": "2",
+  "url": "modulararithmetic.html#thm-congruenceequivalence",
+  "type": "Theorem",
+  "number": "5.2.2",
+  "title": "",
+  "body": "  The relation of congruence modulo is an equivalence relation on .   "
+},
+{
+  "id": "modulararithmetic-6",
+  "level": "2",
+  "url": "modulararithmetic.html#modulararithmetic-6",
+  "type": "Proof",
+  "number": "5.2.1",
+  "title": "",
+  "body": " We need to show that the relation of congruence modulo is reflexive, symmetric, and transitive.   To show that the relation is reflexive, we need to show that for all . This is true because is divisible by .    To show that the relation is symmetric, we need to show that if , then . This is true because if , then , which means that , which means that .    To show that the relation is transitive, we need to show that if and , then . Observe that if , then . Also, if , then . Adding these values, we have , which means that . Thus, we have .     "
+},
+{
+  "id": "modulararithmetic-7",
+  "level": "2",
+  "url": "modulararithmetic.html#modulararithmetic-7",
+  "type": "Checkpoint",
+  "number": "5.2.3",
+  "title": "",
+  "body": " Discuss the proof above. Does it make sense? Why or why not?  "
+},
+{
+  "id": "modulararithmetic-8",
+  "level": "2",
+  "url": "modulararithmetic.html#modulararithmetic-8",
+  "type": "Checkpoint",
+  "number": "5.2.4",
+  "title": "",
+  "body": " Use set notation to write the following equivalence classes of integers.    modulo .     modulo .     "
+},
+{
+  "id": "def-modulararithmetic",
+  "level": "2",
+  "url": "modulararithmetic.html#def-modulararithmetic",
+  "type": "Definition",
+  "number": "5.2.5",
+  "title": "",
+  "body": "  Let . We write the set of equivalence classes of integers modulo as , which we call \"Z mod nZ\". We define addition and multiplication on as follows. For , we define and . We call the resulting system of equivalence classes with these operations of addition and multiplication the modular arithmetic system modulo .   "
+},
+{
+  "id": "modulararithmetic-11",
+  "level": "2",
+  "url": "modulararithmetic.html#modulararithmetic-11",
+  "type": "Checkpoint",
+  "number": "5.2.6",
+  "title": "",
+  "body": " In , compute the following sums and products. Which of the resulting equivalence classes are the same?                        "
+},
+{
+  "id": "thm-modulararithmeticwelldefined",
+  "level": "2",
+  "url": "modulararithmetic.html#thm-modulararithmeticwelldefined",
+  "type": "Theorem",
+  "number": "5.2.7",
+  "title": "",
+  "body": "  Modular arithmetic is well-defined.   "
+},
+{
+  "id": "modulararithmetic-14",
+  "level": "2",
+  "url": "modulararithmetic.html#modulararithmetic-14",
+  "type": "Proof",
+  "number": "5.2.2",
+  "title": "",
+  "body": " We first need to prove that addition is well-defined modulo . We need to show that if and , then . Because , we have that , and similarly for . Thus, which means that .  Next, we need to prove that multiplication is well-defined modulo . We need to show that if and , then . Because , we have that , and similarly for . Thus, which means that .  "
+},
+{
+  "id": "modulararithmetic-15",
+  "level": "2",
+  "url": "modulararithmetic.html#modulararithmetic-15",
+  "type": "Checkpoint",
+  "number": "5.2.8",
+  "title": "",
+  "body": " Discuss the proof above. Does it make sense? Why or why not?  "
+},
+{
+  "id": "modulararithmetic-18",
+  "level": "2",
+  "url": "modulararithmetic.html#modulararithmetic-18",
+  "type": "Checkpoint",
+  "number": "5.2.9",
+  "title": "",
+  "body": " Represent the equivalence classes of integers modulo on a clock with five hours, and use this to interpret the value of and in .  "
+},
+{
+  "id": "thm-modulararithmeticproperties",
+  "level": "2",
+  "url": "modulararithmetic.html#thm-modulararithmeticproperties",
+  "type": "Theorem",
+  "number": "5.2.10",
+  "title": "",
+  "body": "  Modular addition and multiplication are commutative, associative, and the distributive law holds. Further, the cancellation law holds for addition, meaning that if , then . An equivalent way to state the cancellation law is that if then    "
+},
+{
+  "id": "modulararithmetic-22",
+  "level": "2",
+  "url": "modulararithmetic.html#modulararithmetic-22",
+  "type": "Checkpoint",
+  "number": "5.2.11",
+  "title": "",
+  "body": " Discuss with your group: why does it make sense that the cancellation law holds?  "
+},
+{
+  "id": "def-zerodivisor",
+  "level": "2",
+  "url": "modulararithmetic.html#def-zerodivisor",
+  "type": "Definition",
+  "number": "5.2.12",
+  "title": "",
+  "body": "  A zero divisor in a modular arithmetic system is a nonzero equivalence class such that there exists a nonzero equivalence class with .   "
+},
+{
+  "id": "modulararithmetic-25",
+  "level": "2",
+  "url": "modulararithmetic.html#modulararithmetic-25",
+  "type": "Checkpoint",
+  "number": "5.2.13",
+  "title": "",
+  "body": " Find all of the zero divisors in .  "
+},
+{
+  "id": "def-unit",
+  "level": "2",
+  "url": "modulararithmetic.html#def-unit",
+  "type": "Definition",
+  "number": "5.2.14",
+  "title": "",
+  "body": "  A unit in is an equivalence class such that there exists an equivalence class with . In this case, we call the multiplicative inverse of , and denote it as . Equivalently, is a unit if there exists a non-zero such that    "
+},
+{
+  "id": "modulararithmetic-28",
+  "level": "2",
+  "url": "modulararithmetic.html#modulararithmetic-28",
+  "type": "Checkpoint",
+  "number": "5.2.15",
+  "title": "",
+  "body": " Find all of the units in and their multiplicative inverses.  "
+},
+{
+  "id": "thm-modularunits",
+  "level": "2",
+  "url": "modulararithmetic.html#thm-modularunits",
+  "type": "Theorem",
+  "number": "5.2.16",
+  "title": "",
+  "body": "  In , an equivalence class is a unit if and only if .   "
+},
+{
+  "id": "modulararithmetic-31",
+  "level": "2",
+  "url": "modulararithmetic.html#modulararithmetic-31",
+  "type": "Proof",
+  "number": "5.2.3",
+  "title": "",
+  "body": " We first prove the forward direction. Assume that is a unit in . Then there exists an equivalence class such that . This means that , which means that . Thus, there exists an integer such that , which means that . This is the Bezout identity, which implies that .  We next prove the reverse direction. Assume that . Then there exist integers and such that . This means that , which means that . Thus, is a unit in .  "
+},
+{
+  "id": "modulararithmetic-32",
+  "level": "2",
+  "url": "modulararithmetic.html#modulararithmetic-32",
+  "type": "Checkpoint",
+  "number": "5.2.17",
+  "title": "",
+  "body": " Discuss the proof above. Does it make sense? Why or why not?  "
+},
+{
+  "id": "def-modularorder",
+  "level": "2",
+  "url": "modulararithmetic.html#def-modularorder",
+  "type": "Definition",
+  "number": "5.2.18",
+  "title": "",
+  "body": "  Let . The additive order of is the smallest positive integer such that where there are copies of in the sum. We denote the additive order by .   "
+},
+{
+  "id": "modulararithmetic-35",
+  "level": "2",
+  "url": "modulararithmetic.html#modulararithmetic-35",
+  "type": "Checkpoint",
+  "number": "5.2.19",
+  "title": "",
+  "body": " Find the additive order of each equivalence class in .  "
+},
+{
+  "id": "thm-modularorderdivides",
+  "level": "2",
+  "url": "modulararithmetic.html#thm-modularorderdivides",
+  "type": "Theorem",
+  "number": "5.2.20",
+  "title": "",
+  "body": "  Let . Then , and thus the additive order divides .   "
+},
+{
+  "id": "modulararithmetic-38",
+  "level": "2",
+  "url": "modulararithmetic.html#modulararithmetic-38",
+  "type": "Proof",
+  "number": "5.2.4",
+  "title": "",
+  "body": " We set . Then we can write and for some integers and with . We need to show that the smallest positive integer such that where there are copies of in the sum, is equal to . Observe that If we want this to be equal to , we need , which is the same as , which is the same as . Because , we have that if and only if divides . Thus, the smallest positive integer such that is , which means that the smallest positive integer such that where there are copies of in the sum, is . Thus, the additive order of is , which divides .  "
+},
+{
+  "id": "modulararithmetic-39",
+  "level": "2",
+  "url": "modulararithmetic.html#modulararithmetic-39",
+  "type": "Checkpoint",
+  "number": "5.2.21",
+  "title": "",
+  "body": " Discuss the proof above. Does it make sense? Why or why not?  "
 },
 {
   "id": "chineseremaindertheorem",
