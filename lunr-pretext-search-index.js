@@ -1873,18 +1873,18 @@ var ptx_lunr_docs = [
   "body": " Prove that the multiplication operation is well-defined on equivalence classes of fractions.  "
 },
 {
-  "id": "modulararithmetic",
+  "id": "modularcongruence",
   "level": "1",
-  "url": "modulararithmetic.html",
+  "url": "modularcongruence.html",
   "type": "Section",
   "number": "5.2",
-  "title": "Modular Arithmetic",
-  "body": " Modular Arithmetic  Now that we have developed the concept of equivalence relations and equivalence classes, we can use this to construct systems of modular arithmetic.    Let with . We say that is congruent to modulo , written if . In other words, and are congruent modulo if their difference is divisible by , which is the same as saying that and have the same remainder when divided by .    For example, we have that , because is divisible by . We also have that , because is divisible by . Thus, the set of integers that are congruent to modulo is     The relation of congruence modulo is an equivalence relation on .     We need to show that the relation of congruence modulo is reflexive, symmetric, and transitive.   To show that the relation is reflexive, we need to show that for all . This is true because is divisible by .    To show that the relation is symmetric, we need to show that if , then . This is true because if , then , which means that , which means that .    To show that the relation is transitive, we need to show that if and , then . Observe that if , then . Also, if , then . Adding these values, we have , which means that . Thus, we have .       Discuss the proof above. Does it make sense? Why or why not?    Use set notation to write the following equivalence classes of integers.    modulo .     modulo .      We next wish to introduce an arithmetic structure on the equivalence classes of integers modulo .    Let . We write the set of equivalence classes of integers modulo as , which we call \"Z mod nZ\". We define addition and multiplication on as follows. For , we define and . We call the resulting system of equivalence classes with these operations of addition and multiplication the modular arithmetic system modulo .     In , compute the following sums and products. Which of the resulting equivalence classes are the same?                         As with the case of equivalent fractions, we need to prove that the operations of addition and multiplication on equivalence classes of integers modulo are well-defined, meaning that the result does not depend on the choice of representatives of the equivalence classes we are adding or multiplying together.    Modular arithmetic is well-defined.     We first need to prove that addition is well-defined modulo . We need to show that if and , then . Because , we have that , and similarly for . Thus, which means that .  Next, we need to prove that multiplication is well-defined modulo . We need to show that if and , then . Because , we have that , and similarly for . Thus, which means that .    Discuss the proof above. Does it make sense? Why or why not?   Because modular arithmetic is well-defined, we can treat the equivalence classes of integers modulo as if they were independent objects, and we can add and multiply them together by selecting representatives of each class and get the same result regardless of which representatives we choose to add or multiply together. In practice, we usually use the values , which we call distinguished representatives , as the representatives for each equivalence class. When we add these values, we \"reduce mod \", meaning that if we end up with a value larger than , we replace that number with the remainder after dividing by .  A common convention for representing the equivalence classes modulo is to write the values on a clock. For example, the equivalence classes of integers modulo are represented on a clock with the numbers through , and we add by moving clockwise around the clock.   Represent the equivalence classes of integers modulo on a clock with five hours, and use this to interpret the value of and in .   Our usual clock represents the equivalence classes of integers modulo . Thus, if it is 10 o'clock and we want to know what time it will be in 7 hours, we are computing modulo , so it will be 5 o'clock.  Because modular arithmetic relies on addition and multiplication in the integers, we can use the properties of addition and multiplication in the integers to deduce properties of addition and multiplication in modular arithmetic. This leads to the following theorem, which we will not prove in detail.    Modular addition and multiplication are commutative, associative, and the distributive law holds. Further, the cancellation law holds for addition, meaning that if , then . An equivalent way to state the cancellation law is that if then      Discuss with your group: why does it make sense that the cancellation law holds?   There are some significant differences between arithmetic in the integers and modular arithmetic. The first major difference is that it is possible to multiply two nonzero equivalence classes together and get the zero equivalence class. For example, in , we have that .    A zero divisor in a modular arithmetic system is a nonzero equivalence class such that there exists a nonzero equivalence class with .     Find all of the zero divisors in .   Another major difference is that it is not always possible to divide in modular arithmetic. For example, in , we have that , so if we try to divide both sides by , we get , which is not true. This leads to the following definition.    A unit in is an equivalence class such that there exists an equivalence class with . In this case, we call the multiplicative inverse of , and denote it as . Equivalently, is a unit if there exists a non-zero such that      Find all of the units in and their multiplicative inverses.   From the examples above, you might conjecture the following theorem.    In , an equivalence class is a unit if and only if .     We first prove the forward direction. Assume that is a unit in . Then there exists an equivalence class such that . This means that , which means that . Thus, there exists an integer such that , which means that . This is the Bezout identity, which implies that .  We next prove the reverse direction. Assume that . Then there exist integers and such that . This means that , which means that . Thus, is a unit in .    Discuss the proof above. Does it make sense? Why or why not?   When is a prime number, the condition is always true for . In this case, every non-zero equivalence class is a unit. We record this formally below.    If is prime, then every non-zero equivalence class in is a unit.     This follows immediately from the fact that if is prime, then for all .   We use the Euclidean algorithm and the Bezout identity to find the multiplicative inverse of an equivalence class in when . Specifically, we use the Euclidean algorithm to find integers and such that . Then we have that , which means that , so is the multiplicative inverse of .   Find the multiplicative inverse of in using the Euclidean algorithm and the Bezout identity.   A key role played by units is that these are the only equivalence classes that we can cancel in modular arithmetic.    Suppose that is a unit in , and suppose that . Then .     Because is a unit, there exists an equivalence class such that . Thus if , we have that     Discuss the proof above. Does it make sense? Why or why not?   Observe another interesting property of modular arithmetic: if we add a nonzero equivalence class to itself enough times, we can get the zero equivalence class. For example, in , we have that . In general, we have that in , if we add to itself times, we get . This leads to the definition of the additive order of an equivalence class in modular arithmetic.    Let . The additive order of is the smallest positive integer such that where there are copies of in the sum. We denote the additive order by .     Find the additive order of each equivalence class in .   From the examples you just worked out, we can see the following interesting fact: the order of an equivalence class in divides .    Let . Then , and thus the additive order divides .     We set . Then we can write and for some integers and with . We need to show that the smallest positive integer such that where there are copies of in the sum, is equal to . Observe that If we want this to be equal to , we need , which is the same as , which is the same as . Because , we have that if and only if divides . Thus, the smallest positive integer such that is , which means that the smallest positive integer such that where there are copies of in the sum, is . Thus, the additive order of is , which divides .    Discuss the proof above. Does it make sense? Why or why not?   "
+  "title": "Congruence and Modular Operations",
+  "body": " Congruence and Modular Operations  Now that we have developed the concept of equivalence relations and equivalence classes, we can use this to construct systems of modular arithmetic.    Let with . We say that is congruent to modulo , written if . In other words, and are congruent modulo if their difference is divisible by , which is the same as saying that and have the same remainder when divided by .    For example, we have that , because is divisible by . We also have that , because is divisible by . Thus, the set of integers that are congruent to modulo is     The relation of congruence modulo is an equivalence relation on .     We need to show that the relation of congruence modulo is reflexive, symmetric, and transitive.   To show that the relation is reflexive, we need to show that for all . This is true because is divisible by .    To show that the relation is symmetric, we need to show that if , then . This is true because if , then , which means that , which means that .    To show that the relation is transitive, we need to show that if and , then . Observe that if , then . Also, if , then . Adding these values, we have , which means that . Thus, we have .       Discuss the proof above. Does it make sense? Why or why not?    Use set notation to write the following equivalence classes of integers.    modulo .     modulo .      We next wish to introduce an arithmetic structure on the equivalence classes of integers modulo .    Let . We write the set of equivalence classes of integers modulo as , which we call \"Z mod nZ\". We define addition and multiplication on as follows. For , we define and . We call the resulting system of equivalence classes with these operations of addition and multiplication the modular arithmetic system modulo .     In , compute the following sums and products. Which of the resulting equivalence classes are the same?                         As with the case of equivalent fractions, we need to prove that the operations of addition and multiplication on equivalence classes of integers modulo are well-defined, meaning that the result does not depend on the choice of representatives of the equivalence classes we are adding or multiplying together.    Modular arithmetic is well-defined.     We first need to prove that addition is well-defined modulo . We need to show that if and , then . Because , we have that , and similarly for . Thus, which means that .  Next, we need to prove that multiplication is well-defined modulo . We need to show that if and , then . Because , we have that , and similarly for . Thus, which means that .    Discuss the proof above. Does it make sense? Why or why not?   Because modular arithmetic is well-defined, we can treat the equivalence classes of integers modulo as if they were independent objects, and we can add and multiply them together by selecting representatives of each class and get the same result regardless of which representatives we choose to add or multiply together. In practice, we usually use the values , which we call distinguished representatives , as the representatives for each equivalence class. When we add these values, we \"reduce mod \", meaning that if we end up with a value larger than , we replace that number with the remainder after dividing by .  A common convention for representing the equivalence classes modulo is to write the values on a clock. For example, the equivalence classes of integers modulo are represented on a clock with the numbers through , and we add by moving clockwise around the clock.   Represent the equivalence classes of integers modulo on a clock with five hours, and use this to interpret the value of and in .   Our usual clock represents the equivalence classes of integers modulo . Thus, if it is 10 o'clock and we want to know what time it will be in 7 hours, we are computing modulo , so it will be 5 o'clock.  Another common convention for representing the addition and multiplication operations in modular arithmetic is to create a table for each operation. For example, the addition table for is as follows.  Addition table for in .    +  0  1  2  3  4    0  0  1  2  3  4    1  1  2  3  4  0    2  2  3  4  0  1    3  3  4  0  1  2    4  4  0  1  2  3          Create the multiplication table for .    Create the addition and multiplication tables for .      "
 },
 {
   "id": "def-congruence",
   "level": "2",
-  "url": "modulararithmetic.html#def-congruence",
+  "url": "modularcongruence.html#def-congruence",
   "type": "Definition",
   "number": "5.2.1",
   "title": "",
@@ -1893,34 +1893,34 @@ var ptx_lunr_docs = [
 {
   "id": "thm-congruenceequivalence",
   "level": "2",
-  "url": "modulararithmetic.html#thm-congruenceequivalence",
+  "url": "modularcongruence.html#thm-congruenceequivalence",
   "type": "Theorem",
   "number": "5.2.2",
   "title": "",
   "body": "  The relation of congruence modulo is an equivalence relation on .   "
 },
 {
-  "id": "modulararithmetic-6",
+  "id": "modularcongruence-6",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-6",
+  "url": "modularcongruence.html#modularcongruence-6",
   "type": "Proof",
   "number": "5.2.1",
   "title": "",
   "body": " We need to show that the relation of congruence modulo is reflexive, symmetric, and transitive.   To show that the relation is reflexive, we need to show that for all . This is true because is divisible by .    To show that the relation is symmetric, we need to show that if , then . This is true because if , then , which means that , which means that .    To show that the relation is transitive, we need to show that if and , then . Observe that if , then . Also, if , then . Adding these values, we have , which means that . Thus, we have .     "
 },
 {
-  "id": "modulararithmetic-7",
+  "id": "modularcongruence-7",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-7",
+  "url": "modularcongruence.html#modularcongruence-7",
   "type": "Checkpoint",
   "number": "5.2.3",
   "title": "",
   "body": " Discuss the proof above. Does it make sense? Why or why not?  "
 },
 {
-  "id": "modulararithmetic-8",
+  "id": "modularcongruence-8",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-8",
+  "url": "modularcongruence.html#modularcongruence-8",
   "type": "Checkpoint",
   "number": "5.2.4",
   "title": "",
@@ -1929,16 +1929,16 @@ var ptx_lunr_docs = [
 {
   "id": "def-modulararithmetic",
   "level": "2",
-  "url": "modulararithmetic.html#def-modulararithmetic",
+  "url": "modularcongruence.html#def-modulararithmetic",
   "type": "Definition",
   "number": "5.2.5",
   "title": "",
   "body": "  Let . We write the set of equivalence classes of integers modulo as , which we call \"Z mod nZ\". We define addition and multiplication on as follows. For , we define and . We call the resulting system of equivalence classes with these operations of addition and multiplication the modular arithmetic system modulo .   "
 },
 {
-  "id": "modulararithmetic-11",
+  "id": "modularcongruence-11",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-11",
+  "url": "modularcongruence.html#modularcongruence-11",
   "type": "Checkpoint",
   "number": "5.2.6",
   "title": "",
@@ -1947,54 +1947,81 @@ var ptx_lunr_docs = [
 {
   "id": "thm-modulararithmeticwelldefined",
   "level": "2",
-  "url": "modulararithmetic.html#thm-modulararithmeticwelldefined",
+  "url": "modularcongruence.html#thm-modulararithmeticwelldefined",
   "type": "Theorem",
   "number": "5.2.7",
   "title": "",
   "body": "  Modular arithmetic is well-defined.   "
 },
 {
-  "id": "modulararithmetic-14",
+  "id": "modularcongruence-14",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-14",
+  "url": "modularcongruence.html#modularcongruence-14",
   "type": "Proof",
   "number": "5.2.2",
   "title": "",
   "body": " We first need to prove that addition is well-defined modulo . We need to show that if and , then . Because , we have that , and similarly for . Thus, which means that .  Next, we need to prove that multiplication is well-defined modulo . We need to show that if and , then . Because , we have that , and similarly for . Thus, which means that .  "
 },
 {
-  "id": "modulararithmetic-15",
+  "id": "modularcongruence-15",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-15",
+  "url": "modularcongruence.html#modularcongruence-15",
   "type": "Checkpoint",
   "number": "5.2.8",
   "title": "",
   "body": " Discuss the proof above. Does it make sense? Why or why not?  "
 },
 {
-  "id": "modulararithmetic-18",
+  "id": "modularcongruence-18",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-18",
+  "url": "modularcongruence.html#modularcongruence-18",
   "type": "Checkpoint",
   "number": "5.2.9",
   "title": "",
   "body": " Represent the equivalence classes of integers modulo on a clock with five hours, and use this to interpret the value of and in .  "
 },
 {
+  "id": "modularcongruence-20-2",
+  "level": "2",
+  "url": "modularcongruence.html#modularcongruence-20-2",
+  "type": "Table",
+  "number": "5.2.10",
+  "title": "",
+  "body": " Addition table for in .    +  0  1  2  3  4    0  0  1  2  3  4    1  1  2  3  4  0    2  2  3  4  0  1    3  3  4  0  1  2    4  4  0  1  2  3    "
+},
+{
+  "id": "modularcongruence-21",
+  "level": "2",
+  "url": "modularcongruence.html#modularcongruence-21",
+  "type": "Checkpoint",
+  "number": "5.2.11",
+  "title": "",
+  "body": "    Create the multiplication table for .    Create the addition and multiplication tables for .     "
+},
+{
+  "id": "modulararithmetic",
+  "level": "1",
+  "url": "modulararithmetic.html",
+  "type": "Section",
+  "number": "5.3",
+  "title": "Modular Arithmetic",
+  "body": " Modular Arithmetic  Because modular operations rely on addition and multiplication in the integers, we can use the properties of addition and multiplication in the integers to deduce properties of addition and multiplication in modular arithmetic. This leads to the following theorem, which we will not prove in detail.    Modular addition and multiplication are commutative, associative, and the distributive law holds. Further, the cancellation law holds for addition, meaning that if , then . An equivalent way to state the cancellation law is that if then      Discuss with your group: why does it make sense that the cancellation law holds?   There are some significant differences between arithmetic in the integers and modular arithmetic. The first major difference is that it is possible to multiply two nonzero equivalence classes together and get the zero equivalence class. For example, in , we have that .    A zero divisor in a modular arithmetic system is a nonzero equivalence class such that there exists a nonzero equivalence class with .     Find all of the zero divisors in .   Another major difference is that it is not always possible to divide in modular arithmetic. For example, in , we have that , so if we try to divide both sides by , we get , which is not true. This leads to the following definition.    A unit in is an equivalence class such that there exists an equivalence class with . In this case, we call the multiplicative inverse of , and denote it as . Equivalently, is a unit if there exists a non-zero such that     Observe that a zero divisor cannot be a unit, because if is a zero divisor, then there exists a nonzero equivalence class such that . So, if were a unit, we would have that which contradicts our assumption that .   Find all of the units in and their multiplicative inverses.   From the checkpoint above, you might conjecture the following theorem.    In , an equivalence class is a unit if and only if .     We first prove the forward direction. Assume that is a unit in . Then there exists an equivalence class such that . This means that , which means that . Thus, there exists an integer such that , which means that . This is the Bezout identity, which implies that .  We next prove the reverse direction. Assume that . Then there exist integers and such that . This means that , which means that . Thus, is a unit in .    Discuss the proof above. Does it make sense? Why or why not?   When is a prime number, the condition is always true for . In this case, every non-zero equivalence class is a unit. We record this formally below.    If is prime, then every non-zero equivalence class in is a unit.     This follows immediately from the fact that if is prime, then for all .   So, in , we can add, subtract, multiply, and divide (except by ) without every causing any issues. This is one of the reasons why working modulo a prime is such a powerful tool in mathematics. (In modern algebra classes like MA 361-362, you learn that is a field , while in general the modular arithmetic systems are rings but not fields.)  We use the Euclidean algorithm and the Bezout identity to find the multiplicative inverse of an equivalence class in when . Specifically, we use the Euclidean algorithm to find integers and such that . Then we have that , which means that , so is the multiplicative inverse of .   Find the multiplicative inverse of in using the Euclidean algorithm and the Bezout identity.   A key role played by units is that these are the only equivalence classes that we can cancel in modular arithmetic.    Suppose that is a unit in , and suppose that . Then .     Because is a unit, there exists an equivalence class such that . Thus if , we have that     Discuss the proof above. Does it make sense? Why or why not?   Observe another interesting property of modular arithmetic: if we add a nonzero equivalence class to itself enough times, we can get the zero equivalence class. For example, in , we have that . In general, we have that in , if we add to itself times, we get . This leads to the definition of the additive order of an equivalence class in modular arithmetic.    Let . The additive order of is the smallest positive integer such that where there are copies of in the sum. We denote the additive order by .     Find the additive order of each equivalence class in .   From the examples you just worked out, we can see the following interesting fact: the order of an equivalence class in divides .    Let . Then , and thus the additive order divides .     We set . Then we can write and for some integers and with . We need to show that the smallest positive integer such that where there are copies of in the sum, is equal to . Observe that If we want this to be equal to , we need , which is the same as , which is the same as . Because , we have that if and only if divides . Thus, the smallest positive integer such that is , which means that the smallest positive integer such that where there are copies of in the sum, is . Thus, the additive order of is , which divides .    Discuss the proof above. Does it make sense? Why or why not?   "
+},
+{
   "id": "thm-modulararithmeticproperties",
   "level": "2",
   "url": "modulararithmetic.html#thm-modulararithmeticproperties",
   "type": "Theorem",
-  "number": "5.2.10",
+  "number": "5.3.1",
   "title": "",
   "body": "  Modular addition and multiplication are commutative, associative, and the distributive law holds. Further, the cancellation law holds for addition, meaning that if , then . An equivalent way to state the cancellation law is that if then    "
 },
 {
-  "id": "modulararithmetic-22",
+  "id": "modulararithmetic-4",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-22",
+  "url": "modulararithmetic.html#modulararithmetic-4",
   "type": "Checkpoint",
-  "number": "5.2.11",
+  "number": "5.3.2",
   "title": "",
   "body": " Discuss with your group: why does it make sense that the cancellation law holds?  "
 },
@@ -2003,16 +2030,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "modulararithmetic.html#def-zerodivisor",
   "type": "Definition",
-  "number": "5.2.12",
+  "number": "5.3.3",
   "title": "",
   "body": "  A zero divisor in a modular arithmetic system is a nonzero equivalence class such that there exists a nonzero equivalence class with .   "
 },
 {
-  "id": "modulararithmetic-25",
+  "id": "modulararithmetic-7",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-25",
+  "url": "modulararithmetic.html#modulararithmetic-7",
   "type": "Checkpoint",
-  "number": "5.2.13",
+  "number": "5.3.4",
   "title": "",
   "body": " Find all of the zero divisors in .  "
 },
@@ -2021,16 +2048,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "modulararithmetic.html#def-unit",
   "type": "Definition",
-  "number": "5.2.14",
+  "number": "5.3.5",
   "title": "",
   "body": "  A unit in is an equivalence class such that there exists an equivalence class with . In this case, we call the multiplicative inverse of , and denote it as . Equivalently, is a unit if there exists a non-zero such that    "
 },
 {
-  "id": "modulararithmetic-28",
+  "id": "modulararithmetic-11",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-28",
+  "url": "modulararithmetic.html#modulararithmetic-11",
   "type": "Checkpoint",
-  "number": "5.2.15",
+  "number": "5.3.6",
   "title": "",
   "body": " Find all of the units in and their multiplicative inverses.  "
 },
@@ -2039,25 +2066,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "modulararithmetic.html#thm-modularunits",
   "type": "Theorem",
-  "number": "5.2.16",
+  "number": "5.3.7",
   "title": "",
   "body": "  In , an equivalence class is a unit if and only if .   "
 },
 {
-  "id": "modulararithmetic-31",
+  "id": "modulararithmetic-14",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-31",
+  "url": "modulararithmetic.html#modulararithmetic-14",
   "type": "Proof",
-  "number": "5.2.3",
+  "number": "5.3.1",
   "title": "",
   "body": " We first prove the forward direction. Assume that is a unit in . Then there exists an equivalence class such that . This means that , which means that . Thus, there exists an integer such that , which means that . This is the Bezout identity, which implies that .  We next prove the reverse direction. Assume that . Then there exist integers and such that . This means that , which means that . Thus, is a unit in .  "
 },
 {
-  "id": "modulararithmetic-32",
+  "id": "modulararithmetic-15",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-32",
+  "url": "modulararithmetic.html#modulararithmetic-15",
   "type": "Checkpoint",
-  "number": "5.2.17",
+  "number": "5.3.8",
   "title": "",
   "body": " Discuss the proof above. Does it make sense? Why or why not?  "
 },
@@ -2066,25 +2093,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "modulararithmetic.html#cor-modularunitsprime",
   "type": "Corollary",
-  "number": "5.2.18",
+  "number": "5.3.9",
   "title": "",
   "body": "  If is prime, then every non-zero equivalence class in is a unit.   "
 },
 {
-  "id": "modulararithmetic-35",
+  "id": "modulararithmetic-18",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-35",
+  "url": "modulararithmetic.html#modulararithmetic-18",
   "type": "Proof",
-  "number": "5.2.4",
+  "number": "5.3.2",
   "title": "",
   "body": " This follows immediately from the fact that if is prime, then for all .  "
 },
 {
-  "id": "modulararithmetic-37",
+  "id": "modulararithmetic-21",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-37",
+  "url": "modulararithmetic.html#modulararithmetic-21",
   "type": "Checkpoint",
-  "number": "5.2.19",
+  "number": "5.3.10",
   "title": "",
   "body": " Find the multiplicative inverse of in using the Euclidean algorithm and the Bezout identity.  "
 },
@@ -2093,25 +2120,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "modulararithmetic.html#thm-modularunitdivision",
   "type": "Theorem",
-  "number": "5.2.20",
+  "number": "5.3.11",
   "title": "",
   "body": "  Suppose that is a unit in , and suppose that . Then .   "
 },
 {
-  "id": "modulararithmetic-40",
+  "id": "modulararithmetic-24",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-40",
+  "url": "modulararithmetic.html#modulararithmetic-24",
   "type": "Proof",
-  "number": "5.2.5",
+  "number": "5.3.3",
   "title": "",
   "body": " Because is a unit, there exists an equivalence class such that . Thus if , we have that   "
 },
 {
-  "id": "modulararithmetic-41",
+  "id": "modulararithmetic-25",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-41",
+  "url": "modulararithmetic.html#modulararithmetic-25",
   "type": "Checkpoint",
-  "number": "5.2.21",
+  "number": "5.3.12",
   "title": "",
   "body": " Discuss the proof above. Does it make sense? Why or why not?  "
 },
@@ -2120,16 +2147,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "modulararithmetic.html#def-modularorder",
   "type": "Definition",
-  "number": "5.2.22",
+  "number": "5.3.13",
   "title": "",
   "body": "  Let . The additive order of is the smallest positive integer such that where there are copies of in the sum. We denote the additive order by .   "
 },
 {
-  "id": "modulararithmetic-44",
+  "id": "modulararithmetic-28",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-44",
+  "url": "modulararithmetic.html#modulararithmetic-28",
   "type": "Checkpoint",
-  "number": "5.2.23",
+  "number": "5.3.14",
   "title": "",
   "body": " Find the additive order of each equivalence class in .  "
 },
@@ -2138,25 +2165,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "modulararithmetic.html#thm-modularorderdivides",
   "type": "Theorem",
-  "number": "5.2.24",
+  "number": "5.3.15",
   "title": "",
   "body": "  Let . Then , and thus the additive order divides .   "
 },
 {
-  "id": "modulararithmetic-47",
+  "id": "modulararithmetic-31",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-47",
+  "url": "modulararithmetic.html#modulararithmetic-31",
   "type": "Proof",
-  "number": "5.2.6",
+  "number": "5.3.4",
   "title": "",
   "body": " We set . Then we can write and for some integers and with . We need to show that the smallest positive integer such that where there are copies of in the sum, is equal to . Observe that If we want this to be equal to , we need , which is the same as , which is the same as . Because , we have that if and only if divides . Thus, the smallest positive integer such that is , which means that the smallest positive integer such that where there are copies of in the sum, is . Thus, the additive order of is , which divides .  "
 },
 {
-  "id": "modulararithmetic-48",
+  "id": "modulararithmetic-32",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-48",
+  "url": "modulararithmetic.html#modulararithmetic-32",
   "type": "Checkpoint",
-  "number": "5.2.25",
+  "number": "5.3.16",
   "title": "",
   "body": " Discuss the proof above. Does it make sense? Why or why not?  "
 },
@@ -2165,16 +2192,16 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "chineseremaindertheorem.html",
   "type": "Section",
-  "number": "5.3",
-  "title": "Chinese Remainder Theorem",
-  "body": " Chinese Remainder Theorem    "
+  "number": "5.4",
+  "title": "Solving Modular Linear Equations",
+  "body": " Solving Modular Linear Equations    "
 },
 {
   "id": "fermatslittletheorem",
   "level": "1",
   "url": "fermatslittletheorem.html",
   "type": "Section",
-  "number": "5.4",
+  "number": "5.5",
   "title": "Fermat’s Little Theorem",
   "body": " Fermat's Little Theorem    "
 },
@@ -2183,7 +2210,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "musicalscalesandkeys.html",
   "type": "Section",
-  "number": "5.5",
+  "number": "5.6",
   "title": "Musical Scales and Keys",
   "body": " Musical Scales and Keys    "
 },
