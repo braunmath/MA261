@@ -7,6 +7,8 @@
      <!-- include sections  -->
   <xi:include href="equivalencerelations.ptx" />
 
+  <xi:include href="modularcongruence.ptx" />
+
   <xi:include href="modulararithmetic.ptx" />
 
   <xi:include href="chineseremaindertheorem.ptx" />

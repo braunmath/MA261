@@ -2,191 +2,9 @@
 
 <section xml:id="modulararithmetic" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Modular Arithmetic</title>
-
-  <p>
-    Now that we have developed the concept of equivalence relations and equivalence classes, we can use this to construct systems of modular arithmetic.
-  </p>
-
-  <definition xml:id="def-congruence">
-    <statement>
-      <p>
-        Let <m>a,b,n \in \mathbb{Z}</m> with <m>n \gt 0</m>.
-        We say that <m>a</m> is <alert>congruent</alert> to <m>b</m> modulo <m>n</m>, written <me>a \equiv b \pmod{n}\, ,</me> if <m>n \mid (a-b)</m>.
-        In other words, <m>a</m> and <m>b</m> are congruent modulo <m>n</m> if their difference is divisible by <m>n</m>, which is the same as saying that <m>a</m> and <m>b</m> have the same remainder when divided by <m>n</m>.
-      </p>
-    </statement>
-  </definition>
-
-  <p>
-    For example, we have that <m>17 \equiv 5 \pmod{12}</m>, because <m>17-5=12</m> is divisible by <m>12</m>.
-    We also have that <m>17 \equiv 29 \pmod{12}</m>, because <m>17-29=-12</m> is divisible by <m>12</m>.
-    Thus, the set of integers that are congruent to <m>17</m> modulo <m>12</m> is
-    <me> \{17+12t: t\in \mathbb{Z}\} = \{\ldots, -7, 5, 17, 29, 41, \ldots\} \, .</me>
-  </p>
-
-  <theorem xml:id="thm-congruenceequivalence">
-    <statement>
-      <p>
-        The relation of congruence modulo <m>n</m> is an equivalence relation on <m>\mathbb{Z}</m>.
-      </p>
-    </statement>
-  </theorem>
-
-  <proof>
-    <p>
-      We need to show that the relation of congruence modulo <m>n</m> is reflexive, symmetric, and transitive.
-      <ol>
-        <li>
-          <p>
-            To show that the relation is reflexive, we need to show that <m>a \equiv a \pmod{n}</m> for all <m>a \in \mathbb{Z}</m>.
-            This is true because <m>a-a=0</m> is divisible by <m>n</m>.
-          </p>
-        </li>
-        <li>
-          <p>
-            To show that the relation is symmetric, we need to show that if <m>a \equiv b \pmod{n}</m>, then <m>b \equiv a \pmod{n}</m>.
-            This is true because if <m>a \equiv b \pmod{n}</m>, then <m>n \mid (a-b)</m>, which means that <m>n \mid (b-a)</m>, which means that <m>b \equiv a \pmod{n}</m>.
-          </p>
-        </li>
-        <li>
-          <p>
-            To show that the relation is transitive, we need to show that if <m>a \equiv b \pmod{n}</m> and <m>b \equiv c \pmod{n}</m>, then <m>a \equiv c \pmod{n}</m>.
-            Observe that if <m>a \equiv b \pmod{n}</m>, then <m>n \mid (a-b)</m>.
-            Also, if <m>b \equiv c \pmod{n}</m>, then <m>n \mid (b-c)</m>.
-            Adding these values, we have <m>n \mid ((a-b)+(b-c))</m>, which means that <m>n \mid (a-c)</m>.
-            Thus, we have <m>a \equiv c \pmod{n}</m>.
-          </p>
-        </li>
-      </ol>
-    </p>
-  </proof>
-
-  <exercise>
-    <p>
-      Discuss the proof above. Does it make sense? Why or why not?
-    </p>
-  </exercise>
-
-  <exercise>
-    <p>
-      Use set notation to write the following equivalence classes of integers.
-      <ol>
-        <li>
-          <p>
-            <m>[0]</m> modulo <m>7</m>.
-          </p>
-        </li>
-        <li>
-          <p>
-            <m>[3]</m> modulo <m>17</m>.
-          </p>
-        </li>
-      </ol>
-    </p>
-  </exercise>
-  
-  <p>
-    We next wish to introduce an arithmetic structure on the equivalence classes of integers modulo <m>n</m>.
-  </p>
-
-  <definition xml:id="def-modulararithmetic">
-    <statement>
-      <p>
-        Let <m>n\gt 0</m>.
-        We write the set of equivalence classes of integers modulo <m>n</m> as <m>\mathbb{Z}/n\mathbb{Z}</m>, which we call "Z mod nZ".
-        We define addition and multiplication on <m>\mathbb{Z}/n\mathbb{Z}</m> as follows.
-        For <m>[a],[b] \in \mathbb{Z}/n\mathbb{Z}</m>, we define <me>[a]+[b] := [a+b]</me> and <me>[a][b] := [ab]</me>.
-        We call the resulting system of equivalence classes with these operations of addition and multiplication the <alert>modular arithmetic system</alert> modulo <m>n</m>.
-      </p>
-    </statement>
-  </definition>
-
-  <exercise>
-    <p>
-      In <m>\mathbb{Z}/12\mathbb{Z}</m>, compute the following sums and products.
-      Which of the resulting equivalence classes are the same?
-      <ol>
-        <li>
-          <p>
-            <m>[5]+[9]</m>
-          </p>
-        </li>
-        <li>
-          <p>
-            <m>[17]+[33]</m>
-          </p>
-        </li>
-        <li>
-          <p>
-            <m>[17][29]</m>
-          </p>
-        </li>
-        <li>
-          <p>
-            <m>[-7][41]</m>
-          </p>
-        </li>
-      </ol>
-    </p>
-  </exercise>
-
-  <p>
-    As with the case of equivalent fractions, we need to prove that the operations of addition and multiplication on equivalence classes of integers modulo <m>n</m> are well-defined, meaning that the result does not depend on the choice of representatives of the equivalence classes we are adding or multiplying together.
-  </p>
-
-  <theorem xml:id="thm-modulararithmeticwelldefined">
-    <statement>
-      <p>
-        Modular arithmetic is well-defined.
-      </p>
-    </statement>
-  </theorem>
-
-  <proof>
-    <p>
-      We first need to prove that addition is well-defined modulo <m>n</m>.
-      We need to show that if <m>[a] = [a']</m> and <m>[b] = [b']</m>, then <m>[a+b] = [a'+b']</m>.
-      Because <m>[a] = [a']</m>, we have that <m>n \mid (a-a')</m>, and similarly for <m>[b]=[b']</m>.
-      Thus, <me>n \mid (a-a' + b-b') = ((a+b) - (a'+b'))\, ,</me> which means that <m>[a+b] = [a'+b']</m>.
-    </p>
-    <p>
-      Next, we need to prove that multiplication is well-defined modulo <m>n</m>.
-      We need to show that if <m>[a] = [a']</m> and <m>[b] = [b']</m>, then <m>[ab] = [a'b']</m>.
-      Because <m>[a] = [a']</m>, we have that <m>n \mid (a-a')</m>, and similarly for <m>[b]=[b']</m>.
-      Thus, <me>n \mid ((a-a')b + a'(b-b')) = ab - a'b + a'b - a'b' = ab-a'b' \, ,</me> which means that <m>[ab] = [a'b']</m>.
-    </p>
-  </proof>
-
-  <exercise>
-    <p>
-      Discuss the proof above. Does it make sense? Why or why not?
-    </p>
-  </exercise>
-
-  <p>
-    Because modular arithmetic is well-defined, we can treat the equivalence classes of integers modulo <m>n</m> as if they were independent objects, and we can add and multiply them together by selecting representatives of each class and get the same result regardless of which representatives we choose to add or multiply together.
-    In practice, we usually use the values <me>\{0,1,2,3,\ldots,n-1\}</me>, which we call <alert>distinguished representatives</alert>, as the representatives for each equivalence class.
-    When we add these values, we "reduce mod <m>n</m>", meaning that if we end up with a value larger than <m>n</m>, we replace that number with the remainder after dividing by <m>n</m>.
-  </p>
-
-  <p>
-    A common convention for representing the equivalence classes modulo <m>n</m> is to write the values <m>\{0,1,2,3,\ldots,n-1\}</m> on a clock.
-    For example, the equivalence classes of integers modulo <m>12</m> are represented on a clock with the numbers <m>0</m> through <m>11</m>, and we add by moving clockwise around the clock.
-  </p>
-
-  <exercise>
-    <p>
-      Represent the equivalence classes of integers modulo <m>5</m> on a clock with five hours, and use this to interpret the value of <me>[3]+[4]</me> and <me>[3][4]</me> in <m>\mathbb{Z}/5\mathbb{Z}</m>.
-    </p>
-  </exercise>
-
-    <p>
-      Our usual clock represents the equivalence classes of integers modulo <m>12</m>.
-      Thus, if it is 10 o'clock and we want to know what time it will be in 7 hours, we are computing <me>[10]+[7] = [17] = [5]</me> modulo <m>12</m>, so it will be 5 o'clock.
-    </p>
   
     <p>
-      Because modular arithmetic relies on addition and multiplication in the integers, we can use the properties of addition and multiplication in the integers to deduce properties of addition and multiplication in modular arithmetic.
+      Because modular operations rely on addition and multiplication in the integers, we can use the properties of addition and multiplication in the integers to deduce properties of addition and multiplication in modular arithmetic.
       This leads to the following theorem, which we will not prove in detail.
     </p>
 
@@ -242,6 +60,11 @@
             </p>
           </statement>
         </definition>
+
+        <p>
+          Observe that a zero divisor cannot be a unit, because if <m>[a]</m> is a zero divisor, then there exists a nonzero equivalence class <m>[b]</m> such that <m>[a][b] = [0]</m>.
+          So, if <m>[a]</m> were a unit, we would have that <me>[0] = [a]^{-1}[0] = [a]^{-1}[a][b] = [1][b] = [b]\, </me> which contradicts our assumption that <m>[b]\neq [0]</m>.
+        </p>
   
         <exercise>
           <p>
@@ -250,7 +73,7 @@
         </exercise>
 
         <p>
-          From the examples above, you might conjecture the following theorem.
+          From the checkpoint above, you might conjecture the following theorem.
         </p>
 
         <theorem xml:id="thm-modularunits">
@@ -304,6 +127,12 @@
             This follows immediately from the fact that if <m>p</m> is prime, then <m>\gcd(a,p)=1</m> for all <m>a=1,2,\ldots,p-1</m>.
           </p>
         </proof>
+
+        <p>
+          So, in <m>\mathbb{Z}/p\mathbb{Z}</m>, we can add, subtract, multiply, and divide (except by <m>[0]</m>) without every causing any issues.
+          This is one of the reasons why working modulo a prime is such a powerful tool in mathematics.
+          (In modern algebra classes like MA 361-362, you learn that <m>\mathbb{Z}/p\mathbb{Z}</m> is a <em>field</em>, while in general the modular arithmetic systems <m>\mathbb{Z}/n\mathbb{Z}</m> are <em>rings</em> but not fields.)
+        </p>
 
         <p>
           We use the Euclidean algorithm and the Bezout identity to find the multiplicative inverse of an equivalence class <m>[a]</m> in <m>\mathbb{Z}/n\mathbb{Z}</m> when <m>\gcd(a,n)=1</m>.
