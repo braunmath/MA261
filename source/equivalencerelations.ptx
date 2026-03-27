@@ -222,7 +222,7 @@
         We need to show that <me>(ad+cb)(b'd') = (a'd'+c'b')(bd)</me>, which is the required condition to establish that <me>\frac{a}{b}+\frac{c}{d} \cong \frac{a'}{b'}+\frac{c'}{d'}</me>.
         Because <m>ab' = a'b</m> and <m>cd' = c'd</m>, we have
         <md>
-          (ad+cb)(b'd') = adb'd' + cbb'd' = a'bdd' + c'bdd' = (a'd'+c'b')(bd) \, .
+          (ad+cb)(b'd') = adb'd' + cbb'd' = a'dbd' + c'bb'd = (a'd'+c'b')(bd) \, .
         </md>
         Therefore, the result holds.
       </p>

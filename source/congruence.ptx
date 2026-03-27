@@ -11,6 +11,8 @@
 
   <xi:include href="modulararithmetic.ptx" />
 
+    <xi:include href="modularlinearequations.ptx" />
+
   <xi:include href="chineseremaindertheorem.ptx" />
 
   <xi:include href="fermatslittletheorem.ptx" />
