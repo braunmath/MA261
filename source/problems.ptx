@@ -875,18 +875,49 @@ Your grade is based on completion only (in other words, if you complete the assi
     <problem>
         <title>P27</title>
         <p>
+            Suppose that <m>R</m> is an equivalence relation on a set <m>X</m>.
+            Suppose further that <m>R</m> is symmetric and transitive, and that for every element <m>x\in X</m>, <m>x</m> occurs in at least on ordered pair for <m>R</m>.
+            Prove that <m>R</m> must also be reflexive.
+        </p>
+        <p>
+            Note: for this proof, you will be giving a purely formal argument. You need to use the axioms for symmetric and transitive to show that the reflexive property holds under these assumptions.
         </p>
     </problem>
 
     <problem>
         <title>P28</title>
         <p>
+            Suppose <m>R</m> and <m>T</m> are equivalence relations on a set <m>X</m>.
+            Prove that the intersection <m>R\cap T</m> is an equivalence relation on <m>X</m>.
+        </p>
+        <p>
+            Note: Remember that <m>R</m> and <m>T</m> are binary relations, which means that they are collections of ordered pairs in <m>X\times X</m>.
+            So, your goal is to prove that the collection of ordered pairs in <m>R\cap T</m> is reflexive, symmetric, and transitive.
         </p>
     </problem>
 
     <problem>
         <title>P29</title>
         <p>
+            Which of the following binary relations <m>R</m> are equivalence relations on the positive integers? 
+            For each of them, either prove it is an equivalence relation, or explain why it fails one of the axioms for an equivalence relation.
+            <ol>
+                <li>
+                    <p>
+                        <m>(a,b)\in R</m> if <m>a</m> and <m>b</m> have the same set of prime divisors.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>(a,b)\in R</m> if <m>a\lt b</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        For a fixed positive integer <m>n</m>, <m>(a,b)\in R</m> if <m>\gcd(a,n)=\gcd(b,n)</m>. 
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
