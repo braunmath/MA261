@@ -2188,27 +2188,27 @@ var ptx_lunr_docs = [
   "body": " Discuss the proof above. Does it make sense? Why or why not?  "
 },
 {
-  "id": "chineseremaindertheorem",
+  "id": "modularlinearequations",
   "level": "1",
-  "url": "chineseremaindertheorem.html",
+  "url": "modularlinearequations.html",
   "type": "Section",
   "number": "5.4",
   "title": "Solving Modular Linear Equations",
-  "body": " Solving Modular Linear Equations  Now that we have developed a new number system to work with, we can consider standard problems in this new context. For example, the first functions you learn about in school are linear functions, which are functions of the form . You learned that if , then the function is invertible, and you can solve for in terms of . In the context of modular arithmetic, we can ask a similar question: given a linear function , can we solve for in terms of when we are working modulo some integer ? For this problem, we will consider two solutions to be the same if they are congruent modulo . In other words, we will seek solutions to where .  As an example, consider the function working with the number system . We can ask the question: given a value of , can we find a value of such that ? For example, what are the solutions to the following equation? We can equivalently write this in as: This is equivalent to finding the values of such that is divisible by 5. We can check each value of in to see which ones work:  is divisible by 5, so is a solution.  is not divisible by 5, so is not a solution.  is not divisible by 5, so is not a solution.  is not divisible by 5, so is not a solution.  is not divisible by 5, so is not a solution.  Therefore, the only solution to the equation is . What happens if we change the equation to which is equivalent over to We can check each value of again:  is not congruent to 1 modulo 5, so is not a solution.  is not congruent to 1 modulo 5, so is not a solution.  is congruent to 1 modulo 5, so is a solution.  is not congruent to 1 modulo 5, so is not a solution.  is not congruent to 1 modulo 5, so is not a solution.  Therefore, the only solution to the equation is . So far, there is a unique solution to each of the equations we have considered, similarly to what we are used to.  However, consider next the equation . We can check each value of in to see which ones work:  is not congruent to 8 modulo 10, so is not a solution.  is not congruent to 8 modulo 10, so is not a solution.  is not congruent to 8 modulo 10, so is not a solution.  is not congruent to 8 modulo 10, so is not a solution.  is congruent to 8 modulo 10, so is a solution.  is not congruent to 8 modulo 10, so is not a solution.  is not congruent to 8 modulo 10, so is not a solution.  is not congruent to 8 modulo 10, so is not a solution.  is not congruent to 8 modulo 10, so is not a solution.  is congruent to 8 modulo 10, so is a solution.  Therefore, the solutions to the equation are and . In this case, there are two solutions to the equation, which is different from what we are used to in the context of real numbers.  As yet another example, consider the equation which is equivalent over to In this case, we can immediately see that there are no solutions to this equation, since is always an odd number, and therefore it is never divisible by .   Find all of the solutions to the following equations.         over           over       So, we have seen that in the context of modular arithmetic, linear equations can have a unique solution, multiple solutions, or no solutions at all. This leads us to the following questions:  What are the criteria guaranteeing that a given linear equation has a solution, and when it does, how many solutions does it have?  Is there a method to find all the solutions to a given linear equation?  Fortunately, we can solve these problems using the Euclidean algorithm and the Bezout identity.   Sometimes when you are reading math, instead of placing the proof of a theorem after the statement of the theorem, an author will lead you through a proof before stating the theorem. We will illustrate this style of writing for the next theorem.   Consider the general equation . This is equivalent to the equation in , which is equivalent to the equation . So, we need to find the values of such that is divisible by . This is equivalent to finding the values of such that there exists an integer such that which is equivalent to finding integer solutions and to the linear equation However, we know how to do this! Specifically, we know that the linear equation has integer solutions if and only if .  Further, we know that if , then is a unit in , so there is a unique solution to the equation in this case, namely . If is not a unit and if there is a solution to the equation , then there are multiple solutions. The reason is that if is a solution, then so is , since So, we have shown the following theorem.    The linear equation , or equivalently in , has a solution if and only if . Further, if , then there is a unique solution to the equation, namely . If is not a unit and if there are solutions to this equation, then there are multiple solutions.     Discuss this theorem and the proof preceding it with your group. Does it make sense? Why or why not?    With your group, compare the statement of this theorem to the three examples that are worked out at the beginning of this section. Do the examples match the statement of the theorem? Why or why not?   Another topic that is important is simultaneously solving systems of linear equations across multiple moduli. In other words, we can consider linear equations with a single variable, but where each linear equation uses a different value for . Let's look at an example.  Consider the following two equations: We can ask the question: is there a solution to this system of equations? In this case, we see that is a solution, since and . What this means is that the number plays two roles simultaneously: we have in and in .  Consider the following more complicated example: In this case, we have that is a solution. Again, what does this mean? It means that the number plays four roles simultaneously: we have in , in , in , and in .  This leads to the following problem: given and , can we find a number such that in for each ?   Discuss these examples and this question. Do they make sense? Why or why not?   The answer to this question is known as the Chinese Remainder Theorem, because problems of this type were solved 1500 years ago by mathematicians in China.   Chinese Remainder Theorem   Suppose that are pairwise coprime, i.e., that for all . Then for any choice of , the system of equations given by has a unique solution in . In other words, there is a unique congruence class whose representatives simultaneously solve these equations.     We first prove that if a solution exists, then it is unique. Suppose that and are both solutions to the above system of equations. This means that for each , we have and thus each divides . Since the are pairwise coprime, this least common multiple is their product, and this must divide as well. Thus, in .  We next show how to construct a solution to this system of equations. We start with the case of two equations. Bezout's identity states that we can find and such that We now claim that we have a solution to the first two equations given by This is a solution because we can replace in the above equation to get and when we reduce this modulo we get . A similar calculation shows that this holds for .  When , we can use a similar process to the case of two equations. Specifically, let and let . Since the original are coprime, we have that . Thus, there is a multiplicative inverse of in , which we will call . This multiplicative inverse can be found by solving the Bezout identity, as we have done previously. We define We know that for each due to the additive inverse relationship. We also have that if , then Thus, for each , as desired.    Discuss this proof with your group. Does it make sense? Why or why not?   Let's work through an example to solve such a system of equations. Suppose we have Using the notation from the proof, we have that , , , and . Computing inverses, we have (where the 3 subscript indicates the modulus) and thus . Similarly, , so . Finally, . Putting this together, we have If we reduce modulo , we obtain . Thus, is our unique solution in .   Find the solution to the following system of equations.    "
+  "body": " Solving Modular Linear Equations  Now that we have developed a new number system to work with, we can consider standard problems in this new context. For example, the first functions you learn about in school are linear functions, which are functions of the form . You learned that if , then the function is invertible, and you can solve for in terms of . In the context of modular arithmetic, we can ask a similar question: given a linear function , can we solve for in terms of when we are working modulo some integer ? For this problem, we will consider two solutions to be the same if they are congruent modulo . In other words, we will seek solutions to where .  As an example, consider the function working with the number system . We can ask the question: given a value of , can we find a value of such that ? For example, what are the solutions to the following equation? We can equivalently write this in as: This is equivalent to finding the values of such that is divisible by 5. We can check each value of in to see which ones work:  is divisible by 5, so is a solution.  is not divisible by 5, so is not a solution.  is not divisible by 5, so is not a solution.  is not divisible by 5, so is not a solution.  is not divisible by 5, so is not a solution.  Therefore, the only solution to the equation is . What happens if we change the equation to which is equivalent over to We can check each value of again:  is not congruent to 1 modulo 5, so is not a solution.  is not congruent to 1 modulo 5, so is not a solution.  is congruent to 1 modulo 5, so is a solution.  is not congruent to 1 modulo 5, so is not a solution.  is not congruent to 1 modulo 5, so is not a solution.  Therefore, the only solution to the equation is . So far, there is a unique solution to each of the equations we have considered, similarly to what we are used to.  However, consider next the equation . We can check each value of in to see which ones work:  is not congruent to 8 modulo 10, so is not a solution.  is not congruent to 8 modulo 10, so is not a solution.  is not congruent to 8 modulo 10, so is not a solution.  is not congruent to 8 modulo 10, so is not a solution.  is congruent to 8 modulo 10, so is a solution.  is not congruent to 8 modulo 10, so is not a solution.  is not congruent to 8 modulo 10, so is not a solution.  is not congruent to 8 modulo 10, so is not a solution.  is not congruent to 8 modulo 10, so is not a solution.  is congruent to 8 modulo 10, so is a solution.  Therefore, the solutions to the equation are and . In this case, there are two solutions to the equation, which is different from what we are used to in the context of real numbers.  As yet another example, consider the equation which is equivalent over to In this case, we can immediately see that there are no solutions to this equation, since is always an odd number, and therefore it is never divisible by .   Find all of the solutions to the following equations.         over           over       So, we have seen that in the context of modular arithmetic, linear equations can have a unique solution, multiple solutions, or no solutions at all. This leads us to the following questions:  What are the criteria guaranteeing that a given linear equation has a solution, and when it does, how many solutions does it have?  Is there a method to find all the solutions to a given linear equation?  Fortunately, we can solve these problems using the Euclidean algorithm and the Bezout identity.   Sometimes when you are reading math, instead of placing the proof of a theorem after the statement of the theorem, an author will lead you through a proof before stating the theorem. We will illustrate this style of writing for the next theorem.   Consider the general equation . This is equivalent to the equation in , which is equivalent to the equation . So, we need to find the values of such that is divisible by . This is equivalent to finding the values of such that there exists an integer such that which is equivalent to finding integer solutions and to the linear equation However, we know how to do this! Specifically, we know that the linear equation has integer solutions if and only if .  Further, we know that if , then is a unit in , so there is a unique solution to the equation in this case, namely . If is not a unit and if there is a solution to the equation , then there are multiple solutions. The reason is that if is a solution, then so is , since So, we have shown the following theorem.    The linear equation , or equivalently in , has a solution if and only if . Further, if , then there is a unique solution to the equation, namely . If is not a unit and if there are solutions to this equation, then there are multiple solutions.     Discuss this theorem and the proof preceding it with your group. Does it make sense? Why or why not?    With your group, compare the statement of this theorem to the three examples that are worked out at the beginning of this section. Do the examples match the statement of the theorem? Why or why not?   "
 },
 {
-  "id": "chineseremaindertheorem-6",
+  "id": "modularlinearequations-6",
   "level": "2",
-  "url": "chineseremaindertheorem.html#chineseremaindertheorem-6",
+  "url": "modularlinearequations.html#modularlinearequations-6",
   "type": "Checkpoint",
   "number": "5.4.1",
   "title": "",
   "body": " Find all of the solutions to the following equations.         over           over      "
 },
 {
-  "id": "chineseremaindertheorem-8",
+  "id": "modularlinearequations-8",
   "level": "2",
-  "url": "chineseremaindertheorem.html#chineseremaindertheorem-8",
+  "url": "modularlinearequations.html#modularlinearequations-8",
   "type": "Remark",
   "number": "5.4.2",
   "title": "",
@@ -2217,36 +2217,45 @@ var ptx_lunr_docs = [
 {
   "id": "thm-solvabilitymodularlinearequations",
   "level": "2",
-  "url": "chineseremaindertheorem.html#thm-solvabilitymodularlinearequations",
+  "url": "modularlinearequations.html#thm-solvabilitymodularlinearequations",
   "type": "Theorem",
   "number": "5.4.3",
   "title": "",
   "body": "  The linear equation , or equivalently in , has a solution if and only if . Further, if , then there is a unique solution to the equation, namely . If is not a unit and if there are solutions to this equation, then there are multiple solutions.   "
 },
 {
-  "id": "chineseremaindertheorem-12",
+  "id": "modularlinearequations-12",
   "level": "2",
-  "url": "chineseremaindertheorem.html#chineseremaindertheorem-12",
+  "url": "modularlinearequations.html#modularlinearequations-12",
   "type": "Checkpoint",
   "number": "5.4.4",
   "title": "",
   "body": " Discuss this theorem and the proof preceding it with your group. Does it make sense? Why or why not?  "
 },
 {
-  "id": "chineseremaindertheorem-13",
+  "id": "modularlinearequations-13",
   "level": "2",
-  "url": "chineseremaindertheorem.html#chineseremaindertheorem-13",
+  "url": "modularlinearequations.html#modularlinearequations-13",
   "type": "Checkpoint",
   "number": "5.4.5",
   "title": "",
   "body": " With your group, compare the statement of this theorem to the three examples that are worked out at the beginning of this section. Do the examples match the statement of the theorem? Why or why not?  "
 },
 {
-  "id": "chineseremaindertheorem-18",
+  "id": "chineseremaindertheorem",
+  "level": "1",
+  "url": "chineseremaindertheorem.html",
+  "type": "Section",
+  "number": "5.5",
+  "title": "Chinese Remainder Theorem",
+  "body": " Chinese Remainder Theorem  Another topic that is important is simultaneously solving systems of linear equations across multiple moduli. In other words, we can consider linear equations with a single variable, but where each linear equation uses a different value for . Let's look at an example.  Consider the following two equations: We can ask the question: is there a solution to this system of equations? In this case, we see that is a solution, since and . What this means is that the number plays two roles simultaneously: we have in and in .  Consider the following more complicated example: In this case, we have that is a solution. Again, what does this mean? It means that the number plays four roles simultaneously: we have in , in , in , and in .  This leads to the following problem: given and , can we find a number such that in for each ?   Discuss these examples and this question. Do they make sense? Why or why not?   The answer to this question is known as the Chinese Remainder Theorem, because problems of this type were solved 1500 years ago by mathematicians in China.   Chinese Remainder Theorem   Suppose that are pairwise coprime, i.e., that for all . Then for any choice of , the system of equations given by has a unique solution in . In other words, there is a unique congruence class whose representatives simultaneously solve these equations.     We first prove that if a solution exists, then it is unique. Suppose that and are both solutions to the above system of equations. This means that for each , we have and thus each divides . Since the are pairwise coprime, this least common multiple is their product, and this must divide as well. Thus, in .  We next show how to construct a solution to this system of equations. We start with the case of two equations. Bezout's identity states that we can find and such that We now claim that we have a solution to the first two equations given by This is a solution because we can replace in the above equation to get and when we reduce this modulo we get . A similar calculation shows that this holds for .  When , we can use a similar process to the case of two equations. Specifically, let and let . Since the original are coprime, we have that . Thus, there is a multiplicative inverse of in , which we will call . This multiplicative inverse can be found by solving the Bezout identity, as we have done previously. We define We know that for each due to the additive inverse relationship. We also have that if , then Thus, for each , as desired.    Discuss this proof with your group. Does it make sense? Why or why not?   Let's work through an example to solve such a system of equations. Suppose we have Using the notation from the proof, we have that , , , and . Computing inverses, we have (where the 3 subscript indicates the modulus) and thus . Similarly, , so . Finally, . Putting this together, we have If we reduce modulo , we obtain . Thus, is our unique solution in .   Find the solution to the following system of equations.    "
+},
+{
+  "id": "chineseremaindertheorem-6",
   "level": "2",
-  "url": "chineseremaindertheorem.html#chineseremaindertheorem-18",
+  "url": "chineseremaindertheorem.html#chineseremaindertheorem-6",
   "type": "Checkpoint",
-  "number": "5.4.6",
+  "number": "5.5.1",
   "title": "",
   "body": " Discuss these examples and this question. Do they make sense? Why or why not?  "
 },
@@ -2255,34 +2264,34 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "chineseremaindertheorem.html#thm-chineseremaindertheorem",
   "type": "Theorem",
-  "number": "5.4.7",
+  "number": "5.5.2",
   "title": "Chinese Remainder Theorem.",
   "body": " Chinese Remainder Theorem   Suppose that are pairwise coprime, i.e., that for all . Then for any choice of , the system of equations given by has a unique solution in . In other words, there is a unique congruence class whose representatives simultaneously solve these equations.   "
 },
 {
-  "id": "chineseremaindertheorem-21",
+  "id": "chineseremaindertheorem-9",
   "level": "2",
-  "url": "chineseremaindertheorem.html#chineseremaindertheorem-21",
+  "url": "chineseremaindertheorem.html#chineseremaindertheorem-9",
   "type": "Proof",
-  "number": "5.4.1",
+  "number": "5.5.1",
   "title": "",
   "body": " We first prove that if a solution exists, then it is unique. Suppose that and are both solutions to the above system of equations. This means that for each , we have and thus each divides . Since the are pairwise coprime, this least common multiple is their product, and this must divide as well. Thus, in .  We next show how to construct a solution to this system of equations. We start with the case of two equations. Bezout's identity states that we can find and such that We now claim that we have a solution to the first two equations given by This is a solution because we can replace in the above equation to get and when we reduce this modulo we get . A similar calculation shows that this holds for .  When , we can use a similar process to the case of two equations. Specifically, let and let . Since the original are coprime, we have that . Thus, there is a multiplicative inverse of in , which we will call . This multiplicative inverse can be found by solving the Bezout identity, as we have done previously. We define We know that for each due to the additive inverse relationship. We also have that if , then Thus, for each , as desired.  "
 },
 {
-  "id": "chineseremaindertheorem-22",
+  "id": "chineseremaindertheorem-10",
   "level": "2",
-  "url": "chineseremaindertheorem.html#chineseremaindertheorem-22",
+  "url": "chineseremaindertheorem.html#chineseremaindertheorem-10",
   "type": "Checkpoint",
-  "number": "5.4.8",
+  "number": "5.5.3",
   "title": "",
   "body": " Discuss this proof with your group. Does it make sense? Why or why not?  "
 },
 {
-  "id": "chineseremaindertheorem-24",
+  "id": "chineseremaindertheorem-12",
   "level": "2",
-  "url": "chineseremaindertheorem.html#chineseremaindertheorem-24",
+  "url": "chineseremaindertheorem.html#chineseremaindertheorem-12",
   "type": "Checkpoint",
-  "number": "5.4.9",
+  "number": "5.5.4",
   "title": "",
   "body": " Find the solution to the following system of equations.   "
 },
@@ -2291,7 +2300,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "fermatslittletheorem.html",
   "type": "Section",
-  "number": "5.5",
+  "number": "5.6",
   "title": "Fermat’s Little Theorem",
   "body": " Fermat's Little Theorem    "
 },
@@ -2300,7 +2309,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "musicalscalesandkeys.html",
   "type": "Section",
-  "number": "5.6",
+  "number": "5.7",
   "title": "Musical Scales and Keys",
   "body": " Musical Scales and Keys    "
 },
