@@ -209,8 +209,205 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="fermatslittletheorem"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fermat’s Little Theorem</span>
 </h2>
-<div class="para" id="fermatslittletheorem-2"><div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" data-description="Section 5.6: Fermat’s Little Theorem"><a href="#fermatslittletheorem" title="Copy heading and permalink for Section 5.6: Fermat’s Little Theorem" aria-label="Copy heading and permalink for Section 5.6: Fermat’s Little Theorem">🔗</a></div></section></div>
+<div class="para" id="fermatslittletheorem-2">The next topic we will consider is a result known as "Fermat’s Little Theorem". Pierre de Fermat was a mathematician in the 17th century who extensively studied number theory, and is perhaps best know for his "Last Theorem". Fermat’s little theorem is a key result in number theory that is a major ingredient in the study of primality testing and encryption algorithms, which you can learn more about in the course MA 340.<div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="fermatslittletheorem-3">
+<div class="para">We will begin with the following experiments using either a calculator on your phone or using SageMath. Suppose that <span class="process-math">\(p\)</span> is a prime number, and suppose <span class="process-math">\(a\)</span> is a positive integer that is relatively prime to <span class="process-math">\(p\text{.}\)</span> In symbols, <span class="process-math">\(p\nmid a\text{.}\)</span> <em class="alert">Is there a value <span class="process-math">\(x\)</span> that consistently gives<div class="displaymath process-math" id="fermatslittletheorem-3-5-2">
+\begin{equation*}
+[a]^x=[1] \, ?
+\end{equation*}
+</div></em> In other words, is there a value of <span class="process-math">\(x\)</span> that will always guarantee</div>
+<div class="displaymath process-math" id="fermatslittletheorem-3-7">
+\begin{equation*}
+a^x\equiv 1 \bmod p \, ?
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="fermatslittletheorem-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="fermatslittletheorem-4-1">
+<div class="para">For each of the following values of <span class="process-math">\(p\)</span> and <span class="process-math">\(a\text{,}\)</span> use a calculator or SageMath or another computer system to calculate <span class="process-math">\([a]^x\)</span> for each <span class="process-math">\(x=1,2,3,\ldots,p\text{.}\)</span> In other words, what is the remainder of <span class="process-math">\(a^x\)</span> after dividing by <span class="process-math">\(p\text{?}\)</span>
+</div>
+<ol class="decimal" id="fermatslittletheorem-4-1-7">
+<li id="fermatslittletheorem-4-1-7-1">
+<div class="para" id="fermatslittletheorem-4-1-7-1-1">
+<span class="process-math">\(\displaystyle p=3, a=8\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-4-1-7-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.6.1.1"><a href="#fermatslittletheorem-4-1-7-1" title="Copy heading and permalink for Item 5.6.1.1" aria-label="Copy heading and permalink for Item 5.6.1.1">🔗</a></div>
+</li>
+<li id="fermatslittletheorem-4-1-7-2">
+<div class="para" id="fermatslittletheorem-4-1-7-2-1">
+<span class="process-math">\(\displaystyle p=7, a=306\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-4-1-7-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.6.1.2"><a href="#fermatslittletheorem-4-1-7-2" title="Copy heading and permalink for Item 5.6.1.2" aria-label="Copy heading and permalink for Item 5.6.1.2">🔗</a></div>
+</li>
+<li id="fermatslittletheorem-4-1-7-3">
+<div class="para" id="fermatslittletheorem-4-1-7-3-1">
+<span class="process-math">\(\displaystyle p=17, a = 14\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-4-1-7-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.6.1.3"><a href="#fermatslittletheorem-4-1-7-3" title="Copy heading and permalink for Item 5.6.1.3" aria-label="Copy heading and permalink for Item 5.6.1.3">🔗</a></div>
+</li>
+<li id="fermatslittletheorem-4-1-7-4">
+<div class="para" id="fermatslittletheorem-4-1-7-4-1">
+<span class="process-math">\(\displaystyle p=11, a=13^{10^{100}}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-4-1-7-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5.6.1.4"><a href="#fermatslittletheorem-4-1-7-4" title="Copy heading and permalink for Item 5.6.1.4" aria-label="Copy heading and permalink for Item 5.6.1.4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 5.6.1"><a href="#fermatslittletheorem-4" title="Copy heading and permalink for Checkpoint 5.6.1" aria-label="Copy heading and permalink for Checkpoint 5.6.1">🔗</a></div></article></details><div class="para logical" id="fermatslittletheorem-5">
+<div class="para">From this, there are two things to observe.</div>
+<ul class="disc" id="fermatslittletheorem-5-1">
+<li id="fermatslittletheorem-5-1-1">
+<div class="para" id="fermatslittletheorem-5-1-1-1">First, we see that it appears that <span class="process-math">\(x=p-1\)</span> always produces <span class="process-math">\([1]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-5-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#fermatslittletheorem-5-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="fermatslittletheorem-5-1-2">
+<div class="para" id="fermatslittletheorem-5-1-2-1">Second, we see that it is hard to check this for all integers. In particular, if <span class="process-math">\(p\)</span> and <span class="process-math">\(a\)</span> are both extremely large, then they cannot be stored in the memory of a computer. Thus, if we think that <span class="process-math">\(x=p-1\)</span> always produces <span class="process-math">\([1]\text{,}\)</span> we need to prove it.<div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-5-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#fermatslittletheorem-5-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="para">This leads us to our main result.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-fermatlittletheorem"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Fermat’s Little Theorem.</span>
+</h3>
+<div class="para logical" id="thm-fermatlittletheorem-2-1">
+<div class="para">If <span class="process-math">\(p\)</span> is prime and <span class="process-math">\(a\)</span> is a positive integer such that <span class="process-math">\(p\)</span> does not divide <span class="process-math">\(a\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="thm-fermatlittletheorem-2-1-5">
+\begin{equation*}
+[a]^{p-1} = [1] \, .
+\end{equation*}
+</div>
+<div class="para">Equivalently,</div>
+<div class="displaymath process-math" id="thm-fermatlittletheorem-2-1-6">
+\begin{equation*}
+a^{p-1}\equiv 1 \bmod p \, .
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-fermatlittletheorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.6.2: Fermat’s Little Theorem"><a href="#thm-fermatlittletheorem" title="Copy heading and permalink for Theorem 5.6.2: Fermat’s Little Theorem" aria-label="Copy heading and permalink for Theorem 5.6.2: Fermat’s Little Theorem">🔗</a></div></article><div class="para" id="fermatslittletheorem-7">We will give two proofs of Fermat’s little theorem. Our first proof relies on properties of units in <span class="process-math">\(\mathbb{Z}/n\mathbb{Z}\text{.}\)</span> We will use the notation <span class="process-math">\(A\setminus B\text{,}\)</span> read as "A setminus B", to denote the elements of <span class="process-math">\(A\)</span> that are not in <span class="process-math">\(B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="fermatslittletheorem-8" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="title">Proof of Fermat’s Little Theorem using units.</span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="fermatslittletheorem-8-2">
+<div class="para">We begin our proof with the claim that every non-zero element <span class="process-math">\([a]\in \mathbb{Z}/p\mathbb{Z}\)</span> is a unit, since every such <span class="process-math">\(a\)</span> has <span class="process-math">\(\gcd(a,p)=1\text{.}\)</span> Thus, for any such <span class="process-math">\([a]\text{,}\)</span> the function <span class="process-math">\(M_a\)</span> that sends <span class="process-math">\([b]\in \mathbb{Z}/p\mathbb{Z}\)</span> to <span class="process-math">\([a][b]\)</span> is an invertible function from <span class="process-math">\(\mathbb{Z}/p\mathbb{Z}\setminus \{[0]\}\)</span> to itself. In other words,</div>
+<div class="displaymath process-math" id="fermatslittletheorem-8-2-9">
+\begin{equation*}
+M_a:\mathbb{Z}/p\mathbb{Z}\setminus \{[0]\} \rightarrow \mathbb{Z}/p\mathbb{Z}\setminus \{[0]\}
+\end{equation*}
+</div>
+<div class="para">is a function that is both one-to-one and onto. Therefore, <span class="process-math">\(M_a\)</span> rearranges the elements of <span class="process-math">\(\mathbb{Z}/p\mathbb{Z}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-8-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="fermatslittletheorem-8-3">
+<div class="para">We prove this claim as follows. First, suppose that for <span class="process-math">\([b]\)</span> and <span class="process-math">\([b']\)</span> we have <span class="process-math">\([a][b]=[a][b']\text{.}\)</span> Then multiplying both sides by <span class="process-math">\([a]^{-1}\)</span> we obtain <span class="process-math">\([b]=[b']\text{,}\)</span> and thus the function is one-to-one. Second, we want to show that <span class="process-math">\(M_a\)</span> is onto, i.e., that every element of <span class="process-math">\(\mathbb{Z}/p\mathbb{Z}\)</span> is mapped onto by <span class="process-math">\(M_a\text{.}\)</span> Suppose that <span class="process-math">\([b]\in\mathbb{Z}/p\mathbb{Z}\text{.}\)</span> Then we know that <span class="process-math">\([a]^{-1}[b]\in\mathbb{Z}/p\mathbb{Z}\text{.}\)</span> So,</div>
+<div class="displaymath process-math" id="fermatslittletheorem-8-3-11">
+\begin{equation*}
+M_a([a]^{-1}[b])=[a][a]^{-1}[b]=[b] \, ,
+\end{equation*}
+</div>
+<div class="para">showing that <span class="process-math">\([b]\)</span> is mapped onto by <span class="process-math">\(M_a\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-8-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="fermatslittletheorem-8-4">
+<div class="para">Thus, we see that</div>
+<div class="displaymath process-math" id="fermatslittletheorem-8-4-1">
+\begin{equation*}
+\{[1],[2],[3],\ldots,[p-1]\}=\{[a][1],[a][2],[a][3],\ldots,[a][p-1]\} \, .
+\end{equation*}
+</div>
+<div class="para">Hence, we have that the product of all the elements in the first set is equal to the product of all the elements in the second set, i.e.,</div>
+<div class="displaymath process-math" id="fermatslittletheorem-8-4-2">
+\begin{equation*}
+[1][2][3]\cdots [p-1] = [a][1][a][2][a][3]\cdots [a][p-1] \, .
+\end{equation*}
+</div>
+<div class="para">Multiplying both sides by</div>
+<div class="displaymath process-math" id="fermatslittletheorem-8-4-3">
+\begin{equation*}
+[1]^{-1}[2]^{-1}[3]^{-1}\cdots [p-1]^{-1}
+\end{equation*}
+</div>
+<div class="para">we obtain</div>
+<div class="displaymath process-math" id="fermatslittletheorem-8-4-4">
+\begin{equation*}
+[1]=[a]^{p-1}
+\end{equation*}
+</div>
+<div class="para">and this completes the proof.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-8-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 5.6.1: Proof of Fermat’s Little Theorem using units"><a href="#fermatslittletheorem-8" title="Copy heading and permalink for Proof 5.6.1: Proof of Fermat’s Little Theorem using units" aria-label="Copy heading and permalink for Proof 5.6.1: Proof of Fermat’s Little Theorem using units">🔗</a></div></article></details><details id="fermatslittletheorem-9" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="fermatslittletheorem-9-1">Work through the details of this proof in the specific case of <span class="process-math">\(p=7, a=3\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-9-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 5.6.3"><a href="#fermatslittletheorem-9" title="Copy heading and permalink for Checkpoint 5.6.3" aria-label="Copy heading and permalink for Checkpoint 5.6.3">🔗</a></div></article></details><details id="fermatslittletheorem-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="fermatslittletheorem-10-1">Discuss the above proof. Does it make sense? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 5.6.4"><a href="#fermatslittletheorem-10" title="Copy heading and permalink for Checkpoint 5.6.4" aria-label="Copy heading and permalink for Checkpoint 5.6.4">🔗</a></div></article></details><div class="para" id="fermatslittletheorem-11">Our second proof uses a combinatorial argument, i.e., a proof based on counting.<div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="fermatslittletheorem-12" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="title">Combinatorial proof of Fermat’s Little Theorem.</span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="fermatslittletheorem-12-2">
+<div class="para">We will prove that for <em class="alert">any</em> positive integer <span class="process-math">\(a\)</span> we have</div>
+<div class="displaymath process-math" id="fermatslittletheorem-12-2-3">
+\begin{equation*}
+a^p\equiv a \bmod p \, ,
+\end{equation*}
+</div>
+<div class="para">and thus in the special case where <span class="process-math">\(\gcd(a,p)=1\text{,}\)</span> we can cancel <span class="process-math">\(a\)</span> from both sides to obtain our desired formula</div>
+<div class="displaymath process-math" id="fermatslittletheorem-12-2-6">
+\begin{equation*}
+a^{p-1}\equiv 1 \bmod p \, .
+\end{equation*}
+</div>
+<div class="para">Observe that <span class="process-math">\(a^p\)</span> counts the number of length <span class="process-math">\(p\)</span> "words" that we can write using <span class="process-math">\(a\)</span> letters. For example, if <span class="process-math">\(p=3\)</span> and <span class="process-math">\(a=3\text{,}\)</span> then there are <span class="process-math">\(3^3=27\)</span> words of length three using the three letters <span class="process-math">\(\{a,b,c\}\text{:}\)</span>
+</div>
+<div class="displaymath process-math" id="fermatslittletheorem-12-2-14">
+\begin{gather*}
+aaa,aab,aac\\
+aba,abb,abc\\
+aca,acb,acc\\
+baa,bab,bac\\
+bba,bbb,bbc\\
+bca,bcb,bcc\\
+caa,cba,cca\\
+cba,cbb,cbc\\
+cca,ccb,ccc
+\end{gather*}
+</div>
+<div class="para">We need to show that</div>
+<div class="displaymath process-math" id="fermatslittletheorem-12-2-15">
+\begin{equation*}
+p\mid a^p-a\text{.}
+\end{equation*}
+</div>
+<div class="para">Observe that <span class="process-math">\(a^p-a\)</span> is the number of words remaining after we delete all the single-letter words. In our above example, if we remove <span class="process-math">\(aaa\text{,}\)</span> <span class="process-math">\(bbb\text{,}\)</span> and <span class="process-math">\(ccc\)</span> from the list then there are <span class="process-math">\(3^3-3\)</span> words remaining. To show that <span class="process-math">\(p\)</span> divides <span class="process-math">\(a^p-a\text{,}\)</span> we need to gather the remaining words into groups of size <span class="process-math">\(p\text{.}\)</span> The way we will do this is to gather the words when they agree by a cyclic shift, i.e., starting from a word create a list of <span class="process-math">\(p\)</span> words by repeatedly taking the last letter and moving it to the first position. For example, when <span class="process-math">\(p=7\)</span> we will group the words in the following list, where the next word is obtained by moving the last letter to the front of the next word:</div>
+<div class="displaymath process-math" id="fermatslittletheorem-12-2-26">
+\begin{gather*}
+abcabac\\
+cabcaba\\
+acabcab\\
+bacabca\\
+abacabc\\
+cabacab\\
+bcabaca
+\end{gather*}
+</div>
+<div class="para">The length of our words is prime, and therefore we never see a repeated word in this list (since that would create a divisor of <span class="process-math">\(p\)</span>). Thus, this method gathers all of the <span class="process-math">\(a^p-a\)</span> words into groups of size <span class="process-math">\(p\text{,}\)</span> and hence <span class="process-math">\(p\)</span> divides <span class="process-math">\(a^p-a\text{,}\)</span> as desired.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-12-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 5.6.2: Combinatorial proof of Fermat’s Little Theorem"><a href="#fermatslittletheorem-12" title="Copy heading and permalink for Proof 5.6.2: Combinatorial proof of Fermat’s Little Theorem" aria-label="Copy heading and permalink for Proof 5.6.2: Combinatorial proof of Fermat’s Little Theorem">🔗</a></div></article></details><details id="fermatslittletheorem-13" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.6.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="fermatslittletheorem-13-1">Discuss the above proof. Does it make sense? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#fermatslittletheorem-13-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 5.6.5"><a href="#fermatslittletheorem-13" title="Copy heading and permalink for Checkpoint 5.6.5" aria-label="Copy heading and permalink for Checkpoint 5.6.5">🔗</a></div></article></details><div class="autopermalink" data-description="Section 5.6: Fermat’s Little Theorem"><a href="#fermatslittletheorem" title="Copy heading and permalink for Section 5.6: Fermat’s Little Theorem" aria-label="Copy heading and permalink for Section 5.6: Fermat’s Little Theorem">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="chineseremaindertheorem.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="musicalscalesandkeys.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
