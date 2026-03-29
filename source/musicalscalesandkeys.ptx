@@ -4,7 +4,146 @@
   <title>Musical Scales and Keys</title>
 
   <p>
-    
+    We will now apply modular arithmetic to the study of musical scales and keys.
+    First, we will need to introduce some notation for notes in an equally-tempered chromatic scale.
   </p>
+
+  <p>
+    Recall that a note is given by a frequency <m>f</m>, and that two frequencies are defined to be equivalent if they differ by a power of <m>2</m>.
+    Observe that this is an equivalence relation:
+    <ul>
+      <li>
+        <p>
+          Reflexivity: <m>f=f</m> for all frequencies <m>f</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Symmetry: If <m>f=2^ng</m>, then <m>2^{-n}f=g</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Transitivity: If <m>f=2^ng</m> and <m>g=2^mh</m>, then <m>f=2^{n+m}h</m>.
+        </p>
+      </li>
+    </ul>
+  </p>
+
+  <definition xml:id="def-pitchclass">
+    <p>
+    Given any frequency <m>f</m> Hz, we will call the equivalence class <m>[f]</m> under the above equivalence relation the "frequency class" of <m>f</m>.
+    For the frequency <m>440</m> Hz, we will refer to the frequency class <m>[440]</m> by the letter "A".
+    </p>
+  </definition>
+
+  <p>
+    There are 12 frequency classes in an equally-tempered chromatic scale.
+    Each of these frequency classes is given both a note name and a "pitch class" which is a number that we will explain following the table.
+    <table>
+  <tabular bottom="minor" left="minor" halign="center">
+    <row bottom="major">
+      <cell right="minor"><alert>Note Name</alert></cell>
+      <cell right="minor"><alert>Frequency Class</alert></cell>
+      <cell right="minor"><alert>Pitch Class</alert></cell>
+    </row>
+    <row bottom="minor">
+      <cell right="minor">C</cell>
+      <cell right="minor"><m>[261.62\ldots]</m></cell>
+      <cell right="minor">0</cell>
+    </row>
+
+    <row bottom="minor">
+      <cell right="minor">C<m>\sharp</m> or D<m>\flat</m></cell>
+      <cell right="minor"><m>[277.18\ldots]</m></cell>
+      <cell right="minor">1</cell>
+    </row>
+
+    <row bottom="minor">
+      <cell right="minor">D</cell>
+      <cell right="minor"><m>[293.66\ldots]</m></cell>
+      <cell right="minor">2</cell>
+    </row>
+
+    <row bottom="minor">
+      <cell right="minor">D<m>\sharp</m> or E<m>\flat</m></cell>
+      <cell right="minor"><m>[311.12\ldots]</m></cell>
+      <cell right="minor">3</cell>
+    </row>
+
+    <row bottom="minor">
+      <cell right="minor">E</cell>
+      <cell right="minor"><m>[329.62\ldots]</m></cell>
+      <cell right="minor">4</cell>
+    </row>
+
+    <row bottom="minor">
+      <cell right="minor">F</cell>
+      <cell right="minor"><m>[349.22\ldots]</m></cell>
+      <cell right="minor">5</cell>
+    </row>
+
+    <row bottom="minor">
+      <cell right="minor">F<m>\sharp</m> or G<m>\flat</m></cell>
+      <cell right="minor"><m>[369.99\ldots]</m></cell>
+      <cell right="minor">6</cell>
+    </row>  
+
+    <row bottom="minor">
+      <cell right="minor">G</cell>
+      <cell right="minor"><m>[391.99\ldots]</m></cell>
+      <cell right="minor">7</cell>
+    </row>  
+
+    <row bottom="minor">
+      <cell right="minor">G<m>\sharp</m> or A<m>\flat</m></cell>
+      <cell right="minor"><m>[415.30\ldots]</m></cell>
+      <cell right="minor">8</cell>
+    </row>
+
+    <row bottom="minor">
+      <cell right="minor">A</cell>
+      <cell right="minor"><m>[440.00\ldots]</m></cell>
+      <cell right="minor">9</cell>
+    </row>
+
+    <row bottom="minor">
+      <cell right="minor">A<m>\sharp</m> or B<m>\flat</m></cell>
+      <cell right="minor"><m>[466.16\ldots]</m></cell>
+      <cell right="minor">10</cell>
+    </row>
+
+    <row>
+      <cell right="minor">B</cell>
+      <cell right="minor"><m>[493.88\ldots]</m></cell>
+      <cell right="minor">11</cell>
+    </row>
+  </tabular>
+  <caption>Chromatic scale notation.</caption>
+</table>
+  </p>
+
+  <p>
+    We can see the pitch classes arise as the exponents of <m>\sqrt[12]{2}</m> when applied to the frequency for C to obtain the frequencies for each other note.
+    For example, the pitch class number for E is <m>4</m>, and indeed <m>[261.62\ldots]\cdot (\sqrt[12]{2})^4=[329.62\ldots]</m>.
+    Similarly, the pitch class number for G<m>\sharp</m> is <m>8</m>, and indeed <m>[261.62\ldots]\cdot (\sqrt[12]{2})^8=[415.30\ldots]</m>.
+  </p>
+
+  <p>
+    By identifying the pitch class values <m>\{0,1,2,3,\ldots, 11\}</m> with both the frequency classes of notes and with the elements of <m>\mathbb{Z}/12\mathbb{Z}</m>, we can use modular arithmetic to study musical scales and keys.
+    We will begin this application with the definition of the diatonic musical scale.
+  </p>
+
+  <definition xml:id="def-diatonicscale">
+    <statement>
+      <p>
+        The <alert>diatonic scale in the key of C</alert> is the scale consisting of the notes C, D, E, F, G, A, and B.
+        Equivalently, the diatonic scale in the key of C is the set of pitch classes:
+        <md>
+          \{0, 2, 4, 5, 7, 9, 11\}
+        </md>
+      </p>
+    </statement>
+  </definition>
 
 </section>
