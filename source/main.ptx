@@ -17,7 +17,6 @@
     <xi:include href="./divisibility.ptx" />
     <xi:include href="./congruence.ptx" />
     <xi:include href="./fractions.ptx" />
-    <xi:include href="./pythagorean.ptx" />
     <xi:include href="./problems.ptx" />
 
   </book>
