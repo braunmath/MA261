@@ -876,7 +876,7 @@ Your grade is based on completion only (in other words, if you complete the assi
         <title>P27</title>
         <p>
             Suppose that <m>R</m> is an equivalence relation on a set <m>X</m>.
-            Suppose further that <m>R</m> is symmetric and transitive, and that for every element <m>x\in X</m>, <m>x</m> occurs in at least on ordered pair for <m>R</m>.
+            Suppose further that <m>R</m> is symmetric and transitive, and that for every element <m>x\in X</m>, <m>x</m> occurs in at least one ordered pair for <m>R</m>.
             Prove that <m>R</m> must also be reflexive.
         </p>
         <p>
