@@ -2005,7 +2005,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.3",
   "title": "Modular Arithmetic",
-  "body": " Modular Arithmetic  Because modular operations rely on addition and multiplication in the integers, we can use the properties of addition and multiplication in the integers to deduce properties of addition and multiplication in modular arithmetic. This leads to the following theorem, which we will not prove in detail.    Modular addition and multiplication are commutative, associative, and the distributive law holds. Further, the cancellation law holds for addition, meaning that if , then . An equivalent way to state the cancellation law is that if then      Discuss with your group: why does it make sense that the cancellation law holds?   There are some significant differences between arithmetic in the integers and modular arithmetic. The first major difference is that it is possible to multiply two nonzero equivalence classes together and get the zero equivalence class. For example, in , we have that .    A zero divisor in a modular arithmetic system is a nonzero equivalence class such that there exists a nonzero equivalence class with .     Find all of the zero divisors in .   Another major difference is that it is not always possible to divide in modular arithmetic. For example, in , we have that , so if we try to divide both sides by , we get , which is not true. This leads to the following definition.    A unit in is an equivalence class such that there exists an equivalence class with . In this case, we call the multiplicative inverse of , and denote it as . Equivalently, is a unit if there exists a non-zero such that     Observe that a zero divisor cannot be a unit, because if is a zero divisor, then there exists a nonzero equivalence class such that . So, if were a unit, we would have that which contradicts our assumption that .   Find all of the units in and their multiplicative inverses.   From the checkpoint above, you might conjecture the following theorem.    In , an equivalence class is a unit if and only if .     We first prove the forward direction. Assume that is a unit in . Then there exists an equivalence class such that . This means that , which means that . Thus, there exists an integer such that , which means that . This is the Bezout identity, which implies that .  We next prove the reverse direction. Assume that . Then there exist integers and such that . This means that , which means that . Thus, is a unit in .    Discuss the proof above. Does it make sense? Why or why not?   When is a prime number, the condition is always true for . In this case, every non-zero equivalence class is a unit. We record this formally below.    If is prime, then every non-zero equivalence class in is a unit.     This follows immediately from the fact that if is prime, then for all .   So, in , we can add, subtract, multiply, and divide (except by ) without every causing any issues. This is one of the reasons why working modulo a prime is such a powerful tool in mathematics. (In modern algebra classes like MA 361-362, you learn that is a field , while in general the modular arithmetic systems are rings but not fields.)  We use the Euclidean algorithm and the Bezout identity to find the multiplicative inverse of an equivalence class in when . Specifically, we use the Euclidean algorithm to find integers and such that . Then we have that , which means that , so is the multiplicative inverse of .   Find the multiplicative inverse of in using the Euclidean algorithm and the Bezout identity.   A key role played by units is that these are the only equivalence classes that we can cancel in modular arithmetic.    Suppose that is a unit in , and suppose that . Then .     Because is a unit, there exists an equivalence class such that . Thus if , we have that     Discuss the proof above. Does it make sense? Why or why not?   Observe another interesting property of modular arithmetic: if we add a nonzero equivalence class to itself enough times, we can get the zero equivalence class. For example, in , we have that . In general, we have that in , if we add to itself times, we get . This leads to the definition of the additive order of an equivalence class in modular arithmetic.    Let . The additive order of is the smallest positive integer such that where there are copies of in the sum. We denote the additive order by .     Find the additive order of each equivalence class in .   From the examples you just worked out, we can see the following interesting fact: the order of an equivalence class in divides .    Let . Then , and thus the additive order divides .     We set . Then we can write and for some integers and with . We need to show that the smallest positive integer such that where there are copies of in the sum, is equal to . Observe that If we want this to be equal to , we need , which is the same as , which is the same as . Because , we have that if and only if divides . Thus, the smallest positive integer such that is , which means that the smallest positive integer such that where there are copies of in the sum, is . Thus, the additive order of is , which divides .    Discuss the proof above. Does it make sense? Why or why not?   "
+  "body": " Modular Arithmetic  Because modular operations rely on addition and multiplication in the integers, we can use the properties of addition and multiplication in the integers to deduce properties of addition and multiplication in modular arithmetic. This leads to the following theorem, which we will not prove in detail.    Modular addition and multiplication are commutative, associative, and the distributive law holds. Further, the cancellation law holds for addition, meaning that if , then . An equivalent way to state the cancellation law is that if then      Discuss with your group: why does it make sense that the cancellation law holds?   There are some significant differences between arithmetic in the integers and modular arithmetic. The first major difference is that it is possible to multiply two nonzero equivalence classes together and get the zero equivalence class. For example, in , we have that .    A zero divisor in a modular arithmetic system is a nonzero equivalence class such that there exists a nonzero equivalence class with .     Find all of the zero divisors in .   Another major difference is that it is not always possible to divide in modular arithmetic. For example, in , we have that , so if we try to divide both sides by , we get , which is not true. This leads to the following definition.    A unit in is an equivalence class such that there exists an equivalence class with . In this case, we call the multiplicative inverse of , and denote it as . Equivalently, is a unit if there exists a non-zero such that     Observe that a zero divisor cannot be a unit, because if is a zero divisor, then there exists a nonzero equivalence class such that . So, if were a unit, we would have that which contradicts our assumption that .   Find all of the units in and their multiplicative inverses.   From the checkpoint above, you might conjecture the following theorem.    In , an equivalence class is a unit if and only if .     We first prove the forward direction. Assume that is a unit in . Then there exists an equivalence class such that . This means that , which means that . Thus, there exists an integer such that , which means that . This is the Bezout identity, which implies that .  We next prove the reverse direction. Assume that . Then there exist integers and such that . This means that , which means that . Thus, is a unit in .    Discuss the proof above. Does it make sense? Why or why not?   When is a prime number, the condition is always true for . In this case, every non-zero equivalence class is a unit. We record this formally below.    If is prime, then every non-zero equivalence class in is a unit.     This follows immediately from the fact that if is prime, then for all .   So, in , we can add, subtract, multiply, and divide (except by ) without every causing any issues. This is one of the reasons why working modulo a prime is such a powerful tool in mathematics. (In modern algebra classes like MA 361-362, you learn that is a field , while in general the modular arithmetic systems are rings but not fields.)  We use the Euclidean algorithm and the Bezout identity to find the multiplicative inverse of an equivalence class in when . Specifically, we use the Euclidean algorithm to find integers and such that . Then we have that , which means that , so is the multiplicative inverse of .  For example, take in . Since , we know that is a unit in . We use the Euclidean algorithm to find integers and such that . We have: Thus, we have that This means that , so , and thus is the multiplicative inverse of in .   Find the multiplicative inverse of in using the Euclidean algorithm and the Bezout identity.   A key role played by units is that these are the only equivalence classes that we can cancel in modular arithmetic.    Suppose that is a unit in , and suppose that . Then .     Because is a unit, there exists an equivalence class such that . Thus if , we have that     Discuss the proof above. Does it make sense? Why or why not?   Observe another interesting property of modular arithmetic: if we add a nonzero equivalence class to itself enough times, we can get the zero equivalence class. For example, in , we have that . In general, we have that in , if we add to itself times, we get . This leads to the definition of the additive order of an equivalence class in modular arithmetic.    Let . The additive order of is the smallest positive integer such that where there are copies of in the sum. We denote the additive order by .     Find the additive order of each equivalence class in .   From the examples you just worked out, we can see the following interesting fact: the order of an equivalence class in divides .    Let . Then , and thus the additive order divides .     We set . Then we can write and for some integers and with . We need to show that the smallest positive integer such that where there are copies of in the sum, is equal to . Observe that If we want this to be equal to , we need , which is the same as , which is the same as . Because , we have that if and only if divides . Thus, the smallest positive integer such that is , which means that the smallest positive integer such that where there are copies of in the sum, is . Thus, the additive order of is , which divides .    Discuss the proof above. Does it make sense? Why or why not?   "
 },
 {
   "id": "thm-modulararithmeticproperties",
@@ -2107,9 +2107,9 @@ var ptx_lunr_docs = [
   "body": " This follows immediately from the fact that if is prime, then for all .  "
 },
 {
-  "id": "modulararithmetic-21",
+  "id": "modulararithmetic-22",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-21",
+  "url": "modulararithmetic.html#modulararithmetic-22",
   "type": "Checkpoint",
   "number": "5.3.10",
   "title": "",
@@ -2125,18 +2125,18 @@ var ptx_lunr_docs = [
   "body": "  Suppose that is a unit in , and suppose that . Then .   "
 },
 {
-  "id": "modulararithmetic-24",
+  "id": "modulararithmetic-25",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-24",
+  "url": "modulararithmetic.html#modulararithmetic-25",
   "type": "Proof",
   "number": "5.3.3",
   "title": "",
   "body": " Because is a unit, there exists an equivalence class such that . Thus if , we have that   "
 },
 {
-  "id": "modulararithmetic-25",
+  "id": "modulararithmetic-26",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-25",
+  "url": "modulararithmetic.html#modulararithmetic-26",
   "type": "Checkpoint",
   "number": "5.3.12",
   "title": "",
@@ -2152,9 +2152,9 @@ var ptx_lunr_docs = [
   "body": "  Let . The additive order of is the smallest positive integer such that where there are copies of in the sum. We denote the additive order by .   "
 },
 {
-  "id": "modulararithmetic-28",
+  "id": "modulararithmetic-29",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-28",
+  "url": "modulararithmetic.html#modulararithmetic-29",
   "type": "Checkpoint",
   "number": "5.3.14",
   "title": "",
@@ -2170,18 +2170,18 @@ var ptx_lunr_docs = [
   "body": "  Let . Then , and thus the additive order divides .   "
 },
 {
-  "id": "modulararithmetic-31",
+  "id": "modulararithmetic-32",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-31",
+  "url": "modulararithmetic.html#modulararithmetic-32",
   "type": "Proof",
   "number": "5.3.4",
   "title": "",
   "body": " We set . Then we can write and for some integers and with . We need to show that the smallest positive integer such that where there are copies of in the sum, is equal to . Observe that If we want this to be equal to , we need , which is the same as , which is the same as . Because , we have that if and only if divides . Thus, the smallest positive integer such that is , which means that the smallest positive integer such that where there are copies of in the sum, is . Thus, the additive order of is , which divides .  "
 },
 {
-  "id": "modulararithmetic-32",
+  "id": "modulararithmetic-33",
   "level": "2",
-  "url": "modulararithmetic.html#modulararithmetic-32",
+  "url": "modulararithmetic.html#modulararithmetic-33",
   "type": "Checkpoint",
   "number": "5.3.16",
   "title": "",
