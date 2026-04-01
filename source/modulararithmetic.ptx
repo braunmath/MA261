@@ -140,9 +140,23 @@
           Then we have that <m>ax \equiv 1 \pmod{n}</m>, which means that <m>[a][x] = [1]</m>, so <m>[x]</m> is the multiplicative inverse of <m>[a]</m>.
         </p>
 
+        <p>
+          For example, take <m>[7]</m> in <m>\mathbb{Z}/13\mathbb{Z}</m>.
+          Since <m>\gcd(7,13)=1</m>, we know that <m>[7]</m> is a unit in <m>\mathbb{Z}/13\mathbb{Z}</m>.
+          We use the Euclidean algorithm to find integers <m>x</m> and <m>y</m> such that <m>7x + 13y = 1</m>.
+          We have: 
+          <md>
+          <mrow>13 = 7\cdot 1 + 6</mrow>
+          <mrow>7 = 6\cdot 1 + 1</mrow>
+          <mrow>6 = 1\cdot 6 + 0</mrow>
+          </md>
+          Thus, we have that <me>1 = 7 - 6\cdot 1 = 7 - (13 - 7\cdot 1) = 7\cdot 2 - 13\cdot 1 \, .</me>
+          This means that <m>7\cdot 2 \equiv 1 \pmod{13}</m>, so <m>[7][2] = [1]</m>, and thus <m>[2]</m> is the multiplicative inverse of <m>[7]</m> in <m>\mathbb{Z}/13\mathbb{Z}</m>.
+        </p>
+
         <exercise>
           <p>
-            Find the multiplicative inverse of <m>[5]</m> in <m>\mathbb{Z}/12\mathbb{Z}</m> using the Euclidean algorithm and the Bezout identity.
+            Find the multiplicative inverse of <m>[30]</m> in <m>\mathbb{Z}/107\mathbb{Z}</m> using the Euclidean algorithm and the Bezout identity.
           </p>
         </exercise>
 
