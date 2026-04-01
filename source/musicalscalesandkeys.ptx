@@ -491,7 +491,7 @@
           <cell>IV</cell>
           <cell>V</cell>
           <cell>vi</cell>
-          <cell>vii</cell>
+          <cell>vii<m>\flat</m>5</cell>
         </row>
       </tabular>
       <caption>Each column corresponds to a note in the key of C, the second row gives the pitch classes for the diatonic triad corresponding to that note, the third row gives the names of the notes in the triads, and the fourth row gives the Roman numeral for that chord.</caption>
