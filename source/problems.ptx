@@ -923,19 +923,39 @@ Your grade is based on completion only (in other words, if you complete the assi
 
     <problem>
         <title>P30</title>
-        <p>
+        <p>Find the multiplicative inverses of the following congruence classes.
+            <ol>
+                <li>
+                    <p>
+                        <m>[3]\in \mathbb{Z}/19\mathbb{Z}</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>[16]\in \mathbb{Z}/21\mathbb{Z}</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>[8]\in \mathbb{Z}/103\mathbb{Z}</m>
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
     <problem>
         <title>P31</title>
-        <p>
+        <p>Suppose <m>a</m>, <m>b</m>, and <m>c</m> are positive integers such that <m>a^2+b^2=c^2</m>.
+            Use modular arithmetic to prove that if <m>4</m> does not divide <m>a</m>, then <m>4</m> divides <m>b</m> and <m>4</m> does not divide <m>c</m>.
         </p>
     </problem>
 
     <problem>
         <title>P32</title>
-        <p>
+        <p>Write down two linear congruences modulo <m>n</m> that do <alert>not</alert> have a solution when <m>n=21</m>, but which do have a solution when <m>n=32</m>.
+            Explain why these congruences do not have a solution when <m>n=21</m>, and explain why they do have a solution when <m>n=32</m>.
+            (You do not need to find the solutions to these congruences.)
         </p>
     </problem>
 
