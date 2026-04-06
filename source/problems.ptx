@@ -904,7 +904,7 @@ Your grade is based on completion only (in other words, if you complete the assi
             <ol>
                 <li>
                     <p>
-                        <m>(a,b)\in R</m> if <m>a</m> and <m>b</m> have the same set of prime divisors.
+                        <m>(a,b)\in R</m> if <m>a</m> and <m>b</m> have the same set of prime divisors (where the primes might have different multiplicities).
                     </p>
                 </li>
                 <li>
