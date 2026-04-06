@@ -89,7 +89,7 @@
       </md>
       This is a solution because we can replace <m>m_2n_2 = 1-n_1m_1</m> in the above equation to get
       <md>
-        x \equiv a_1 (1-n_1m_1) + a_2 m_1m_1
+        x \equiv a_1 (1-n_1m_1) + a_2 n_1m_1
       </md>
       and when we reduce this modulo <m>n_1</m> we get <m>a_1</m>.
       A similar calculation shows that this holds for <m>a_2</m>.
