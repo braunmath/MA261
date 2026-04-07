@@ -4,6 +4,22 @@
   <title>Decimal Expansions</title>
 
   <p> 
+    Our main goal in this chapter is to understand ways of using rational numbers to approximate real numbers.
+    The most common way of doing this is to use decimal expansions, which is a technique that you first learn in elementary or middle school.
+    For example, most of you are familiar with the idea that
+    <md>
+      \pi=3.14\ldots
+    </md>
+    has an infinite, non-repeating decimal expansion, and that
+    <md>
+      \frac{1}{3}=0.333\ldots
+    </md>
+    has an infinite, repeating decimal expansion.
+    In this section, we will prove several properties of decimal expansions.  
+  </p>
+
+  <p>
+    
   </p>
 
 </section>

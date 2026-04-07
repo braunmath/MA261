@@ -4,11 +4,10 @@
   <title>Continued Fractions</title>
 
      <!-- include sections  -->
-      <xi:include href="decimalexpansions.ptx" />
+  <xi:include href="decimalexpansions.ptx" />
   <xi:include href="finitecontinuedfractions.ptx" />
   <xi:include href="infinitecontinuedfractions.ptx" />
   <xi:include href="convergents.ptx" />
   <xi:include href="microtonalscales.ptx" />
-    
 
 </chapter>

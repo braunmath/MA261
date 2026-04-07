@@ -64,6 +64,23 @@
     </statement>
   </theorem>
 
+  <exercise>
+    <p>
+      <ol>
+        <li>
+          <p>
+            With your group, create one example of a system of equations where this theorem applies, and create one example of a system where this theorem does not apply.
+          </p>
+        </li>
+        <li>
+          <p>
+            Create an example of a system of equations where this theorem does not apply, but where there is a solution.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+
   <proof>
     <p>
       We first prove that if a solution exists, then it is unique.
