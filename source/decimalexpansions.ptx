@@ -6,20 +6,239 @@
   <p> 
     Our main goal in this chapter is to understand ways of using rational numbers to approximate real numbers.
     The most common way of doing this is to use decimal expansions, which is a technique that you first learn in elementary or middle school.
-    For example, most of you are familiar with the idea that
+    For example, most of you are familiar with the following ideas:
     <md>
       \pi=3.14\ldots
     </md>
-    has an infinite, non-repeating decimal expansion, and that
+    has an infinite, non-repeating decimal expansion.
     <md>
       \frac{1}{3}=0.333\ldots
     </md>
     has an infinite, repeating decimal expansion.
+    <md>
+      \frac{347}{10000}=0.0347
+    </md>
+    has a finite decimal expansion.    
     In this section, we will prove several properties of decimal expansions.  
+    We will begin with the definition of a decimal representation of a number.
   </p>
 
+  <definition xml:id="def-decimalexpansion">
+    <statement>
+      <p>
+        Given a sequence of positive integers <m>a_1,a_2,a_2,\ldots</m> with each <m>0\leq a_i\leq 9</m>, we define the <alert>decimal expansion</alert> for the sequence to be the real number
+        <md>
+          0.a_1a_2a_3\ldots := \sum_{i=1}^\infty \frac{a_i}{10^i} = \frac{a_1}{10}+\frac{a_2}{100}+\frac{a_3}{1000}+\cdots \, .
+        </md>
+        When the sequence contains only finitely many non-zero terms, we say that the decimal expansion is finite.
+        Otherwise, we say the decimal expansion is infinite.
+      </p>
+    </statement>
+  </definition>
+
+  <exercise>
+    <p>
+      With your group, represent the following decimal expansions on a number line:
+      <ol>
+        <li>
+          <p>
+            <m>0.9</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>0.99</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>0.999</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      With your group, discuss: Is it true that
+      <md>
+        0.999999\ldots = 1 \, ?
+      </md>
+      Why or why not?      
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      With your group, represent the following decimal expansions on a number line:
+      <ol>
+        <li>
+          <p>
+            <m>0.1</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>0.11</m>
+          </p>
+        </li>
+        <li>
+          <p>
+            <m>0.111</m>
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      With your group, discuss: Is it true that
+      <md>
+        0.111111\ldots = 1/9 \, ?
+      </md>
+      Why or why not?
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      With your group, discuss: Is it true that 
+      <md>
+        5/7 = 0.\overline{714285} = 0.714285714285714285\ldots \, ?
+      </md>
+      Why or why not?
+    </p>
+  </exercise>
+
   <p>
-    
+    The above exercises demonstrate that decimal expansions are more subtle and complicated than many people believe.
+    Let's start with a simple question: does every decimal expansion define a real number?
   </p>
+
+  <exercise>
+    <p>
+      Discuss with your group: Do you think that every decimal expansion defines a real number? Why or why not?
+    </p>
+  </exercise>
+
+  <p>
+    To answer this, we need to use techniques from Calculus II.
+    Specifically, we make the observation that the decimal expansion
+    <md>
+      0.a_1a_2a_3\ldots = \sum_{i=1}^\infty \frac{a_i}{10^i}
+    </md>
+    is an infinite series.
+    What we need to show is that this infinite series converges, and therefore defines a real number.
+    To do this, we need to recall convergence properties of geometric series.
+  </p>
+
+  <theorem xml:id="thm-geometricseries">
+    <title>Geometric Series Convergence</title>
+    <statement>
+      <p>
+        Let <m>x\in (-1,1)</m> be a real number. Then the geometric series
+        <md>
+          \sum_{i=0}^\infty x^i = 1 + x + x^2 + x^3 + \cdots
+        </md>
+        converges, and we have
+        <md>
+          \sum_{i=0}^\infty x^i = \frac{1}{1-x}.
+        </md>
+        Further, we have 
+        <md>
+          \sum_{i=1}^\infty x^i = \frac{1}{1-x} -1 = \frac{x}{1-x} \, .
+        </md>
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    We will give two proofs of this theorem.
+    The first is an embodied proof, while the second is a formal proof using limits.
+  </p>
+
+  <proof>
+    <title>Embodied Proof of Geometric Series Convergence</title>
+    <p>
+      The following video has a 1:40 minute visual/embodied proof of the convergence of the geometric series.
+      <url href="https://www.youtube.com/watch?v=TGUWt5xcB8M">https://www.youtube.com/watch?v=TGUWt5xcB8M</url>
+    </p>
+  </proof>
+  
+  <exercise>
+    <p>
+      Discuss this proof. Does it make sense? Why or why not? What are the key insights that this proof conveys?
+    </p>
+  </exercise>
+
+  <proof>
+    <title>Formal Proof of Geometric Series Convergence</title>
+    <p>
+      For a fixed value of <m>x</m>, let <m>S_n = \sum_{i=0}^n x^i</m> be the <m>n</m>th partial sum of the geometric series.
+      It is a straightforward calculation to show that
+      <md>
+        (1-x)S_n = 1-x^{n+1} \, ,
+      </md>
+      and therefore
+      <md>
+        S_n = \frac{1-x^{n+1}}{1-x} \, .
+      </md>
+      Thus, we have
+      <md>
+        \sum_{i=0}^\infty x^i = \lim_{n \to \infty} S_n = \lim_{n \to \infty} \frac{1-x^{n+1}}{1-x} = \frac{1}{1-x} \, ,
+      </md>
+      since <m>|x|\lt 1</m> implies that <m>\lim_{n \to \infty} x^{n+1} = 0</m>.      
+    </p>
+  </proof>
+
+  <exercise>
+    <p>
+      Discuss this proof. Does it make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      Use the geometric series convergence theorem to show that the series
+      <md>
+        \sum_{i=1}^\infty \frac{9}{10^i}= 9 \sum_{i=1}^\infty \left(\frac{1}{10}\right)^i
+      </md>
+      converges, and find its value.
+    </p>
+  </exercise>
+
+  <p>
+    We can now prove that every decimal expansion converges.
+    Our main tool will be the comparison test for series convergence, which states that if <m>\sum_{i=1}^\infty a_i</m> is a series with non-negative terms, and if there exists a convergent series <m>\sum_{i=1}^\infty b_i</m> with non-negative terms such that <m>a_i \leq b_i</m> for all <m>i</m>, then the series <m>\sum_{i=1}^\infty a_i</m> also converges.
+  </p>
+
+  <theorem xml:id="thm-decimalconvergence">
+    <statement>
+      <p>
+        Every decimal expansion converges, and therefore defines a real number.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      Let <m>0.a_1a_2a_3\ldots</m> be a decimal expansion.
+      We need to show that the series
+      <md>
+        \sum_{i=1}^\infty \frac{a_i}{10^i}
+      </md>
+      converges.
+      Since each <m>a_i\leq 9</m>, we have
+      <md>
+        \frac{a_i}{10^i} \leq \frac{9}{10^i}.
+      </md>
+      Since the geometric series 
+      <m>\sum_{i=1}^\infty \frac{9}{10^i}</m> 
+      converges (as you proved in the previous checkpoint), it follows from the comparison test that the series <m>\sum_{i=1}^\infty \frac{a_i}{10^i}</m> also converges, and therefore defines a real number.
+    </p>
+  </proof>
+  
 
 </section>
