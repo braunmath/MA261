@@ -206,23 +206,239 @@ eBookConfig.enable_chatcodes =  false;
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Decimal Expansions</span>
 </h2>
 <div class="para logical" id="decimalexpansions-2">
-<div class="para">Our main goal in this chapter is to understand ways of using rational numbers to approximate real numbers. The most common way of doing this is to use decimal expansions, which is a technique that you first learn in elementary or middle school. For example, most of you are familiar with the idea that</div>
+<div class="para">Our main goal in this chapter is to understand ways of using rational numbers to approximate real numbers. The most common way of doing this is to use decimal expansions, which is a technique that you first learn in elementary or middle school. For example, most of you are familiar with the following ideas:</div>
 <div class="displaymath process-math" id="decimalexpansions-2-1">
 \begin{equation*}
 \pi=3.14\ldots
 \end{equation*}
 </div>
-<div class="para">has an infinite, non-repeating decimal expansion, and that</div>
+<div class="para">has an infinite, non-repeating decimal expansion.</div>
 <div class="displaymath process-math" id="decimalexpansions-2-2">
 \begin{equation*}
 \frac{1}{3}=0.333\ldots
 \end{equation*}
 </div>
-<div class="para">has an infinite, repeating decimal expansion. In this section, we will prove several properties of decimal expansions.</div>
+<div class="para">has an infinite, repeating decimal expansion.</div>
+<div class="displaymath process-math" id="decimalexpansions-2-3">
+\begin{equation*}
+\frac{347}{10000}=0.0347
+\end{equation*}
+</div>
+<div class="para">has a finite decimal expansion. In this section, we will prove several properties of decimal expansions. We will begin with the definition of a decimal representation of a number.</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="para" id="decimalexpansions-3"><div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div></div>
-<div class="autopermalink" data-description="Section 6.1: Decimal Expansions"><a href="#decimalexpansions" title="Copy heading and permalink for Section 6.1: Decimal Expansions" aria-label="Copy heading and permalink for Section 6.1: Decimal Expansions">🔗</a></div></section></div>
+<article class="definition definition-like" id="def-decimalexpansion"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-decimalexpansion-1-1">
+<div class="para">Given a sequence of positive integers <span class="process-math">\(a_1,a_2,a_2,\ldots\)</span> with each <span class="process-math">\(0\leq a_i\leq 9\text{,}\)</span> we define the <em class="alert">decimal expansion</em> for the sequence to be the real number</div>
+<div class="displaymath process-math" id="def-decimalexpansion-1-1-4">
+\begin{equation*}
+0.a_1a_2a_3\ldots := \sum_{i=1}^\infty \frac{a_i}{10^i} = \frac{a_1}{10}+\frac{a_2}{100}+\frac{a_3}{1000}+\cdots \, .
+\end{equation*}
+</div>
+<div class="para">When the sequence contains only finitely many non-zero terms, we say that the decimal expansion is finite. Otherwise, we say the decimal expansion is infinite.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-decimalexpansion-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 6.1.1"><a href="#def-decimalexpansion" title="Copy heading and permalink for Definition 6.1.1" aria-label="Copy heading and permalink for Definition 6.1.1">🔗</a></div></article><details id="decimalexpansions-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="decimalexpansions-4-1">
+<div class="para">With your group, represent the following decimal expansions on a number line:</div>
+<ol class="decimal" id="decimalexpansions-4-1-1">
+<li id="decimalexpansions-4-1-1-1">
+<div class="para" id="decimalexpansions-4-1-1-1-1">
+<span class="process-math">\(\displaystyle 0.9\)</span><div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-4-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.2.1"><a href="#decimalexpansions-4-1-1-1" title="Copy heading and permalink for Item 6.1.2.1" aria-label="Copy heading and permalink for Item 6.1.2.1">🔗</a></div>
+</li>
+<li id="decimalexpansions-4-1-1-2">
+<div class="para" id="decimalexpansions-4-1-1-2-1">
+<span class="process-math">\(\displaystyle 0.99\)</span><div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-4-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.2.2"><a href="#decimalexpansions-4-1-1-2" title="Copy heading and permalink for Item 6.1.2.2" aria-label="Copy heading and permalink for Item 6.1.2.2">🔗</a></div>
+</li>
+<li id="decimalexpansions-4-1-1-3">
+<div class="para" id="decimalexpansions-4-1-1-3-1">
+<span class="process-math">\(\displaystyle 0.999\)</span><div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-4-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.2.3"><a href="#decimalexpansions-4-1-1-3" title="Copy heading and permalink for Item 6.1.2.3" aria-label="Copy heading and permalink for Item 6.1.2.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.1.2"><a href="#decimalexpansions-4" title="Copy heading and permalink for Checkpoint 6.1.2" aria-label="Copy heading and permalink for Checkpoint 6.1.2">🔗</a></div></article></details><details id="decimalexpansions-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="decimalexpansions-5-1">
+<div class="para">With your group, discuss: Is it true that</div>
+<div class="displaymath process-math" id="decimalexpansions-5-1-1">
+\begin{equation*}
+0.999999\ldots = 1 \, ?
+\end{equation*}
+</div>
+<div class="para">Why or why not?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.1.3"><a href="#decimalexpansions-5" title="Copy heading and permalink for Checkpoint 6.1.3" aria-label="Copy heading and permalink for Checkpoint 6.1.3">🔗</a></div></article></details><details id="decimalexpansions-6" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="decimalexpansions-6-1">
+<div class="para">With your group, represent the following decimal expansions on a number line:</div>
+<ol class="decimal" id="decimalexpansions-6-1-1">
+<li id="decimalexpansions-6-1-1-1">
+<div class="para" id="decimalexpansions-6-1-1-1-1">
+<span class="process-math">\(\displaystyle 0.1\)</span><div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-6-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.4.1"><a href="#decimalexpansions-6-1-1-1" title="Copy heading and permalink for Item 6.1.4.1" aria-label="Copy heading and permalink for Item 6.1.4.1">🔗</a></div>
+</li>
+<li id="decimalexpansions-6-1-1-2">
+<div class="para" id="decimalexpansions-6-1-1-2-1">
+<span class="process-math">\(\displaystyle 0.11\)</span><div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-6-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.4.2"><a href="#decimalexpansions-6-1-1-2" title="Copy heading and permalink for Item 6.1.4.2" aria-label="Copy heading and permalink for Item 6.1.4.2">🔗</a></div>
+</li>
+<li id="decimalexpansions-6-1-1-3">
+<div class="para" id="decimalexpansions-6-1-1-3-1">
+<span class="process-math">\(\displaystyle 0.111\)</span><div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-6-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.1.4.3"><a href="#decimalexpansions-6-1-1-3" title="Copy heading and permalink for Item 6.1.4.3" aria-label="Copy heading and permalink for Item 6.1.4.3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.1.4"><a href="#decimalexpansions-6" title="Copy heading and permalink for Checkpoint 6.1.4" aria-label="Copy heading and permalink for Checkpoint 6.1.4">🔗</a></div></article></details><details id="decimalexpansions-7" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="decimalexpansions-7-1">
+<div class="para">With your group, discuss: Is it true that</div>
+<div class="displaymath process-math" id="decimalexpansions-7-1-1">
+\begin{equation*}
+0.111111\ldots = 1/9 \, ?
+\end{equation*}
+</div>
+<div class="para">Why or why not?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-7-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.1.5"><a href="#decimalexpansions-7" title="Copy heading and permalink for Checkpoint 6.1.5" aria-label="Copy heading and permalink for Checkpoint 6.1.5">🔗</a></div></article></details><details id="decimalexpansions-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="decimalexpansions-8-1">
+<div class="para">With your group, discuss: Is it true that</div>
+<div class="displaymath process-math" id="decimalexpansions-8-1-1">
+\begin{equation*}
+5/7 = 0.\overline{714285} = 0.714285714285714285\ldots \, ?
+\end{equation*}
+</div>
+<div class="para">Why or why not?</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.1.6"><a href="#decimalexpansions-8" title="Copy heading and permalink for Checkpoint 6.1.6" aria-label="Copy heading and permalink for Checkpoint 6.1.6">🔗</a></div></article></details><div class="para" id="decimalexpansions-9">The above exercises demonstrate that decimal expansions are more subtle and complicated than many people believe. Let’s start with a simple question: does every decimal expansion define a real number?<div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="decimalexpansions-10" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="decimalexpansions-10-1">Discuss with your group: Do you think that every decimal expansion defines a real number? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-10-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.1.7"><a href="#decimalexpansions-10" title="Copy heading and permalink for Checkpoint 6.1.7" aria-label="Copy heading and permalink for Checkpoint 6.1.7">🔗</a></div></article></details><div class="para logical" id="decimalexpansions-11">
+<div class="para">To answer this, we need to use techniques from Calculus II. Specifically, we make the observation that the decimal expansion</div>
+<div class="displaymath process-math" id="decimalexpansions-11-1">
+\begin{equation*}
+0.a_1a_2a_3\ldots = \sum_{i=1}^\infty \frac{a_i}{10^i}
+\end{equation*}
+</div>
+<div class="para">is an infinite series. What we need to show is that this infinite series converges, and therefore defines a real number. To do this, we need to recall convergence properties of geometric series.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-geometricseries"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Geometric Series Convergence.</span>
+</h3>
+<div class="para logical" id="thm-geometricseries-2-1">
+<div class="para">Let <span class="process-math">\(x\in (-1,1)\)</span> be a real number. Then the geometric series</div>
+<div class="displaymath process-math" id="thm-geometricseries-2-1-2">
+\begin{equation*}
+\sum_{i=0}^\infty x^i = 1 + x + x^2 + x^3 + \cdots
+\end{equation*}
+</div>
+<div class="para">converges, and we have</div>
+<div class="displaymath process-math" id="thm-geometricseries-2-1-3">
+\begin{equation*}
+\sum_{i=0}^\infty x^i = \frac{1}{1-x}.
+\end{equation*}
+</div>
+<div class="para">Further, we have</div>
+<div class="displaymath process-math" id="thm-geometricseries-2-1-4">
+\begin{equation*}
+\sum_{i=1}^\infty x^i = \frac{1}{1-x} -1 = \frac{x}{1-x} \, .
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-geometricseries-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 6.1.8: Geometric Series Convergence"><a href="#thm-geometricseries" title="Copy heading and permalink for Theorem 6.1.8: Geometric Series Convergence" aria-label="Copy heading and permalink for Theorem 6.1.8: Geometric Series Convergence">🔗</a></div></article><div class="para" id="decimalexpansions-13">We will give two proofs of this theorem. The first is an embodied proof, while the second is a formal proof using limits.<div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="decimalexpansions-14" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="title">Embodied Proof of Geometric Series Convergence.</span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="decimalexpansions-14-2">The following video has a 1:40 minute visual/embodied proof of the convergence of the geometric series. <a class="external" href="https://www.youtube.com/watch?v=TGUWt5xcB8M" target="_blank">https://www.youtube.com/watch?v=TGUWt5xcB8M</a><div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-14-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 6.1.1: Embodied Proof of Geometric Series Convergence"><a href="#decimalexpansions-14" title="Copy heading and permalink for Proof 6.1.1: Embodied Proof of Geometric Series Convergence" aria-label="Copy heading and permalink for Proof 6.1.1: Embodied Proof of Geometric Series Convergence">🔗</a></div></article></details><details id="decimalexpansions-15" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="decimalexpansions-15-1">Discuss this proof. Does it make sense? Why or why not? What are the key insights that this proof conveys?<div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.1.9"><a href="#decimalexpansions-15" title="Copy heading and permalink for Checkpoint 6.1.9" aria-label="Copy heading and permalink for Checkpoint 6.1.9">🔗</a></div></article></details><details id="decimalexpansions-16" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="title">Formal Proof of Geometric Series Convergence.</span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="decimalexpansions-16-2">
+<div class="para">For a fixed value of <span class="process-math">\(x\text{,}\)</span> let <span class="process-math">\(S_n = \sum_{i=0}^n x^i\)</span> be the <span class="process-math">\(n\)</span>th partial sum of the geometric series. It is a straightforward calculation to show that</div>
+<div class="displaymath process-math" id="decimalexpansions-16-2-4">
+\begin{equation*}
+(1-x)S_n = 1-x^{n+1} \, ,
+\end{equation*}
+</div>
+<div class="para">and therefore</div>
+<div class="displaymath process-math" id="decimalexpansions-16-2-5">
+\begin{equation*}
+S_n = \frac{1-x^{n+1}}{1-x} \, .
+\end{equation*}
+</div>
+<div class="para">Thus, we have</div>
+<div class="displaymath process-math" id="decimalexpansions-16-2-6">
+\begin{equation*}
+\sum_{i=0}^\infty x^i = \lim_{n \to \infty} S_n = \lim_{n \to \infty} \frac{1-x^{n+1}}{1-x} = \frac{1}{1-x} \, ,
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(|x|\lt 1\)</span> implies that <span class="process-math">\(\lim_{n \to \infty} x^{n+1} = 0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-16-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 6.1.2: Formal Proof of Geometric Series Convergence"><a href="#decimalexpansions-16" title="Copy heading and permalink for Proof 6.1.2: Formal Proof of Geometric Series Convergence" aria-label="Copy heading and permalink for Proof 6.1.2: Formal Proof of Geometric Series Convergence">🔗</a></div></article></details><details id="decimalexpansions-17" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="decimalexpansions-17-1">Discuss this proof. Does it make sense? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-17-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.1.10"><a href="#decimalexpansions-17" title="Copy heading and permalink for Checkpoint 6.1.10" aria-label="Copy heading and permalink for Checkpoint 6.1.10">🔗</a></div></article></details><details id="decimalexpansions-18" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="decimalexpansions-18-1">
+<div class="para">Use the geometric series convergence theorem to show that the series</div>
+<div class="displaymath process-math" id="decimalexpansions-18-1-1">
+\begin{equation*}
+\sum_{i=1}^\infty \frac{9}{10^i}= 9 \sum_{i=1}^\infty \left(\frac{1}{10}\right)^i
+\end{equation*}
+</div>
+<div class="para">converges, and find its value.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-18-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.1.11"><a href="#decimalexpansions-18" title="Copy heading and permalink for Checkpoint 6.1.11" aria-label="Copy heading and permalink for Checkpoint 6.1.11">🔗</a></div></article></details><div class="para" id="decimalexpansions-19">We can now prove that every decimal expansion converges. Our main tool will be the comparison test for series convergence, which states that if <span class="process-math">\(\sum_{i=1}^\infty a_i\)</span> is a series with non-negative terms, and if there exists a convergent series <span class="process-math">\(\sum_{i=1}^\infty b_i\)</span> with non-negative terms such that <span class="process-math">\(a_i \leq b_i\)</span> for all <span class="process-math">\(i\text{,}\)</span> then the series <span class="process-math">\(\sum_{i=1}^\infty a_i\)</span> also converges.<div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-decimalconvergence"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.1.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm-decimalconvergence-1-1">Every decimal expansion converges, and therefore defines a real number.<div class="autopermalink" data-description="Paragraph"><a href="#thm-decimalconvergence-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 6.1.12"><a href="#thm-decimalconvergence" title="Copy heading and permalink for Theorem 6.1.12" aria-label="Copy heading and permalink for Theorem 6.1.12">🔗</a></div></article><details id="decimalexpansions-21" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="decimalexpansions-21-1">
+<div class="para">Let <span class="process-math">\(0.a_1a_2a_3\ldots\)</span> be a decimal expansion. We need to show that the series</div>
+<div class="displaymath process-math" id="decimalexpansions-21-1-2">
+\begin{equation*}
+\sum_{i=1}^\infty \frac{a_i}{10^i}
+\end{equation*}
+</div>
+<div class="para">converges. Since each <span class="process-math">\(a_i\leq 9\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="decimalexpansions-21-1-4">
+\begin{equation*}
+\frac{a_i}{10^i} \leq \frac{9}{10^i}.
+\end{equation*}
+</div>
+<div class="para">Since the geometric series <span class="process-math">\(\sum_{i=1}^\infty \frac{9}{10^i}\)</span> converges (as you proved in the previous checkpoint), it follows from the comparison test that the series <span class="process-math">\(\sum_{i=1}^\infty \frac{a_i}{10^i}\)</span> also converges, and therefore defines a real number.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#decimalexpansions-21-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 6.1.3"><a href="#decimalexpansions-21" title="Copy heading and permalink for Proof 6.1.3" aria-label="Copy heading and permalink for Proof 6.1.3">🔗</a></div></article></details><div class="autopermalink" data-description="Section 6.1: Decimal Expansions"><a href="#decimalexpansions" title="Copy heading and permalink for Section 6.1: Decimal Expansions" aria-label="Copy heading and permalink for Section 6.1: Decimal Expansions">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="fractions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="finitecontinuedfractions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
