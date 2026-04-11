@@ -2563,7 +2563,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.1",
   "title": "Decimal Expansions",
-  "body": " Decimal Expansions  Our main goal in this chapter is to understand ways of using rational numbers to approximate real numbers. The most common way of doing this is to use decimal expansions, which is a technique that you first learn in elementary or middle school. For example, most of you are familiar with the following ideas: has an infinite, non-repeating decimal expansion. has an infinite, repeating decimal expansion. has a finite decimal expansion. In this section, we will prove several properties of decimal expansions. We will begin with the definition of a decimal representation of a number.    Given a sequence of positive integers with each , we define the decimal expansion for the sequence to be the real number When the sequence contains only finitely many non-zero terms, we say that the decimal expansion is finite. Otherwise, we say the decimal expansion is infinite. If the sequence consists of an eventually repeating pattern then we say that the decimal expansion is repeating.     With your group, represent the following decimal expansions on a number line:                     With your group, discuss: Is it true that Why or why not?    With your group, represent the following decimal expansions on a number line:                     With your group, discuss: Is it true that Why or why not?    With your group, discuss: Is it true that Why or why not?   The above exercises demonstrate that decimal expansions are more subtle and complicated than many people believe. Let's start with a simple question: does every decimal expansion define a real number?   Discuss with your group: Do you think that every decimal expansion defines a real number? Why or why not?   To answer this, we need to use techniques from Calculus II. Specifically, we make the observation that the decimal expansion is an infinite series. What we need to show is that this infinite series converges, and therefore defines a real number. To do this, we need to recall convergence properties of geometric series.   Geometric Series Convergence   Let be a real number. Then the geometric series converges, and we have Further, we have     We will give two proofs of this theorem. The first is an embodied proof, while the second is a formal proof using limits.   Embodied Proof of Geometric Series Convergence  The following video has a 1:40 minute visual\/embodied proof of the convergence of the geometric series. https:\/\/www.youtube.com\/watch?v=TGUWt5xcB8M     Discuss this proof. Does it make sense? Why or why not? What are the key insights that this proof conveys?    Formal Proof of Geometric Series Convergence  For a fixed value of , let be the th partial sum of the geometric series. It is a straightforward calculation to show that and therefore Thus, we have since implies that .    Discuss this proof. Does it make sense? Why or why not?    Use the geometric series convergence theorem to show that the series converges, and find its value.   We can now prove that every decimal expansion converges. Our main tool will be the comparison test for series convergence, which states that if is a series with non-negative terms, and if there exists a convergent series with non-negative terms such that for all , then the series also converges.    Every decimal expansion converges, and therefore defines a real number.     Let be a decimal expansion. We need to show that the series converges. Since each , we have Since the series converges (as you proved in the previous checkpoint), it follows from the comparison test that the series also converges, and therefore defines a real number.    Discuss the proof above. Does it make sense? Why or why not?   "
+  "body": " Decimal Expansions  Our main goal in this chapter is to understand ways of using rational numbers to approximate real numbers. The most common way of doing this is to use decimal expansions, which is a technique that you first learn in elementary or middle school. For example, most of you are familiar with the following ideas: has an infinite, non-repeating decimal expansion. has an infinite, repeating decimal expansion. has a finite decimal expansion. In this section, we will prove several properties of decimal expansions. We will begin with the definition of a decimal representation of a number.    Given a sequence of positive integers with each , we define the decimal expansion for the sequence to be the real number When the sequence contains only finitely many non-zero terms, we say that the decimal expansion is finite. Otherwise, we say the decimal expansion is infinite. If the sequence consists of an eventually repeating pattern then we say that the decimal expansion is repeating.     With your group, represent the following decimal expansions on a number line:                     With your group, discuss: Is it true that Why or why not?    With your group, discuss: Is it true that Why or why not?   The above exercises demonstrate that decimal expansions are more subtle and complicated than many people believe. Let's start with a simple question: does every decimal expansion define a real number?   Discuss with your group: Do you think that every decimal expansion defines a real number? Why or why not?   To answer this, we need to use techniques from Calculus II. Specifically, we make the observation that the decimal expansion is an infinite series. What we need to show is that this infinite series converges, and therefore defines a real number. To do this, we need to recall convergence properties of geometric series.   Geometric Series Convergence   Let be a real number. Then the geometric series converges, and we have Further, we have     We will give two proofs of this theorem. The first is an embodied proof, while the second is a formal proof using limits.   Embodied Proof of Geometric Series Convergence  The following video has a 1:40 minute visual\/embodied proof of the convergence of the geometric series. https:\/\/www.youtube.com\/watch?v=TGUWt5xcB8M     Discuss this proof. Does it make sense? Why or why not? What are the key insights that this proof conveys?    Formal Proof of Geometric Series Convergence  For a fixed value of , let be the th partial sum of the geometric series. Multipliying both sides of the equation by , we have that most terms on the right-hand side cancel, and we are left with Therefore, we have Thus, we can conclude that since implies that .    Discuss this proof. Does it make sense? Why or why not?    Use the geometric series convergence theorem to show that the series converges, and find its value.   We can now prove that every decimal expansion converges. Our main tool will be the comparison test for series convergence, which states that if is a series with non-negative terms, and if there exists a convergent series with non-negative terms such that for all , then the series also converges.    Every decimal expansion converges, and therefore defines a real number.     Let be a decimal expansion. We need to show that the series converges. Since each , we have Since the series converges (as you proved in the previous checkpoint), it follows from the comparison test that the series also converges, and therefore defines a real number.    Discuss the proof above. Does it make sense? Why or why not?   We can now ask: which decimal expansions correspond to rational numbers, and which correspond to irrational numbers? The following theorem gives a complete answer.    A decimal expansion corresponds to a rational number if and only if it is either finite or repeating.     First, we will show that if a decimal expansion is either finite or repeating, then it corresponds to a rational number. If a decimal expansion is finite, then it is of the form which is a rational number. If a decimal expansion is repeating, then it is of the form which is a rational number, since it is a finite sum of rational numbers.  To prove the converse, let be positive integers and consider the fraction , which is a number strictly between and . Applying the long division algorithm to the fraction , we see that at each step of the long division algorithm, we get a remainder that is between and . At each step, we bring down some number of zeros, and then divide by again. Since there are only finitely many possible remainders, it follows that at some point in the long division algorithm, we will get a remainder that we have seen before. At this point, the decimal expansion of will begin repeating, since the long division algorithm will repeat the same steps as before.    Apply the long division algorithm to compute the decimal expansion of .    Discuss the proof above. Does it make sense? Why or why not?   Decimal expansions are the usual way that we use rational numbers to approximate real numbers, but they are not the only way. In the next sections, we will discuss the method of representing real numbers by continued fractions, which gives a different method for approximation of reals by rationals.  "
 },
 {
   "id": "def-decimalexpansion",
@@ -2599,15 +2599,6 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "6.1.4",
   "title": "",
-  "body": " With your group, represent the following decimal expansions on a number line:                   "
-},
-{
-  "id": "decimalexpansions-7",
-  "level": "2",
-  "url": "decimalexpansions.html#decimalexpansions-7",
-  "type": "Checkpoint",
-  "number": "6.1.5",
-  "title": "",
   "body": " With your group, discuss: Is it true that Why or why not?  "
 },
 {
@@ -2615,16 +2606,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "decimalexpansions.html#decimalexpansions-8",
   "type": "Checkpoint",
-  "number": "6.1.6",
-  "title": "",
-  "body": " With your group, discuss: Is it true that Why or why not?  "
-},
-{
-  "id": "decimalexpansions-10",
-  "level": "2",
-  "url": "decimalexpansions.html#decimalexpansions-10",
-  "type": "Checkpoint",
-  "number": "6.1.7",
+  "number": "6.1.5",
   "title": "",
   "body": " Discuss with your group: Do you think that every decimal expansion defines a real number? Why or why not?  "
 },
@@ -2633,52 +2615,52 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "decimalexpansions.html#thm-geometricseries",
   "type": "Theorem",
-  "number": "6.1.8",
+  "number": "6.1.6",
   "title": "Geometric Series Convergence.",
   "body": " Geometric Series Convergence   Let be a real number. Then the geometric series converges, and we have Further, we have    "
 },
 {
-  "id": "decimalexpansions-14",
+  "id": "decimalexpansions-12",
   "level": "2",
-  "url": "decimalexpansions.html#decimalexpansions-14",
+  "url": "decimalexpansions.html#decimalexpansions-12",
   "type": "Proof",
   "number": "6.1.1",
   "title": "Embodied Proof of Geometric Series Convergence.",
   "body": " Embodied Proof of Geometric Series Convergence  The following video has a 1:40 minute visual\/embodied proof of the convergence of the geometric series. https:\/\/www.youtube.com\/watch?v=TGUWt5xcB8M   "
 },
 {
+  "id": "decimalexpansions-13",
+  "level": "2",
+  "url": "decimalexpansions.html#decimalexpansions-13",
+  "type": "Checkpoint",
+  "number": "6.1.7",
+  "title": "",
+  "body": " Discuss this proof. Does it make sense? Why or why not? What are the key insights that this proof conveys?  "
+},
+{
+  "id": "decimalexpansions-14",
+  "level": "2",
+  "url": "decimalexpansions.html#decimalexpansions-14",
+  "type": "Proof",
+  "number": "6.1.2",
+  "title": "Formal Proof of Geometric Series Convergence.",
+  "body": " Formal Proof of Geometric Series Convergence  For a fixed value of , let be the th partial sum of the geometric series. Multipliying both sides of the equation by , we have that most terms on the right-hand side cancel, and we are left with Therefore, we have Thus, we can conclude that since implies that .  "
+},
+{
   "id": "decimalexpansions-15",
   "level": "2",
   "url": "decimalexpansions.html#decimalexpansions-15",
   "type": "Checkpoint",
-  "number": "6.1.9",
+  "number": "6.1.8",
   "title": "",
-  "body": " Discuss this proof. Does it make sense? Why or why not? What are the key insights that this proof conveys?  "
+  "body": " Discuss this proof. Does it make sense? Why or why not?  "
 },
 {
   "id": "decimalexpansions-16",
   "level": "2",
   "url": "decimalexpansions.html#decimalexpansions-16",
-  "type": "Proof",
-  "number": "6.1.2",
-  "title": "Formal Proof of Geometric Series Convergence.",
-  "body": " Formal Proof of Geometric Series Convergence  For a fixed value of , let be the th partial sum of the geometric series. It is a straightforward calculation to show that and therefore Thus, we have since implies that .  "
-},
-{
-  "id": "decimalexpansions-17",
-  "level": "2",
-  "url": "decimalexpansions.html#decimalexpansions-17",
   "type": "Checkpoint",
-  "number": "6.1.10",
-  "title": "",
-  "body": " Discuss this proof. Does it make sense? Why or why not?  "
-},
-{
-  "id": "decimalexpansions-18",
-  "level": "2",
-  "url": "decimalexpansions.html#decimalexpansions-18",
-  "type": "Checkpoint",
-  "number": "6.1.11",
+  "number": "6.1.9",
   "title": "",
   "body": " Use the geometric series convergence theorem to show that the series converges, and find its value.  "
 },
@@ -2687,25 +2669,61 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "decimalexpansions.html#thm-decimalconvergence",
   "type": "Theorem",
-  "number": "6.1.12",
+  "number": "6.1.10",
   "title": "",
   "body": "  Every decimal expansion converges, and therefore defines a real number.   "
 },
 {
-  "id": "decimalexpansions-21",
+  "id": "decimalexpansions-19",
   "level": "2",
-  "url": "decimalexpansions.html#decimalexpansions-21",
+  "url": "decimalexpansions.html#decimalexpansions-19",
   "type": "Proof",
   "number": "6.1.3",
   "title": "",
   "body": " Let be a decimal expansion. We need to show that the series converges. Since each , we have Since the series converges (as you proved in the previous checkpoint), it follows from the comparison test that the series also converges, and therefore defines a real number.  "
 },
 {
-  "id": "decimalexpansions-22",
+  "id": "decimalexpansions-20",
   "level": "2",
-  "url": "decimalexpansions.html#decimalexpansions-22",
+  "url": "decimalexpansions.html#decimalexpansions-20",
+  "type": "Checkpoint",
+  "number": "6.1.11",
+  "title": "",
+  "body": " Discuss the proof above. Does it make sense? Why or why not?  "
+},
+{
+  "id": "thm-decimalexpansionclassification",
+  "level": "2",
+  "url": "decimalexpansions.html#thm-decimalexpansionclassification",
+  "type": "Theorem",
+  "number": "6.1.12",
+  "title": "",
+  "body": "  A decimal expansion corresponds to a rational number if and only if it is either finite or repeating.   "
+},
+{
+  "id": "decimalexpansions-23",
+  "level": "2",
+  "url": "decimalexpansions.html#decimalexpansions-23",
+  "type": "Proof",
+  "number": "6.1.4",
+  "title": "",
+  "body": " First, we will show that if a decimal expansion is either finite or repeating, then it corresponds to a rational number. If a decimal expansion is finite, then it is of the form which is a rational number. If a decimal expansion is repeating, then it is of the form which is a rational number, since it is a finite sum of rational numbers.  To prove the converse, let be positive integers and consider the fraction , which is a number strictly between and . Applying the long division algorithm to the fraction , we see that at each step of the long division algorithm, we get a remainder that is between and . At each step, we bring down some number of zeros, and then divide by again. Since there are only finitely many possible remainders, it follows that at some point in the long division algorithm, we will get a remainder that we have seen before. At this point, the decimal expansion of will begin repeating, since the long division algorithm will repeat the same steps as before.  "
+},
+{
+  "id": "decimalexpansions-24",
+  "level": "2",
+  "url": "decimalexpansions.html#decimalexpansions-24",
   "type": "Checkpoint",
   "number": "6.1.13",
+  "title": "",
+  "body": " Apply the long division algorithm to compute the decimal expansion of .  "
+},
+{
+  "id": "decimalexpansions-25",
+  "level": "2",
+  "url": "decimalexpansions.html#decimalexpansions-25",
+  "type": "Checkpoint",
+  "number": "6.1.14",
   "title": "",
   "body": " Discuss the proof above. Does it make sense? Why or why not?  "
 },
