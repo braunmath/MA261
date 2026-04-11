@@ -74,39 +74,6 @@
 
   <exercise>
     <p>
-      With your group, represent the following decimal expansions on a number line:
-      <ol>
-        <li>
-          <p>
-            <m>0.1</m>
-          </p>
-        </li>
-        <li>
-          <p>
-            <m>0.11</m>
-          </p>
-        </li>
-        <li>
-          <p>
-            <m>0.111</m>
-          </p>
-        </li>
-      </ol>
-    </p>
-  </exercise>
-
-  <exercise>
-    <p>
-      With your group, discuss: Is it true that
-      <md>
-        0.111111\ldots = 1/9 \, ?
-      </md>
-      Why or why not?
-    </p>
-  </exercise>
-
-  <exercise>
-    <p>
       With your group, discuss: Is it true that 
       <md>
         5/7 = 0.\overline{714285} = 0.714285714285714285\ldots \, ?
@@ -180,15 +147,15 @@
     <title>Formal Proof of Geometric Series Convergence</title>
     <p>
       For a fixed value of <m>x</m>, let <m>S_n = \sum_{i=0}^n x^i</m> be the <m>n</m>th partial sum of the geometric series.
-      It is a straightforward calculation to show that
+      Multipliying both sides of the equation <m>S_n = 1 + x + x^2 + \cdots + x^n</m> by <m>1-x</m>, we have that most terms on the right-hand side cancel, and we are left with
       <md>
-        (1-x)S_n = 1-x^{n+1} \, ,
+        (1-x)S_n = 1-x^{n+1} \, .
       </md>
-      and therefore
+      Therefore, we have
       <md>
         S_n = \frac{1-x^{n+1}}{1-x} \, .
       </md>
-      Thus, we have
+      Thus, we can conclude that
       <md>
         \sum_{i=0}^\infty x^i = \lim_{n \to \infty} S_n = \lim_{n \to \infty} \frac{1-x^{n+1}}{1-x} = \frac{1}{1-x} \, ,
       </md>
@@ -248,6 +215,62 @@
       Discuss the proof above. Does it make sense? Why or why not?
     </p>
   </exercise>
+
+  <p>
+    We can now ask: which decimal expansions correspond to rational numbers, and which correspond to irrational numbers?
+    The following theorem gives a complete answer.
+  </p>
+
+  <theorem xml:id="thm-decimalexpansionclassification">
+    <statement>
+      <p>
+        A decimal expansion corresponds to a rational number if and only if it is either finite or repeating.
+      </p>
+    </statement>
+  </theorem>
+
+  <proof>
+    <p>
+      First, we will show that if a decimal expansion is either finite or repeating, then it corresponds to a rational number.
+      If a decimal expansion is finite, then it is of the form
+      <md>
+        0.a_1a_2\ldots a_k = \frac{a_1}{10} + \frac{a_2}{100} + \cdots + \frac{a_k}{10^k} \, ,
+      </md>
+      which is a rational number.
+      If a decimal expansion is repeating, then it is of the form
+      <md>
+        <mrow> \amp 0.b_1b_2\ldots b_k \overline{a_{0}...a_{m-1}}</mrow>
+        <mrow>=\amp \frac{b_1}{10} + \frac{b_2}{100} + \cdots + \frac{b_k}{10^k} + (1/10^{k+1})\sum_{i=0}^\infty \left( \left( \sum_{j=0}^{m-1}\frac{a_j}{10^j}\right) \left(\frac{1}{10^m}\right)^i\right)</mrow>
+        <mrow>=\amp \frac{b_1}{10} + \frac{b_2}{100} + \cdots + \frac{b_k}{10^k} + (1/10^{k+1})\left( \sum_{j=0}^{m-1}\frac{a_j}{10^j} \right)\cdot \frac{1}{1-(1/10)^m}</mrow>
+      </md>
+      which is a rational number, since it is a finite sum of rational numbers.
+    </p>
+    <p>
+      To prove the converse, let <m>n\lt m</m> be positive integers and consider the fraction <m>m/n</m>, which is a number strictly between <m>0</m> and <m>1</m>.
+      Applying the long division algorithm to the fraction <m>m/n</m>, we see that at each step of the long division algorithm, we get a remainder that is between <m>0</m> and <m>n-1</m>.
+      At each step, we bring down some number of zeros, and then divide by <m>n</m> again.
+      Since there are only finitely many possible remainders, it follows that at some point in the long division algorithm, we will get a remainder that we have seen before.
+      At this point, the decimal expansion of <m>m/n</m> will begin repeating, since the long division algorithm will repeat the same steps as before.
+    </p>
+  </proof>
+
+  <exercise>
+    <p>
+      Apply the long division algorithm to compute the decimal expansion of <m>5/7</m>.
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      Discuss the proof above. Does it make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <p>
+    Decimal expansions are the usual way that we use rational numbers to approximate real numbers, but they are not the only way.
+    In the next sections, we will discuss the method of representing real numbers by continued fractions, which gives a different method for approximation of reals by rationals.
+  </p>
+  
   
 
 </section>
