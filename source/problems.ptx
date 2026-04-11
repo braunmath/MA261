@@ -1016,18 +1016,84 @@ Your grade is based on completion only (in other words, if you complete the assi
     <problem>
         <title>P33</title>
         <p>
+            Use the technique in the proof of the Chinese Remainder Theorem to find an integer solution to each of the following systems of equations.
+            Show all your work.
+            <ol>
+                <li>
+                    <p>The following system has two equations.
+                        <md>
+                            <mrow>x \equiv \amp 3 \bmod 31 </mrow>
+                            <mrow>x \equiv \amp 21 \bmod 32 </mrow>
+                        </md>                        
+                    </p>
+                </li>
+                
+                <li>
+                    <p> The following system has four equations.
+                        <md>
+                            <mrow>x \equiv \amp 1 \bmod 7 </mrow>
+                            <mrow>x \equiv \amp 16 \bmod 23 </mrow>
+                            <mrow>x \equiv \amp 32 \bmod 73 </mrow>
+                            <mrow>x \equiv \amp 77 \bmod 100 </mrow>
+                        </md>
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
     <problem>
         <title>P34</title>
         <p>
+            In this problem we will use Fermat's Little Theorem to prove that if <m>p</m> is an odd prime number and <m>0\lt a\lt p</m>, then
+            <md>
+            [a]^{(p-1)/2} = [1] \text{ or } [-1] \, .
+            </md>            
+            <ol>
+                <li>
+                    <p>
+                        Prove that <m>([a]^{(p-1)/2}-[1])([a]^{(p-1)/2}+[1]) = [0]</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Explain why this equation implies that either <m>[a]^{(p-1)/2}=[1]</m> or <m>[a]^{(p-1)/2}=[-1]</m> in <m>\mathbb{Z}/p\mathbb{Z}</m>.
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
     <problem>
         <title>P35</title>
         <p>
+            In this problem you will prove <alert>Wilson's Theorem</alert>, which is a classic result in number theory that states if <m>p</m> is prime, then
+            <md>
+                (p-1)! \equiv -1 \bmod p \, ,
+            </md>
+            or in other words, 
+            <md>
+                [(p-1)!]=[-1]
+            </md>
+            in <m>\mathbb{Z}/p\mathbb{Z}</m>.
+            <ol>
+                <li>
+                    <p>
+                        Prove that the only elements of <m>\mathbb{Z}/p\mathbb{Z}</m> that are their own multiplicative inverse are <m>[1]</m> and <m>[-1]</m>. 
+                        (HINT: Use the fact that <m>[a]^2=[1]</m> is equivalent to <m>([a]-[1])([a]+[1])=[0]</m> in <m>\mathbb{Z}/p\mathbb{Z}</m>.)
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Evaluate <m>[p][p-1][p-2][p-3]\cdots [2][1]</m> in <m>\mathbb{Z}/p\mathbb{Z}</m> by pairing each element with its multiplicative inverse, except for <m>[1]</m> and <m>[-1]</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Explain why your answer to part 2 implies <m>[(p-1)!]=[-1]</m> in <m>\mathbb{Z}/p\mathbb{Z}</m>.
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
