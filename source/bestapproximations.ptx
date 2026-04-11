@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="bestapproximations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Best Approximations</title>
+
+  <p>
+    We gave an embodied argument at the end of the previous section justifying that we can approximate any real number by rational numbers with denominator given by a powers of <m>10</m>.
+    This is the method of decimal expansions, and it is a very natural method for approximation of real numbers by rationals.
+    A natural question to ask is the following:
+    If we are allowed to use any rational number with denominator between <m>1</m> and <m>q</m>, what is the best approximation to a given real number <m>s</m> that we can get?
+    There are two different ways to interpret the meaning of "best approximation" in this case, and these give rise to two different definitions of best approximations.
+  </p>
+
+  <definition xml:id="def-bestapproximations">
+    <statement>
+      <p>
+        Given a real number <m>s\in (0,1)</m>, we say that a rational number <m>p/q</m> is a <alert>best approximation of the first kind</alert> to <m>s</m> if for any other rational number <m>r/t</m> with denominator <m>t\leq q</m>, we have
+        <me>
+          \left|s-\frac{p}{q}\right|\leq \left|s-\frac{r}{t}\right| \, .
+        </me>
+        We say that a rational number <m>p/q</m> is a <alert>best approximation of the second kind</alert> to <m>s</m> if for any other rational number <m>r/t</m> with denominator <m>t\leq q</m>, we have
+        <me>
+          \left|q s-p\right|\leq \left|t s-r\right| \, .
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    Consider the following SageMath code that computes the best approximation of the first kind to a real number <m>s</m>.
+    Running this in <url href="https://sagecell.sagemath.org/">https://sagecell.sagemath.org/</url> produces best approximations to <m>\pi-3</m>, <m>\frac{1+\sqrt{5}}{2}-1</m>, and <m>\log_2(3/2)</m>.
+  </p>
+    <program language="sage">
+      <input>
+def firstbestapproximation(s,q):
+    """
+    input: a real number s between 0 and 1 and a maximum denominator q
+    output: the rational number with denominator at most q that is the best approximation to s of the first kind
+    """
+    best = 0
+    for j in srange(1,q+1):
+        for k in srange(0,j+1):
+            if abs(s-k/j) &lt;= abs(s-best):
+                best = k/j
+    return best
+
+print(firstbestapproximation(pi-3,10))
+
+print(firstbestapproximation((1+sqrt(5))/2-1,50))
+
+print(firstbestapproximation(log(3/2,2),60))
+      </input>
+    </program>
+
+
+  <p>
+    The following code computes the best approximation of the second kind to a real number <m>s</m>.
+  </p>
+    <program language="sage">
+      <input>
+def secondbestapproximation(s,q):
+    """
+    input: a real number s between 0 and 1 and a maximum denominator q
+    output: the rational number with denominator at most q that is the best approximation to s of the second kind
+    """ 
+    numbest = 0
+    denombest = 1
+    for j in srange(1,q+1):
+        for k in srange(0,j+1):
+            if abs(j*s-k) &lt;= abs(denombest*s-numbest):
+                numbest = k
+                denombest = j
+    return numbest/denombest
+
+print(secondbestapproximation(pi-3,10))
+
+print(secondbestapproximation((1+sqrt(5))/2-1,50))
+
+print(secondbestapproximation(log(3/2,2),60))
+      </input>
+    </program>
+
+    <p>
+      The following code demonstrates that these two types of approximations are not always the same.
+      Specifically, the first and second best approximations to <m>\pi-3</m> with denominator at most <m>100</m> are different.
+    </p>
+
+    <program language="sage">
+      <input>
+def firstbestapproximation(s,q):
+    """
+    input: a real number s between 0 and 1 and a maximum denominator q
+    output: the rational number with denominator at most q that is the best approximation to s of the first kind
+    """
+    best = 0
+    for j in srange(1,q+1):
+        for k in srange(0,j+1):
+            if abs(s-k/j) &lt;= abs(s-best):
+                best = k/j
+    return best
+
+def secondbestapproximation(s,q):
+    """
+    input: a real number s between 0 and 1 and a maximum denominator q
+    output: the rational number with denominator at most q that is the best approximation to s of the second kind
+    """ 
+    numbest = 0
+    denombest = 1
+    for j in srange(1,q+1):
+        for k in srange(0,j+1):
+            if abs(j*s-k) &lt;= abs(denombest*s-numbest):
+                numbest = k
+                denombest = j
+    return numbest/denombest
+
+print(firstbestapproximation(pi-3,100))
+
+print(secondbestapproximation(pi-3,100))
+      </input>
+    </program>
+
+</section>

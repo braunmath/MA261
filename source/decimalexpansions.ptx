@@ -267,6 +267,14 @@
   </exercise>
 
   <p>
+  It is a theorem that every real number between <m>0</m> and <m>1</m> has a decimal expansion; we will not prove that here, but we will give the following embodied argument to justify this.
+  If you fix a positive integer <m>k</m> and consider all rational numbers between <m>0</m> and <m>1</m> with denominator <m>10^k</m>, then these rational numbers partition the interval from <m>0</m> to <m>1</m> into subintervals of length <m>1/10^k</m>.
+  (Imagine the number line from <m>0</m> to <m>1</m> with tick marks at each rational number with denominator <m>10^k</m>.)
+  Every real number <m>s</m> between <m>0</m> and <m>1</m> must lie in one of these subintervals, and the decimal expansion of <m>s</m> up to the <m>k</m>-th digit is determined by which subinterval it lies in for each value of <m>k</m>.
+  As we send <m>k</m> to infinity, we produce decimal approximations that are accurate to arbitrarily many significant digits.
+  </p>
+
+  <p>
     Decimal expansions are the usual way that we use rational numbers to approximate real numbers, but they are not the only way.
     In the next sections, we will discuss the method of representing real numbers by continued fractions, which gives a different method for approximation of reals by rationals.
   </p>
