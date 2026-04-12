@@ -527,7 +527,7 @@ Your grade is based on completion only (in other words, if you complete the assi
         </p>
     </problem>
 
-    <problem>
+    <problem xml:id="prob-contfracproblem">
         <title>P19</title>
         <p>
             Let <m>a \gt b</m> be positive integers.
@@ -683,7 +683,7 @@ You should include your code and the results in your submission.
         </p>
     </problem>
 
-    <problem>
+    <problem xml:id="prob-infcontfrac">
         <title>P23</title>
         <p>In this problem we consider what the Euclidean algorithm might look like if we apply it to an irrational number.
             <ol>

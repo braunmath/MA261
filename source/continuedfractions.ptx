@@ -4,6 +4,307 @@
   <title>Continued Fractions and Convergents</title>
 
   <p> 
+    In <xref ref="prob-contfracproblem">Problem P19</xref>, we saw that every rational number has an expansion as a finite continued fraction:
+    <md>
+\frac{a}{b}
+=
+q_0
++
+\cfrac{1}{
+  q_1
+  +
+  \cfrac{1}{
+    q_2
+    +
+    \cfrac{1}{
+      \ddots
+      +
+      \cfrac{1}{q_k}
+    }
+  }
+}
+  </md>
+  We will denote this continued fraction by <m>[q_0;q_1,q_2,\ldots,q_k]</m>.
+</p>
+  <p>
+  For this problem, we assumed that <m>a\gt b</m> were positive integers, thus we restricted ourselves to the case where a rational number is in the interval <m>(1,\infty)</m>.
+  However, we can find a continued fraction expansion for any rational number, because we can add or subtract an integer to a rational number and it only changes the value of <m>q_0</m> in the continued fraction expansion.
+</p>
+
+<exercise>
+  <p>
+    Discuss the observation above with your group.
+    Do you agree that if we have two rational numbers <m>x</m> and <m>y</m>, and if <m>x=n+y</m> for some integer <m>n</m>, then the continued fraction for <m>x</m> is obtained from the continued fraction for <m>y</m> by adding <m>n</m> to the <m>q_0</m> value for <m>y</m>?
   </p>
+</exercise>
+
+<p>
+  Next, let's remind ourselves how this continued fraction expression was obtained on your homework.
+  If <m>a \gt b</m> are positive integers, then we apply the Euclidean algorithm to get the following sequence:
+            <md>
+                <mrow>a \amp = q_0b+r_1 </mrow>
+                <mrow>b  \amp  = q_1r_1 + r_2 </mrow>
+                <mrow>r_1 \amp =  q_2r_2 + r_3 </mrow>
+                <mrow>r_2 \amp =   q_3r_3 + r_4 </mrow>
+                <mrow>\vdots \amp =  \vdots </mrow>
+                <mrow>r_{k-1} \amp =  q_kr_k + 0</mrow>
+            </md>
+            If you divide the first equation by <m>b</m> you obtain 
+            <md>
+                \frac{a}{b} = q_0 + \frac{r_1}{b} = q_0 + \frac{1}{\frac{b}{r_1}}\, .
+            </md>
+            If you divide the second equation by <m>r_1</m>, you obtain
+            <md>
+              \frac{b}{r_1}=q_1+\frac{r_2}{r_1} = q_1+\frac{1}{\frac{r_1}{r_2}} \, ,
+            </md>
+            which can be substituted into the first equation to obtain
+            <md>
+            \frac{a}{b} = q_0 + \frac{r_1}{b} = q_0 + \frac{1}{q_1+\frac{1}{\frac{r_1}{r_2}}} \, .
+            </md>
+            We can continue in this way until we reach the last equation in the Euclidean algorithm, and thus we obtain a continued fraction representation for <m>a/b</m>.
+            Thus, given any rational number, we can write it as a continued fraction where <m>q_0\in \mathbb{Z}</m> and each <m>q_i\in \mathbb{Z}_{\geq 1}</m>.
+  </p>
+
+  <exercise>
+    <p>
+      Discuss the argument above. Does it make sense? Why or why not?
+    </p>
+  </exercise>
+
+    <exercise>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Find the continued fraction expansion for <m>16/41</m>. HINT: <m>q_0=0</m> in this case, so the continued fraction starts with <me>0+\frac{1}{\frac{41}{16}}\, . </me>
+          </p>
+        </li>
+        <li>
+          <p>
+            Find the continued fraction expansion for <m>43/30</m>.
+          </p>
+        </li>
+      </ol>
+      
+    </p>
+  </exercise>
+
+  <p>
+    Also observe that if we consider any <m>q_0\in \mathbb{Z}</m> and let <m>q_i\in \mathbb{Z}_{\geq 1}</m> for <m>i=1,2,\ldots,k</m>, then the value
+    <md>
+q_0
++
+\cfrac{1}{
+  q_1
+  +
+  \cfrac{1}{
+    q_2
+    +
+    \cfrac{1}{
+      \ddots
+      +
+      \cfrac{1}{q_k}
+    }
+  }
+}
+  </md>
+  is a rational number.
+  This is obtained by recursively (i.e., inductively) finding a common denominator at each level.
+  For example, if we consider the number
+  <md>
+    q_0
++
+\cfrac{1}{
+  q_1
+  +
+  \cfrac{1}{
+    q_2
+    +
+    \cfrac{1}{q_3}
+  }
+} \, ,
+  </md>
+  then we have
+  <md>
+    q_0
++
+\cfrac{1}{
+  q_1
+  +
+  \cfrac{1}{
+    \frac{q_2q_3+1}{q_3}
+  }
+}
+  </md>
+  from which we obtain
+  <md>
+    q_0
++
+\cfrac{1}{
+  q_1
+  +
+  \cfrac{q_3}{q_2q_3+1}
+  }
+  </md>
+  from which we obtain
+  <md>
+    q_0
++
+\cfrac{1}{\frac{q_1(q_2q_3+1)+q_3}{q_2q_3+1}}
+  </md>
+  from which we obtain
+    <md>
+    q_0
++\frac{q_2q_3+1}{q_1(q_2q_3+1)+q_3}
+  </md>
+  from which we obtain
+    <md>
+   \frac{q_0(q_1(q_2q_3+1)+q_3)+q_2q_3+1}{q_1(q_2q_3+1)+q_3}
+  </md>
+  which is a rational number since the denominator only involves products and sums of positive integers, hence is not equal to zero.
+  This is an <alert>embodied-symbolic</alert> proof of this fact; a fully formal proof would provide a proof by induction.
+  </p>
+
+  <exercise>
+    <p>
+      Discuss the argument above. Does it make sense? Why or why not?
+    </p>    
+  </exercise>
+
+  <p>
+    Summarizing the two arguments above, we have proved the following.
+  </p>
+
+  <theorem xml:id="thm-finitecontinuedfractions">
+    <statement>
+      <p>
+        A number is rational if and only if it has a finite continued fraction expansion.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    You obtained in problem <xref ref="prob-infcontfrac">Problem P23</xref> an infinite continued fraction representation for <m>\sqrt{2}</m>.
+    It turns out that every real number has a continued fraction expansion.
+    We will denote such an expansion using the following notation.
+  </p>
+
+  <definition xml:id="def-contfracnotation">
+    <statement>
+      <p>
+        If <m>q_0\in \mathbb{Z}</m> and <m>q_i\in \mathbb{Z}_{\geq 1}</m> for all <m>i=1,2,3,\ldots</m>, we denote by 
+        <me>[q_0;q_1,q_2,q_3,\ldots]</me>
+        the infinite continued fraction
+        <md>
+q_0
++
+\cfrac{1}{
+  q_1
+  +
+  \cfrac{1}{
+    q_2
+    +
+    \cfrac{1}{
+      \ddots}
+    }
+  }
+  </md>
+  which is defined to be the value
+  <md>
+    \lim_{n\to \infty}[q_0;q_1,q_2,\ldots,q_n] \, .
+  </md>
+      </p>
+    </statement>
+  </definition>
+
+  <p>
+    The following theorem can be proved using a combination of technical details about continued fractions and techniques from real analysis to study sequence convergence (which you can learn more about in MA 471 or MA 575).
+    Thus, the full proof is beyond the scope of this course.
+  </p>
+
+  <theorem xml:id="thm-convergence">
+    <statement>
+      <p>
+        Every irrational number admits a unique representation as an infinite continued fraction, and every infinite continued fraction converges to a unique irrational number.
+      </p>
+    </statement>
+  </theorem>
+
+  <p>
+    Let's look at the continued fraction expansion for <m>\sqrt{3}\approx 1.73205</m>.
+    Note that this means we have 
+    <md>
+      <mrow>\sqrt{3} \amp \approx 1+0.73205 </mrow>
+      <mrow> \amp = 1+\frac{1}{1.36603} </mrow>
+      <mrow>\amp = 1+\frac{1}{1+\frac{1}{2.73205}}</mrow>
+      <mrow>\amp = 1+\frac{1}{1+\frac{1}{2+\frac{1}{1.3660}}}</mrow>
+    </md>
+    and thus we have that the beginning of the resulting infinite continued fraction is <m>\sqrt{3}=[1;1,2,1,\ldots]</m>.
+  </p>
+
+  <exercise>
+    <p>
+      Find <m>q_0,q_1,q_2,q_3,q_4,q_5</m> in the continued fraction approximation for <m>\log_2(3/2)</m>.
+    </p>
+  </exercise>
+
+  <p>
+    If we have an irrational number given by <m>s=[q_0;q_1,q_2,q_3,\ldots]</m>, then we define the <alert><m>m</m>-th convergent</alert> of <m>s</m> to be the rational number
+    <md>
+      \frac{b_m}{c_m}:= [q_0;q_1,q_2,q_3,\ldots,q_m] \, .
+    </md>
+  </p>
+
+  <exercise>
+    <p>
+      Find the second convergent of <m>\sqrt{3}</m> and the fourth convergent of <m>\log_2(3/2)</m>.
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      Find the first four convergents of <m>\pi</m>.
+      How good are these approximations to the value of <m>\pi</m> given by your calculator?
+    </p>
+  </exercise>
+
+  <p>
+    The key to obtaining best approximations of an irrational number <m>s</m> is to look at the convergents of <m>s</m>, as the following theorem shows.
+  </p>
+
+  <theorem xml:id="thm-bestapproximationsfromconvergents">
+    <statement>
+      <p>
+        Let <m>s</m> be an irrational number.
+        A rational number is a best approximation of the second kind for <m>s</m> if and only if it is a convergent for <m>s</m>.
+      </p>
+    </statement>
+  </theorem>
+
+  <exercise>
+    <p>
+      Discuss with your group: do you believe this theorem, even though we haven't given a proof? Why or why not?
+    </p>
+  </exercise>
+
+  <p>
+    The proof of this theorem is beyond the scope of our course, and can be found in the book <em>Continued Fractions</em> by A. Ya. Khinchin, available <url href="https://archive.org/details/khinchin-continued-fractions/mode/2up">at this link</url>.
+    However, this theorem motivates a further study of convergents, leading to the following theorem.
+  </p>
+
+  <theorem xml:id="thm-formulaforconvergents">
+    <statement>
+      <p>
+        Define numbers <m>b_m</m> and <m>c_m</m> inductively as follows:
+      </p>
+    </statement>
+  </theorem>
+  
+  
+
+
+  
+  
+
 
 </section>
