@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="decimalexpansions" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Decimal Expansions</title>
+  <title>Decimal Expansions and Quantifiers</title>
 
   <p> 
     Our main goal in this chapter is to understand ways of using rational numbers to approximate real numbers.
@@ -34,6 +34,7 @@
         Otherwise, we say the decimal expansion is infinite.
         If the sequence consists of an eventually repeating pattern 
         <md>0.a_1a_2\ldots a_k \overline{a_{k+1}...a_{k+m}} \, ,</md> 
+        where the overline indicates that the pattern <m>a_{k+1}...a_{k+m}</m> repeats infinitely many times,
         then we say that the decimal expansion is repeating.
       </p>
     </statement>
@@ -241,6 +242,7 @@
       <md>
         <mrow> \amp 0.b_1b_2\ldots b_k \overline{a_{0}...a_{m-1}}</mrow>
         <mrow>=\amp \frac{b_1}{10} + \frac{b_2}{100} + \cdots + \frac{b_k}{10^k} + (1/10^{k+1})\sum_{i=0}^\infty \left( \left( \sum_{j=0}^{m-1}\frac{a_j}{10^j}\right) \left(\frac{1}{10^m}\right)^i\right)</mrow>
+        <mrow>=\amp \frac{b_1}{10} + \frac{b_2}{100} + \cdots + \frac{b_k}{10^k} + (1/10^{k+1})\left(\sum_{j=0}^{m-1}\frac{a_j}{10^j}\right) \sum_{i=0}^\infty \left(\frac{1}{10^m}\right)^i</mrow>
         <mrow>=\amp \frac{b_1}{10} + \frac{b_2}{100} + \cdots + \frac{b_k}{10^k} + (1/10^{k+1})\left( \sum_{j=0}^{m-1}\frac{a_j}{10^j} \right)\cdot \frac{1}{1-(1/10)^m}</mrow>
       </md>
       which is a rational number, since it is a finite sum of rational numbers.
@@ -275,10 +277,89 @@
   </p>
 
   <p>
+    Throughout the course so far, we have frequently used two types of logical condition statements called <em>quantifiers</em>.
+    We will now give precise definitions for these, and we will rewrite some of our results about decimal expansions precisely using these.
+  </p>
+
+<definition xml:id="def-quantifiers">
+  <statement>
+    <p>
+      The <alert>universal quantifer</alert> is the phrase "for all" or "for every" and is denoted by the symbol <m>\forall</m>.
+      It is used to express statements of the form "for all <m>x</m> in a set <m>S</m>, we have <m>P(x)</m>" where <m>P(x)</m> is some statement that depends on the element <m>x</m>.
+      The <alert>existential quantifier</alert> is the phrase "there exists" adn is denoted by the symbol <m>\exists</m>,
+      It is used to express statements of the form "there exists an element <m>x</m> in a set <m>S</m> such that <m>P(x)</m>".
+    </p>
+  </statement>
+</definition>
+
+<p>
+  For example, we can rewrite the statement "every decimal expansion converges" as follows using quantifiers:
+<md>
+\forall a_1,a_2,a_3,\ldots \in \{0,1,2,3,4,5,6,7,8,9\}, \sum_{i=1}^\infty \frac{a_i}{10^i} \text{ converges.}
+</md>
+We can rewrite the statement "for every real number <m>s\in (0,1)</m>, there exists a decimal expansion that corresponds to <m>s</m>" as follows:
+<md>
+\forall s \in (0,1), \exists a_1,a_2,a_3,\ldots \in \{0,1,2,3,4,5,6,7,8,9\} \text{ such that } 0.a_1a_2a_3\ldots = s \, .
+</md>
+</p>
+
+<exercise>
+  <p>
+    <ol>
+      <li>
+        <p>
+          Rewrite the statement "there exists a rational number <m>r</m> such that <m>r^2 = 2</m>" using quantifiers.
+        </p>
+      </li>
+      <li>
+        <p>
+          Which of the following statements is equivalent to "<m>\sqrt{2}</m> is irrational"?
+          <ol>
+            <li>
+              <p>
+                <m>
+                  \exists r \in \mathbb{Q} \text{ such that } r^2 = 2
+                </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>
+                  \forall a,b\in\mathbb{Z}, (a/b)^2 = 2
+                </m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\forall a,b\in \mathbb{Z}, 2\neq (a/b)^2</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>
+                  \forall r \in \mathbb{Q}, \exists a,b\in \mathbb{Z} \text{ such that } r=a/b \text{ and } r^2 = 2
+                </m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </li>
+    </ol>
+  </p>
+</exercise>
+
+<remark>
+  <p>
+    Different mathematicians have different preferences for how to use quantifiers.
+    For example, some mathematicians prefer to use the phrase "for any" instead of "for all", and some prefer to use the phrase "there is" instead of "there exists".
+    Some mathematicians prefer to use the symbols <m>\forall</m> and <m>\exists</m> in their writing, while others prefer to write out the phrases "for all" and "there exists".
+    The important thing is to be clear and consistent in your use of quantifiers, and to make sure that your use of quantifiers accurately conveys the meaning of your statements.
+  </p>
+</remark>
+
+  <p>
     Decimal expansions are the usual way that we use rational numbers to approximate real numbers, but they are not the only way.
     In the next sections, we will discuss the method of representing real numbers by continued fractions, which gives a different method for approximation of reals by rationals.
   </p>
-  
-  
 
 </section>

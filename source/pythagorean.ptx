@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="pythagorean" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Pythagorean Triples</title>
+
+  <p> 
+    In this final section, we will investigate a classical topic in number theory, <em>Pythagorean triples</em>.
+    The question that motivates this study is the following: Suppose we have a right-angled triangle with sides lengths that are positive integers <m>a</m>, <m>b</m>, and <m>c</m>.
+    Which triples of values <m>a,b,c</m> are possible?
+    Any such triple is called a <alert>Pythagorean triple</alert>.
+    Observe that not every triple can arise in this way, because any such triple has to satisfy the Pythagorean theorem: <me>a^2+b^2=c^2</me>
+    Thus, for example, <m>(3,4,5)</m> is a Pythagorean triple, but <m>(1,1,2)</m> is not.
+  </p>
+    
+    <p>
+      In this section, rather than providing proofs, we will practice the proof-reading skills we have developed by interpreting mathematical proofs from Wikipedia, YouTube, and Art of Problem Solving.
+      While learning how to read, write, and create proofs within the context of a class is important, it is equally important to be able to do this outside of a specific course structure, using resources available online and in print.
+      We will begin by investigating three proofs of the Pythagorean Theorem that are found on Wikipedia.
+  </p>
+
+  <p>
+    First, consider the following <alert>proof by rearrangement</alert>, which is originally available at <url href="https://commons.wikimedia.org/wiki/File:Animated_gif_version_of_SVG_of_rearrangement_proof_of_Pythagorean_theorem.gif">this link</url>.
+    <figure xml:id="fig-pythagrearrangement">
+      <caption>An animated gif of a proof by rearrangement of the Pythagorean Theorem. </caption>
+      <image source="pythag_rearrangement.gif" width="65%"> 
+        <shortdescription>An animated gif of a proof by rearrangement of the Pythagorean Theorem.</shortdescription>
+      </image>
+    </figure>
+  </p>
+
+  <exercise>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Discuss the rearrangement proof with your group. Does it make sense? Why or why not?
+          </p>
+        </li>
+        <li>
+          <p>
+            Is this proof primarily embodied, symbolic, or formal?
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+
+    <p>
+    Second, consider the following <alert>proof by shearing transformations</alert>, which is originally available at <url href="https://en.wikipedia.org/wiki/File:Visual_proof_of_the_Pythagorean_theorem_by_area-preserving_shearing.gif">this link</url>.
+    <figure xml:id="fig-pythagshearing">
+      <caption>An animated gif of a proof by shearing of the Pythagorean Theorem. </caption>
+      <image source="pythag_shearing.gif" width="65%"> 
+        <shortdescription>An animated gif of a proof by shearing of the Pythagorean Theorem.</shortdescription>
+      </image>
+    </figure>
+  </p>
+
+  <exercise>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Discuss the shearing proof with your group. Does it make sense? Why or why not?
+          </p>
+        </li>
+        <li>
+          <p>
+            Is this proof primarily embodied, symbolic, or formal?
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+
+  <p>
+    Third, consider the following <alert>proof by similar triangles</alert>, which is available at <url href="https://en.wikipedia.org/wiki/Pythagorean_theorem#Proof_using_similar_triangles">https://en.wikipedia.org/wiki/Pythagorean_theorem#Proof_using_similar_triangles </url>.
+  </p>
+
+  <exercise>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Discuss the similar triangles proof with your group. Does it make sense? Why or why not?
+          </p>
+        </li>
+        <li>
+          <p>
+            Is this proof primarily embodied, symbolic, or formal?
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      Which of these three proofs of the Pythagorean theorem did you find most convincing? Why?
+    </p>
+  </exercise>
+
+  <p>
+    Next, we will learn about Pythagorean triples by watching and analyzing the following YouTube video from 3Blue1Brown: <url href="https://www.youtube.com/watch?v=QJYmyhnaaek">All possible Pythagorean triples, visualized</url>
+  </p>
+
+  <p>
+    After watching the video as a class, work through the following activities with your group.
+    <ol>
+      <li>
+        <p>
+          Write down a symbolic proof that the point <m>(u,v)</m> with positive integer coordinates are the first two values in a Pythagorean triple if and only if the distance from <m>(u,v)</m> to <m>(0,0)</m> is an integer.
+        </p>
+      </li>
+      <li>
+        <p>
+          Let <m>i=\sqrt{-1}</m>. Justify symbolically the following formula:
+          <me>(u+vi)^2 = u^2-v^2+2uvi</me>
+        </p>
+      </li>
+      <li>
+        <p>
+          <alert>Euler's formula</alert> for a complex number states that if we write a point using polar coordinates <m>r</m> and <m>\theta</m>, then
+          <me>re^{i\theta}=r\cos(\theta)+r\sin(\theta)i \, .</me>
+          Prove that this is true by evaluating the following power series at <m>i\theta</m> or <m>\theta</m>, multiplying them by <m>r</m>, and then checking to see that they satisfy the equality above.
+          <md>
+            <mrow>e^x = \sum_{n=0}^\infty \frac{x^n}{n!}</mrow>
+            <mrow>\cos(x)=\sum_{n=0}^\infty \frac{(-1)^n}{(2n)!}x^{2n}</mrow>
+            <mrow>\sin(x)=\sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!}x^{2n+1}</mrow>
+          </md>
+        </p>
+      </li>
+      <li>
+        <p>
+          Using Euler's formula, we see that for two complex numbers <m>r_1e^{i\theta_1}</m> and <m>r_2e^{i\theta_2}</m>, their product is
+          <md>
+            r_1e^{i\theta_1}r_2e^{i\theta_2}=r_1r_2e^{i(\theta_1+\theta_2)} \, .
+          </md>
+          Explain why this justifies the claim in the 3Blue1Brown video that multiplying two complex numbers multiplies their distances from the origin and adds their angles.
+        </p>
+      </li>
+      <li>
+        <p>
+          Discuss the picture in the video at time 9:50. Does it make sense how scaling some Pythagorean triples leads to others? Why or why not?
+        </p>
+      </li>
+      <li>
+        <p>
+          Write down a symbolic proof that every Pythagorean triple corresponds to a point on the unit circle with rational coordinates.
+        </p>
+      </li>
+      <li>
+        <p>
+          Consider the picture in the video at time 13:58. Discuss this in detail with your group, and write down in a list of bullet points the steps in the argument that every rational slope is obtained by a point on the unit circle.
+        </p>
+      </li>
+      <li>
+        <p>
+          Write down a precise statement of the theorem that is represented by this video.
+          What is the video actually proving?
+        </p>
+      </li>
+      <li>
+        <p>
+          Do you believe that the proof given in the video is complete and correct? Why or why not?
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    If you were searching for a proof of the classification of Pythagorean triples, another popular website that might come up in your search is Art of Problem Solving.
+    Go to the AoPS <url href="https://artofproblemsolving.com/wiki/index.php?title=Pythagorean_triple">Pythagorean Triples</url> page, and complete the following activities with your group.
+    <ol>
+      <li>
+        <p>
+          Read and discuss the Theorem statement for their classification of the general form of Pythagorean Triples.
+        </p>
+      </li>
+      <li>
+        <p>
+          With your group, read the proof they give.
+          Go through all the details, and also think about the overall structure of the argument.
+          <em>Use all the tools you have learned in this class to make sense of this proof and to be able to communicate both the "big ideas" and the technical details clearly.</em>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+</section>

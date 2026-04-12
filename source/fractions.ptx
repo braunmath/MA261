@@ -7,7 +7,6 @@
   <xi:include href="decimalexpansions.ptx" />
   <xi:include href="bestapproximations.ptx" />
   <xi:include href="continuedfractions.ptx" />
-  <xi:include href="convergents.ptx" />
   <xi:include href="microtonalscales.ptx" />
 
 </chapter>

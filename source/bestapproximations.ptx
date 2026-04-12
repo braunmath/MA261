@@ -4,27 +4,68 @@
   <title>Best Approximations</title>
 
   <p>
-    We gave an embodied argument at the end of the previous section justifying that we can approximate any real number by rational numbers with denominator given by a powers of <m>10</m>.
+    We gave an embodied argument in the previous section justifying that we can approximate any real number by rational numbers with denominator given by a powers of <m>10</m>.
     This is the method of decimal expansions, and it is a very natural method for approximation of real numbers by rationals.
     A natural question to ask is the following:
     If we are allowed to use any rational number with denominator between <m>1</m> and <m>q</m>, what is the best approximation to a given real number <m>s</m> that we can get?
-    There are two different ways to interpret the meaning of "best approximation" in this case, and these give rise to two different definitions of best approximations.
+    There are two different ways to interpret the meaning of "best" in this case, and these give rise to two different definitions of best approximations.
   </p>
 
   <definition xml:id="def-bestapproximations">
     <statement>
       <p>
-        Given a real number <m>s\in (0,1)</m>, we say that a rational number <m>p/q</m> is a <alert>best approximation of the first kind</alert> to <m>s</m> if for any other rational number <m>r/t</m> with denominator <m>t\leq q</m>, we have
+        Given a real number <m>s</m>, we say that a rational number <m>p/q</m> is a <alert>best approximation of the first kind</alert> to <m>s</m> if for any other rational number <m>r/t</m> with denominator <m>t\leq q</m>, we have
         <me>
-          \left|s-\frac{p}{q}\right|\leq \left|s-\frac{r}{t}\right| \, .
+          \left|s-\frac{p}{q}\right|\lt \left|s-\frac{r}{t}\right| \, .
         </me>
         We say that a rational number <m>p/q</m> is a <alert>best approximation of the second kind</alert> to <m>s</m> if for any other rational number <m>r/t</m> with denominator <m>t\leq q</m>, we have
         <me>
-          \left|q s-p\right|\leq \left|t s-r\right| \, .
+          \left|q s-p\right|\lt \left|t s-r\right| \, .
         </me>
       </p>
     </statement>
   </definition>
+
+  <p>
+    For an approximation of the first kind, suppose that we have <me>\left|s-\frac{p}{q}\right|\approx 0 \, .</me>
+    Then we have that
+    <me>s \approx \frac{p}{q} \, ,</me>
+    from which it would follow that
+    <me>qs \approx p\, ,</me>
+    from which it would follow that
+    <md>
+      \left|qs-p\right|\approx 0 \, ,
+    </md>
+    giving an approximation of the second kind.
+    Thus, these two types of best approximations are related, though what they measure is not the same (as we will see).
+  </p>
+
+  <exercise>
+    <p>
+      <ol>
+        <li>
+          <p>
+            Discuss the definitions of best approximations of the first and second kind, and their relationship. Do they make sense? Why or why not?
+          </p>
+        </li>
+        <li>
+          <p>
+            Draw a picture on the number line to give an embodied interpretation of a best approximation of the first kind.
+          </p>
+        </li>
+        <li>
+          <p>
+            Draw a picture on the number line to give an embodied interpretation of a best approximation of the second kind.
+          </p>
+        </li>
+        <li>
+          <p>
+            With your group, find the best approximations of the first kind and the second kind to <m>325/736</m> with denominator between <m>1</m> and <m>4</m>.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </exercise>
 
   <p>
     Consider the following SageMath code that computes the best approximation of the first kind to a real number <m>s</m>.
@@ -52,6 +93,11 @@ print(firstbestapproximation(log(3/2,2),60))
       </input>
     </program>
 
+    <exercise>
+      <p>
+        Discuss the code above. Does it make sense why this is returning the correct answer? Why or why not?
+      </p>
+    </exercise>
 
   <p>
     The following code computes the best approximation of the second kind to a real number <m>s</m>.
@@ -63,14 +109,14 @@ def secondbestapproximation(s,q):
     input: a real number s between 0 and 1 and a maximum denominator q
     output: the rational number with denominator at most q that is the best approximation to s of the second kind
     """ 
-    numbest = 0
-    denombest = 1
+    num_best = 0
+    denom_best = 1
     for j in srange(1,q+1):
         for k in srange(0,j+1):
-            if abs(j*s-k) &lt;= abs(denombest*s-numbest):
-                numbest = k
-                denombest = j
-    return numbest/denombest
+            if abs(j*s-k) &lt;= abs(denom_best*s-num_best):
+                num_best = k
+                denom_best = j
+    return num_best/denom_best
 
 print(secondbestapproximation(pi-3,10))
 
@@ -79,6 +125,12 @@ print(secondbestapproximation((1+sqrt(5))/2-1,50))
 print(secondbestapproximation(log(3/2,2),60))
       </input>
     </program>
+
+    <exercise>
+      <p>
+        Discuss the code above. Does it make sense why this is returning the correct answer? Why or why not?
+      </p>
+    </exercise>
 
     <p>
       The following code demonstrates that these two types of approximations are not always the same.
@@ -118,5 +170,55 @@ print(firstbestapproximation(pi-3,100))
 print(secondbestapproximation(pi-3,100))
       </input>
     </program>
+
+    <p>
+      A natural question to ask is how these two types of best approximations are related.
+      The answer is given by the following theorem.
+    </p>
+
+    <theorem xml:id="thm-bestapproximationsrelation">
+      <statement>
+        <p>
+          If <m>p/q</m> is a best approximation of the second kind to <m>s</m>, then it is also a best approximation of the first kind to <m>s</m>.
+        </p>
+      </statement>
+    </theorem>
+
+      <p>
+        We will prove this by <alert>contrapositive</alert>: this means that we will prove <m>P\implies Q</m> by showing that <m>\neg Q \implies \neg P</m> where <m>\neg P</m> means "not <m>P</m>", or the negation of <m>P</m>.
+        Observe that if we prove that <m>p/q</m> not being a first kind best approximation implies it is also not a second kind best approximation, then it is impossible for <m>p/q</m> to be simultaneously a second kind best approximation and not a first kind best approximation.
+      </p>
+
+      <exercise>
+        <p>
+          Discuss the strategy of proof by contrapositive. Does it make sense what we are about to prove, and why this proof strategy works?
+        </p>
+      </exercise>
+
+      <proof>
+        <p>
+          Suppose that <m>p/q</m> is not a best approximation of the first kind to <m>s</m>.
+          Then there exists <m>1\leq q'\leq q</m> and <m>p'</m> such that
+          <me>\left| s-p'/q'\right| \leq \left| s-p/q\right|\, .</me>
+          Since <m>q'\leq q</m>, we can multiply the left-hand side of the displayed equation by <m>q'</m> and the right-hand side by <m>q</m> without changing the inequality.
+          Thus, we have 
+          <me>\left| q's-p'\right| \leq \left| q s-p\right|\, ,</me>
+          from which it follows that <m>p/q</m> is not a best approximation of the second kind to <m>s</m>.
+        </p>
+      </proof>
+
+      <exercise>
+        <p>
+          Discuss this proof with your group. Does it make sense? Why or why not?
+        </p>
+      </exercise>
+
+      <p>
+        Thus, being a best approximation of the second kind is a stronger condition than being a best approximation of the first kind.
+        How do we find these approximations without carrying out a brute force search like we did in the SageMath code above?
+        The answer is that best approximations of the second kind are produced by <em>convergents of continued fractions for <m>s</m></em>.
+        Thus, we will study continued fractions and their convergents.
+      </p>
+    
 
 </section>
