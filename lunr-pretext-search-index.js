@@ -2842,7 +2842,124 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.3",
   "title": "Continued Fractions and Convergents",
-  "body": " Continued Fractions and Convergents    "
+  "body": " Continued Fractions and Convergents  In Problem P19 , we saw that every rational number has an expansion as a finite continued fraction: We will denote this continued fraction by .  For this problem, we assumed that were positive integers, thus we restricted ourselves to the case where a rational number is in the interval . However, we can find a continued fraction expansion for any rational number, because we can add or subtract an integer to a rational number and it only changes the value of in the continued fraction expansion.   Discuss the observation above with your group. Do you agree that if we have two rational numbers and , and if for some integer , then the continued fraction for is obtained from the continued fraction for by adding to the value for ?   Next, let's remind ourselves how this continued fraction expression was obtained on your homework. If are positive integers, then we apply the Euclidean algorithm to get the following sequence: If you divide the first equation by you obtain If you divide the second equation by , you obtain which can be substituted into the first equation to obtain We can continue in this way until we reach the last equation in the Euclidean algorithm, and thus we obtain a continued fraction representation for . Thus, given any rational number, we can write it as a continued fraction where and each .   Discuss the argument above. Does it make sense? Why or why not?       Find the continued fraction expansion for . HINT: in this case, so the continued fraction starts with     Find the continued fraction expansion for .      Also observe that if we consider any and let for , then the value is a rational number. This is obtained by recursively (i.e., inductively) finding a common denominator at each level. For example, if we consider the number then we have from which we obtain from which we obtain from which we obtain from which we obtain which is a rational number since the denominator only involves products and sums of positive integers, hence is not equal to zero. This is an embodied-symbolic proof of this fact; a fully formal proof would provide a proof by induction.   Discuss the argument above. Does it make sense? Why or why not?   Summarizing the two arguments above, we have proved the following.    A number is rational if and only if it has a finite continued fraction expansion.    You obtained in problem Problem P23 an infinite continued fraction representation for . It turns out that every real number has a continued fraction expansion. We will denote such an expansion using the following notation.    If and for all , we denote by the infinite continued fraction which is defined to be the value     The following theorem can be proved using a combination of technical details about continued fractions and techniques from real analysis to study sequence convergence (which you can learn more about in MA 471 or MA 575). Thus, the full proof is beyond the scope of this course.    Every irrational number admits a unique representation as an infinite continued fraction, and every infinite continued fraction converges to a unique irrational number.    Let's look at the continued fraction expansion for . Note that this means we have and thus we have that the beginning of the resulting infinite continued fraction is .   Find in the continued fraction approximation for .   If we have an irrational number given by , then we define the -th convergent of to be the rational number    Find the second convergent of and the fourth convergent of .    Find the first four convergents of . How good are these approximations to the value of given by your calculator?   The key to obtaining best approximations of an irrational number is to look at the convergents of , as the following theorem shows.    Let be an irrational number. A rational number is a best approximation of the second kind for if and only if it is a convergent for .     Discuss with your group: do you believe this theorem, even though we haven't given a proof? Why or why not?   The proof of this theorem is beyond the scope of our course, and can be found in the book Continued Fractions by A. Ya. Khinchin, available at this link . However, this theorem motivates a further study of convergents, leading to the following theorem.    Define numbers and inductively as follows:    "
+},
+{
+  "id": "continuedfractions-4",
+  "level": "2",
+  "url": "continuedfractions.html#continuedfractions-4",
+  "type": "Checkpoint",
+  "number": "6.3.1",
+  "title": "",
+  "body": " Discuss the observation above with your group. Do you agree that if we have two rational numbers and , and if for some integer , then the continued fraction for is obtained from the continued fraction for by adding to the value for ?  "
+},
+{
+  "id": "continuedfractions-6",
+  "level": "2",
+  "url": "continuedfractions.html#continuedfractions-6",
+  "type": "Checkpoint",
+  "number": "6.3.2",
+  "title": "",
+  "body": " Discuss the argument above. Does it make sense? Why or why not?  "
+},
+{
+  "id": "continuedfractions-7",
+  "level": "2",
+  "url": "continuedfractions.html#continuedfractions-7",
+  "type": "Checkpoint",
+  "number": "6.3.3",
+  "title": "",
+  "body": "    Find the continued fraction expansion for . HINT: in this case, so the continued fraction starts with     Find the continued fraction expansion for .     "
+},
+{
+  "id": "continuedfractions-9",
+  "level": "2",
+  "url": "continuedfractions.html#continuedfractions-9",
+  "type": "Checkpoint",
+  "number": "6.3.4",
+  "title": "",
+  "body": " Discuss the argument above. Does it make sense? Why or why not?  "
+},
+{
+  "id": "thm-finitecontinuedfractions",
+  "level": "2",
+  "url": "continuedfractions.html#thm-finitecontinuedfractions",
+  "type": "Theorem",
+  "number": "6.3.5",
+  "title": "",
+  "body": "  A number is rational if and only if it has a finite continued fraction expansion.   "
+},
+{
+  "id": "def-contfracnotation",
+  "level": "2",
+  "url": "continuedfractions.html#def-contfracnotation",
+  "type": "Definition",
+  "number": "6.3.6",
+  "title": "",
+  "body": "  If and for all , we denote by the infinite continued fraction which is defined to be the value    "
+},
+{
+  "id": "thm-convergence",
+  "level": "2",
+  "url": "continuedfractions.html#thm-convergence",
+  "type": "Theorem",
+  "number": "6.3.7",
+  "title": "",
+  "body": "  Every irrational number admits a unique representation as an infinite continued fraction, and every infinite continued fraction converges to a unique irrational number.   "
+},
+{
+  "id": "continuedfractions-17",
+  "level": "2",
+  "url": "continuedfractions.html#continuedfractions-17",
+  "type": "Checkpoint",
+  "number": "6.3.8",
+  "title": "",
+  "body": " Find in the continued fraction approximation for .  "
+},
+{
+  "id": "continuedfractions-19",
+  "level": "2",
+  "url": "continuedfractions.html#continuedfractions-19",
+  "type": "Checkpoint",
+  "number": "6.3.9",
+  "title": "",
+  "body": " Find the second convergent of and the fourth convergent of .  "
+},
+{
+  "id": "continuedfractions-20",
+  "level": "2",
+  "url": "continuedfractions.html#continuedfractions-20",
+  "type": "Checkpoint",
+  "number": "6.3.10",
+  "title": "",
+  "body": " Find the first four convergents of . How good are these approximations to the value of given by your calculator?  "
+},
+{
+  "id": "thm-bestapproximationsfromconvergents",
+  "level": "2",
+  "url": "continuedfractions.html#thm-bestapproximationsfromconvergents",
+  "type": "Theorem",
+  "number": "6.3.11",
+  "title": "",
+  "body": "  Let be an irrational number. A rational number is a best approximation of the second kind for if and only if it is a convergent for .   "
+},
+{
+  "id": "continuedfractions-23",
+  "level": "2",
+  "url": "continuedfractions.html#continuedfractions-23",
+  "type": "Checkpoint",
+  "number": "6.3.12",
+  "title": "",
+  "body": " Discuss with your group: do you believe this theorem, even though we haven't given a proof? Why or why not?  "
+},
+{
+  "id": "thm-formulaforconvergents",
+  "level": "2",
+  "url": "continuedfractions.html#thm-formulaforconvergents",
+  "type": "Theorem",
+  "number": "6.3.13",
+  "title": "",
+  "body": "  Define numbers and inductively as follows:   "
 },
 {
   "id": "microtonalscales",
@@ -3115,9 +3232,9 @@ var ptx_lunr_docs = [
   "body": " P18  Use the Euclidean algorithm to compute the gcd of the following pairs of numbers. Show all of the steps of the algorithm in your solution .                   "
 },
 {
-  "id": "problems-23",
+  "id": "prob-contfracproblem",
   "level": "2",
-  "url": "problems.html#problems-23",
+  "url": "problems.html#prob-contfracproblem",
   "type": "Problem",
   "number": "8.0.22",
   "title": "P19.",
@@ -3151,9 +3268,9 @@ var ptx_lunr_docs = [
   "body": " P22  A point is called a lattice point if both and are integers.   Find the number of lattice points that are on the line segment connecting the points and .    How many lattice points are on the line segment connecting the points and for arbitrary positive integers and ? Prove that your answer is correct.     "
 },
 {
-  "id": "problems-27",
+  "id": "prob-infcontfrac",
   "level": "2",
-  "url": "problems.html#problems-27",
+  "url": "problems.html#prob-infcontfrac",
   "type": "Problem",
   "number": "8.0.26",
   "title": "P23.",
