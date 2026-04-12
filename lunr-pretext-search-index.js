@@ -2562,8 +2562,8 @@ var ptx_lunr_docs = [
   "url": "decimalexpansions.html",
   "type": "Section",
   "number": "6.1",
-  "title": "Decimal Expansions",
-  "body": " Decimal Expansions  Our main goal in this chapter is to understand ways of using rational numbers to approximate real numbers. The most common way of doing this is to use decimal expansions, which is a technique that you first learn in elementary or middle school. For example, most of you are familiar with the following ideas: has an infinite, non-repeating decimal expansion. has an infinite, repeating decimal expansion. has a finite decimal expansion. In this section, we will prove several properties of decimal expansions. We will begin with the definition of a decimal representation of a number.    Given a sequence of positive integers with each , we define the decimal expansion for the sequence to be the real number When the sequence contains only finitely many non-zero terms, we say that the decimal expansion is finite. Otherwise, we say the decimal expansion is infinite. If the sequence consists of an eventually repeating pattern then we say that the decimal expansion is repeating.     With your group, represent the following decimal expansions on a number line:                     With your group, discuss: Is it true that Why or why not?    With your group, discuss: Is it true that Why or why not?   The above exercises demonstrate that decimal expansions are more subtle and complicated than many people believe. Let's start with a simple question: does every decimal expansion define a real number?   Discuss with your group: Do you think that every decimal expansion defines a real number? Why or why not?   To answer this, we need to use techniques from Calculus II. Specifically, we make the observation that the decimal expansion is an infinite series. What we need to show is that this infinite series converges, and therefore defines a real number. To do this, we need to recall convergence properties of geometric series.   Geometric Series Convergence   Let be a real number. Then the geometric series converges, and we have Further, we have     We will give two proofs of this theorem. The first is an embodied proof, while the second is a formal proof using limits.   Embodied Proof of Geometric Series Convergence  The following video has a 1:40 minute visual\/embodied proof of the convergence of the geometric series. https:\/\/www.youtube.com\/watch?v=TGUWt5xcB8M     Discuss this proof. Does it make sense? Why or why not? What are the key insights that this proof conveys?    Formal Proof of Geometric Series Convergence  For a fixed value of , let be the th partial sum of the geometric series. Multipliying both sides of the equation by , we have that most terms on the right-hand side cancel, and we are left with Therefore, we have Thus, we can conclude that since implies that .    Discuss this proof. Does it make sense? Why or why not?    Use the geometric series convergence theorem to show that the series converges, and find its value.   We can now prove that every decimal expansion converges. Our main tool will be the comparison test for series convergence, which states that if is a series with non-negative terms, and if there exists a convergent series with non-negative terms such that for all , then the series also converges.    Every decimal expansion converges, and therefore defines a real number.     Let be a decimal expansion. We need to show that the series converges. Since each , we have Since the series converges (as you proved in the previous checkpoint), it follows from the comparison test that the series also converges, and therefore defines a real number.    Discuss the proof above. Does it make sense? Why or why not?   We can now ask: which decimal expansions correspond to rational numbers, and which correspond to irrational numbers? The following theorem gives a complete answer.    A decimal expansion corresponds to a rational number if and only if it is either finite or repeating.     First, we will show that if a decimal expansion is either finite or repeating, then it corresponds to a rational number. If a decimal expansion is finite, then it is of the form which is a rational number. If a decimal expansion is repeating, then it is of the form which is a rational number, since it is a finite sum of rational numbers.  To prove the converse, let be positive integers and consider the fraction , which is a number strictly between and . Applying the long division algorithm to the fraction , we see that at each step of the long division algorithm, we get a remainder that is between and . At each step, we bring down some number of zeros, and then divide by again. Since there are only finitely many possible remainders, it follows that at some point in the long division algorithm, we will get a remainder that we have seen before. At this point, the decimal expansion of will begin repeating, since the long division algorithm will repeat the same steps as before.    Apply the long division algorithm to compute the decimal expansion of .    Discuss the proof above. Does it make sense? Why or why not?   Decimal expansions are the usual way that we use rational numbers to approximate real numbers, but they are not the only way. In the next sections, we will discuss the method of representing real numbers by continued fractions, which gives a different method for approximation of reals by rationals.  "
+  "title": "Decimal Expansions and Quantifiers",
+  "body": " Decimal Expansions and Quantifiers  Our main goal in this chapter is to understand ways of using rational numbers to approximate real numbers. The most common way of doing this is to use decimal expansions, which is a technique that you first learn in elementary or middle school. For example, most of you are familiar with the following ideas: has an infinite, non-repeating decimal expansion. has an infinite, repeating decimal expansion. has a finite decimal expansion. In this section, we will prove several properties of decimal expansions. We will begin with the definition of a decimal representation of a number.    Given a sequence of positive integers with each , we define the decimal expansion for the sequence to be the real number When the sequence contains only finitely many non-zero terms, we say that the decimal expansion is finite. Otherwise, we say the decimal expansion is infinite. If the sequence consists of an eventually repeating pattern where the overline indicates that the pattern repeats infinitely many times, then we say that the decimal expansion is repeating.     With your group, represent the following decimal expansions on a number line:                     With your group, discuss: Is it true that Why or why not?    With your group, discuss: Is it true that Why or why not?   The above exercises demonstrate that decimal expansions are more subtle and complicated than many people believe. Let's start with a simple question: does every decimal expansion define a real number?   Discuss with your group: Do you think that every decimal expansion defines a real number? Why or why not?   To answer this, we need to use techniques from Calculus II. Specifically, we make the observation that the decimal expansion is an infinite series. What we need to show is that this infinite series converges, and therefore defines a real number. To do this, we need to recall convergence properties of geometric series.   Geometric Series Convergence   Let be a real number. Then the geometric series converges, and we have Further, we have     We will give two proofs of this theorem. The first is an embodied proof, while the second is a formal proof using limits.   Embodied Proof of Geometric Series Convergence  The following video has a 1:40 minute visual\/embodied proof of the convergence of the geometric series. https:\/\/www.youtube.com\/watch?v=TGUWt5xcB8M     Discuss this proof. Does it make sense? Why or why not? What are the key insights that this proof conveys?    Formal Proof of Geometric Series Convergence  For a fixed value of , let be the th partial sum of the geometric series. Multipliying both sides of the equation by , we have that most terms on the right-hand side cancel, and we are left with Therefore, we have Thus, we can conclude that since implies that .    Discuss this proof. Does it make sense? Why or why not?    Use the geometric series convergence theorem to show that the series converges, and find its value.   We can now prove that every decimal expansion converges. Our main tool will be the comparison test for series convergence, which states that if is a series with non-negative terms, and if there exists a convergent series with non-negative terms such that for all , then the series also converges.    Every decimal expansion converges, and therefore defines a real number.     Let be a decimal expansion. We need to show that the series converges. Since each , we have Since the series converges (as you proved in the previous checkpoint), it follows from the comparison test that the series also converges, and therefore defines a real number.    Discuss the proof above. Does it make sense? Why or why not?   We can now ask: which decimal expansions correspond to rational numbers, and which correspond to irrational numbers? The following theorem gives a complete answer.    A decimal expansion corresponds to a rational number if and only if it is either finite or repeating.     First, we will show that if a decimal expansion is either finite or repeating, then it corresponds to a rational number. If a decimal expansion is finite, then it is of the form which is a rational number. If a decimal expansion is repeating, then it is of the form which is a rational number, since it is a finite sum of rational numbers.  To prove the converse, let be positive integers and consider the fraction , which is a number strictly between and . Applying the long division algorithm to the fraction , we see that at each step of the long division algorithm, we get a remainder that is between and . At each step, we bring down some number of zeros, and then divide by again. Since there are only finitely many possible remainders, it follows that at some point in the long division algorithm, we will get a remainder that we have seen before. At this point, the decimal expansion of will begin repeating, since the long division algorithm will repeat the same steps as before.    Apply the long division algorithm to compute the decimal expansion of .    Discuss the proof above. Does it make sense? Why or why not?   It is a theorem that every real number between and has a decimal expansion; we will not prove that here, but we will give the following embodied argument to justify this. If you fix a positive integer and consider all rational numbers between and with denominator , then these rational numbers partition the interval from to into subintervals of length . (Imagine the number line from to with tick marks at each rational number with denominator .) Every real number between and must lie in one of these subintervals, and the decimal expansion of up to the -th digit is determined by which subinterval it lies in for each value of . As we send to infinity, we produce decimal approximations that are accurate to arbitrarily many significant digits.  Throughout the course so far, we have frequently used two types of logical condition statements called quantifiers . We will now give precise definitions for these, and we will rewrite some of our results about decimal expansions precisely using these.    The universal quantifer is the phrase \"for all\" or \"for every\" and is denoted by the symbol . It is used to express statements of the form \"for all in a set , we have \" where is some statement that depends on the element . The existential quantifier is the phrase \"there exists\" adn is denoted by the symbol , It is used to express statements of the form \"there exists an element in a set such that \".    For example, we can rewrite the statement \"every decimal expansion converges\" as follows using quantifiers: We can rewrite the statement \"for every real number , there exists a decimal expansion that corresponds to \" as follows:       Rewrite the statement \"there exists a rational number such that \" using quantifiers.    Which of the following statements is equivalent to \" is irrational\"?                             Different mathematicians have different preferences for how to use quantifiers. For example, some mathematicians prefer to use the phrase \"for any\" instead of \"for all\", and some prefer to use the phrase \"there is\" instead of \"there exists\". Some mathematicians prefer to use the symbols and in their writing, while others prefer to write out the phrases \"for all\" and \"there exists\". The important thing is to be clear and consistent in your use of quantifiers, and to make sure that your use of quantifiers accurately conveys the meaning of your statements.   Decimal expansions are the usual way that we use rational numbers to approximate real numbers, but they are not the only way. In the next sections, we will discuss the method of representing real numbers by continued fractions, which gives a different method for approximation of reals by rationals.  "
 },
 {
   "id": "def-decimalexpansion",
@@ -2572,7 +2572,7 @@ var ptx_lunr_docs = [
   "type": "Definition",
   "number": "6.1.1",
   "title": "",
-  "body": "  Given a sequence of positive integers with each , we define the decimal expansion for the sequence to be the real number When the sequence contains only finitely many non-zero terms, we say that the decimal expansion is finite. Otherwise, we say the decimal expansion is infinite. If the sequence consists of an eventually repeating pattern then we say that the decimal expansion is repeating.   "
+  "body": "  Given a sequence of positive integers with each , we define the decimal expansion for the sequence to be the real number When the sequence contains only finitely many non-zero terms, we say that the decimal expansion is finite. Otherwise, we say the decimal expansion is infinite. If the sequence consists of an eventually repeating pattern where the overline indicates that the pattern repeats infinitely many times, then we say that the decimal expansion is repeating.   "
 },
 {
   "id": "decimalexpansions-4",
@@ -2728,47 +2728,200 @@ var ptx_lunr_docs = [
   "body": " Discuss the proof above. Does it make sense? Why or why not?  "
 },
 {
-  "id": "finitecontinuedfractions",
+  "id": "def-quantifiers",
+  "level": "2",
+  "url": "decimalexpansions.html#def-quantifiers",
+  "type": "Definition",
+  "number": "6.1.15",
+  "title": "",
+  "body": "  The universal quantifer is the phrase \"for all\" or \"for every\" and is denoted by the symbol . It is used to express statements of the form \"for all in a set , we have \" where is some statement that depends on the element . The existential quantifier is the phrase \"there exists\" adn is denoted by the symbol , It is used to express statements of the form \"there exists an element in a set such that \".   "
+},
+{
+  "id": "decimalexpansions-30",
+  "level": "2",
+  "url": "decimalexpansions.html#decimalexpansions-30",
+  "type": "Checkpoint",
+  "number": "6.1.16",
+  "title": "",
+  "body": "    Rewrite the statement \"there exists a rational number such that \" using quantifiers.    Which of the following statements is equivalent to \" is irrational\"?                           "
+},
+{
+  "id": "decimalexpansions-31",
+  "level": "2",
+  "url": "decimalexpansions.html#decimalexpansions-31",
+  "type": "Remark",
+  "number": "6.1.17",
+  "title": "",
+  "body": " Different mathematicians have different preferences for how to use quantifiers. For example, some mathematicians prefer to use the phrase \"for any\" instead of \"for all\", and some prefer to use the phrase \"there is\" instead of \"there exists\". Some mathematicians prefer to use the symbols and in their writing, while others prefer to write out the phrases \"for all\" and \"there exists\". The important thing is to be clear and consistent in your use of quantifiers, and to make sure that your use of quantifiers accurately conveys the meaning of your statements.  "
+},
+{
+  "id": "bestapproximations",
   "level": "1",
-  "url": "finitecontinuedfractions.html",
+  "url": "bestapproximations.html",
   "type": "Section",
   "number": "6.2",
-  "title": "Finite Continued Fractions",
-  "body": " Finite Continued Fractions    "
+  "title": "Best Approximations",
+  "body": " Best Approximations  We gave an embodied argument in the previous section justifying that we can approximate any real number by rational numbers with denominator given by a powers of . This is the method of decimal expansions, and it is a very natural method for approximation of real numbers by rationals. A natural question to ask is the following: If we are allowed to use any rational number with denominator between and , what is the best approximation to a given real number that we can get? There are two different ways to interpret the meaning of \"best\" in this case, and these give rise to two different definitions of best approximations.    Given a real number , we say that a rational number is a best approximation of the first kind to if for any other rational number with denominator , we have We say that a rational number is a best approximation of the second kind to if for any other rational number with denominator , we have     For an approximation of the first kind, suppose that we have Then we have that from which it would follow that from which it would follow that giving an approximation of the second kind. Thus, these two types of best approximations are related, though what they measure is not the same (as we will see).      Discuss the definitions of best approximations of the first and second kind, and their relationship. Do they make sense? Why or why not?    Draw a picture on the number line to give an embodied interpretation of a best approximation of the first kind.    Draw a picture on the number line to give an embodied interpretation of a best approximation of the second kind.    With your group, find the best approximations of the first kind and the second kind to with denominator between and .      Consider the following SageMath code that computes the best approximation of the first kind to a real number . Running this in https:\/\/sagecell.sagemath.org\/ produces best approximations to , , and .   def firstbestapproximation(s,q): \"\"\" input: a real number s between 0 and 1 and a maximum denominator q output: the rational number with denominator at most q that is the best approximation to s of the first kind \"\"\" best = 0 for j in srange(1,q+1): for k in srange(0,j+1): if abs(s-k\/j) <= abs(s-best): best = k\/j return best print(firstbestapproximation(pi-3,10)) print(firstbestapproximation((1+sqrt(5))\/2-1,50)) print(firstbestapproximation(log(3\/2,2),60))    Discuss the code above. Does it make sense why this is returning the correct answer? Why or why not?   The following code computes the best approximation of the second kind to a real number .   def secondbestapproximation(s,q): \"\"\" input: a real number s between 0 and 1 and a maximum denominator q output: the rational number with denominator at most q that is the best approximation to s of the second kind \"\"\" num_best = 0 denom_best = 1 for j in srange(1,q+1): for k in srange(0,j+1): if abs(j*s-k) <= abs(denom_best*s-num_best): num_best = k denom_best = j return num_best\/denom_best print(secondbestapproximation(pi-3,10)) print(secondbestapproximation((1+sqrt(5))\/2-1,50)) print(secondbestapproximation(log(3\/2,2),60))    Discuss the code above. Does it make sense why this is returning the correct answer? Why or why not?   The following code demonstrates that these two types of approximations are not always the same. Specifically, the first and second best approximations to with denominator at most are different.   def firstbestapproximation(s,q): \"\"\" input: a real number s between 0 and 1 and a maximum denominator q output: the rational number with denominator at most q that is the best approximation to s of the first kind \"\"\" best = 0 for j in srange(1,q+1): for k in srange(0,j+1): if abs(s-k\/j) <= abs(s-best): best = k\/j return best def secondbestapproximation(s,q): \"\"\" input: a real number s between 0 and 1 and a maximum denominator q output: the rational number with denominator at most q that is the best approximation to s of the second kind \"\"\" numbest = 0 denombest = 1 for j in srange(1,q+1): for k in srange(0,j+1): if abs(j*s-k) <= abs(denombest*s-numbest): numbest = k denombest = j return numbest\/denombest print(firstbestapproximation(pi-3,100)) print(secondbestapproximation(pi-3,100))   A natural question to ask is how these two types of best approximations are related. The answer is given by the following theorem.    If is a best approximation of the second kind to , then it is also a best approximation of the first kind to .    We will prove this by contrapositive : this means that we will prove by showing that where means \"not \", or the negation of . Observe that if we prove that not being a first kind best approximation implies it is also not a second kind best approximation, then it is impossible for to be simultaneously a second kind best approximation and not a first kind best approximation.   Discuss the strategy of proof by contrapositive. Does it make sense what we are about to prove, and why this proof strategy works?    Suppose that is not a best approximation of the first kind to . Then there exists and such that Since , we can multiply the left-hand side of the displayed equation by and the right-hand side by without changing the inequality. Thus, we have from which it follows that is not a best approximation of the second kind to .    Discuss this proof with your group. Does it make sense? Why or why not?   Thus, being a best approximation of the second kind is a stronger condition than being a best approximation of the first kind. How do we find these approximations without carrying out a brute force search like we did in the SageMath code above? The answer is that best approximations of the second kind are produced by convergents of continued fractions for . Thus, we will study continued fractions and their convergents.  "
 },
 {
-  "id": "infinitecontinuedfractions",
+  "id": "def-bestapproximations",
+  "level": "2",
+  "url": "bestapproximations.html#def-bestapproximations",
+  "type": "Definition",
+  "number": "6.2.1",
+  "title": "",
+  "body": "  Given a real number , we say that a rational number is a best approximation of the first kind to if for any other rational number with denominator , we have We say that a rational number is a best approximation of the second kind to if for any other rational number with denominator , we have    "
+},
+{
+  "id": "bestapproximations-5",
+  "level": "2",
+  "url": "bestapproximations.html#bestapproximations-5",
+  "type": "Checkpoint",
+  "number": "6.2.2",
+  "title": "",
+  "body": "    Discuss the definitions of best approximations of the first and second kind, and their relationship. Do they make sense? Why or why not?    Draw a picture on the number line to give an embodied interpretation of a best approximation of the first kind.    Draw a picture on the number line to give an embodied interpretation of a best approximation of the second kind.    With your group, find the best approximations of the first kind and the second kind to with denominator between and .     "
+},
+{
+  "id": "bestapproximations-8",
+  "level": "2",
+  "url": "bestapproximations.html#bestapproximations-8",
+  "type": "Checkpoint",
+  "number": "6.2.3",
+  "title": "",
+  "body": " Discuss the code above. Does it make sense why this is returning the correct answer? Why or why not?  "
+},
+{
+  "id": "bestapproximations-11",
+  "level": "2",
+  "url": "bestapproximations.html#bestapproximations-11",
+  "type": "Checkpoint",
+  "number": "6.2.4",
+  "title": "",
+  "body": " Discuss the code above. Does it make sense why this is returning the correct answer? Why or why not?  "
+},
+{
+  "id": "thm-bestapproximationsrelation",
+  "level": "2",
+  "url": "bestapproximations.html#thm-bestapproximationsrelation",
+  "type": "Theorem",
+  "number": "6.2.5",
+  "title": "",
+  "body": "  If is a best approximation of the second kind to , then it is also a best approximation of the first kind to .   "
+},
+{
+  "id": "bestapproximations-17",
+  "level": "2",
+  "url": "bestapproximations.html#bestapproximations-17",
+  "type": "Checkpoint",
+  "number": "6.2.6",
+  "title": "",
+  "body": " Discuss the strategy of proof by contrapositive. Does it make sense what we are about to prove, and why this proof strategy works?  "
+},
+{
+  "id": "bestapproximations-18",
+  "level": "2",
+  "url": "bestapproximations.html#bestapproximations-18",
+  "type": "Proof",
+  "number": "6.2.1",
+  "title": "",
+  "body": " Suppose that is not a best approximation of the first kind to . Then there exists and such that Since , we can multiply the left-hand side of the displayed equation by and the right-hand side by without changing the inequality. Thus, we have from which it follows that is not a best approximation of the second kind to .  "
+},
+{
+  "id": "bestapproximations-19",
+  "level": "2",
+  "url": "bestapproximations.html#bestapproximations-19",
+  "type": "Checkpoint",
+  "number": "6.2.7",
+  "title": "",
+  "body": " Discuss this proof with your group. Does it make sense? Why or why not?  "
+},
+{
+  "id": "continuedfractions",
   "level": "1",
-  "url": "infinitecontinuedfractions.html",
+  "url": "continuedfractions.html",
   "type": "Section",
   "number": "6.3",
-  "title": "Infinite Continued Fractions",
-  "body": " Infinite Continued Fractions    "
-},
-{
-  "id": "convergents",
-  "level": "1",
-  "url": "convergents.html",
-  "type": "Section",
-  "number": "6.4",
-  "title": "Convergents",
-  "body": " Convergents    "
+  "title": "Continued Fractions and Convergents",
+  "body": " Continued Fractions and Convergents    "
 },
 {
   "id": "microtonalscales",
   "level": "1",
   "url": "microtonalscales.html",
   "type": "Section",
-  "number": "6.5",
+  "number": "6.4",
   "title": "Microtonal Scales",
   "body": " Microtonal Scales    "
+},
+{
+  "id": "pythagorean",
+  "level": "1",
+  "url": "pythagorean.html",
+  "type": "Section",
+  "number": "7.1",
+  "title": "Pythagorean Triples",
+  "body": " Pythagorean Triples  In this final section, we will investigate a classical topic in number theory, Pythagorean triples . The question that motivates this study is the following: Suppose we have a right-angled triangle with sides lengths that are positive integers , , and . Which triples of values are possible? Any such triple is called a Pythagorean triple . Observe that not every triple can arise in this way, because any such triple has to satisfy the Pythagorean theorem: Thus, for example, is a Pythagorean triple, but is not.  In this section, rather than providing proofs, we will practice the proof-reading skills we have developed by interpreting mathematical proofs from Wikipedia, YouTube, and Art of Problem Solving. While learning how to read, write, and create proofs within the context of a class is important, it is equally important to be able to do this outside of a specific course structure, using resources available online and in print. We will begin by investigating three proofs of the Pythagorean Theorem that are found on Wikipedia.  First, consider the following proof by rearrangement , which is originally available at this link .  An animated gif of a proof by rearrangement of the Pythagorean Theorem.   An animated gif of a proof by rearrangement of the Pythagorean Theorem.         Discuss the rearrangement proof with your group. Does it make sense? Why or why not?    Is this proof primarily embodied, symbolic, or formal?      Second, consider the following proof by shearing transformations , which is originally available at this link .  An animated gif of a proof by shearing of the Pythagorean Theorem.   An animated gif of a proof by shearing of the Pythagorean Theorem.         Discuss the shearing proof with your group. Does it make sense? Why or why not?    Is this proof primarily embodied, symbolic, or formal?      Third, consider the following proof by similar triangles , which is available at https:\/\/en.wikipedia.org\/wiki\/Pythagorean_theorem#Proof_using_similar_triangles .      Discuss the similar triangles proof with your group. Does it make sense? Why or why not?    Is this proof primarily embodied, symbolic, or formal?       Which of these three proofs of the Pythagorean theorem did you find most convincing? Why?   Next, we will learn about Pythagorean triples by watching and analyzing the following YouTube video from 3Blue1Brown: All possible Pythagorean triples, visualized   After watching the video as a class, work through the following activities with your group.   Write down a symbolic proof that the point with positive integer coordinates are the first two values in a Pythagorean triple if and only if the distance from to is an integer.    Let . Justify symbolically the following formula:      Euler's formula for a complex number states that if we write a point using polar coordinates and , then Prove that this is true by evaluating the following power series at or , multiplying them by , and then checking to see that they satisfy the equality above.     Using Euler's formula, we see that for two complex numbers and , their product is Explain why this justifies the claim in the 3Blue1Brown video that multiplying two complex numbers multiplies their distances from the origin and adds their angles.    Discuss the picture in the video at time 9:50. Does it make sense how scaling some Pythagorean triples leads to others? Why or why not?    Write down a symbolic proof that every Pythagorean triple corresponds to a point on the unit circle with rational coordinates.    Consider the picture in the video at time 13:58. Discuss this in detail with your group, and write down in a list of bullet points the steps in the argument that every rational slope is obtained by a point on the unit circle.    Write down a precise statement of the theorem that is represented by this video. What is the video actually proving?    Do you believe that the proof given in the video is complete and correct? Why or why not?     If you were searching for a proof of the classification of Pythagorean triples, another popular website that might come up in your search is Art of Problem Solving. Go to the AoPS Pythagorean Triples page, and complete the following activities with your group.   Read and discuss the Theorem statement for their classification of the general form of Pythagorean Triples.    With your group, read the proof they give. Go through all the details, and also think about the overall structure of the argument. Use all the tools you have learned in this class to make sense of this proof and to be able to communicate both the \"big ideas\" and the technical details clearly.      "
+},
+{
+  "id": "fig-pythagrearrangement",
+  "level": "2",
+  "url": "pythagorean.html#fig-pythagrearrangement",
+  "type": "Figure",
+  "number": "7.1.1",
+  "title": "",
+  "body": " An animated gif of a proof by rearrangement of the Pythagorean Theorem.   An animated gif of a proof by rearrangement of the Pythagorean Theorem.   "
+},
+{
+  "id": "pythagorean-5",
+  "level": "2",
+  "url": "pythagorean.html#pythagorean-5",
+  "type": "Checkpoint",
+  "number": "7.1.2",
+  "title": "",
+  "body": "    Discuss the rearrangement proof with your group. Does it make sense? Why or why not?    Is this proof primarily embodied, symbolic, or formal?     "
+},
+{
+  "id": "fig-pythagshearing",
+  "level": "2",
+  "url": "pythagorean.html#fig-pythagshearing",
+  "type": "Figure",
+  "number": "7.1.3",
+  "title": "",
+  "body": " An animated gif of a proof by shearing of the Pythagorean Theorem.   An animated gif of a proof by shearing of the Pythagorean Theorem.   "
+},
+{
+  "id": "pythagorean-7",
+  "level": "2",
+  "url": "pythagorean.html#pythagorean-7",
+  "type": "Checkpoint",
+  "number": "7.1.4",
+  "title": "",
+  "body": "    Discuss the shearing proof with your group. Does it make sense? Why or why not?    Is this proof primarily embodied, symbolic, or formal?     "
+},
+{
+  "id": "pythagorean-9",
+  "level": "2",
+  "url": "pythagorean.html#pythagorean-9",
+  "type": "Checkpoint",
+  "number": "7.1.5",
+  "title": "",
+  "body": "    Discuss the similar triangles proof with your group. Does it make sense? Why or why not?    Is this proof primarily embodied, symbolic, or formal?     "
+},
+{
+  "id": "pythagorean-10",
+  "level": "2",
+  "url": "pythagorean.html#pythagorean-10",
+  "type": "Checkpoint",
+  "number": "7.1.6",
+  "title": "",
+  "body": " Which of these three proofs of the Pythagorean theorem did you find most convincing? Why?  "
 },
 {
   "id": "problems",
   "level": "1",
   "url": "problems.html",
   "type": "Chapter",
-  "number": "7",
+  "number": "8",
   "title": "Problems and Essays",
   "body": " Problems and Essays   Essay 1  Go to and download the book Proof and Proving in Mathematics Education . Your essay will be a response to parts of Chapter 2, titled \"Cognitive Development of Proof\". Read the following sections of this chapter:   Section 2, \"Perceptions of Proof\", including both Subsections 2.1 and 2.2, page numbers 14-16.    Subsection 3.3, \"A Global Framework for the Development of Mathematical Thinking\", page numbers 23-25.   After you read these sections, complete the following essay.   This will be an essay of length at least 500 words, which is equivalent to at least 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced. (You can write a longer essay if needed.)    Your essay should respond to the following three questions.   What are 2-3 experiences you have with mathematical proofs in your previous mathematics courses (both high school and college)? How do these experiences relate to the discussion of proof for mathematicians and for growing individuals discussed in Section 2 of the article?    What are examples of work you have done in your previous mathematics courses that represent \"embodied\", \"symbolic\", and \"formal\" modes of mathematical thinking, as described in Subsection 3.3 of the article?    What is one thing that you read in these sections that made sense to you? Why? What is one thing that you read in these sections that did not make sense to you? Why was it confusing? What questions do you have about it?      Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).    P1  For a real number , define the floor function  to be the greatest integer less than or equal to . For example, , , and . The SageMath command to compute the floor is \"floor(x)\".  Let and be positive integers. The goal of this problem is to explore why the number of multiples of between and (inclusive) is given by .   Draw a picture using the number line that demonstrates why this is true for and . Explain in words why your picture shows that this is true.    Draw a more generic picture using the number line that demonstrates why this is true for any and . Explain in words why your picture shows that this is true.    Explain why this is true using only symbols and words.       P2  In this problem, you will complete several computational exercises using SageMath. Before starting this problem, you should read . These exercises will require you to modify the code found in that section.  To submit your solutions, upload to Canvas either (A) a document with screenshots of your code and output, or (B) a link to a Jupyter notebook with your work.   Produce a list of all the numbers from 1 to 200 that are divisible by 10.    Produce a plot of the points for all between 1 and 400 that are divisible by 3 but not divisible by 5 or 7.    How many numbers between and are divisible by 23 but not divisible by 17 or 29?       P3  Consider the equation    Draw a picture that demonstrates why this is true for all positive integers . Explain how your picture is related to the equation. (This is an \"embodied\" proof.)    Give a \"symbolic\" proof of this equation by rewriting the numbers in the sum and using properties of sums that we have discussed in class. Hint: write each odd number as .    Hint: Begin both of these with small examples. What happens when ? How can you use these examples to guide your thinking about the general case?     P4  Use induction to prove that is true for all .    P5  Recall that .   Do a computational experiment comparing the values of and for . The command in SageMath for is \"factorial(n)\", while the command for is \"2^n\". Provide either a screenshot or printout or notebook link for your code and results.    State a precise conjecture in response to the following question: is one of these functions eventually larger than the other?    Use induction to prove your conjecture.       Essay 2  Watch the following video from 3Blue1Brown (19 minutes, published July 2023): After you watch this video, complete the following essay.   This will be an essay of length 500 words, which is equivalent to 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced.    The video introduced three false proofs, one related to spherical surface area, one related to finding the value of , and one supposedly proving that all triangles are equilateral. Which of these three false proofs did you find most interesting, and why? Which of these three false proofs did you find least interesting, and why? You need to give specific details in the video that support your opinions.    What is something about mathematical proof that this video made you consider that you had not thought of before? Do you feel that this new insight will help you as you work on proofs in this course? Why or why not?    How are the ideas of the embodied, symbolic, and formal modes of mathematical thinking (from the reading for Essay 1) related to the ideas introduced in this video? Does this video make you think differently about these modes of mathematical thinking? Why or why not?   Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).    P6  The Sylvester sequence is the sequence of positive integers defined by and for all .   Prove by induction on that for all , we have .    Prove that if is a prime number that divides for some , then does not divide for any . Explain why this implies that there are infinitely many prime numbers.    Explain in a few sentences how the Sylvester sequence is related to Euclid's proof of the infinitude of primes.       P7  We will show in this problem how the fundamental theorem of arithmetic can be used to prove that there are infinitely many primes. Recall that is the number of primes less than or equal to . This problem will lead you through the steps of a proof due to Paul Erdős.   Prove that every integer can be expressed as , where and are positive integers and is square-free (meaning that no prime number divides more than once).    Prove that there are at most square-free integers less than or equal to .    Prove that there are at most integers less than or equal to that are of the form for some positive integer .    Use the previous parts to prove that for all positive integers .    Show that the inequality in the previous part implies that for all .    Explain why this proves that there are infinitely many prime numbers.       P8  The following problem is an open problem in mathematics, meaning that it is a problem that has not been solved by anyone. The Euclid-Mullin sequence is the sequence of prime numbers that starts with and continues by taking the smallest prime number produced by a Euclid step, as defined in . Thus, the Euclid-Mullin sequence starts with If you are interested, you can read about this sequence at .  The open problem is: Does every prime number appear in the Euclid-Mullin sequence? For example, no one knows whether or not the prime is produced by this process.  Make as much progress as you can on this open problem; I don't expect you to find a solution, but you should spend 2-3 hours thinking about this! Your goal is to do something more than check examples; the examples should lead you to make some interesting observations about the problem, to understand it a bit better. Why do you think it might be true? Why might it be false? Are there any properties of binomial coefficients that support your comments? Are there any positive integers for which this is obviously true? You can do this using only pencil and paper, or using mostly computational experiments, or you can use a mix of these. However, you need to provide a narrative in sentences\/paragraphs explaining your thinking and the results of your investigations. (Seriously, write down everything you're thinking and every idea you try, even if it doesn't go anywhere.)    P9  We say a divisor of a positive integer is a positive integer such that . The sum of divisors function is defined to be the sum of all the divisors of . For example, the divisors of are , so .   Suppose for some prime number and some positive integer . Prove that . Then, use this to prove that .    Suppose is the prime factorization of . Prove that     Use the previous two parts to find the values of and .       P10  Let be a positive integer. Consider the sequence of numbers given by Prove that this sequence does not contain any prime number. Explain why this shows that there are arbitrarily long sequences of consecutive composite numbers.    P11     Prove that the polynomial is divisible by for all positive integers and .    Use the first part to prove that if is a composite number, then is also a composite number.       P12     Prove that is irrational.    Prove that is irrational.       P13  Prove that for any two positive integers and , we have     P14  The following problems involve .   Do the frequencies and produce equivalent notes? Why or why not?    Do the frequencies and produce equivalent notes? Why or why not?    If you start with the frequency , what is the frequency that is obtained by going up by two perfect fourths and then up by a perfect fifth? Explain your work.    If you start with the frequency , what is the frequency that is obtained by going up by a perfect fifth and then up by two perfect fourths? Explain your work.    Suppose that you start with a frequency and you go up by a sequence of perfect fourths and perfect fifths, where you have a total of perfect fourths and perfect fifths. Is it possible for you to get different frequencies if you go up by the perfect fourths and perfect fifths in different orders? Why or why not?       P15  Prove a similar result to but for perfect fourths instead of perfect fifths. In other words, prove that if you start with a frequency and you go up by a sequence of perfect fourths, then you will never obtain a note equivalent to .    P16  Use to prove that is odd for any integer .    P17  This problem is an exploration of given at the end of Section 4.1.   Prove using calculus that the function is increasing for all .    Prove using calculus that     Using the prime number theorem and the previous result, prove that .       Essay 3  Read the following blog post by Keith Weber, a professor of math education at Rutgers University who studies how undergraduate students understand proofs in mathematics: After you read this article, complete the following essay.   This will be an essay of length at least 500 words, which is equivalent to at least 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced. (You can write a longer essay if needed.)    Your essay should respond to the following three questions.   The article describes four expectations that professors have for students, but which are usually mis-communicated. For each of these four expectations , do you respond more like the students in their surveys, or more like the professors? Why?    The discussion at the end of the article has some recommendations for faculty in their courses. Which of these recommendations do you think you would find most helpful for your learning, and why?    What is one thing you might change about your approach to your math courses after reading this article? Why is this the thing you would choose to change?      Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).    P18  Use the Euclidean algorithm to compute the gcd of the following pairs of numbers. Show all of the steps of the algorithm in your solution .                     P19  Let be positive integers. Apply the Euclidean algorithm to get the sequence If you divide the first equation by you obtain    What formula do you get for when you divide the second equation in the Euclidean algorithm by and use the result to substitute for in the above equation?    What formula do you get for when you divide the third equation in the Euclidean algorithm by and use the result to substitute for in your answer to part 1?    Give an explanation of why if you continue this process you get the formula     The expression above is called the continued fraction representation of . Use this to compute the continued fraction representation for .       P20  The following problem is an open problem in mathematics, meaning that it is a problem that has not been solved by anyone. This is a problem that was stated by Jeffrey Lagarias in 2002 in an article in the American Mathematical Monthly . What is amazing about this problem is that it is equivalent to the Riemann Hypothesis, in that the inequality below holds for all if and only if the Riemann Hypothesis is true.  For a positive integer , let denote the sum of the positive integers that divide . Let denote the -th harmonic number , i.e. Let denote the natural log function (NOT log base 10). The open problem is: Does the following inequality hold for all ?     Use computer software to list the values of for . You should include your code and the results in your submission. If you are not familiar with computational software, I recommend using SageMath through the website https:\/\/sagecell.sagemath.org\/ . SageMath is based on Python, so basic Python commands will work. The SageMath command to give a decimal approximation of the -th harmonic number is \"N(harmonic_number(n))\". The SageMath command to compute is \"sigma(n,1)\".    Use computer software to verify that the above inequality holds for at least (feel free to compute more examples if you want). You should include your code and the results in your submission.    Make as much progress as you can on this open problem; I don't expect you to find a solution, but you should spend 2-3 hours thinking about this! Your goal is to do something more than check examples; the examples should lead you to make some interesting observations about the problem, to understand it a bit better. Why do you think it might be true? Why might it be false? Are there any properties of binomial coefficients that support your comments? Are there any positive integers for which this is obviously true? You can do this using only pencil and paper, or using mostly computational experiments, or you can use a mix of these. However, you need to provide a narrative in sentences\/paragraphs explaining your thinking and the results of your investigations. (Seriously, write down everything you're thinking and every idea you try, even if it doesn't go anywhere.)      P21  Use the Euclidean algorithm to find integers and such that for the following pairs, using the technique given in our first proof of the Bézout identity.                     P22  A point is called a lattice point if both and are integers.   Find the number of lattice points that are on the line segment connecting the points and .    How many lattice points are on the line segment connecting the points and for arbitrary positive integers and ? Prove that your answer is correct.       P23  In this problem we consider what the Euclidean algorithm might look like if we apply it to an irrational number.   First, show the (simple) calculations to establish that and     Suppose we tried to apply the Euclidean algorithm to the number dividing it by . In this case, we would get Starting from this observation, prove that you can use the two calculations from part 1 to obtain the following infinite continued fraction formula for :     If you stop the infinite continued fraction at any point, you get a rational number approximating . For example, if you stop after the first term, you get . If you stop after the second term, you get If you stop after the third term, you get If you stop after the fourth term, you get   Compute the rational numbers that you get by stopping the infinite continued fraction for after the first 4 terms, after the first 5 terms, and after the first 6 terms. Then, compute the decimal approximations of these rational numbers and compare them to the decimal approximation of . What do you observe about these approximations?       Essay 4  Read the following article from 3 March 2025 in Quanta magazine: Years After the Early Death of a Math Genius, Her Ideas Gain New Life . After you read this article, complete the following essay.     This will be an essay of length at least 500 words, which is equivalent to at least 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced. (You can write a longer essay if needed.)    Your essay should respond to the following three questions.   What aspect of this article made the strongest impression on you? In other words, what did you notice that you were most surprised\/inspired\/motivated\/etc by?    What were two aspects of the process of mathematical discovery that stood out to you about the story conveyed in the article?    What aspects of embodied, symbolic, and formal mathematics did you notice in this article?          P24  Find the full solution set to the following linear Diophantine equations. Show all of your work for all steps of the process, and write your final answer using set notation.                P25  For each of the following rhythmic patterns, represent each pattern three ways: in box-like notation, as a clockwise distance sequence, and with a clock diagram.   The pattern with onsets at beats 1, 3, 5, 6, and 8 out of 11 total beats.    The pattern with onsets at beats 1, 3, 5, and 7 out of 9 total beats.    The pattern with onsets at beats 1, 4, 6, 9, 11, and 14 out of 16 total beats.       P26  Find the integer sequence for the following values of and . Show all your work for all steps of the process.                     Essay 5  Read the course syllabus on the Canvas homepage for MA 261. After you read the syllabus, complete the following essay.   This will be an essay of length at least 500 words, which is equivalent to at least 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced. (You can write a longer essay if needed.)    Your essay should respond to the following two questions.   So far we have investigated multiple topics and techniques in number theory. Which of these have you enjoyed the most? Which have you enjoyed the least? Why? Give specific examples from the homework and\/or notes to illustrate your opinions.    The student learning outcomes list various mathematical practices that students will develop in MA 261, in addition to the content-based learning outcomes. Which of these practices do you feel you have improved on the most so far this semester? Which do you are most in need of further development?      Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).    P27  Suppose that is an equivalence relation on a set . Suppose further that is symmetric and transitive, and that for every element , occurs in at least one ordered pair for . Prove that must also be reflexive.  Note: for this proof, you will be giving a purely formal argument. You need to use the axioms for symmetric and transitive to show that the reflexive property holds under these assumptions.    P28  Suppose and are equivalence relations on a set . Prove that the intersection is an equivalence relation on .  Note: Remember that and are binary relations, which means that they are collections of ordered pairs in . So, your goal is to prove that the collection of ordered pairs in is reflexive, symmetric, and transitive.    P29  Which of the following binary relations are equivalence relations on the positive integers? For each of them, either prove it is an equivalence relation, or explain why it fails one of the axioms for an equivalence relation.    if and have the same set of prime divisors (where the primes might have different multiplicities).     if .    For a fixed positive integer , if .       P30  Find the multiplicative inverses of the following congruence classes.                     P31  Suppose , , and are positive integers such that . Use modular arithmetic to prove that if does not divide , then divides and does not divide .    P32  Write down two linear congruences modulo that do not have a solution when , but which do have a solution when . Explain why these congruences do not have a solution when , and explain why they do have a solution when . (You do not need to find the solutions to these congruences.)    Essay 6  Watch the following YouTube video from Quanta Magazine (17 minutes, published January 2021): After you watch this video, complete the following essay.   This will be an essay of length 500 words, which is equivalent to 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced.    Write a critical review of this video. Imagine that you are writing your review for a journal for undergraduates in mathematics and the sciences, so your primary audience is undergraduate math\/cs\/engineering\/etc majors and minors.    Like any critic, you will respond positively to some things and negatively to others. Unlike many critics, you need to justify your opinions and provide detailed explanations for your claims.    You should consider the following questions:    Does the video effectively communicate the mathematics it discusses? Why or why not? Justify your claims with specific details about the video.    We have discussed multiple approaches\/themes to prime numbers in this course. Which of these approaches\/themes to prime numbers are used in this video? Be detailed, give specific examples from the video!    Is the mathematics clearly explained? If yes, what did they do especially well? If no, what made it unclear? Again, justify your claims with specific examples from the video.   Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).    P33  Use the technique in the proof of the Chinese Remainder Theorem to find an integer solution to each of the following systems of equations. Show all your work.   The following system has two equations.     The following system has four equations.        P34  In this problem we will use Fermat's Little Theorem to prove that if is an odd prime number and , then    Prove that .    Explain why this equation implies that either or in .       P35  In this problem you will prove Wilson's Theorem , which is a classic result in number theory that states if is prime, then or in other words, in .   Prove that the only elements of that are their own multiplicative inverse are and . (HINT: Use the fact that is equivalent to in .)    Evaluate in by pairing each element with its multiplicative inverse, except for and .    Explain why your answer to part 2 implies in .       P36      P37      P38      P39      P40      End-of-Class Reflection  Type a 1000 word essay in response to the following prompt. This is the equivalent of 4 pages in 12 point Times New Roman font, double-spaced.   What were six of the most important discoveries or realizations you made in this class? In other words, what are you taking away from this class that you think might stick with you over time and\/or influence you in the future? What have you experienced that might have a long-term effect on you intellectually or personally? These can include things you had not realized about mathematics or society, specific homework problems or theorems, etc. These can be things that made sense to you, or topics where you were confused, points that you agreed\/disagreed with in the readings or class discussions, issues that arose while working on your assignments, etc.    Explain why these six discoveries or realizations are important to you.    You should include a combination of observations about both mathematics and your habits, practices, and beliefs about mathematics.   This assignment grade is based only on completion (i.e. if you turn it in, it meets the length requirement, and it appropriately responds to the prompt above, then you get full credit).   "
 },
@@ -2777,7 +2930,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-2",
   "type": "Problem",
-  "number": "7.0.1",
+  "number": "8.0.1",
   "title": "Essay 1.",
   "body": " Essay 1  Go to and download the book Proof and Proving in Mathematics Education . Your essay will be a response to parts of Chapter 2, titled \"Cognitive Development of Proof\". Read the following sections of this chapter:   Section 2, \"Perceptions of Proof\", including both Subsections 2.1 and 2.2, page numbers 14-16.    Subsection 3.3, \"A Global Framework for the Development of Mathematical Thinking\", page numbers 23-25.   After you read these sections, complete the following essay.   This will be an essay of length at least 500 words, which is equivalent to at least 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced. (You can write a longer essay if needed.)    Your essay should respond to the following three questions.   What are 2-3 experiences you have with mathematical proofs in your previous mathematics courses (both high school and college)? How do these experiences relate to the discussion of proof for mathematicians and for growing individuals discussed in Section 2 of the article?    What are examples of work you have done in your previous mathematics courses that represent \"embodied\", \"symbolic\", and \"formal\" modes of mathematical thinking, as described in Subsection 3.3 of the article?    What is one thing that you read in these sections that made sense to you? Why? What is one thing that you read in these sections that did not make sense to you? Why was it confusing? What questions do you have about it?      Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).  "
 },
@@ -2786,7 +2939,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-3",
   "type": "Problem",
-  "number": "7.0.2",
+  "number": "8.0.2",
   "title": "P1.",
   "body": " P1  For a real number , define the floor function  to be the greatest integer less than or equal to . For example, , , and . The SageMath command to compute the floor is \"floor(x)\".  Let and be positive integers. The goal of this problem is to explore why the number of multiples of between and (inclusive) is given by .   Draw a picture using the number line that demonstrates why this is true for and . Explain in words why your picture shows that this is true.    Draw a more generic picture using the number line that demonstrates why this is true for any and . Explain in words why your picture shows that this is true.    Explain why this is true using only symbols and words.     "
 },
@@ -2795,7 +2948,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-4",
   "type": "Problem",
-  "number": "7.0.3",
+  "number": "8.0.3",
   "title": "P2.",
   "body": " P2  In this problem, you will complete several computational exercises using SageMath. Before starting this problem, you should read . These exercises will require you to modify the code found in that section.  To submit your solutions, upload to Canvas either (A) a document with screenshots of your code and output, or (B) a link to a Jupyter notebook with your work.   Produce a list of all the numbers from 1 to 200 that are divisible by 10.    Produce a plot of the points for all between 1 and 400 that are divisible by 3 but not divisible by 5 or 7.    How many numbers between and are divisible by 23 but not divisible by 17 or 29?     "
 },
@@ -2804,7 +2957,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-5",
   "type": "Problem",
-  "number": "7.0.4",
+  "number": "8.0.4",
   "title": "P3.",
   "body": " P3  Consider the equation    Draw a picture that demonstrates why this is true for all positive integers . Explain how your picture is related to the equation. (This is an \"embodied\" proof.)    Give a \"symbolic\" proof of this equation by rewriting the numbers in the sum and using properties of sums that we have discussed in class. Hint: write each odd number as .    Hint: Begin both of these with small examples. What happens when ? How can you use these examples to guide your thinking about the general case?   "
 },
@@ -2813,7 +2966,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-6",
   "type": "Problem",
-  "number": "7.0.5",
+  "number": "8.0.5",
   "title": "P4.",
   "body": " P4  Use induction to prove that is true for all .  "
 },
@@ -2822,7 +2975,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-7",
   "type": "Problem",
-  "number": "7.0.6",
+  "number": "8.0.6",
   "title": "P5.",
   "body": " P5  Recall that .   Do a computational experiment comparing the values of and for . The command in SageMath for is \"factorial(n)\", while the command for is \"2^n\". Provide either a screenshot or printout or notebook link for your code and results.    State a precise conjecture in response to the following question: is one of these functions eventually larger than the other?    Use induction to prove your conjecture.     "
 },
@@ -2831,7 +2984,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-8",
   "type": "Problem",
-  "number": "7.0.7",
+  "number": "8.0.7",
   "title": "Essay 2.",
   "body": " Essay 2  Watch the following video from 3Blue1Brown (19 minutes, published July 2023): After you watch this video, complete the following essay.   This will be an essay of length 500 words, which is equivalent to 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced.    The video introduced three false proofs, one related to spherical surface area, one related to finding the value of , and one supposedly proving that all triangles are equilateral. Which of these three false proofs did you find most interesting, and why? Which of these three false proofs did you find least interesting, and why? You need to give specific details in the video that support your opinions.    What is something about mathematical proof that this video made you consider that you had not thought of before? Do you feel that this new insight will help you as you work on proofs in this course? Why or why not?    How are the ideas of the embodied, symbolic, and formal modes of mathematical thinking (from the reading for Essay 1) related to the ideas introduced in this video? Does this video make you think differently about these modes of mathematical thinking? Why or why not?   Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).  "
 },
@@ -2840,7 +2993,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-9",
   "type": "Problem",
-  "number": "7.0.8",
+  "number": "8.0.8",
   "title": "P6.",
   "body": " P6  The Sylvester sequence is the sequence of positive integers defined by and for all .   Prove by induction on that for all , we have .    Prove that if is a prime number that divides for some , then does not divide for any . Explain why this implies that there are infinitely many prime numbers.    Explain in a few sentences how the Sylvester sequence is related to Euclid's proof of the infinitude of primes.     "
 },
@@ -2849,7 +3002,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-10",
   "type": "Problem",
-  "number": "7.0.9",
+  "number": "8.0.9",
   "title": "P7.",
   "body": " P7  We will show in this problem how the fundamental theorem of arithmetic can be used to prove that there are infinitely many primes. Recall that is the number of primes less than or equal to . This problem will lead you through the steps of a proof due to Paul Erdős.   Prove that every integer can be expressed as , where and are positive integers and is square-free (meaning that no prime number divides more than once).    Prove that there are at most square-free integers less than or equal to .    Prove that there are at most integers less than or equal to that are of the form for some positive integer .    Use the previous parts to prove that for all positive integers .    Show that the inequality in the previous part implies that for all .    Explain why this proves that there are infinitely many prime numbers.     "
 },
@@ -2858,7 +3011,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-11",
   "type": "Problem",
-  "number": "7.0.10",
+  "number": "8.0.10",
   "title": "P8.",
   "body": " P8  The following problem is an open problem in mathematics, meaning that it is a problem that has not been solved by anyone. The Euclid-Mullin sequence is the sequence of prime numbers that starts with and continues by taking the smallest prime number produced by a Euclid step, as defined in . Thus, the Euclid-Mullin sequence starts with If you are interested, you can read about this sequence at .  The open problem is: Does every prime number appear in the Euclid-Mullin sequence? For example, no one knows whether or not the prime is produced by this process.  Make as much progress as you can on this open problem; I don't expect you to find a solution, but you should spend 2-3 hours thinking about this! Your goal is to do something more than check examples; the examples should lead you to make some interesting observations about the problem, to understand it a bit better. Why do you think it might be true? Why might it be false? Are there any properties of binomial coefficients that support your comments? Are there any positive integers for which this is obviously true? You can do this using only pencil and paper, or using mostly computational experiments, or you can use a mix of these. However, you need to provide a narrative in sentences\/paragraphs explaining your thinking and the results of your investigations. (Seriously, write down everything you're thinking and every idea you try, even if it doesn't go anywhere.)  "
 },
@@ -2867,7 +3020,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-12",
   "type": "Problem",
-  "number": "7.0.11",
+  "number": "8.0.11",
   "title": "P9.",
   "body": " P9  We say a divisor of a positive integer is a positive integer such that . The sum of divisors function is defined to be the sum of all the divisors of . For example, the divisors of are , so .   Suppose for some prime number and some positive integer . Prove that . Then, use this to prove that .    Suppose is the prime factorization of . Prove that     Use the previous two parts to find the values of and .     "
 },
@@ -2876,7 +3029,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-13",
   "type": "Problem",
-  "number": "7.0.12",
+  "number": "8.0.12",
   "title": "P10.",
   "body": " P10  Let be a positive integer. Consider the sequence of numbers given by Prove that this sequence does not contain any prime number. Explain why this shows that there are arbitrarily long sequences of consecutive composite numbers.  "
 },
@@ -2885,7 +3038,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-14",
   "type": "Problem",
-  "number": "7.0.13",
+  "number": "8.0.13",
   "title": "P11.",
   "body": " P11     Prove that the polynomial is divisible by for all positive integers and .    Use the first part to prove that if is a composite number, then is also a composite number.     "
 },
@@ -2894,7 +3047,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-15",
   "type": "Problem",
-  "number": "7.0.14",
+  "number": "8.0.14",
   "title": "P12.",
   "body": " P12     Prove that is irrational.    Prove that is irrational.     "
 },
@@ -2903,7 +3056,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-16",
   "type": "Problem",
-  "number": "7.0.15",
+  "number": "8.0.15",
   "title": "P13.",
   "body": " P13  Prove that for any two positive integers and , we have   "
 },
@@ -2912,7 +3065,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-17",
   "type": "Problem",
-  "number": "7.0.16",
+  "number": "8.0.16",
   "title": "P14.",
   "body": " P14  The following problems involve .   Do the frequencies and produce equivalent notes? Why or why not?    Do the frequencies and produce equivalent notes? Why or why not?    If you start with the frequency , what is the frequency that is obtained by going up by two perfect fourths and then up by a perfect fifth? Explain your work.    If you start with the frequency , what is the frequency that is obtained by going up by a perfect fifth and then up by two perfect fourths? Explain your work.    Suppose that you start with a frequency and you go up by a sequence of perfect fourths and perfect fifths, where you have a total of perfect fourths and perfect fifths. Is it possible for you to get different frequencies if you go up by the perfect fourths and perfect fifths in different orders? Why or why not?     "
 },
@@ -2921,7 +3074,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-18",
   "type": "Problem",
-  "number": "7.0.17",
+  "number": "8.0.17",
   "title": "P15.",
   "body": " P15  Prove a similar result to but for perfect fourths instead of perfect fifths. In other words, prove that if you start with a frequency and you go up by a sequence of perfect fourths, then you will never obtain a note equivalent to .  "
 },
@@ -2930,7 +3083,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-19",
   "type": "Problem",
-  "number": "7.0.18",
+  "number": "8.0.18",
   "title": "P16.",
   "body": " P16  Use to prove that is odd for any integer .  "
 },
@@ -2939,7 +3092,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-20",
   "type": "Problem",
-  "number": "7.0.19",
+  "number": "8.0.19",
   "title": "P17.",
   "body": " P17  This problem is an exploration of given at the end of Section 4.1.   Prove using calculus that the function is increasing for all .    Prove using calculus that     Using the prime number theorem and the previous result, prove that .     "
 },
@@ -2948,7 +3101,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-21",
   "type": "Problem",
-  "number": "7.0.20",
+  "number": "8.0.20",
   "title": "Essay 3.",
   "body": " Essay 3  Read the following blog post by Keith Weber, a professor of math education at Rutgers University who studies how undergraduate students understand proofs in mathematics: After you read this article, complete the following essay.   This will be an essay of length at least 500 words, which is equivalent to at least 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced. (You can write a longer essay if needed.)    Your essay should respond to the following three questions.   The article describes four expectations that professors have for students, but which are usually mis-communicated. For each of these four expectations , do you respond more like the students in their surveys, or more like the professors? Why?    The discussion at the end of the article has some recommendations for faculty in their courses. Which of these recommendations do you think you would find most helpful for your learning, and why?    What is one thing you might change about your approach to your math courses after reading this article? Why is this the thing you would choose to change?      Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).  "
 },
@@ -2957,7 +3110,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-22",
   "type": "Problem",
-  "number": "7.0.21",
+  "number": "8.0.21",
   "title": "P18.",
   "body": " P18  Use the Euclidean algorithm to compute the gcd of the following pairs of numbers. Show all of the steps of the algorithm in your solution .                   "
 },
@@ -2966,7 +3119,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-23",
   "type": "Problem",
-  "number": "7.0.22",
+  "number": "8.0.22",
   "title": "P19.",
   "body": " P19  Let be positive integers. Apply the Euclidean algorithm to get the sequence If you divide the first equation by you obtain    What formula do you get for when you divide the second equation in the Euclidean algorithm by and use the result to substitute for in the above equation?    What formula do you get for when you divide the third equation in the Euclidean algorithm by and use the result to substitute for in your answer to part 1?    Give an explanation of why if you continue this process you get the formula     The expression above is called the continued fraction representation of . Use this to compute the continued fraction representation for .     "
 },
@@ -2975,7 +3128,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-24",
   "type": "Problem",
-  "number": "7.0.23",
+  "number": "8.0.23",
   "title": "P20.",
   "body": " P20  The following problem is an open problem in mathematics, meaning that it is a problem that has not been solved by anyone. This is a problem that was stated by Jeffrey Lagarias in 2002 in an article in the American Mathematical Monthly . What is amazing about this problem is that it is equivalent to the Riemann Hypothesis, in that the inequality below holds for all if and only if the Riemann Hypothesis is true.  For a positive integer , let denote the sum of the positive integers that divide . Let denote the -th harmonic number , i.e. Let denote the natural log function (NOT log base 10). The open problem is: Does the following inequality hold for all ?     Use computer software to list the values of for . You should include your code and the results in your submission. If you are not familiar with computational software, I recommend using SageMath through the website https:\/\/sagecell.sagemath.org\/ . SageMath is based on Python, so basic Python commands will work. The SageMath command to give a decimal approximation of the -th harmonic number is \"N(harmonic_number(n))\". The SageMath command to compute is \"sigma(n,1)\".    Use computer software to verify that the above inequality holds for at least (feel free to compute more examples if you want). You should include your code and the results in your submission.    Make as much progress as you can on this open problem; I don't expect you to find a solution, but you should spend 2-3 hours thinking about this! Your goal is to do something more than check examples; the examples should lead you to make some interesting observations about the problem, to understand it a bit better. Why do you think it might be true? Why might it be false? Are there any properties of binomial coefficients that support your comments? Are there any positive integers for which this is obviously true? You can do this using only pencil and paper, or using mostly computational experiments, or you can use a mix of these. However, you need to provide a narrative in sentences\/paragraphs explaining your thinking and the results of your investigations. (Seriously, write down everything you're thinking and every idea you try, even if it doesn't go anywhere.)    "
 },
@@ -2984,7 +3137,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-25",
   "type": "Problem",
-  "number": "7.0.24",
+  "number": "8.0.24",
   "title": "P21.",
   "body": " P21  Use the Euclidean algorithm to find integers and such that for the following pairs, using the technique given in our first proof of the Bézout identity.                   "
 },
@@ -2993,7 +3146,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-26",
   "type": "Problem",
-  "number": "7.0.25",
+  "number": "8.0.25",
   "title": "P22.",
   "body": " P22  A point is called a lattice point if both and are integers.   Find the number of lattice points that are on the line segment connecting the points and .    How many lattice points are on the line segment connecting the points and for arbitrary positive integers and ? Prove that your answer is correct.     "
 },
@@ -3002,7 +3155,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-27",
   "type": "Problem",
-  "number": "7.0.26",
+  "number": "8.0.26",
   "title": "P23.",
   "body": " P23  In this problem we consider what the Euclidean algorithm might look like if we apply it to an irrational number.   First, show the (simple) calculations to establish that and     Suppose we tried to apply the Euclidean algorithm to the number dividing it by . In this case, we would get Starting from this observation, prove that you can use the two calculations from part 1 to obtain the following infinite continued fraction formula for :     If you stop the infinite continued fraction at any point, you get a rational number approximating . For example, if you stop after the first term, you get . If you stop after the second term, you get If you stop after the third term, you get If you stop after the fourth term, you get   Compute the rational numbers that you get by stopping the infinite continued fraction for after the first 4 terms, after the first 5 terms, and after the first 6 terms. Then, compute the decimal approximations of these rational numbers and compare them to the decimal approximation of . What do you observe about these approximations?     "
 },
@@ -3011,7 +3164,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-28",
   "type": "Problem",
-  "number": "7.0.27",
+  "number": "8.0.27",
   "title": "Essay 4.",
   "body": " Essay 4  Read the following article from 3 March 2025 in Quanta magazine: Years After the Early Death of a Math Genius, Her Ideas Gain New Life . After you read this article, complete the following essay.     This will be an essay of length at least 500 words, which is equivalent to at least 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced. (You can write a longer essay if needed.)    Your essay should respond to the following three questions.   What aspect of this article made the strongest impression on you? In other words, what did you notice that you were most surprised\/inspired\/motivated\/etc by?    What were two aspects of the process of mathematical discovery that stood out to you about the story conveyed in the article?    What aspects of embodied, symbolic, and formal mathematics did you notice in this article?        "
 },
@@ -3020,7 +3173,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-29",
   "type": "Problem",
-  "number": "7.0.28",
+  "number": "8.0.28",
   "title": "P24.",
   "body": " P24  Find the full solution set to the following linear Diophantine equations. Show all of your work for all steps of the process, and write your final answer using set notation.              "
 },
@@ -3029,7 +3182,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-30",
   "type": "Problem",
-  "number": "7.0.29",
+  "number": "8.0.29",
   "title": "P25.",
   "body": " P25  For each of the following rhythmic patterns, represent each pattern three ways: in box-like notation, as a clockwise distance sequence, and with a clock diagram.   The pattern with onsets at beats 1, 3, 5, 6, and 8 out of 11 total beats.    The pattern with onsets at beats 1, 3, 5, and 7 out of 9 total beats.    The pattern with onsets at beats 1, 4, 6, 9, 11, and 14 out of 16 total beats.     "
 },
@@ -3038,7 +3191,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-31",
   "type": "Problem",
-  "number": "7.0.30",
+  "number": "8.0.30",
   "title": "P26.",
   "body": " P26  Find the integer sequence for the following values of and . Show all your work for all steps of the process.                   "
 },
@@ -3047,7 +3200,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-32",
   "type": "Problem",
-  "number": "7.0.31",
+  "number": "8.0.31",
   "title": "Essay 5.",
   "body": " Essay 5  Read the course syllabus on the Canvas homepage for MA 261. After you read the syllabus, complete the following essay.   This will be an essay of length at least 500 words, which is equivalent to at least 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced. (You can write a longer essay if needed.)    Your essay should respond to the following two questions.   So far we have investigated multiple topics and techniques in number theory. Which of these have you enjoyed the most? Which have you enjoyed the least? Why? Give specific examples from the homework and\/or notes to illustrate your opinions.    The student learning outcomes list various mathematical practices that students will develop in MA 261, in addition to the content-based learning outcomes. Which of these practices do you feel you have improved on the most so far this semester? Which do you are most in need of further development?      Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).  "
 },
@@ -3056,7 +3209,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-33",
   "type": "Problem",
-  "number": "7.0.32",
+  "number": "8.0.32",
   "title": "P27.",
   "body": " P27  Suppose that is an equivalence relation on a set . Suppose further that is symmetric and transitive, and that for every element , occurs in at least one ordered pair for . Prove that must also be reflexive.  Note: for this proof, you will be giving a purely formal argument. You need to use the axioms for symmetric and transitive to show that the reflexive property holds under these assumptions.  "
 },
@@ -3065,7 +3218,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-34",
   "type": "Problem",
-  "number": "7.0.33",
+  "number": "8.0.33",
   "title": "P28.",
   "body": " P28  Suppose and are equivalence relations on a set . Prove that the intersection is an equivalence relation on .  Note: Remember that and are binary relations, which means that they are collections of ordered pairs in . So, your goal is to prove that the collection of ordered pairs in is reflexive, symmetric, and transitive.  "
 },
@@ -3074,7 +3227,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-35",
   "type": "Problem",
-  "number": "7.0.34",
+  "number": "8.0.34",
   "title": "P29.",
   "body": " P29  Which of the following binary relations are equivalence relations on the positive integers? For each of them, either prove it is an equivalence relation, or explain why it fails one of the axioms for an equivalence relation.    if and have the same set of prime divisors (where the primes might have different multiplicities).     if .    For a fixed positive integer , if .     "
 },
@@ -3083,7 +3236,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-36",
   "type": "Problem",
-  "number": "7.0.35",
+  "number": "8.0.35",
   "title": "P30.",
   "body": " P30  Find the multiplicative inverses of the following congruence classes.                   "
 },
@@ -3092,7 +3245,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-37",
   "type": "Problem",
-  "number": "7.0.36",
+  "number": "8.0.36",
   "title": "P31.",
   "body": " P31  Suppose , , and are positive integers such that . Use modular arithmetic to prove that if does not divide , then divides and does not divide .  "
 },
@@ -3101,7 +3254,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-38",
   "type": "Problem",
-  "number": "7.0.37",
+  "number": "8.0.37",
   "title": "P32.",
   "body": " P32  Write down two linear congruences modulo that do not have a solution when , but which do have a solution when . Explain why these congruences do not have a solution when , and explain why they do have a solution when . (You do not need to find the solutions to these congruences.)  "
 },
@@ -3110,7 +3263,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-39",
   "type": "Problem",
-  "number": "7.0.38",
+  "number": "8.0.38",
   "title": "Essay 6.",
   "body": " Essay 6  Watch the following YouTube video from Quanta Magazine (17 minutes, published January 2021): After you watch this video, complete the following essay.   This will be an essay of length 500 words, which is equivalent to 2 typed pages with 1 inch margins, 12 point Times New Roman font, double spaced.    Write a critical review of this video. Imagine that you are writing your review for a journal for undergraduates in mathematics and the sciences, so your primary audience is undergraduate math\/cs\/engineering\/etc majors and minors.    Like any critic, you will respond positively to some things and negatively to others. Unlike many critics, you need to justify your opinions and provide detailed explanations for your claims.    You should consider the following questions:    Does the video effectively communicate the mathematics it discusses? Why or why not? Justify your claims with specific details about the video.    We have discussed multiple approaches\/themes to prime numbers in this course. Which of these approaches\/themes to prime numbers are used in this video? Be detailed, give specific examples from the video!    Is the mathematics clearly explained? If yes, what did they do especially well? If no, what made it unclear? Again, justify your claims with specific examples from the video.   Your grade is based on completion only (in other words, if you complete the assignment and it meets the length requirement and responds appropriately to the prompt, then you get full credit).  "
 },
@@ -3119,7 +3272,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-40",
   "type": "Problem",
-  "number": "7.0.39",
+  "number": "8.0.39",
   "title": "P33.",
   "body": " P33  Use the technique in the proof of the Chinese Remainder Theorem to find an integer solution to each of the following systems of equations. Show all your work.   The following system has two equations.     The following system has four equations.      "
 },
@@ -3128,7 +3281,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-41",
   "type": "Problem",
-  "number": "7.0.40",
+  "number": "8.0.40",
   "title": "P34.",
   "body": " P34  In this problem we will use Fermat's Little Theorem to prove that if is an odd prime number and , then    Prove that .    Explain why this equation implies that either or in .     "
 },
@@ -3137,7 +3290,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-42",
   "type": "Problem",
-  "number": "7.0.41",
+  "number": "8.0.41",
   "title": "P35.",
   "body": " P35  In this problem you will prove Wilson's Theorem , which is a classic result in number theory that states if is prime, then or in other words, in .   Prove that the only elements of that are their own multiplicative inverse are and . (HINT: Use the fact that is equivalent to in .)    Evaluate in by pairing each element with its multiplicative inverse, except for and .    Explain why your answer to part 2 implies in .     "
 },
@@ -3146,7 +3299,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-43",
   "type": "Problem",
-  "number": "7.0.42",
+  "number": "8.0.42",
   "title": "P36.",
   "body": " P36    "
 },
@@ -3155,7 +3308,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-44",
   "type": "Problem",
-  "number": "7.0.43",
+  "number": "8.0.43",
   "title": "P37.",
   "body": " P37    "
 },
@@ -3164,7 +3317,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-45",
   "type": "Problem",
-  "number": "7.0.44",
+  "number": "8.0.44",
   "title": "P38.",
   "body": " P38    "
 },
@@ -3173,7 +3326,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-46",
   "type": "Problem",
-  "number": "7.0.45",
+  "number": "8.0.45",
   "title": "P39.",
   "body": " P39    "
 },
@@ -3182,7 +3335,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-47",
   "type": "Problem",
-  "number": "7.0.46",
+  "number": "8.0.46",
   "title": "P40.",
   "body": " P40    "
 },
@@ -3191,7 +3344,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "problems.html#problems-48",
   "type": "Problem",
-  "number": "7.0.47",
+  "number": "8.0.47",
   "title": "End-of-Class Reflection.",
   "body": " End-of-Class Reflection  Type a 1000 word essay in response to the following prompt. This is the equivalent of 4 pages in 12 point Times New Roman font, double-spaced.   What were six of the most important discoveries or realizations you made in this class? In other words, what are you taking away from this class that you think might stick with you over time and\/or influence you in the future? What have you experienced that might have a long-term effect on you intellectually or personally? These can include things you had not realized about mathematics or society, specific homework problems or theorems, etc. These can be things that made sense to you, or topics where you were confused, points that you agreed\/disagreed with in the readings or class discussions, issues that arose while working on your assignments, etc.    Explain why these six discoveries or realizations are important to you.    You should include a combination of observations about both mathematics and your habits, practices, and beliefs about mathematics.   This assignment grade is based only on completion (i.e. if you turn it in, it meets the length requirement, and it appropriately responds to the prompt above, then you get full credit).  "
 }

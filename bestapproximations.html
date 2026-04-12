@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: tacoma                         *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Best Approximations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math"
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="MA 261 Course Notes">
+<meta property="book:author" content="Benjamin Braun">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.13.3';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.b76b8eace4405b9e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.bbf2283c5c1d4f99.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.b12a7b3f0773ebcd.css">
+<script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="ma261.html"><span class="title">MA 261 Course Notes</span></a></h1>
+<p class="byline">Benjamin Braun</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="decimalexpansions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="fractions.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="continuedfractions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} \newcommand{\lcm}{\mathrm{lcm}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="introduction.html" class="internal"><span class="codenumber">1</span> <span class="title">Introduction</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-section-name.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Introduction to MA 261</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="reasoning.html" class="internal"><span class="codenumber">2</span> <span class="title">Mathematical Reasoning</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123n.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Mathematics Begins With Questions</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123napproaches.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Exploration Leads to Conjecture</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123nproofs.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Conjecture Requires Experimental Verification and Proof</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123nembodied.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Embodied Proof</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123nsymbolic.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Symbolic Proof</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123nformal.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Formal Proof</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s123ncoding.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Computational Experiments in SageMath</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="primes.html" class="internal"><span class="codenumber">3</span> <span class="title">Prime Numbers</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="prime-numbers.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Numbers, Sets, and Primes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="infinitudeofprimes.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Infinitude of Primes</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="fundthmarithmetic.html" class="internal"><span class="codenumber">3.3</span> <span class="title">The Fundamental Theorem of Arithmetic</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="FTAcorollaries.html" class="internal"><span class="codenumber">3.4</span> <span class="title">Consequences of the Fundamental Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="harmonics.html" class="internal"><span class="codenumber">3.5</span> <span class="title">Harmonics</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-temperament.html" class="internal"><span class="codenumber">3.6</span> <span class="title">Pythagorean Scales and Equal Temperament</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="divisibility.html" class="internal"><span class="codenumber">4</span> <span class="title">Divisibility</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="divisionalgorithm.html" class="internal"><span class="codenumber">4.1</span> <span class="title">The Division Algorithm</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="euclideanalgorithm.html" class="internal"><span class="codenumber">4.2</span> <span class="title">The Euclidean Algorithm</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="bezoutidentity.html" class="internal"><span class="codenumber">4.3</span> <span class="title">The Bezout Identity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="lineardiophantine.html" class="internal"><span class="codenumber">4.4</span> <span class="title">Linear Diophantine Equations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="rhythms.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Rhythmic Patterns</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="euclideanrhythms.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Euclidean Rhythms</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="congruence.html" class="internal"><span class="codenumber">5</span> <span class="title">Congruence and Modular Arithmetic</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="equivalencerelations.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Equivalence Relations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="modularcongruence.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Congruence and Modular Operations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="modulararithmetic.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Modular Arithmetic</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="modularlinearequations.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Solving Modular Linear Equations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="chineseremaindertheorem.html" class="internal"><span class="codenumber">5.5</span> <span class="title">Chinese Remainder Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="fermatslittletheorem.html" class="internal"><span class="codenumber">5.6</span> <span class="title">Fermat’s Little Theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="musicalscalesandkeys.html" class="internal"><span class="codenumber">5.7</span> <span class="title">Musical Scales and Keys</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="fractions.html" class="internal"><span class="codenumber">6</span> <span class="title">Continued Fractions</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="decimalexpansions.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Decimal Expansions and Quantifiers</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="bestapproximations.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Best Approximations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="continuedfractions.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Continued Fractions and Convergents</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="microtonalscales.html" class="internal"><span class="codenumber">6.4</span> <span class="title">Microtonal Scales</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="pythagoreantriples.html" class="internal"><span class="codenumber">7</span> <span class="title">Pythagorean Triples</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="pythagorean.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Pythagorean Triples</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="problems.html" class="internal"><span class="codenumber">8</span> <span class="title">Problems and Essays</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="bestapproximations"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Best Approximations</span>
+</h2>
+<div class="para" id="bestapproximations-2">We gave an embodied argument in the previous section justifying that we can approximate any real number by rational numbers with denominator given by a powers of <span class="process-math">\(10\text{.}\)</span> This is the method of decimal expansions, and it is a very natural method for approximation of real numbers by rationals. A natural question to ask is the following: If we are allowed to use any rational number with denominator between <span class="process-math">\(1\)</span> and <span class="process-math">\(q\text{,}\)</span> what is the best approximation to a given real number <span class="process-math">\(s\)</span> that we can get? There are two different ways to interpret the meaning of "best" in this case, and these give rise to two different definitions of best approximations.<div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-bestapproximations"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-bestapproximations-1-1">
+<div class="para">Given a real number <span class="process-math">\(s\text{,}\)</span> we say that a rational number <span class="process-math">\(p/q\)</span> is a <em class="alert">best approximation of the first kind</em> to <span class="process-math">\(s\)</span> if for any other rational number <span class="process-math">\(r/t\)</span> with denominator <span class="process-math">\(t\leq q\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="def-bestapproximations-1-1-7">
+\begin{equation*}
+\left|s-\frac{p}{q}\right|\lt \left|s-\frac{r}{t}\right| \, .
+\end{equation*}
+</div>
+<div class="para">We say that a rational number <span class="process-math">\(p/q\)</span> is a <em class="alert">best approximation of the second kind</em> to <span class="process-math">\(s\)</span> if for any other rational number <span class="process-math">\(r/t\)</span> with denominator <span class="process-math">\(t\leq q\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="def-bestapproximations-1-1-13">
+\begin{equation*}
+\left|q s-p\right|\lt \left|t s-r\right| \, .
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-bestapproximations-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 6.2.1"><a href="#def-bestapproximations" title="Copy heading and permalink for Definition 6.2.1" aria-label="Copy heading and permalink for Definition 6.2.1">🔗</a></div></article><div class="para logical" id="bestapproximations-4">
+<div class="para">For an approximation of the first kind, suppose that we have</div>
+<div class="displaymath process-math" id="bestapproximations-4-1">
+\begin{equation*}
+\left|s-\frac{p}{q}\right|\approx 0 \, .
+\end{equation*}
+</div>
+<div class="para">Then we have that</div>
+<div class="displaymath process-math" id="bestapproximations-4-2">
+\begin{equation*}
+s \approx \frac{p}{q} \, ,
+\end{equation*}
+</div>
+<div class="para">from which it would follow that</div>
+<div class="displaymath process-math" id="bestapproximations-4-3">
+\begin{equation*}
+qs \approx p\, ,
+\end{equation*}
+</div>
+<div class="para">from which it would follow that</div>
+<div class="displaymath process-math" id="bestapproximations-4-4">
+\begin{equation*}
+\left|qs-p\right|\approx 0 \, ,
+\end{equation*}
+</div>
+<div class="para">giving an approximation of the second kind. Thus, these two types of best approximations are related, though what they measure is not the same (as we will see).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="bestapproximations-5" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="bestapproximations-5-1">
+<ol class="decimal" id="bestapproximations-5-1-1">
+<li id="bestapproximations-5-1-1-1">
+<div class="para" id="bestapproximations-5-1-1-1-1">Discuss the definitions of best approximations of the first and second kind, and their relationship. Do they make sense? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-5-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.2.2.1"><a href="#bestapproximations-5-1-1-1" title="Copy heading and permalink for Item 6.2.2.1" aria-label="Copy heading and permalink for Item 6.2.2.1">🔗</a></div>
+</li>
+<li id="bestapproximations-5-1-1-2">
+<div class="para" id="bestapproximations-5-1-1-2-1">Draw a picture on the number line to give an embodied interpretation of a best approximation of the first kind.<div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-5-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.2.2.2"><a href="#bestapproximations-5-1-1-2" title="Copy heading and permalink for Item 6.2.2.2" aria-label="Copy heading and permalink for Item 6.2.2.2">🔗</a></div>
+</li>
+<li id="bestapproximations-5-1-1-3">
+<div class="para" id="bestapproximations-5-1-1-3-1">Draw a picture on the number line to give an embodied interpretation of a best approximation of the second kind.<div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-5-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.2.2.3"><a href="#bestapproximations-5-1-1-3" title="Copy heading and permalink for Item 6.2.2.3" aria-label="Copy heading and permalink for Item 6.2.2.3">🔗</a></div>
+</li>
+<li id="bestapproximations-5-1-1-4">
+<div class="para" id="bestapproximations-5-1-1-4-1">With your group, find the best approximations of the first kind and the second kind to <span class="process-math">\(325/736\)</span> with denominator between <span class="process-math">\(1\)</span> and <span class="process-math">\(4\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-5-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 6.2.2.4"><a href="#bestapproximations-5-1-1-4" title="Copy heading and permalink for Item 6.2.2.4" aria-label="Copy heading and permalink for Item 6.2.2.4">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.2.2"><a href="#bestapproximations-5" title="Copy heading and permalink for Checkpoint 6.2.2" aria-label="Copy heading and permalink for Checkpoint 6.2.2">🔗</a></div></article></details><div class="para" id="bestapproximations-6">Consider the following SageMath code that computes the best approximation of the first kind to a real number <span class="process-math">\(s\text{.}\)</span> Running this in <a class="external" href="https://sagecell.sagemath.org/" target="_blank">https://sagecell.sagemath.org/</a> produces best approximations to <span class="process-math">\(\pi-3\text{,}\)</span> <span class="process-math">\(\frac{1+\sqrt{5}}{2}-1\text{,}\)</span> and <span class="process-math">\(\log_2(3/2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="code-box"><pre class="program clipboardable"><code class="language-py">def firstbestapproximation(s,q):
+    """
+    input: a real number s between 0 and 1 and a maximum denominator q
+    output: the rational number with denominator at most q that is the best approximation to s of the first kind
+    """
+    best = 0
+    for j in srange(1,q+1):
+        for k in srange(0,j+1):
+            if abs(s-k/j) &lt;= abs(s-best):
+                best = k/j
+    return best
+
+print(firstbestapproximation(pi-3,10))
+
+print(firstbestapproximation((1+sqrt(5))/2-1,50))
+
+print(firstbestapproximation(log(3/2,2),60))
+</code></pre></div>
+<details id="bestapproximations-8" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="bestapproximations-8-1">Discuss the code above. Does it make sense why this is returning the correct answer? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-8-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.2.3"><a href="#bestapproximations-8" title="Copy heading and permalink for Checkpoint 6.2.3" aria-label="Copy heading and permalink for Checkpoint 6.2.3">🔗</a></div></article></details><div class="para" id="bestapproximations-9">The following code computes the best approximation of the second kind to a real number <span class="process-math">\(s\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-9" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="code-box"><pre class="program clipboardable"><code class="language-py">def secondbestapproximation(s,q):
+    """
+    input: a real number s between 0 and 1 and a maximum denominator q
+    output: the rational number with denominator at most q that is the best approximation to s of the second kind
+    """ 
+    num_best = 0
+    denom_best = 1
+    for j in srange(1,q+1):
+        for k in srange(0,j+1):
+            if abs(j*s-k) &lt;= abs(denom_best*s-num_best):
+                num_best = k
+                denom_best = j
+    return num_best/denom_best
+
+print(secondbestapproximation(pi-3,10))
+
+print(secondbestapproximation((1+sqrt(5))/2-1,50))
+
+print(secondbestapproximation(log(3/2,2),60))
+</code></pre></div>
+<details id="bestapproximations-11" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="bestapproximations-11-1">Discuss the code above. Does it make sense why this is returning the correct answer? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-11-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.2.4"><a href="#bestapproximations-11" title="Copy heading and permalink for Checkpoint 6.2.4" aria-label="Copy heading and permalink for Checkpoint 6.2.4">🔗</a></div></article></details><div class="para" id="bestapproximations-12">The following code demonstrates that these two types of approximations are not always the same. Specifically, the first and second best approximations to <span class="process-math">\(\pi-3\)</span> with denominator at most <span class="process-math">\(100\)</span> are different.<div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="code-box"><pre class="program clipboardable"><code class="language-py">def firstbestapproximation(s,q):
+    """
+    input: a real number s between 0 and 1 and a maximum denominator q
+    output: the rational number with denominator at most q that is the best approximation to s of the first kind
+    """
+    best = 0
+    for j in srange(1,q+1):
+        for k in srange(0,j+1):
+            if abs(s-k/j) &lt;= abs(s-best):
+                best = k/j
+    return best
+
+def secondbestapproximation(s,q):
+    """
+    input: a real number s between 0 and 1 and a maximum denominator q
+    output: the rational number with denominator at most q that is the best approximation to s of the second kind
+    """ 
+    numbest = 0
+    denombest = 1
+    for j in srange(1,q+1):
+        for k in srange(0,j+1):
+            if abs(j*s-k) &lt;= abs(denombest*s-numbest):
+                numbest = k
+                denombest = j
+    return numbest/denombest
+
+print(firstbestapproximation(pi-3,100))
+
+print(secondbestapproximation(pi-3,100))
+</code></pre></div>
+<div class="para" id="bestapproximations-14">A natural question to ask is how these two types of best approximations are related. The answer is given by the following theorem.<div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-bestapproximationsrelation"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm-bestapproximationsrelation-1-1">If <span class="process-math">\(p/q\)</span> is a best approximation of the second kind to <span class="process-math">\(s\text{,}\)</span> then it is also a best approximation of the first kind to <span class="process-math">\(s\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-bestapproximationsrelation-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 6.2.5"><a href="#thm-bestapproximationsrelation" title="Copy heading and permalink for Theorem 6.2.5" aria-label="Copy heading and permalink for Theorem 6.2.5">🔗</a></div></article><div class="para" id="bestapproximations-16">We will prove this by <em class="alert">contrapositive</em>: this means that we will prove <span class="process-math">\(P\implies Q\)</span> by showing that <span class="process-math">\(\neg Q \implies \neg P\)</span> where <span class="process-math">\(\neg P\)</span> means "not <span class="process-math">\(P\)</span>", or the negation of <span class="process-math">\(P\text{.}\)</span> Observe that if we prove that <span class="process-math">\(p/q\)</span> not being a first kind best approximation implies it is also not a second kind best approximation, then it is impossible for <span class="process-math">\(p/q\)</span> to be simultaneously a second kind best approximation and not a first kind best approximation.<div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="bestapproximations-17" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="bestapproximations-17-1">Discuss the strategy of proof by contrapositive. Does it make sense what we are about to prove, and why this proof strategy works?<div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-17-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.2.6"><a href="#bestapproximations-17" title="Copy heading and permalink for Checkpoint 6.2.6" aria-label="Copy heading and permalink for Checkpoint 6.2.6">🔗</a></div></article></details><details id="bestapproximations-18" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="bestapproximations-18-1">
+<div class="para">Suppose that <span class="process-math">\(p/q\)</span> is not a best approximation of the first kind to <span class="process-math">\(s\text{.}\)</span> Then there exists <span class="process-math">\(1\leq q'\leq q\)</span> and <span class="process-math">\(p'\)</span> such that</div>
+<div class="displaymath process-math" id="bestapproximations-18-1-5">
+\begin{equation*}
+\left| s-p'/q'\right| \leq \left| s-p/q\right|\, .
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(q'\leq q\text{,}\)</span> we can multiply the left-hand side of the displayed equation by <span class="process-math">\(q'\)</span> and the right-hand side by <span class="process-math">\(q\)</span> without changing the inequality. Thus, we have</div>
+<div class="displaymath process-math" id="bestapproximations-18-1-9">
+\begin{equation*}
+\left| q's-p'\right| \leq \left| q s-p\right|\, ,
+\end{equation*}
+</div>
+<div class="para">from which it follows that <span class="process-math">\(p/q\)</span> is not a best approximation of the second kind to <span class="process-math">\(s\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-18-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 6.2.1"><a href="#bestapproximations-18" title="Copy heading and permalink for Proof 6.2.1" aria-label="Copy heading and permalink for Proof 6.2.1">🔗</a></div></article></details><details id="bestapproximations-19" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Checkpoint</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="exercise exercise-like knowl__content"><div class="para" id="bestapproximations-19-1">Discuss this proof with your group. Does it make sense? Why or why not?<div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-19-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Checkpoint 6.2.7"><a href="#bestapproximations-19" title="Copy heading and permalink for Checkpoint 6.2.7" aria-label="Copy heading and permalink for Checkpoint 6.2.7">🔗</a></div></article></details><div class="para" id="bestapproximations-20">Thus, being a best approximation of the second kind is a stronger condition than being a best approximation of the first kind. How do we find these approximations without carrying out a brute force search like we did in the SageMath code above? The answer is that best approximations of the second kind are produced by <em class="emphasis">convergents of continued fractions for <span class="process-math">\(s\)</span></em>. Thus, we will study continued fractions and their convergents.<div class="autopermalink" data-description="Paragraph"><a href="#bestapproximations-20" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Section 6.2: Best Approximations"><a href="#bestapproximations" title="Copy heading and permalink for Section 6.2: Best Approximations" aria-label="Copy heading and permalink for Section 6.2: Best Approximations">🔗</a></div></section></div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="decimalexpansions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="continuedfractions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
