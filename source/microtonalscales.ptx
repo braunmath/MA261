@@ -3,7 +3,87 @@
 <section xml:id="microtonalscales" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Microtonal Scales</title>
 
-  <p> 
+  <p> Recall from <xref ref="sec-temperament"/> that given a frequency <m>f</m>, the fifth above <m>f</m> is <m>\frac{3}{2}f</m> and the octave above <m>f</m> is <m>2f</m>.
+    As we learned previously, when a vibrating string is plucked, we naturally hear not only the fundamental frequency <m>f</m> for that string, but we also hear (at progressively lower volumes) the frequencies <m>2f,3f,4f,\ldots</m>, which means we hear a frequency equivalent to a fifth above <m>f</m>.
+    Thus, fifths play a key role in music, and as we saw with the circle of fifths, moving up by fifths generates a sequence of frequencies that sound good to most people.
   </p>
 
+  <p>
+    The stopping point of the circle of fifths is the point at which we have generated a frequency that is octave-equivalent to the starting frequency (in 12-tone equal temperament).
+    Hence, we want to find positive integers <m>a</m> and <m>b</m> such that <me>\left(\frac{3}{2}\right)^b \approx 2^a</me> which is equivalent to finding rational approximations <me>\frac{a}{b}\approx \log_2\left(\frac{3}{2}\right)</me>.
+    Now that we know that convergents of continued fractions give the best rational approximations of the second kind, we can compute the continued fraction expansion of <me>\log_2\left(\frac{3}{2}\right)</me> to find the best rational approximations.
+  </p>
+
+  <p>
+    The sequence of convergents of the corresponding continued fraction expansion is as follows:
+    <md>
+      1, \frac{1}{2}, \frac{3}{5}, \frac{7}{12}, \frac{24}{41}, \frac{31}{53}, \frac{179}{306}, \ldots \, .
+    </md>
+    Previously in the course, we saw that the approximation <me>\frac{7}{12}\approx \log_2\left(\frac{3}{2}\right)</me> is the basis for the 12-tone equal temperament system.
+    However, the approximation <me>\frac{24}{41}\approx \log_2\left(\frac{3}{2}\right)</me> is even better, and it is the basis for the 41-tone equal temperament system, which divides the octave into 41 equal parts instead of 12.
+    In this system, the fifth above <m>f</m> is given by the frequency <m>\sqrt[41]{2}^{24}f</m>, which is very close to <m>\frac{3}{2}f</m>.
+    The next approximation <me>\frac{31}{53}\approx \log_2\left(\frac{3}{2}\right)</me> is better still, and it is the basis for the 53-tone equal temperament system, which divides the octave into 53 equal parts instead of 12.
+    Here, the fifth is given by <m>\sqrt[53]{2}^{31}f</m>.
+  </p>
+  <p>
+    These are examples of what are called <alert>microtonal</alert> scales, which are musical scales that use intervals smaller than the semitone (the smallest interval in the 12-tone equal temperament system).
+    There are many microtonal scales, some equally tempered and some not, that are based on different division of an octave.
+    If one wants to create a microtonal scale that has a fifth that is very close to <m>\frac{3}{2}f</m>, then such a system should be based on a convergent of the continued fraction expansion of <me>\log_2\left(\frac{3}{2}\right)</me>.
+  </p>
+
+  <p>
+    Microtonal scales have been used in various musical traditions around the world, and they offer a wide variety of sounds and possibilities for composers and musicians.
+    For example, the 53-tone chromatic scale was studied by the mathematician Mersenne and others, and it was designated at the official musical system of China in 1713.
+    In 1876, Robert Bosanquet created what he called a "generalized keyboard harmonium" with 53 notes to an octave.
+    <figure xml:id="fig-bosanquet">
+      <caption>Bosanquet's harmonium, image released under a CC BY-NC-SA 4.0 Licence by Science and Society Picture Library <url href="https://collection.sciencemuseumgroup.org.uk/objects/co5865/bosanquets-enharmonic-harmonium">here</url>.</caption>
+      <image source="harmonium.jpg">
+        <shortdescription>Bosanquet's harmonium, a keyboard with 53 keys.</shortdescription>
+      </image>
+    </figure>
+    Bosanquet's harmonium was discussed in a translator's appendix to Hermann Helmholtz's 1877 book <em>On the Sensations of Tone</em>.
+  </p>
+  <p>
+    It is possible to pick close representative of the 12-tone equal temperament system from among the 53-note equal temperament system.
+    For example, the following three videos are demonstrations of the Maple Leaf Rag by Scott Joplin in three different approximations of the 12-tone system, the first two taken from notes in the 53-tone system and the third taken from notes in the 41-tone system.
+    <ol>
+      <li>
+        <p>
+          <url href="https://www.youtube.com/watch?v=AKXMuhB3uHQ">https://www.youtube.com/watch?v=AKXMuhB3uHQ</url>
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="https://www.youtube.com/watch?v=t-pRqKGX0oo">https://www.youtube.com/watch?v=t-pRqKGX0oo</url>
+        </p>
+      </li>
+      <li>
+        <p>
+          <url href="https://www.youtube.com/watch?v=HHn5rrGrVsI">https://www.youtube.com/watch?v=HHn5rrGrVsI</url>        
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    Tuning and temperament remain active subjects of discussion and research today.
+    If you are interested in learning more about these topics, including microtonality, I suggest the following resources.
+    <ul>
+      <li>
+        <p>
+          Book: <em>How Equal Temperament Ruined Harmony (and Why You Should Care)</em>, by Ross W. Duffin, published in 2006 by W. W. Norton and Company.
+        </p>
+      </li>
+      <li>
+        <p>
+          YouTube video from MinutePhysics titled "The Physics of Dissonance", July 18, 2025, at <url href="https://www.youtube.com/watch?v=tCsl6ZcY9ag">https://www.youtube.com/watch?v=tCsl6ZcY9ag</url>.
+        </p>
+      </li>
+      <li>
+        <p>
+          Wikipedia page on "Microtonality", at <url href="https://en.wikipedia.org/wiki/Microtonality">https://en.wikipedia.org/wiki/Microtonality</url>, and the references therein.
+        </p>
+      </li>
+    </ul>
+  </p>
 </section>

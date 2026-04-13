@@ -100,12 +100,42 @@
   </exercise>
 
   <p>
-    Next, we will learn about Pythagorean triples by watching and analyzing the following YouTube video from 3Blue1Brown: <url href="https://www.youtube.com/watch?v=QJYmyhnaaek">All possible Pythagorean triples, visualized</url>
+    If you were searching for a proof of the classification of Pythagorean triples, a popular website that might come up in your search is Art of Problem Solving.
+    Go to the AoPS <url href="https://artofproblemsolving.com/wiki/index.php?title=Pythagorean_triple">Pythagorean Triples</url> page, and complete the following activities with your group.
+    <ol>
+      <li>
+        <p>
+          Read and discuss the Theorem statement for their classification of the general form of Pythagorean Triples.
+        </p>
+      </li>
+      <li>
+        <p>
+          With your group, read the proof they give.
+          Go through all the details, and also think about the overall structure of the argument.
+          <em>Use all the tools you have learned in this class to make sense of this proof and to be able to communicate both the "big ideas" and the technical details clearly.</em>
+        </p>
+      </li>
+    </ol>
+  </p>
+
+  <p>
+    Next, we will learn a different approach to Pythagorean triples by watching and analyzing the following YouTube video from 3Blue1Brown: <url href="https://www.youtube.com/watch?v=QJYmyhnaaek">All possible Pythagorean triples, visualized</url>
   </p>
 
   <p>
     After watching the video as a class, work through the following activities with your group.
     <ol>
+      <li>
+        <p>
+          Write down a precise statement of the theorem that is represented by this video.
+          What is the video actually proving?
+        </p>
+      </li>
+      <li>
+        <p>
+          How is the theorem represented by this video related to the proof from the AoPS website?
+        </p>
+      </li>
       <li>
         <p>
           Write down a symbolic proof that the point <m>(u,v)</m> with positive integer coordinates are the first two values in a Pythagorean triple if and only if the distance from <m>(u,v)</m> to <m>(0,0)</m> is an integer.
@@ -155,35 +185,11 @@
       </li>
       <li>
         <p>
-          Write down a precise statement of the theorem that is represented by this video.
-          What is the video actually proving?
-        </p>
-      </li>
-      <li>
-        <p>
           Do you believe that the proof given in the video is complete and correct? Why or why not?
         </p>
       </li>
     </ol>
   </p>
 
-  <p>
-    If you were searching for a proof of the classification of Pythagorean triples, another popular website that might come up in your search is Art of Problem Solving.
-    Go to the AoPS <url href="https://artofproblemsolving.com/wiki/index.php?title=Pythagorean_triple">Pythagorean Triples</url> page, and complete the following activities with your group.
-    <ol>
-      <li>
-        <p>
-          Read and discuss the Theorem statement for their classification of the general form of Pythagorean Triples.
-        </p>
-      </li>
-      <li>
-        <p>
-          With your group, read the proof they give.
-          Go through all the details, and also think about the overall structure of the argument.
-          <em>Use all the tools you have learned in this class to make sense of this proof and to be able to communicate both the "big ideas" and the technical details clearly.</em>
-        </p>
-      </li>
-    </ol>
-  </p>
 
 </section>

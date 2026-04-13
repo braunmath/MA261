@@ -183,6 +183,12 @@ q_0
     </statement>
   </theorem>
 
+  <exercise>
+    <p>
+      Discuss the theorem above. Does the proof preceding it make sense?
+    </p>
+  </exercise>
+
   <p>
     You obtained in problem <xref ref="prob-infcontfrac">Problem P23</xref> an infinite continued fraction representation for <m>\sqrt{2}</m>.
     It turns out that every real number has a continued fraction expansion.
@@ -263,8 +269,9 @@ q_0
 
   <exercise>
     <p>
-      Find the first four convergents of <m>\pi</m>.
+      Find the first four convergents of <me>\pi=[3; 7, 15, 1, 292, 1, 1, 1, 2, 1, 3, 1, 14, 2, 1, 1, 2, 2, 2, 2,\ldots]</me>.
       How good are these approximations to the value of <m>\pi</m> given by your calculator?
+      NOTE: Lots of interesting information about continued fraction approximations for <m>\pi</m> can be found <url href="https://mathworld.wolfram.com/PiContinuedFraction.html">at this Wolfram MathWorld page</url>.
     </p>
   </exercise>
 
@@ -289,16 +296,113 @@ q_0
 
   <p>
     The proof of this theorem is beyond the scope of our course, and can be found in the book <em>Continued Fractions</em> by A. Ya. Khinchin, available <url href="https://archive.org/details/khinchin-continued-fractions/mode/2up">at this link</url>.
-    However, this theorem motivates a further study of convergents, leading to the following theorem.
+    However, this theorem motivates a further study of convergents, leading to the following theorem that gives a recursive method for computing convergents for an infinite continued fraction.
   </p>
 
   <theorem xml:id="thm-formulaforconvergents">
     <statement>
       <p>
-        Define numbers <m>b_m</m> and <m>c_m</m> inductively as follows:
+        Given an infinite continued fraction <m>[q_0;q_1,q_2,q_3,\ldots]</m>, define numbers <m>b_m</m> and <m>c_m</m> inductively as follows:
+        <md>
+          <mrow>b_0 \amp =q_0</mrow>
+          <mrow> c_0 \amp = 1</mrow>
+          <mrow> b_1 \amp = q_1q_0+1 </mrow>
+          <mrow>c_1 \amp = q_1 </mrow>
+          <mrow>b_m \amp = q_mb_{m-1} + b_{m-2} \text{ for } m\geq 2 </mrow>
+          <mrow>c_m \amp = q_mc_{m-1} + c_{m-2} \text{ for } m\geq 2  </mrow>
+        </md>
+        Then we have
+        <md>\frac{b_m}{c_m} = [q_0;q_1,q_2,\ldots,q_m]</md>
       </p>
     </statement>
   </theorem>
+
+  <p>
+    Let's look at an example before we prove this theorem.
+    It is known that <m>\frac{1+\sqrt{5}}{2}=[1;1,1,1,1,\ldots]</m>.
+    Then we have 
+    <md>
+      b_0,b_1,b_2,b_3,\ldots = 1,2,3,5,8,13,\ldots
+    </md>
+    since <m>b_m=b_{m-1}+b_{m-2}</m> and 
+    <md>
+      c_0,c_1,c_2,c_3,\ldots = 1, 1,2,3,5,8,13,\ldots
+    </md>
+    since <m>c_m=c_{m-1}+c_{m-2}</m>.
+    Thus, the convergents of <m>\frac{1+\sqrt{5}}{2}</m> are of the form <m>\frac{F_{m}}{F_{m-1}}</m> where <m>F_m</m> is the <m>m</m>-th Fibonacci number.
+  </p>
+
+  <exercise>
+    <p>
+      Discuss the example above with your group. Does it make sense? Why or why not?
+    </p>
+  </exercise>
+
+  <exercise>
+    <p>
+      Use the above recursion to compute the first six convergents of <m>\pi=[3;7,15,1,292,1,1,1,\ldots]</m>.
+    </p>
+  </exercise>
+
+  <proof>
+    <p>
+      For the base cases of <m>m=0,1</m>, we have <m>b_0/c_0=q_0</m> and <m>b_1/c_1=q_0+\frac{1}{q_1}</m>, from which the formulas in the theorem follow.
+      When <m>m=2</m>, we see that
+      <md>
+        \frac{b_2}{c_2}=\frac{q_0(q_1q_2+1)+q_2}{q_1q_2+1} \, .
+      </md>
+      This establishes the base cases for <m>m\leq 2</m>.      
+    </p>
+      <p>
+      We next proceed by induction.
+      Assume that the statement is true up to <m>m</m> for <alert>all</alert> continued fractions, and we will show it for <m>m+1</m>.
+      First, observe that if 
+      <md>
+        \frac{b}{c}=[q_0;q_1,\ldots,q_n]
+      </md>
+      and
+      <md>
+        \frac{b'}{c'}=[q_1;q_2,\ldots,q_n] \, ,
+      </md>
+      then we have 
+      <md>
+        \frac{b}{c}=q_0+\frac{1}{\frac{b'}{c'}}=\frac{b'q_0+c'}{b'} \, ,
+      </md>
+      and thus we have what we will call the <alert>shifting relation</alert>:
+      <md>
+        <mrow>b \amp = b'q_0+c' </mrow>
+        <mrow>c \amp = b' </mrow>
+      </md>
+      With this in mind, if we have the equations
+      <md>
+        <mrow>\frac{b_{m+1}}{c_{m+1}} \amp =[q_0;q_1,\ldots,q_{m+1}]</mrow>
+        <mrow> \frac{\beta_j}{\gamma_j} \amp = [q_1;q_2,\ldots,q_{j+1}] </mrow>
+      </md>
+      where the second index is <m>j</m> since the sequence starts with <m>q_1</m>, then: 
+      <md>
+        <mrow>b_{m+1} \amp = q_0\beta_m+\gamma_m</mrow>
+        <mrow>c_{m+1} \amp = \beta_m </mrow>
+      </md>
+      By induction, we have:
+      <md>
+        <mrow>\beta_m \amp = q_{m+1}\beta_{m-1}+\beta_{m-2} </mrow>
+        <mrow>\gamma_m \amp = q_{m+1}\gamma_{m-1}+\gamma_{m-2}</mrow>
+      </md>     
+      Now, plugging these expressions into our shifting relation for <m>m+1</m>, we obtain:
+      <md>
+        <mrow>b_{m+1} \amp = q_{0}(q_{m+1}\beta_{m-1}+\beta_{m-2})+ q_{m+1}\gamma_{m-1}+\gamma_{m-2}</mrow>
+        <mrow> \amp = q_{m+1}(q_{0}\beta_{m-1}+\gamma_{m-1}) + q_0\beta_{m-2}+\gamma_{m-2} </mrow>
+        <mrow> \amp = q_{m+1} b_m+b_{m-1} </mrow>
+      </md>
+      and
+      <md>
+        <mrow>c_{m+1} \amp = q_{m+1}\beta_{m-1}+\beta_{m-2}</mrow>
+        <mrow> \amp = q_{m+1}c_{m}+c_{m-1} </mrow>
+      </md>
+      which agrees with the sequences we defined in the theorem statement, completing the proof.
+    </p>
+  </proof>
+
   
   
 
