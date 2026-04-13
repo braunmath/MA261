@@ -2842,7 +2842,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.3",
   "title": "Continued Fractions and Convergents",
-  "body": " Continued Fractions and Convergents  In Problem P19 , we saw that every rational number has an expansion as a finite continued fraction: We will denote this continued fraction by .  For this problem, we assumed that were positive integers, thus we restricted ourselves to the case where a rational number is in the interval . However, we can find a continued fraction expansion for any rational number, because we can add or subtract an integer to a rational number and it only changes the value of in the continued fraction expansion.   Discuss the observation above with your group. Do you agree that if we have two rational numbers and , and if for some integer , then the continued fraction for is obtained from the continued fraction for by adding to the value for ?   Next, let's remind ourselves how this continued fraction expression was obtained on your homework. If are positive integers, then we apply the Euclidean algorithm to get the following sequence: If you divide the first equation by you obtain If you divide the second equation by , you obtain which can be substituted into the first equation to obtain We can continue in this way until we reach the last equation in the Euclidean algorithm, and thus we obtain a continued fraction representation for . Thus, given any rational number, we can write it as a continued fraction where and each .   Discuss the argument above. Does it make sense? Why or why not?       Find the continued fraction expansion for . HINT: in this case, so the continued fraction starts with     Find the continued fraction expansion for .      Also observe that if we consider any and let for , then the value is a rational number. This is obtained by recursively (i.e., inductively) finding a common denominator at each level. For example, if we consider the number then we have from which we obtain from which we obtain from which we obtain from which we obtain which is a rational number since the denominator only involves products and sums of positive integers, hence is not equal to zero. This is an embodied-symbolic proof of this fact; a fully formal proof would provide a proof by induction.   Discuss the argument above. Does it make sense? Why or why not?   Summarizing the two arguments above, we have proved the following.    A number is rational if and only if it has a finite continued fraction expansion.    You obtained in problem Problem P23 an infinite continued fraction representation for . It turns out that every real number has a continued fraction expansion. We will denote such an expansion using the following notation.    If and for all , we denote by the infinite continued fraction which is defined to be the value     The following theorem can be proved using a combination of technical details about continued fractions and techniques from real analysis to study sequence convergence (which you can learn more about in MA 471 or MA 575). Thus, the full proof is beyond the scope of this course.    Every irrational number admits a unique representation as an infinite continued fraction, and every infinite continued fraction converges to a unique irrational number.    Let's look at the continued fraction expansion for . Note that this means we have and thus we have that the beginning of the resulting infinite continued fraction is .   Find in the continued fraction approximation for .   If we have an irrational number given by , then we define the -th convergent of to be the rational number    Find the second convergent of and the fourth convergent of .    Find the first four convergents of . How good are these approximations to the value of given by your calculator?   The key to obtaining best approximations of an irrational number is to look at the convergents of , as the following theorem shows.    Let be an irrational number. A rational number is a best approximation of the second kind for if and only if it is a convergent for .     Discuss with your group: do you believe this theorem, even though we haven't given a proof? Why or why not?   The proof of this theorem is beyond the scope of our course, and can be found in the book Continued Fractions by A. Ya. Khinchin, available at this link . However, this theorem motivates a further study of convergents, leading to the following theorem.    Define numbers and inductively as follows:    "
+  "body": " Continued Fractions and Convergents  In Problem P19 , we saw that every rational number has an expansion as a finite continued fraction: We will denote this continued fraction by .  For this problem, we assumed that were positive integers, thus we restricted ourselves to the case where a rational number is in the interval . However, we can find a continued fraction expansion for any rational number, because we can add or subtract an integer to a rational number and it only changes the value of in the continued fraction expansion.   Discuss the observation above with your group. Do you agree that if we have two rational numbers and , and if for some integer , then the continued fraction for is obtained from the continued fraction for by adding to the value for ?   Next, let's remind ourselves how this continued fraction expression was obtained on your homework. If are positive integers, then we apply the Euclidean algorithm to get the following sequence: If you divide the first equation by you obtain If you divide the second equation by , you obtain which can be substituted into the first equation to obtain We can continue in this way until we reach the last equation in the Euclidean algorithm, and thus we obtain a continued fraction representation for . Thus, given any rational number, we can write it as a continued fraction where and each .   Discuss the argument above. Does it make sense? Why or why not?       Find the continued fraction expansion for . HINT: in this case, so the continued fraction starts with     Find the continued fraction expansion for .      Also observe that if we consider any and let for , then the value is a rational number. This is obtained by recursively (i.e., inductively) finding a common denominator at each level. For example, if we consider the number then we have from which we obtain from which we obtain from which we obtain from which we obtain which is a rational number since the denominator only involves products and sums of positive integers, hence is not equal to zero. This is an embodied-symbolic proof of this fact; a fully formal proof would provide a proof by induction.   Discuss the argument above. Does it make sense? Why or why not?   Summarizing the two arguments above, we have proved the following.    A number is rational if and only if it has a finite continued fraction expansion.     Discuss the theorem above. Does the proof preceding it make sense?   You obtained in problem Problem P23 an infinite continued fraction representation for . It turns out that every real number has a continued fraction expansion. We will denote such an expansion using the following notation.    If and for all , we denote by the infinite continued fraction which is defined to be the value     The following theorem can be proved using a combination of technical details about continued fractions and techniques from real analysis to study sequence convergence (which you can learn more about in MA 471 or MA 575). Thus, the full proof is beyond the scope of this course.    Every irrational number admits a unique representation as an infinite continued fraction, and every infinite continued fraction converges to a unique irrational number.    Let's look at the continued fraction expansion for . Note that this means we have and thus we have that the beginning of the resulting infinite continued fraction is .   Find in the continued fraction approximation for .   If we have an irrational number given by , then we define the -th convergent of to be the rational number    Find the second convergent of and the fourth convergent of .    Find the first four convergents of . How good are these approximations to the value of given by your calculator? NOTE: Lots of interesting information about continued fraction approximations for can be found at this Wolfram MathWorld page .   The key to obtaining best approximations of an irrational number is to look at the convergents of , as the following theorem shows.    Let be an irrational number. A rational number is a best approximation of the second kind for if and only if it is a convergent for .     Discuss with your group: do you believe this theorem, even though we haven't given a proof? Why or why not?   The proof of this theorem is beyond the scope of our course, and can be found in the book Continued Fractions by A. Ya. Khinchin, available at this link . However, this theorem motivates a further study of convergents, leading to the following theorem that gives a recursive method for computing convergents for an infinite continued fraction.    Given an infinite continued fraction , define numbers and inductively as follows: Then we have     Let's look at an example before we prove this theorem. It is known that . Then we have since and since . Thus, the convergents of are of the form where is the -th Fibonacci number.   Discuss the example above with your group. Does it make sense? Why or why not?    Use the above recursion to compute the first six convergents of .    For the base cases of , we have and , from which the formulas in the theorem follow. When , we see that This establishes the base cases for .  We next proceed by induction. Assume that the statement is true up to for all continued fractions, and we will show it for . First, observe that if and then we have and thus we have what we will call the shifting relation : With this in mind, if we have the equations where the second index is since the sequence starts with , then: By induction, we have: Now, plugging these expressions into our shifting relation for , we obtain: and which agrees with the sequences we defined in the theorem statement, completing the proof.   "
 },
 {
   "id": "continuedfractions-4",
@@ -2890,11 +2890,20 @@ var ptx_lunr_docs = [
   "body": "  A number is rational if and only if it has a finite continued fraction expansion.   "
 },
 {
+  "id": "continuedfractions-12",
+  "level": "2",
+  "url": "continuedfractions.html#continuedfractions-12",
+  "type": "Checkpoint",
+  "number": "6.3.6",
+  "title": "",
+  "body": " Discuss the theorem above. Does the proof preceding it make sense?  "
+},
+{
   "id": "def-contfracnotation",
   "level": "2",
   "url": "continuedfractions.html#def-contfracnotation",
   "type": "Definition",
-  "number": "6.3.6",
+  "number": "6.3.7",
   "title": "",
   "body": "  If and for all , we denote by the infinite continued fraction which is defined to be the value    "
 },
@@ -2903,27 +2912,18 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "continuedfractions.html#thm-convergence",
   "type": "Theorem",
-  "number": "6.3.7",
+  "number": "6.3.8",
   "title": "",
   "body": "  Every irrational number admits a unique representation as an infinite continued fraction, and every infinite continued fraction converges to a unique irrational number.   "
 },
 {
-  "id": "continuedfractions-17",
+  "id": "continuedfractions-18",
   "level": "2",
-  "url": "continuedfractions.html#continuedfractions-17",
-  "type": "Checkpoint",
-  "number": "6.3.8",
-  "title": "",
-  "body": " Find in the continued fraction approximation for .  "
-},
-{
-  "id": "continuedfractions-19",
-  "level": "2",
-  "url": "continuedfractions.html#continuedfractions-19",
+  "url": "continuedfractions.html#continuedfractions-18",
   "type": "Checkpoint",
   "number": "6.3.9",
   "title": "",
-  "body": " Find the second convergent of and the fourth convergent of .  "
+  "body": " Find in the continued fraction approximation for .  "
 },
 {
   "id": "continuedfractions-20",
@@ -2932,23 +2932,32 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "6.3.10",
   "title": "",
-  "body": " Find the first four convergents of . How good are these approximations to the value of given by your calculator?  "
+  "body": " Find the second convergent of and the fourth convergent of .  "
+},
+{
+  "id": "continuedfractions-21",
+  "level": "2",
+  "url": "continuedfractions.html#continuedfractions-21",
+  "type": "Checkpoint",
+  "number": "6.3.11",
+  "title": "",
+  "body": " Find the first four convergents of . How good are these approximations to the value of given by your calculator? NOTE: Lots of interesting information about continued fraction approximations for can be found at this Wolfram MathWorld page .  "
 },
 {
   "id": "thm-bestapproximationsfromconvergents",
   "level": "2",
   "url": "continuedfractions.html#thm-bestapproximationsfromconvergents",
   "type": "Theorem",
-  "number": "6.3.11",
+  "number": "6.3.12",
   "title": "",
   "body": "  Let be an irrational number. A rational number is a best approximation of the second kind for if and only if it is a convergent for .   "
 },
 {
-  "id": "continuedfractions-23",
+  "id": "continuedfractions-24",
   "level": "2",
-  "url": "continuedfractions.html#continuedfractions-23",
+  "url": "continuedfractions.html#continuedfractions-24",
   "type": "Checkpoint",
-  "number": "6.3.12",
+  "number": "6.3.13",
   "title": "",
   "body": " Discuss with your group: do you believe this theorem, even though we haven't given a proof? Why or why not?  "
 },
@@ -2957,9 +2966,36 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "continuedfractions.html#thm-formulaforconvergents",
   "type": "Theorem",
-  "number": "6.3.13",
+  "number": "6.3.14",
   "title": "",
-  "body": "  Define numbers and inductively as follows:   "
+  "body": "  Given an infinite continued fraction , define numbers and inductively as follows: Then we have    "
+},
+{
+  "id": "continuedfractions-28",
+  "level": "2",
+  "url": "continuedfractions.html#continuedfractions-28",
+  "type": "Checkpoint",
+  "number": "6.3.15",
+  "title": "",
+  "body": " Discuss the example above with your group. Does it make sense? Why or why not?  "
+},
+{
+  "id": "continuedfractions-29",
+  "level": "2",
+  "url": "continuedfractions.html#continuedfractions-29",
+  "type": "Checkpoint",
+  "number": "6.3.16",
+  "title": "",
+  "body": " Use the above recursion to compute the first six convergents of .  "
+},
+{
+  "id": "continuedfractions-30",
+  "level": "2",
+  "url": "continuedfractions.html#continuedfractions-30",
+  "type": "Proof",
+  "number": "6.3.1",
+  "title": "",
+  "body": " For the base cases of , we have and , from which the formulas in the theorem follow. When , we see that This establishes the base cases for .  We next proceed by induction. Assume that the statement is true up to for all continued fractions, and we will show it for . First, observe that if and then we have and thus we have what we will call the shifting relation : With this in mind, if we have the equations where the second index is since the sequence starts with , then: By induction, we have: Now, plugging these expressions into our shifting relation for , we obtain: and which agrees with the sequences we defined in the theorem statement, completing the proof.  "
 },
 {
   "id": "microtonalscales",
@@ -2968,7 +3004,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "6.4",
   "title": "Microtonal Scales",
-  "body": " Microtonal Scales    "
+  "body": " Microtonal Scales  Recall from that given a frequency , the fifth above is and the octave above is . As we learned previously, when a vibrating string is plucked, we naturally hear not only the fundamental frequency for that string, but we also hear (at progressively lower volumes) the frequencies , which means we hear a frequency equivalent to a fifth above . Thus, fifths play a key role in music, and as we saw with the circle of fifths, moving up by fifths generates a sequence of frequencies that sound good to most people.  The stopping point of the circle of fifths is the point at which we have generated a frequency that is octave-equivalent to the starting frequency (in 12-tone equal temperament). Hence, we want to find positive integers and such that which is equivalent to finding rational approximations . Now that we know that convergents of continued fractions give the best rational approximations of the second kind, we can compute the continued fraction expansion of to find the best rational approximations.  The sequence of convergents of the corresponding continued fraction expansion is as follows: Previously in the course, we saw that the approximation is the basis for the 12-tone equal temperament system. However, the approximation is even better, and it is the basis for the 41-tone equal temperament system, which divides the octave into 41 equal parts instead of 12. In this system, the fifth above is given by the frequency , which is very close to . The next approximation is better still, and it is the basis for the 53-tone equal temperament system, which divides the octave into 53 equal parts instead of 12. Here, the fifth is given by .  These are examples of what are called microtonal scales, which are musical scales that use intervals smaller than the semitone (the smallest interval in the 12-tone equal temperament system). There are many microtonal scales, some equally tempered and some not, that are based on different division of an octave. If one wants to create a microtonal scale that has a fifth that is very close to , then such a system should be based on a convergent of the continued fraction expansion of .  Microtonal scales have been used in various musical traditions around the world, and they offer a wide variety of sounds and possibilities for composers and musicians. For example, the 53-tone chromatic scale was studied by the mathematician Mersenne and others, and it was designated at the official musical system of China in 1713. In 1876, Robert Bosanquet created what he called a \"generalized keyboard harmonium\" with 53 notes to an octave.  Bosanquet's harmonium, image released under a CC BY-NC-SA 4.0 Licence by Science and Society Picture Library here .   Bosanquet's harmonium, a keyboard with 53 keys.   Bosanquet's harmonium was discussed in a translator's appendix to Hermann Helmholtz's 1877 book On the Sensations of Tone .  It is possible to pick close representative of the 12-tone equal temperament system from among the 53-note equal temperament system. For example, the following three videos are demonstrations of the Maple Leaf Rag by Scott Joplin in three different approximations of the 12-tone system, the first two taken from notes in the 53-tone system and the third taken from notes in the 41-tone system.    https:\/\/www.youtube.com\/watch?v=AKXMuhB3uHQ      https:\/\/www.youtube.com\/watch?v=t-pRqKGX0oo      https:\/\/www.youtube.com\/watch?v=HHn5rrGrVsI      Tuning and temperament remain active subjects of discussion and research today. If you are interested in learning more about these topics, including microtonality, I suggest the following resources.   Book: How Equal Temperament Ruined Harmony (and Why You Should Care) , by Ross W. Duffin, published in 2006 by W. W. Norton and Company.    YouTube video from MinutePhysics titled \"The Physics of Dissonance\", July 18, 2025, at https:\/\/www.youtube.com\/watch?v=tCsl6ZcY9ag .    Wikipedia page on \"Microtonality\", at https:\/\/en.wikipedia.org\/wiki\/Microtonality , and the references therein.     "
+},
+{
+  "id": "fig-bosanquet",
+  "level": "2",
+  "url": "microtonalscales.html#fig-bosanquet",
+  "type": "Figure",
+  "number": "6.4.1",
+  "title": "",
+  "body": " Bosanquet's harmonium, image released under a CC BY-NC-SA 4.0 Licence by Science and Society Picture Library here .   Bosanquet's harmonium, a keyboard with 53 keys.   "
 },
 {
   "id": "pythagorean",
@@ -2977,7 +3022,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.1",
   "title": "Pythagorean Triples",
-  "body": " Pythagorean Triples  In this final section, we will investigate a classical topic in number theory, Pythagorean triples . The question that motivates this study is the following: Suppose we have a right-angled triangle with sides lengths that are positive integers , , and . Which triples of values are possible? Any such triple is called a Pythagorean triple . Observe that not every triple can arise in this way, because any such triple has to satisfy the Pythagorean theorem: Thus, for example, is a Pythagorean triple, but is not.  In this section, rather than providing proofs, we will practice the proof-reading skills we have developed by interpreting mathematical proofs from Wikipedia, YouTube, and Art of Problem Solving. While learning how to read, write, and create proofs within the context of a class is important, it is equally important to be able to do this outside of a specific course structure, using resources available online and in print. We will begin by investigating three proofs of the Pythagorean Theorem that are found on Wikipedia.  First, consider the following proof by rearrangement , which is originally available at this link .  An animated gif of a proof by rearrangement of the Pythagorean Theorem.   An animated gif of a proof by rearrangement of the Pythagorean Theorem.         Discuss the rearrangement proof with your group. Does it make sense? Why or why not?    Is this proof primarily embodied, symbolic, or formal?      Second, consider the following proof by shearing transformations , which is originally available at this link .  An animated gif of a proof by shearing of the Pythagorean Theorem.   An animated gif of a proof by shearing of the Pythagorean Theorem.         Discuss the shearing proof with your group. Does it make sense? Why or why not?    Is this proof primarily embodied, symbolic, or formal?      Third, consider the following proof by similar triangles , which is available at https:\/\/en.wikipedia.org\/wiki\/Pythagorean_theorem#Proof_using_similar_triangles .      Discuss the similar triangles proof with your group. Does it make sense? Why or why not?    Is this proof primarily embodied, symbolic, or formal?       Which of these three proofs of the Pythagorean theorem did you find most convincing? Why?   Next, we will learn about Pythagorean triples by watching and analyzing the following YouTube video from 3Blue1Brown: All possible Pythagorean triples, visualized   After watching the video as a class, work through the following activities with your group.   Write down a symbolic proof that the point with positive integer coordinates are the first two values in a Pythagorean triple if and only if the distance from to is an integer.    Let . Justify symbolically the following formula:      Euler's formula for a complex number states that if we write a point using polar coordinates and , then Prove that this is true by evaluating the following power series at or , multiplying them by , and then checking to see that they satisfy the equality above.     Using Euler's formula, we see that for two complex numbers and , their product is Explain why this justifies the claim in the 3Blue1Brown video that multiplying two complex numbers multiplies their distances from the origin and adds their angles.    Discuss the picture in the video at time 9:50. Does it make sense how scaling some Pythagorean triples leads to others? Why or why not?    Write down a symbolic proof that every Pythagorean triple corresponds to a point on the unit circle with rational coordinates.    Consider the picture in the video at time 13:58. Discuss this in detail with your group, and write down in a list of bullet points the steps in the argument that every rational slope is obtained by a point on the unit circle.    Write down a precise statement of the theorem that is represented by this video. What is the video actually proving?    Do you believe that the proof given in the video is complete and correct? Why or why not?     If you were searching for a proof of the classification of Pythagorean triples, another popular website that might come up in your search is Art of Problem Solving. Go to the AoPS Pythagorean Triples page, and complete the following activities with your group.   Read and discuss the Theorem statement for their classification of the general form of Pythagorean Triples.    With your group, read the proof they give. Go through all the details, and also think about the overall structure of the argument. Use all the tools you have learned in this class to make sense of this proof and to be able to communicate both the \"big ideas\" and the technical details clearly.      "
+  "body": " Pythagorean Triples  In this final section, we will investigate a classical topic in number theory, Pythagorean triples . The question that motivates this study is the following: Suppose we have a right-angled triangle with sides lengths that are positive integers , , and . Which triples of values are possible? Any such triple is called a Pythagorean triple . Observe that not every triple can arise in this way, because any such triple has to satisfy the Pythagorean theorem: Thus, for example, is a Pythagorean triple, but is not.  In this section, rather than providing proofs, we will practice the proof-reading skills we have developed by interpreting mathematical proofs from Wikipedia, YouTube, and Art of Problem Solving. While learning how to read, write, and create proofs within the context of a class is important, it is equally important to be able to do this outside of a specific course structure, using resources available online and in print. We will begin by investigating three proofs of the Pythagorean Theorem that are found on Wikipedia.  First, consider the following proof by rearrangement , which is originally available at this link .  An animated gif of a proof by rearrangement of the Pythagorean Theorem.   An animated gif of a proof by rearrangement of the Pythagorean Theorem.         Discuss the rearrangement proof with your group. Does it make sense? Why or why not?    Is this proof primarily embodied, symbolic, or formal?      Second, consider the following proof by shearing transformations , which is originally available at this link .  An animated gif of a proof by shearing of the Pythagorean Theorem.   An animated gif of a proof by shearing of the Pythagorean Theorem.         Discuss the shearing proof with your group. Does it make sense? Why or why not?    Is this proof primarily embodied, symbolic, or formal?      Third, consider the following proof by similar triangles , which is available at https:\/\/en.wikipedia.org\/wiki\/Pythagorean_theorem#Proof_using_similar_triangles .      Discuss the similar triangles proof with your group. Does it make sense? Why or why not?    Is this proof primarily embodied, symbolic, or formal?       Which of these three proofs of the Pythagorean theorem did you find most convincing? Why?   If you were searching for a proof of the classification of Pythagorean triples, a popular website that might come up in your search is Art of Problem Solving. Go to the AoPS Pythagorean Triples page, and complete the following activities with your group.   Read and discuss the Theorem statement for their classification of the general form of Pythagorean Triples.    With your group, read the proof they give. Go through all the details, and also think about the overall structure of the argument. Use all the tools you have learned in this class to make sense of this proof and to be able to communicate both the \"big ideas\" and the technical details clearly.      Next, we will learn a different approach to Pythagorean triples by watching and analyzing the following YouTube video from 3Blue1Brown: All possible Pythagorean triples, visualized   After watching the video as a class, work through the following activities with your group.   Write down a precise statement of the theorem that is represented by this video. What is the video actually proving?    How is the theorem represented by this video related to the proof from the AoPS website?    Write down a symbolic proof that the point with positive integer coordinates are the first two values in a Pythagorean triple if and only if the distance from to is an integer.    Let . Justify symbolically the following formula:      Euler's formula for a complex number states that if we write a point using polar coordinates and , then Prove that this is true by evaluating the following power series at or , multiplying them by , and then checking to see that they satisfy the equality above.     Using Euler's formula, we see that for two complex numbers and , their product is Explain why this justifies the claim in the 3Blue1Brown video that multiplying two complex numbers multiplies their distances from the origin and adds their angles.    Discuss the picture in the video at time 9:50. Does it make sense how scaling some Pythagorean triples leads to others? Why or why not?    Write down a symbolic proof that every Pythagorean triple corresponds to a point on the unit circle with rational coordinates.    Consider the picture in the video at time 13:58. Discuss this in detail with your group, and write down in a list of bullet points the steps in the argument that every rational slope is obtained by a point on the unit circle.    Do you believe that the proof given in the video is complete and correct? Why or why not?     "
 },
 {
   "id": "fig-pythagrearrangement",
