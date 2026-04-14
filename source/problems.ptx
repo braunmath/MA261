@@ -923,7 +923,7 @@ Your grade is based on completion only (in other words, if you complete the assi
 
     <problem>
         <title>P30</title>
-        <p>Find the multiplicative inverses of the following congruence classes.
+        <p>Find the multiplicative inverses of the following congruence classes by computing a Bezout identity, as shown in the example preceding Checkpoint 5.3.10.
             <ol>
                 <li>
                     <p>
