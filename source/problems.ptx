@@ -1085,7 +1085,7 @@ Your grade is based on completion only (in other words, if you complete the assi
                 </li>
                 <li>
                     <p>
-                        Evaluate <m>[p][p-1][p-2][p-3]\cdots [2][1]</m> in <m>\mathbb{Z}/p\mathbb{Z}</m> by pairing each element with its multiplicative inverse, except for <m>[1]</m> and <m>[-1]</m>.
+                        Evaluate <m>[p-1][p-2][p-3]\cdots [2][1]</m> in <m>\mathbb{Z}/p\mathbb{Z}</m> by pairing each element with its multiplicative inverse, except for <m>[1]</m> and <m>[-1]</m>.
                     </p>
                 </li>
                 <li>
