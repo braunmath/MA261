@@ -1099,31 +1099,96 @@ Your grade is based on completion only (in other words, if you complete the assi
 
     <problem>
         <title>P36</title>
-        <p>
+        <p>Fix a positive integer <m>b\geq 2</m> which we will refer to as the <em>base</em>. 
+            A <em>finite base-</em><m>b</m> expansion is a number of the form
+            <md>
+                \frac{a_1}{b}+\frac{a_2}{b^2}+\frac{a_3}{b^3}+\cdots +\frac{a_n}{b^n}
+            </md>
+            where <m>0\leq a_i\lt b</m> for each <m>i</m> and <m>a_n\neq 0</m>.
+            <ol>
+                <li>
+                    <p>
+                        Explain why <m>0.008</m> written as a standard base-10 decimal has a finite base-5 expansion with <m>a_1=0, a_2=2</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Prove that a number <m>s\in (0,1)</m> has a finite base-<m>b</m> expansion if and only if there exist positive integers <m>0\leq k\lt b^N</m> and <m>N</m> such that
+                        <md>
+                            s=\frac{k}{b^N} \, .
+                        </md>
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
     <problem>
         <title>P37</title>
         <p>
+            Fix a positive integer <m>b\geq 2</m> which we will refer to as the <em>base</em>. 
+            An <em>infinite base-</em><m>b</m> expansion is a number of the form
+            <md>
+                \sum_{i=1}^\infty \frac{a_i}{b^i}=\frac{a_1}{b}+\frac{a_2}{b^2}+\frac{a_3}{b^3}+\cdots 
+            </md>
+            where <m>0\leq a_i\lt b</m> for each <m>i</m>.
+            We say that the expansion is <em>completely periodic</em> if the sequence <m>a_1,a_2,a_3,\ldots</m> is created by repeating the finite sequence <m>a_1,a_2,\ldots,a_m</m> infinitely many times.
+            <ol>
+                <li>
+                    <p>
+                        Find the value of the completely periodic expansion in base <m>b=7</m> with repeating sequence <m>(a_1,a_2,a_3)=(1,2,1)</m>. HINT: Use a geometric series argument.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Prove that any completely periodic expansion for any base <m>b</m> is a rational number.
+                    </p>
+                </li>
+            </ol>
         </p>
+
     </problem>
 
     <problem>
         <title>P38</title>
-        <p>
+        <p>Use the computer code given in <xref ref="bestapproximations"/> to find the first- and second-best approximations of the following forms: 
+            <ol>
+                <li>
+                    <p>
+                        approximate <m>e</m> using denominators up to <m>50</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        approximate <m>\pi^2</m> using denominators up to <m>25</m>.
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
     <problem>
         <title>P39</title>
-        <p>
+        <p>Find the continued fraction expansions for the following numbers.
+            <ol>
+                <li>
+                    <p>
+                        <m>23/47</m>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <m>104/26781</m>
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
     <problem>
         <title>P40</title>
-        <p>
+        <p> 
+            Write code in either Python or SageMath to compute the sequence <m>[a_1;a_2,a_3,\ldots,a_n]</m> for any real number <m>s\in (0,1)</m> and apply your code to find the first 20 values in the continued fraction expansion of <m>e\cdot \pi</m>.
         </p>
     </problem>
 

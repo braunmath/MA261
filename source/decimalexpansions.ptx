@@ -26,7 +26,7 @@
   <definition xml:id="def-decimalexpansion">
     <statement>
       <p>
-        Given a sequence of positive integers <m>a_1,a_2,a_2,\ldots</m> with each <m>0\leq a_i\leq 9</m>, we define the <alert>decimal expansion</alert> for the sequence to be the real number
+        Given a sequence of positive integers <m>a_1,a_2,a_3,\ldots</m> with each <m>0\leq a_i\leq 9</m>, we define the <alert>decimal expansion</alert> for the sequence to be the real number
         <md>
           0.a_1a_2a_3\ldots := \sum_{i=1}^\infty \frac{a_i}{10^i} = \frac{a_1}{10}+\frac{a_2}{100}+\frac{a_3}{1000}+\cdots \, .
         </md>
@@ -65,21 +65,27 @@
 
   <exercise>
     <p>
-      With your group, discuss: Is it true that
+      With your group, discuss: Do you believe that
       <md>
         0.999999\ldots = 1 \, ?
       </md>
       Why or why not?      
     </p>
+    <p>
+      Here is a slightly different question: is the above equality mathematically correct? Why or why not?
+    </p>
   </exercise>
 
   <exercise>
     <p>
-      With your group, discuss: Is it true that 
+      With your group, discuss: Do you believe that 
       <md>
         5/7 = 0.\overline{714285} = 0.714285714285714285\ldots \, ?
       </md>
       Why or why not?
+    </p>
+    <p>
+      Here is a slightly different question: is the above equality mathematically correct? Why or why not?
     </p>
   </exercise>
 
