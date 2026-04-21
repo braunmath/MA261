@@ -352,8 +352,8 @@ x \amp \equiv 2 \bmod 5\\
 x \amp \equiv 4 \bmod 7
 \end{align*}
 </div>
-<div class="para">Using the notation from the proof, we have that <span class="process-math">\(N=3\cdot 5\cdot 7 = 105\text{,}\)</span> <span class="process-math">\(S_1=35\text{,}\)</span> <span class="process-math">\(S_2=21\text{,}\)</span> and <span class="process-math">\(S_3=15\text{.}\)</span> Computing inverses, we have <span class="process-math">\([35]_3=[2]_3\)</span> (where the 3 subscript indicates the modulus) and thus <span class="process-math">\(R_1=2\text{.}\)</span> Similarly, <span class="process-math">\([21]_5=[1]_5\text{,}\)</span> so <span class="process-math">\(R_2=1\text{.}\)</span> Finally, <span class="process-math">\([15]_7=[1]_7\text{.}\)</span> Putting this together, we have</div>
-<div class="displaymath process-math" id="chineseremaindertheorem-12-11">
+<div class="para">Using the notation from the proof, we have that <span class="process-math">\(N=3\cdot 5\cdot 7 = 105\text{,}\)</span> <span class="process-math">\(S_1=35\text{,}\)</span> <span class="process-math">\(S_2=21\text{,}\)</span> and <span class="process-math">\(S_3=15\text{.}\)</span> Computing inverses, we have <span class="process-math">\([35]_3=[2]_3\)</span> (where the 3 subscript indicates the modulus) and since <span class="process-math">\([2]_3^{-1}=[2]_3\text{,}\)</span> we have <span class="process-math">\(R_1=2\text{.}\)</span> Similarly, <span class="process-math">\([21]_5=[1]_5\text{,}\)</span> so <span class="process-math">\([1]_5^{-1}=[1]_5\)</span> and thus <span class="process-math">\(R_2=1\text{.}\)</span> Finally, <span class="process-math">\([15]_7=[1]_7\text{,}\)</span> so <span class="process-math">\([1]_7^{-1}=[1]_7\)</span> and thus <span class="process-math">\(R_3=1\text{.}\)</span> Putting this together, we have</div>
+<div class="displaymath process-math" id="chineseremaindertheorem-12-15">
 \begin{align*}
 x \amp = a_1 S_1 R_1 + a_2 S_2 R_2 + a_2 S_2 R_2 \\
 \amp = 1\cdot 35\cdot 2 + 2 \cdot 21\cdot 1 + 4 \cdot 15 \cdot 1\\
