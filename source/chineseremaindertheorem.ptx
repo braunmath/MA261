@@ -149,9 +149,9 @@
       <mrow>x \amp \equiv 4 \bmod 7</mrow>
     </md>
     Using the notation from the proof, we have that <m>N=3\cdot 5\cdot 7 = 105</m>, <m>S_1=35</m>, <m>S_2=21</m>, and <m>S_3=15</m>.
-    Computing inverses, we have <m>[35]_3=[2]_3</m> (where the 3 subscript indicates the modulus) and thus <m>R_1=2</m>.
-    Similarly, <m>[21]_5=[1]_5</m>, so <m>R_2=1</m>.
-    Finally, <m>[15]_7=[1]_7</m>.
+    Computing inverses, we have <m>[35]_3=[2]_3</m> (where the 3 subscript indicates the modulus) and since <m>[2]_3^{-1}=[2]_3</m>, we have <m>R_1=2</m>.
+    Similarly, <m>[21]_5=[1]_5</m>, so <m>[1]_5^{-1}=[1]_5</m> and thus <m>R_2=1</m>.
+    Finally, <m>[15]_7=[1]_7</m>, so <m>[1]_7^{-1}=[1]_7</m> and thus <m>R_3=1</m>.
     Putting this together, we have
     <md>
       <mrow>x \amp = a_1 S_1 R_1 + a_2 S_2 R_2 + a_2 S_2 R_2 </mrow>
