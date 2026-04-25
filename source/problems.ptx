@@ -1108,7 +1108,7 @@ Your grade is based on completion only (in other words, if you complete the assi
             <ol>
                 <li>
                     <p>
-                        Explain why <m>0.008</m> written as a standard base-10 decimal has a finite base-5 expansion with <m>a_1=0, a_2=2</m>.
+                        Explain why <m>0.008</m> written as a standard base-10 decimal has a finite base-5 expansion with <m>a_1=0, a_2=0, a_3=1</m>.
                     </p>
                 </li>
                 <li>
