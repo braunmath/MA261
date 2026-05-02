@@ -111,6 +111,27 @@
     To do this, we need to recall convergence properties of geometric series.
   </p>
 
+  <p>
+    Recall that an infinite series is actually defined as
+    <md>
+      \sum_{i=1}^\infty a_i = \lim_{n \to \infty} \sum_{i=1}^n a_i \, ,
+    </md>
+    where the right-hand side is a limit of a sequence of partial sums.
+    Thus, for example, we have that <m>0.99999\ldots</m> is the limit of the sequence of partial sums
+    <md>
+      0.9, 0.99, 0.999, 0.9999, \ldots \, .
+    </md>
+  </p>
+
+  <exercise>
+    <p>
+      Discuss with your group: given the description above, do you believe that 
+      <md>
+        0.9999\ldots = 1 \, ?
+      </md>
+    </p>
+  </exercise>
+
   <theorem xml:id="thm-geometricseries">
     <title>Geometric Series Convergence</title>
     <statement>
@@ -314,7 +335,7 @@ We can rewrite the statement "for every real number <m>s\in (0,1)</m>, there exi
     <ol>
       <li>
         <p>
-          Rewrite the statement "there exists a rational number <m>r</m> such that <m>r^2 = 2</m>" using quantifiers.
+          Rewrite the statement "for every natural number <m>m</m> with an even number of each of its prime divisors, there exists a natural number <m>n</m> such that <m>n^2 = m</m>" using quantifiers.
         </p>
       </li>
       <li>

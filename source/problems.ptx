@@ -139,11 +139,9 @@ Your grade is based on completion only (in other words, if you complete the assi
                     </p>
                 </li>
             </ol>
-            <p>
                 Hint: Begin both of these with small examples. 
                 What happens when <m>n=1,2,3,4</m>?
                 How can you use these examples to guide your thinking about the general case?
-            </p>
         </p>
     </problem>
 
@@ -225,7 +223,7 @@ Your grade is based on completion only (in other words, if you complete the assi
             <ol>
                 <li>
                     <p>
-                        Prove by induction on <m>n</m> that for all <m>n\geq 1</m>, we have <m>s_n=s_{n-1}^2 - s_{n-1}+1</m>.
+                        Prove that for all <m>n\geq 1</m>, we have <m>s_n=s_{n-1}^2 - s_{n-1}+1</m>.
                     </p>
                 </li>
                 <li>
@@ -607,6 +605,7 @@ The open problem is: Does the following inequality hold for all <m>n\geq 1</m>?
 \sigma(n)\leq H_n+\log(H_n)e^{H_n} 
 </me>
         </p>
+        <p>
         <ol>
             <li>
                 <p>
@@ -639,6 +638,7 @@ You should include your code and the results in your submission.
                 </p>
             </li>
         </ol>
+    </p>
     </problem>
 
     <problem>
@@ -947,7 +947,18 @@ Your grade is based on completion only (in other words, if you complete the assi
     <problem>
         <title>P31</title>
         <p>Suppose <m>a</m>, <m>b</m>, and <m>c</m> are positive integers such that <m>a^2+b^2=c^2</m>.
-            Use modular arithmetic to prove that if <m>4</m> does not divide <m>a</m>, then <m>4</m> divides <m>b</m> and <m>4</m> does not divide <m>c</m>.
+            <ol>
+                <li>
+                    <p>
+                        By analyzing the cases where <m>a=4k+j</m> for <m>j=1,2,3</m>, prove that if <m>4</m> does not divide <m>a</m>, then <m>2</m> divides <m>b</m> and <m>4</m> does not divide <m>c</m>.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Use remainders after division by <m>8</m> to prove that in each of the cases above, we actually have that <m>4</m> divides <m>b</m>
+                    </p>
+                </li>
+            </ol>
         </p>
     </problem>
 
@@ -1017,6 +1028,7 @@ Your grade is based on completion only (in other words, if you complete the assi
         <title>P33</title>
         <p>
             Use the technique in the proof of the Chinese Remainder Theorem to find an integer solution to each of the following systems of equations.
+            Make sure that your solution is in the range specified by the Chinese Remainder Theorem.
             Show all your work.
             <ol>
                 <li>
@@ -1155,12 +1167,12 @@ Your grade is based on completion only (in other words, if you complete the assi
             <ol>
                 <li>
                     <p>
-                        approximate <m>e</m> using denominators up to <m>50</m>.
+                        approximate <m>e-2</m> using denominators up to <m>50</m>.
                     </p>
                 </li>
                 <li>
                     <p>
-                        approximate <m>\pi^2</m> using denominators up to <m>25</m>.
+                        approximate <m>\pi^2-9</m> using denominators up to <m>25</m>.
                     </p>
                 </li>
             </ol>
